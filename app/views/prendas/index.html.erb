@@ -1,0 +1,25 @@
+<h1>Listing prendas</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Prenda</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @prendas.each do |prenda| %>
+      <tr>
+        <td><%= prenda.prenda %></td>
+        <td><%= link_to 'Show', prenda %></td>
+        <td><%= link_to 'Edit', edit_prenda_path(prenda) %></td>
+        <td><%= link_to 'Destroy', prenda, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Prenda', new_prenda_path %>

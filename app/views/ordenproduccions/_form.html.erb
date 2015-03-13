@@ -1,0 +1,85 @@
+<%= form_for(@ordenproduccion) do |f| %>
+  <% if @ordenproduccion.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@ordenproduccion.errors.count, "error") %> prohibited this ordenproduccion from being saved:</h2>
+
+      <ul>
+      <% @ordenproduccion.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :fechaprogramacion %><br>
+    <%= f.datetime_select :fechaprogramacion %>
+  </div>
+  <div class="field">
+    <%= f.label :ordennumero %><br>
+    <%= f.text_field :ordennumero %>
+  </div>
+  <div class="field">
+    <%= f.label :cliente_id %><br>
+    <%= f.text_field :cliente_id %>
+  </div>
+  <div class="field">
+    <%= f.label :descripcion %><br>
+    <%= f.text_area :descripcion %>
+  </div>
+  <div class="field">
+    <%= f.label :referencia %><br>
+    <%= f.text_field :referencia %>
+  </div>
+  <div class="field">
+    <%= f.label :corte %><br>
+    <%= f.text_field :corte %>
+  </div>
+  <div class="field">
+    <%= f.label :ancho %><br>
+    <%= f.text_field :ancho %>
+  </div>
+  <div class="field">
+    <%= f.label :tela_id %><br>
+    <%= f.text_field :tela_id %>
+  </div>
+  <div class="field">
+    <%= f.label :largotrazo %><br>
+    <%= f.text_field :largotrazo %>
+  </div>
+  <div class="field">
+    <%= f.label :largotendido %><br>
+    <%= f.text_field :largotendido %>
+  </div>
+  <div class="field">
+    <%= f.label :numeropaquetes %><br>
+    <%= f.text_field :numeropaquetes %>
+  </div>
+  <div class="field">
+    <%= f.label :cantidad %><br>
+    <%= f.text_field :cantidad %>
+  </div>
+  <div class="field">
+    <%= f.label :promediounidad %><br>
+    <%= f.text_field :promediounidad %>
+  </div>
+  <div class="field">
+    <%= f.label :totalmetros %><br>
+    <%= f.text_field :totalmetros %>
+  </div>
+  <div class="field">
+    <%= f.label :corte %><br>
+    <%= f.text_field :corte %>
+  </div>
+  <div class="field">
+    <%= f.label :tiqueteada %><br>
+    <%= f.text_field :tiqueteada %>
+  </div>
+  <div class="field">
+    <%= f.label :prenda_id %><br>
+    <%= f.text_field :prenda_id %>
+  </div>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>

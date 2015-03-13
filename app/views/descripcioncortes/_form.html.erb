@@ -1,0 +1,53 @@
+<%= form_for(@descripcioncorte) do |f| %>
+  <% if @descripcioncorte.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@descripcioncorte.errors.count, "error") %> prohibited this descripcioncorte from being saved:</h2>
+
+      <ul>
+      <% @descripcioncorte.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :tallacantidad %><br>
+    <%= f.number_field :tallacantidad %>
+  </div>
+  <div class="field">
+    <%= f.label :capas %><br>
+    <%= f.number_field :capas %>
+  </div>
+  <div class="field">
+    <%= f.label :color %><br>
+    <%= f.text_field :color %>
+  </div>
+  <div class="field">
+    <%= f.label :tallaxs %><br>
+    <%= f.number_field :tallaxs %>
+  </div>
+  <div class="field">
+    <%= f.label :tallas %><br>
+    <%= f.number_field :tallas %>
+  </div>
+  <div class="field">
+    <%= f.label :tallam %><br>
+    <%= f.number_field :tallam %>
+  </div>
+  <div class="field">
+    <%= f.label :tallal %><br>
+    <%= f.number_field :tallal %>
+  </div>
+  <div class="field">
+    <%= f.label :tallaxl %><br>
+    <%= f.number_field :tallaxl %>
+  </div>
+  <div class="field">
+    <%= f.label :ordenproduccion_id %><br>
+    <%= f.text_field :ordenproduccion_id %>
+  </div>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>

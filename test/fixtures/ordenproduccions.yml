@@ -1,0 +1,39 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  fechaprogramacion: 2015-03-13 15:04:55
+  ordennumero: MyString
+  cliente_id: 
+  descripcion: MyText
+  referencia: MyString
+  corte: MyString
+  ancho: MyString
+  tela_id: 
+  largotrazo: MyString
+  largotendido: MyString
+  numeropaquetes: MyString
+  cantidad: MyString
+  promediounidad: MyString
+  totalmetros: MyString
+  corte: MyString
+  tiqueteada: MyString
+  prenda_id: 
+
+two:
+  fechaprogramacion: 2015-03-13 15:04:55
+  ordennumero: MyString
+  cliente_id: 
+  descripcion: MyText
+  referencia: MyString
+  corte: MyString
+  ancho: MyString
+  tela_id: 
+  largotrazo: MyString
+  largotendido: MyString
+  numeropaquetes: MyString
+  cantidad: MyString
+  promediounidad: MyString
+  totalmetros: MyString
+  corte: MyString
+  tiqueteada: MyString
+  prenda_id: 

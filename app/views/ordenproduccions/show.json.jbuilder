@@ -1,0 +1,1 @@
+json.extract! @ordenproduccion, :id, :fechaprogramacion, :ordennumero, :cliente_id, :descripcion, :referencia, :corte, :ancho, :tela_id, :largotrazo, :largotendido, :numeropaquetes, :cantidad, :promediounidad, :totalmetros, :corte, :tiqueteada, :prenda_id, :created_at, :updated_at
