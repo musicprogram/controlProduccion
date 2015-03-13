@@ -4,17 +4,17 @@ Rails.application.routes.draw do
     
     resources :descripcioncortes
    
-    resources :clientes
+   
+
+  end
+
+  resources :clientes
 
     resources :tallas
   
     resources :prendas
   
     resources :telas
-    
-  end
-
- 
 
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".

@@ -1,4 +1,4 @@
-<%= form_for(@descripcioncorte) do |f| %>
+<%= simple_form_for [@ordenproduccion,@descripcioncorte], :html => { :class => 'form-horizontal' } do |f| %>
   <% if @descripcioncorte.errors.any? %>
     <div id="error_explanation">
       <h2><%= pluralize(@descripcioncorte.errors.count, "error") %> prohibited this descripcioncorte from being saved:</h2>

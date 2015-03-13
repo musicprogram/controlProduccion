@@ -44,7 +44,7 @@
         <td><%= ordenproduccion.corte %></td>
         <td><%= ordenproduccion.tiqueteada %></td>
         <td><%= ordenproduccion.prenda %></td>
-        <td><%= link_to 'equipo', ordenproduccion_descripcioncorte_path(proyect) %></td>
+        <td><%= link_to 'equipo', ordenproduccion_descripcioncortes_path(ordenproduccion) %></td>
         <td><%= link_to 'Show', ordenproduccion %></td>
         <td><%= link_to 'Edit', edit_ordenproduccion_path(ordenproduccion) %></td>
         <td><%= link_to 'Destroy', ordenproduccion, method: :delete, data: { confirm: 'Are you sure?' } %></td>
@@ -56,3 +56,4 @@
 <br>
 
 <%= link_to 'New Ordenproduccion', new_ordenproduccion_path %>
+

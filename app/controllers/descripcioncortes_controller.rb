@@ -1,10 +1,10 @@
 class DescripcioncortesController < ApplicationController
-  before_action :set_descripcioncorte, only: [:show, :edit, :update, :destroy]
+  before_action :set_descripcioncorte, only: [:show, :edit, :update, :destroy, :index, :new, :create]
 
   # GET /descripcioncortes
   # GET /descripcioncortes.json
   def index
-    @descripcioncortes = Descripcioncorte.all
+    @descripcioncortes = @ordenproduccion.descripcioncortes.all
   end
 
   # GET /descripcioncortes/1
@@ -25,10 +25,10 @@ class DescripcioncortesController < ApplicationController
   # POST /descripcioncortes.json
   def create
     @descripcioncorte = Descripcioncorte.new(descripcioncorte_params)
-
+    @descripcioncorte.ordenproduccion_id = @ordenproduccion.id
     respond_to do |format|
       if @descripcioncorte.save
-        format.html { redirect_to @descripcioncorte, notice: 'Descripcioncorte was successfully created.' }
+        format.html { redirect_to ordenproduccion_descripcioncortes_path(@descripcioncorte), notice: 'Descripcioncorte was successfully created.' }
         format.json { render :show, status: :created, location: @descripcioncorte }
       else
         format.html { render :new }
@@ -42,7 +42,7 @@ class DescripcioncortesController < ApplicationController
   def update
     respond_to do |format|
       if @descripcioncorte.update(descripcioncorte_params)
-        format.html { redirect_to @descripcioncorte, notice: 'Descripcioncorte was successfully updated.' }
+        format.html { redirect_to ordenproduccion_descripcioncortes_path(@descripcioncorte), notice: 'Descripcioncorte was successfully updated.' }
         format.json { render :show, status: :ok, location: @descripcioncorte }
       else
         format.html { render :edit }
@@ -56,7 +56,7 @@ class DescripcioncortesController < ApplicationController
   def destroy
     @descripcioncorte.destroy
     respond_to do |format|
-      format.html { redirect_to descripcioncortes_url, notice: 'Descripcioncorte was successfully destroyed.' }
+      format.html { redirect_to ordenproduccion_descripcioncortes_url(@ordenproduccion), notice: 'Descripcioncorte was successfully destroyed.' }
       format.json { head :no_content }
     end
   end
@@ -64,7 +64,9 @@ class DescripcioncortesController < ApplicationController
   private
     # Use callbacks to share common setup or constraints between actions.
     def set_descripcioncorte
-      @descripcioncorte = Descripcioncorte.find(params[:id])
+      
+      @ordenproduccion = Ordenproduccion.find(params[:ordenproduccion_id])
+      @descripcioncorte = Descripcioncorte.find(params[:id]) if params[:id]
     end
 
     # Never trust parameters from the scary internet, only allow the white list through.
