@@ -29,12 +29,12 @@
       <tr>
         <td><%= ordenproduccion.fechaprogramacion %></td>
         <td><%= ordenproduccion.ordennumero %></td>
-        <td><%= ordenproduccion.cliente %></td>
+        <td><%= ordenproduccion.cliente.clientenombre %></td>
         <td><%= ordenproduccion.descripcion %></td>
         <td><%= ordenproduccion.referencia %></td>
         <td><%= ordenproduccion.corte %></td>
         <td><%= ordenproduccion.ancho %></td>
-        <td><%= ordenproduccion.tela %></td>
+        <td><%= ordenproduccion.tela.telanombre %></td>
         <td><%= ordenproduccion.largotrazo %></td>
         <td><%= ordenproduccion.largotendido %></td>
         <td><%= ordenproduccion.numeropaquetes %></td>
@@ -43,8 +43,8 @@
         <td><%= ordenproduccion.totalmetros %></td>
         <td><%= ordenproduccion.corte %></td>
         <td><%= ordenproduccion.tiqueteada %></td>
-        <td><%= ordenproduccion.prenda %></td>
-        <td><%= link_to 'equipo', ordenproduccion_descripcioncortes_path(ordenproduccion) %></td>
+        <td><%= ordenproduccion.prenda.prendanombre %></td>
+        <td><%= link_to 'Descripción del Corte', ordenproduccion_descripcioncortes_path(ordenproduccion) %></td>
         <td><%= link_to 'Show', ordenproduccion %></td>
         <td><%= link_to 'Edit', edit_ordenproduccion_path(ordenproduccion) %></td>
         <td><%= link_to 'Destroy', ordenproduccion, method: :delete, data: { confirm: 'Are you sure?' } %></td>

@@ -19,9 +19,10 @@
     <%= f.label :ordennumero %><br>
     <%= f.text_field :ordennumero %>
   </div>
+  
   <div class="field">
-    <%= f.label :cliente_id %><br>
-    <%= f.text_field :cliente_id %>
+     Cliente <br>
+    <%= f.collection_select :cliente_id, Cliente.all, :id, :clientenombre, class: "form-control",prompt: "Seleccione Cliente" %>
   </div>
   <div class="field">
     <%= f.label :descripcion %><br>
@@ -39,10 +40,12 @@
     <%= f.label :ancho %><br>
     <%= f.text_field :ancho %>
   </div>
+ 
   <div class="field">
-    <%= f.label :tela_id %><br>
-    <%= f.text_field :tela_id %>
+     Tela <br>
+    <%= f.collection_select :tela_id, Tela.all, :id, :telanombre, class: "form-control",prompt: "Seleccione Tela" %>
   </div>
+  
   <div class="field">
     <%= f.label :largotrazo %><br>
     <%= f.text_field :largotrazo %>
@@ -76,8 +79,8 @@
     <%= f.text_field :tiqueteada %>
   </div>
   <div class="field">
-    <%= f.label :prenda_id %><br>
-    <%= f.text_field :prenda_id %>
+     Prenda <br>
+    <%= f.collection_select :prenda_id, Prenda.all, :id, :prendanombre, class: "form-control",prompt: "Seleccione Prenda" %>
   </div>
   <div class="actions">
     <%= f.submit %>

@@ -12,7 +12,7 @@
 
 <p>
   <strong>Cliente:</strong>
-  <%= @ordenproduccion.cliente %>
+  <%= @ordenproduccion.cliente.clientenombre %>
 </p>
 
 <p>
@@ -37,7 +37,7 @@
 
 <p>
   <strong>Tela:</strong>
-  <%= @ordenproduccion.tela %>
+  <%= @ordenproduccion.tela.telanombre %>
 </p>
 
 <p>
@@ -82,7 +82,7 @@
 
 <p>
   <strong>Prenda:</strong>
-  <%= @ordenproduccion.prenda %>
+  <%= @ordenproduccion.prenda.prendanombre %>
 </p>
 
 <%= link_to 'Edit', edit_ordenproduccion_path(@ordenproduccion) %> |

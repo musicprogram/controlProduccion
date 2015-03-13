@@ -69,6 +69,6 @@ class PrendasController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def prenda_params
-      params.require(:prenda).permit(:prenda)
+      params.require(:prenda).permit(:prendanombre)
     end
 end

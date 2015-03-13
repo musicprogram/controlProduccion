@@ -27,10 +27,10 @@
         <td><%= descripcioncorte.tallam %></td>
         <td><%= descripcioncorte.tallal %></td>
         <td><%= descripcioncorte.tallaxl %></td>
-        <td><%= descripcioncorte.ordenproduccion %></td>
-        <td><%= link_to 'Show', descripcioncorte %></td>
-        <td><%= link_to 'Edit', edit_descripcioncorte_path(descripcioncorte) %></td>
-        <td><%= link_to 'Destroy', descripcioncorte, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+        <td><%= descripcioncorte.ordenproduccion.ordennumero %></td>
+        <td><%= link_to 'Show', ordenproduccion_descripcioncorte_path(@ordenproduccion,descripcioncorte) %></td>
+        <td><%= link_to 'Edit', edit_ordenproduccion_descripcioncorte_path(@ordenproduccion,descripcioncorte) %></td>
+        <td><%= link_to 'Destroy', ordenproduccion_descripcioncorte_path(@ordenproduccion,descripcioncorte), method: :delete, data: { confirm: 'Are you sure?' } %></td>
       </tr>
     <% end %>
   </tbody>
@@ -40,3 +40,5 @@
 
 <%= link_to 'new', new_ordenproduccion_descripcioncorte_path(@ordenproduccion),
         	:class => 'btn btn-primary' %>
+        	
+<%= link_to 'Back', ordenproduccion_path(@ordenproduccion) %>

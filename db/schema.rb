@@ -14,7 +14,7 @@
 ActiveRecord::Schema.define(version: 20150313150827) do
 
   create_table "clientes", force: true do |t|
-    t.string   "cliente"
+    t.string   "clientenombre"
     t.datetime "created_at"
     t.datetime "updated_at"
   end
@@ -61,19 +61,19 @@ ActiveRecord::Schema.define(version: 20150313150827) do
   add_index "ordenproduccions", ["tela_id"], name: "index_ordenproduccions_on_tela_id"
 
   create_table "prendas", force: true do |t|
-    t.string   "prenda"
+    t.string   "prendanombre"
     t.datetime "created_at"
     t.datetime "updated_at"
   end
 
   create_table "tallas", force: true do |t|
-    t.string   "talla"
+    t.string   "tallanombre"
     t.datetime "created_at"
     t.datetime "updated_at"
   end
 
   create_table "telas", force: true do |t|
-    t.string   "tela"
+    t.string   "telanombre"
     t.datetime "created_at"
     t.datetime "updated_at"
   end

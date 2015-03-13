@@ -11,7 +11,7 @@
   <tbody>
     <% @prendas.each do |prenda| %>
       <tr>
-        <td><%= prenda.prenda %></td>
+        <td><%= prenda.prendanombre %></td>
         <td><%= link_to 'Show', prenda %></td>
         <td><%= link_to 'Edit', edit_prenda_path(prenda) %></td>
         <td><%= link_to 'Destroy', prenda, method: :delete, data: { confirm: 'Are you sure?' } %></td>

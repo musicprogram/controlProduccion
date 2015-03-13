@@ -11,7 +11,7 @@
   <tbody>
     <% @telas.each do |tela| %>
       <tr>
-        <td><%= tela.tela %></td>
+        <td><%= tela.telanombre %></td>
         <td><%= link_to 'Show', tela %></td>
         <td><%= link_to 'Edit', edit_tela_path(tela) %></td>
         <td><%= link_to 'Destroy', tela, method: :delete, data: { confirm: 'Are you sure?' } %></td>

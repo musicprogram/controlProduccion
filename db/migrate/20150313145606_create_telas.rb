@@ -1,7 +1,7 @@
 class CreateTelas < ActiveRecord::Migration
   def change
     create_table :telas do |t|
-      t.string :tela
+      t.string :telanombre
 
       t.timestamps
     end

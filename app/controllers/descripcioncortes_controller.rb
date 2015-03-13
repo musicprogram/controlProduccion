@@ -28,7 +28,7 @@ class DescripcioncortesController < ApplicationController
     @descripcioncorte.ordenproduccion_id = @ordenproduccion.id
     respond_to do |format|
       if @descripcioncorte.save
-        format.html { redirect_to ordenproduccion_descripcioncortes_path(@descripcioncorte), notice: 'Descripcioncorte was successfully created.' }
+        format.html { redirect_to ordenproduccion_descripcioncortes_path(@ordenproduccion), notice: 'Descripcioncorte was successfully created.' }
         format.json { render :show, status: :created, location: @descripcioncorte }
       else
         format.html { render :new }
@@ -42,7 +42,7 @@ class DescripcioncortesController < ApplicationController
   def update
     respond_to do |format|
       if @descripcioncorte.update(descripcioncorte_params)
-        format.html { redirect_to ordenproduccion_descripcioncortes_path(@descripcioncorte), notice: 'Descripcioncorte was successfully updated.' }
+        format.html { redirect_to ordenproduccion_descripcioncortes_path(@ordenproduccion), notice: 'Descripcioncorte was successfully updated.' }
         format.json { render :show, status: :ok, location: @descripcioncorte }
       else
         format.html { render :edit }
