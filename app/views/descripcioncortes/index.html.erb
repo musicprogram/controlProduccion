@@ -15,7 +15,7 @@
       <th colspan="3"></th>
     </tr>
   </thead>
-
+<% re = 0%>
   <tbody>
     <% @descripcioncortes.each do |descripcioncorte| %>
       <tr>
@@ -31,13 +31,17 @@
         <td><%= link_to 'Show', ordenproduccion_descripcioncorte_path(@ordenproduccion,descripcioncorte) %></td>
         <td><%= link_to 'Edit', edit_ordenproduccion_descripcioncorte_path(@ordenproduccion,descripcioncorte) %></td>
         <td><%= link_to 'Destroy', ordenproduccion_descripcioncorte_path(@ordenproduccion,descripcioncorte), method: :delete, data: { confirm: 'Are you sure?' } %></td>
+        <strong><%
+        re = re + sumar(descripcioncorte.tallaxs,descripcioncorte.tallas,descripcioncorte.tallam,descripcioncorte.tallal,descripcioncorte.tallaxl) 
+        %>
+              </strong>
       </tr>
     <% end %>
   </tbody>
 </table>
 
 <br>
-
+<%= re %>
 <%= link_to 'new', new_ordenproduccion_descripcioncorte_path(@ordenproduccion),
         	:class => 'btn btn-primary' %>
         	
