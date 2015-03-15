@@ -11,78 +11,150 @@
     </div>
   <% end %>
 
+<div class="col-md-12">
+  <div class="col-md-4">
+  
   <div class="field">
     <%= f.label :fechaprogramacion %><br>
     <%= f.datetime_select :fechaprogramacion %>
   </div>
+</div>
+<div class="col-md-4">
+  
   <div class="field">
     <%= f.label :ordennumero %><br>
-    <%= f.text_field :ordennumero %>
+    <%= f.text_field :ordennumero, class:'form-control'%>
   </div>
+</div>
+<div class="col-md-4">
+  
   
   <div class="field">
      Cliente <br>
-    <%= f.collection_select :cliente_id, Cliente.all, :id, :clientenombre, class: "form-control",prompt: "Seleccione Cliente" %>
+    <%= f.collection_select :cliente_id, Cliente.all, :id, :clientenombre,{prompt: "Seleccione Cliente"}, {class: "form-control"}  %>
   </div>
-  <div class="field">
-    <%= f.label :descripcion %><br>
-    <%= f.text_area :descripcion %>
-  </div>
-  <div class="field">
+</div>
+</div>
+
+
+<div class="col-md-12">
+    <div class="col-md-4">
+      <div class="field">
     <%= f.label :referencia %><br>
-    <%= f.text_field :referencia %>
+    <%= f.text_field :referencia, class:'form-control' %>
   </div>
-  <div class="field">
+  </div>
+
+  <div class="col-md-4">
+     <div class="field">
     <%= f.label :corte %><br>
-    <%= f.text_field :corte %>
+    <%= f.text_field :corte, class:'form-control' %>
   </div>
-  <div class="field">
-    <%= f.label :ancho %><br>
-    <%= f.text_field :ancho %>
   </div>
  
-  <div class="field">
+  <div class="col-md-4">
+    <div class="field">
+    <%= f.label :ancho %><br>
+    <%= f.text_field :ancho, class:'form-control' %>
+  </div>
+  </div>
+</div>
+
+
+<div class="col-md-12">
+   <div class="col-md-4">
+     <div class="field">
      Tela <br>
-    <%= f.collection_select :tela_id, Tela.all, :id, :telanombre, class: "form-control",prompt: "Seleccione Tela" %>
+    <%= f.collection_select :tela_id, Tela.all, :id, :telanombre,{prompt: "Seleccione Tela"}, {class: "form-control"} %>
+  </div>
+  </div>
+ 
+  <div class="col-md-4">
+     <div class="field">
+    <%= f.label :largotrazo %><br>
+    <%= f.text_field :largotrazo, class:'form-control', class:'form-control' %>
+  </div>
+  </div>
+ 
+  <div class="col-md-4">
+     <div class="field">
+    <%= f.label :largotendido %><br>
+    <%= f.text_field :largotendido, class:'form-control', class:'form-control' %>
+  </div>
+  </div>
+</div>
+
+  
+<div class="col-md-12">
+    <div class="col-md-4">
+     <div class="field">
+    <%= f.label :numeropaquetes %><br>
+    <%= f.text_field :numeropaquetes, class:'form-control', class:'form-control' %>
+  </div>
+  </div>
+ 
+  <div class="col-md-4">
+     <div class="field">
+    <%= f.label :cantidad %><br>
+    <%= f.text_field :cantidad, class:'form-control' %>
+  </div>
+  </div>
+ 
+  <div class="col-md-4">
+     <div class="field">
+    <%= f.label :promediounidad %><br>
+    <%= f.text_field :promediounidad, class:'form-control' %>
+  </div>
+  </div>
+</div>
+ 
+
+ <div class="col-md-12">
+     <div class="col-md-4">
+     <div class="field">
+    <%= f.label :totalmetros %><br>
+    <%= f.text_field :totalmetros, class:'form-control' %>
+  </div>
+  </div>
+ 
+  <div class="col-md-4">
+    <div class="field">
+    <%= f.label :corte %><br>
+    <%= f.text_field :corte, class:'form-control' %>
+  </div>
   </div>
   
-  <div class="field">
-    <%= f.label :largotrazo %><br>
-    <%= f.text_field :largotrazo %>
-  </div>
-  <div class="field">
-    <%= f.label :largotendido %><br>
-    <%= f.text_field :largotendido %>
-  </div>
-  <div class="field">
-    <%= f.label :numeropaquetes %><br>
-    <%= f.text_field :numeropaquetes %>
-  </div>
-  <div class="field">
-    <%= f.label :cantidad %><br>
-    <%= f.text_field :cantidad %>
-  </div>
-  <div class="field">
-    <%= f.label :promediounidad %><br>
-    <%= f.text_field :promediounidad %>
-  </div>
-  <div class="field">
-    <%= f.label :totalmetros %><br>
-    <%= f.text_field :totalmetros %>
-  </div>
-  <div class="field">
-    <%= f.label :corte %><br>
-    <%= f.text_field :corte %>
-  </div>
-  <div class="field">
+  <div class="col-md-4">
+     <div class="field">
     <%= f.label :tiqueteada %><br>
-    <%= f.text_field :tiqueteada %>
+    <%= f.text_field :tiqueteada, class:'form-control' %>
   </div>
-  <div class="field">
+  </div>
+ </div>
+
+ 
+<div class="col-md-12">
+    <div class="col-md-4">
+     <div class="field">
      Prenda <br>
-    <%= f.collection_select :prenda_id, Prenda.all, :id, :prendanombre, class: "form-control",prompt: "Seleccione Prenda" %>
+    <%= f.collection_select :prenda_id, Prenda.all, :id, :prendanombre,{prompt: "Seleccione Prenda"},{ class: "form-control"} %>
   </div>
-  <div class="actions">
-    <%= f.submit "Guardar"%>
+
   </div>
-<% end %>
+  <div class="col-md-8">
+  <div class="field">
+    <%= f.label :descripcion %><br>
+    <%= f.text_area :descripcion, class:'form-control' %>
+  </div>
+  </div>
+ 
+ </div>
+
+
+<div class="col-md-12">  <div class="actions">
+  <%= f.submit "Guardar",class:'btn btn-default btn-lg btn-block'%>
+  </div>
+  <% end %>
+</div>
+
+
