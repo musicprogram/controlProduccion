@@ -12,7 +12,7 @@
 
 <p>
   <strong>Color:</strong>
-  <%= @descripcioncorte.color %>
+  <%= @descripcioncorte.color.colornombre %>
 </p>
 
 <p>
@@ -44,6 +44,7 @@
   <strong>Ordenproduccion:</strong>
   <%= @descripcioncorte.ordenproduccion %>
 </p>
+
 
 <%= link_to 'Edit', edit_descripcioncorte_path(@descripcioncorte) %> |
 <%= link_to 'Back', descripcioncortes_path %>

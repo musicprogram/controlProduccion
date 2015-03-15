@@ -1,5 +1,7 @@
 Rails.application.routes.draw do
 
+  resources :colors
+
   resources :ordenproduccions do
     
   resources :descripcioncortes

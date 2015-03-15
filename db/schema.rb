@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20150313150827) do
+ActiveRecord::Schema.define(version: 20150314135143) do
 
   create_table "clientes", force: true do |t|
     t.string   "clientenombre"
@@ -19,10 +19,16 @@ ActiveRecord::Schema.define(version: 20150313150827) do
     t.datetime "updated_at"
   end
 
+  create_table "colors", force: true do |t|
+    t.string   "colornombre"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
   create_table "descripcioncortes", force: true do |t|
     t.integer  "tallacantidad"
     t.integer  "capas"
-    t.string   "color"
+    t.integer  "color_id"
     t.integer  "tallaxs"
     t.integer  "tallas"
     t.integer  "tallam"
@@ -62,12 +68,6 @@ ActiveRecord::Schema.define(version: 20150313150827) do
 
   create_table "prendas", force: true do |t|
     t.string   "prendanombre"
-    t.datetime "created_at"
-    t.datetime "updated_at"
-  end
-
-  create_table "tallas", force: true do |t|
-    t.string   "tallanombre"
     t.datetime "created_at"
     t.datetime "updated_at"
   end

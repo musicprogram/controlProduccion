@@ -1,6 +1,7 @@
-<h1>Listing descripcioncortes</h1>
-
-<table>
+<h1>Descripcion del Corte</h1>
+<div class="table-reponsive">
+  
+<table class="table">
   <thead>
     <tr>
       <th>Tallacantidad</th>
@@ -15,30 +16,34 @@
       <th colspan="3"></th>
     </tr>
   </thead>
-
+<% re = 0%>
   <tbody>
     <% @descripcioncortes.each do |descripcioncorte| %>
       <tr>
         <td><%= descripcioncorte.tallacantidad %></td>
         <td><%= descripcioncorte.capas %></td>
-        <td><%= descripcioncorte.color %></td>
+        <td><%= descripcioncorte.color.colornombre %></td>
         <td><%= descripcioncorte.tallaxs %></td>
         <td><%= descripcioncorte.tallas %></td>
         <td><%= descripcioncorte.tallam %></td>
         <td><%= descripcioncorte.tallal %></td>
         <td><%= descripcioncorte.tallaxl %></td>
         <td><%= descripcioncorte.ordenproduccion.ordennumero %></td>
-        <td><%= link_to 'Show', ordenproduccion_descripcioncorte_path(@ordenproduccion,descripcioncorte) %></td>
-        <td><%= link_to 'Edit', edit_ordenproduccion_descripcioncorte_path(@ordenproduccion,descripcioncorte) %></td>
-        <td><%= link_to 'Destroy', ordenproduccion_descripcioncorte_path(@ordenproduccion,descripcioncorte), method: :delete, data: { confirm: 'Are you sure?' } %></td>
+        
+        <td><%= link_to "<i class='fa fa-pencil fa-2x encima'>".html_safe, edit_ordenproduccion_descripcioncorte_path(@ordenproduccion,descripcioncorte) %></td>
+        <td><%= link_to "<i class='fa fa-eraser fa-2x encima'>".html_safe, ordenproduccion_descripcioncorte_path(@ordenproduccion,descripcioncorte), method: :delete, data: { confirm: 'Estas Seguro?' } %></td>  
+        <strong><%
+        re = re + sumar(descripcioncorte.tallaxs,descripcioncorte.tallas,descripcioncorte.tallam,descripcioncorte.tallal,descripcioncorte.tallaxl) 
+        %>
+              </strong>       
       </tr>
     <% end %>
   </tbody>
 </table>
+</div>
 
 <br>
-
-<%= link_to 'new', new_ordenproduccion_descripcioncorte_path(@ordenproduccion),
-        	:class => 'btn btn-primary' %>
+<h1>Total Unidad: <%= re %></h1>
+<%= link_to "<i class='fa fa-plus-circle fa-2x'></i>".html_safe, new_ordenproduccion_descripcioncorte_path(@ordenproduccion) %>
         	
-<%= link_to 'Back', ordenproduccion_path(@ordenproduccion) %>
+<%= link_to "<i class='fa fa-arrow-circle-left fa-2x'></i>".html_safe, ordenproduccion_path(@ordenproduccion) %>

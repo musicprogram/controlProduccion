@@ -3,7 +3,7 @@ class CreateDescripcioncortes < ActiveRecord::Migration
     create_table :descripcioncortes do |t|
       t.integer :tallacantidad
       t.integer :capas
-      t.string :color
+      t.references :color
       t.integer :tallaxs
       t.integer :tallas
       t.integer :tallam

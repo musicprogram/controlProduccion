@@ -13,3 +13,22 @@
  *= require_tree .
  *= require_self
  */
+@import "bootstrap";
+@import "font-awesome";
+
+.center{
+	text-align: center
+
+}
+
+.tablero{
+	box-shadow: 10px 10px 5px -4px rgba(0,0,0,0.3);
+	
+}
+
+.encima{
+	hover:red;
+}
+a:hover{
+background-color: transparent;
+}

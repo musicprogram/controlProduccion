@@ -1,4 +1,4 @@
-<%= simple_form_for [@ordenproduccion,@descripcioncorte], :html => { :class => 'form-horizontal' } do |f| %>
+<%= form_for [@ordenproduccion,@descripcioncorte], :html => { :class => 'form-horizontal' } do |f| %>
   <% if @descripcioncorte.errors.any? %>
     <div id="error_explanation">
       <h2><%= pluralize(@descripcioncorte.errors.count, "error") %> prohibited this descripcioncorte from being saved:</h2>
@@ -19,10 +19,13 @@
     <%= f.label :capas %><br>
     <%= f.number_field :capas %>
   </div>
+  
   <div class="field">
-    <%= f.label :color %><br>
-    <%= f.text_field :color %>
-  </div>
+     Color <br>
+    <%= f.collection_select :color_id, Color.all, :id, :colornombre, class: "form-control",     prompt: "Seleccione Color" %>
+</div>
+
+
   <div class="field">
     <%= f.label :tallaxs %><br>
     <%= f.number_field :tallaxs %>

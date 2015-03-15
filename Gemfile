@@ -38,4 +38,5 @@ gem 'spring',        group: :development
 # Use debugger
 # gem 'debugger', group: [:development, :test]
 
-gem 'simple_form', '~> 3.1.0'
+gem 'bootstrap-sass', '~> 3.3.3'
+gem "font-awesome-rails"
