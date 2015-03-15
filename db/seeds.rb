@@ -5,3 +5,24 @@
 #
 #   cities = City.create([{ name: 'Chicago' }, { name: 'Copenhagen' }])
 #   Mayor.create(name: 'Emanuel', city: cities.first)
+
+
+colors = [{colornombre: "negro"}]
+colors.each do |e|
+Color.create(e) unless Color.exists?(e)
+end
+
+clientes = [{clientenombre: "Sena"}]
+clientes.each do |e|
+Cliente.create(e) unless Cliente.exists?(e)
+end
+
+prendas = [{prendanombre: "Jean"}]
+prendas.each do |e|
+Prenda.create(e) unless Prenda.exists?(e)
+end
+
+telas = [{telanombre: "Denim"}]
+telas.each do |e|
+Tela.create(e) unless Tela.exists?(e)
+end
