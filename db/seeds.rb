@@ -26,3 +26,8 @@ telas = [{telanombre: "Denim"}]
 telas.each do |e|
 Tela.create(e) unless Tela.exists?(e)
 end
+
+procesos = [{procesonombre: "Estampado"}]
+procesos.each do |e|
+Proceso.create(e) unless Proceso.exists?(e)
+end

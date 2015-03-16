@@ -1,5 +1,9 @@
 Rails.application.routes.draw do
 
+  resources :ordenterceros
+
+  resources :procesos
+
   resources :colors
 
   resources :ordenproduccions do

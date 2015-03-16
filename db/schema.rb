@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20150314135143) do
+ActiveRecord::Schema.define(version: 20150316163950) do
 
   create_table "clientes", force: true do |t|
     t.string   "clientenombre"
@@ -66,8 +66,38 @@ ActiveRecord::Schema.define(version: 20150314135143) do
   add_index "ordenproduccions", ["prenda_id"], name: "index_ordenproduccions_on_prenda_id"
   add_index "ordenproduccions", ["tela_id"], name: "index_ordenproduccions_on_tela_id"
 
+  create_table "ordenterceros", force: true do |t|
+    t.string   "referencia"
+    t.string   "numeroop"
+    t.string   "nombreproveedor"
+    t.string   "direccion"
+    t.string   "telefono"
+    t.string   "email"
+    t.datetime "fechaingreso"
+    t.datetime "fechasalida"
+    t.string   "responsable"
+    t.integer  "proceso_id"
+    t.string   "cantidad"
+    t.string   "pieza"
+    t.integer  "color_id"
+    t.string   "transportador"
+    t.integer  "totalunidad"
+    t.text     "observacion"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  add_index "ordenterceros", ["color_id"], name: "index_ordenterceros_on_color_id"
+  add_index "ordenterceros", ["proceso_id"], name: "index_ordenterceros_on_proceso_id"
+
   create_table "prendas", force: true do |t|
     t.string   "prendanombre"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  create_table "procesos", force: true do |t|
+    t.string   "procesonombre"
     t.datetime "created_at"
     t.datetime "updated_at"
   end
