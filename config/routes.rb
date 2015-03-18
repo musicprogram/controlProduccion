@@ -1,5 +1,7 @@
 Rails.application.routes.draw do
 
+  resources :cortes
+
   get 'welcome/index'
 
   resources :ordenterceros

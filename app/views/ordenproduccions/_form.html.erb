@@ -46,10 +46,12 @@
   </div>
 
   <div class="col-md-4">
-     <div class="field">
-    <%= f.label :corte %><br>
-    <%= f.text_field :corte, class:'form-control' %>
+      
+  <div class="field">
+     Corte <br>
+    <%= f.collection_select :corte_id, Corte.all, :id, :cortenombre,{prompt: "Seleccione Corte"}, {class: "form-control"}  %>
   </div>
+     
   </div>
  
   <div class="col-md-4">
@@ -71,26 +73,23 @@
  
   <div class="col-md-4">
      <div class="field">
-    <%= f.label :largotrazo %><br>
-    <%= f.text_field :largotrazo, class:'form-control', class:'form-control' %>
-  </div>
+      <%= f.label :largotrazo %><br>
+      <%= f.number_field :largotrazo , class:'form-control'%>
+    </div>
   </div>
  
   <div class="col-md-4">
      <div class="field">
-    <%= f.label :largotendido %><br>
-    <%= f.text_field :largotendido, class:'form-control', class:'form-control' %>
-  </div>
+      <%= f.label :vecestrazo %><br>
+      <%= f.number_field :vecestrazo , class:'form-control'%>
+    </div>
   </div>
 </div>
 
   
 <div class="col-md-12">
     <div class="col-md-4">
-     <div class="field">
-    <%= f.label :numeropaquetes %><br>
-    <%= f.text_field :numeropaquetes, class:'form-control', class:'form-control' %>
-  </div>
+   
   </div>
  
   <div class="col-md-4">
@@ -101,10 +100,7 @@
   </div>
  
   <div class="col-md-4">
-     <div class="field">
-    <%= f.label :promediounidad %><br>
-    <%= f.text_field :promediounidad, class:'form-control' %>
-  </div>
+    
   </div>
 </div>
  
@@ -118,10 +114,12 @@
   </div>
  
   <div class="col-md-4">
+    
     <div class="field">
-    <%= f.label :corte %><br>
-    <%= f.text_field :corte, class:'form-control' %>
+    <%= f.label :largotendido %><br>
+    <%= f.text_field :largotendido, class:'form-control', class:'form-control' %>
   </div>
+    
   </div>
   
   <div class="col-md-4">

@@ -31,3 +31,8 @@ procesos = [{procesonombre: "Estampado"}]
 procesos.each do |e|
 Proceso.create(e) unless Proceso.exists?(e)
 end
+
+cortes = [{cortenombre: "Mecánico"},{cortenombre: "Vértical"},{cortenombre: "Cinfín"}]
+cortes.each do |e|
+Corte.create(e) unless Corte.exists?(e)
+end

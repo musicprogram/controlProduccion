@@ -6,16 +6,16 @@ class CreateOrdenproduccions < ActiveRecord::Migration
       t.references :cliente, index: true
       t.text :descripcion
       t.string :referencia
-      t.string :corte
+      t.references :corte
       t.string :ancho
       t.references :tela, index: true
-      t.string :largotrazo
+      t.integer :largotrazo
+      t.integer :vecestrazo
       t.string :largotendido
-      t.string :numeropaquetes
+      t.integer :promedio
       t.string :cantidad
       t.string :promediounidad
       t.string :totalmetros
-      t.string :corte
       t.string :tiqueteada
       t.references :prenda, index: true
 

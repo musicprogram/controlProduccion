@@ -1,0 +1,21 @@
+<%= form_for(@corte) do |f| %>
+  <% if @corte.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@corte.errors.count, "error") %> prohibited this corte from being saved:</h2>
+
+      <ul>
+      <% @corte.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :cortenombre %><br>
+    <%= f.number_field :cortenombre %>
+  </div>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>

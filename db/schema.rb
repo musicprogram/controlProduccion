@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20150316163950) do
+ActiveRecord::Schema.define(version: 20150318025228) do
 
   create_table "clientes", force: true do |t|
     t.string   "clientenombre"
@@ -21,6 +21,12 @@ ActiveRecord::Schema.define(version: 20150316163950) do
 
   create_table "colors", force: true do |t|
     t.string   "colornombre"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  create_table "cortes", force: true do |t|
+    t.string   "cortenombre"
     t.datetime "created_at"
     t.datetime "updated_at"
   end
@@ -47,12 +53,13 @@ ActiveRecord::Schema.define(version: 20150316163950) do
     t.integer  "cliente_id"
     t.text     "descripcion"
     t.string   "referencia"
-    t.string   "corte"
+    t.integer  "corte_id"
     t.string   "ancho"
     t.integer  "tela_id"
-    t.string   "largotrazo"
+    t.integer  "largotrazo"
+    t.integer  "vecestrazo"
     t.string   "largotendido"
-    t.string   "numeropaquetes"
+    t.integer  "promedio"
     t.string   "cantidad"
     t.string   "promediounidad"
     t.string   "totalmetros"

@@ -5,6 +5,7 @@ class OrdenproduccionsController < ApplicationController
   # GET /ordenproduccions.json
   def index
     @ordenproduccions = Ordenproduccion.all
+    
   end
 
   # GET /ordenproduccions/1
@@ -19,13 +20,16 @@ class OrdenproduccionsController < ApplicationController
 
   # GET /ordenproduccions/1/edit
   def edit
+        @ordenproduccion.promedio = @ordenproduccion.largotrazo / @ordenproduccion.vecestrazo
+
   end
 
   # POST /ordenproduccions
   # POST /ordenproduccions.json
   def create
     @ordenproduccion = Ordenproduccion.new(ordenproduccion_params)
-
+    @ordenproduccion.promedio = @ordenproduccion.largotrazo / @ordenproduccion.vecestrazo
+    
     respond_to do |format|
       if @ordenproduccion.save
         format.html { redirect_to @ordenproduccion, notice: 'Ordenproduccion was successfully created.' }
@@ -69,6 +73,6 @@ class OrdenproduccionsController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def ordenproduccion_params
-      params.require(:ordenproduccion).permit(:fechaprogramacion, :ordennumero, :cliente_id, :descripcion, :referencia, :corte, :ancho, :tela_id, :largotrazo, :largotendido, :numeropaquetes, :cantidad, :promediounidad, :totalmetros, :corte, :tiqueteada, :prenda_id)
+      params.require(:ordenproduccion).permit(:fechaprogramacion, :ordennumero, :cliente_id, :descripcion, :referencia, :corte_id, :ancho, :tela_id, :largotrazo, :largotendido, :promedio, :cantidad, :promediounidad, :totalmetros, :tiqueteada, :prenda_id, :vecestrazo)
     end
 end

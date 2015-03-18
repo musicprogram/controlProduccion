@@ -27,7 +27,7 @@
 
 <p>
   <strong>Corte:</strong>
-  <%= @ordenproduccion.corte %>
+  <%= @ordenproduccion.corte.cortenombre %>
 </p>
 
 <p>
@@ -44,6 +44,10 @@
   <strong>Largotrazo:</strong>
   <%= @ordenproduccion.largotrazo %>
 </p>
+<p>
+  <strong>Veces en el Trazo:</strong>
+  <%= @ordenproduccion.vecestrazo %>
+</p>
 
 <p>
   <strong>Largotendido:</strong>
@@ -51,8 +55,8 @@
 </p>
 
 <p>
-  <strong>Numeropaquetes:</strong>
-  <%= @ordenproduccion.numeropaquetes %>
+  <strong>Promedio:</strong>
+  <%= @ordenproduccion.promedio %>
 </p>
 
 <p>
@@ -70,10 +74,6 @@
   <%= @ordenproduccion.totalmetros %>
 </p>
 
-<p>
-  <strong>Corte:</strong>
-  <%= @ordenproduccion.corte %>
-</p>
 
 <p>
   <strong>Tiqueteada:</strong>
