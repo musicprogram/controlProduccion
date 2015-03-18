@@ -9,6 +9,7 @@ class CreateDescripcioncortes < ActiveRecord::Migration
       t.integer :tallam
       t.integer :tallal
       t.integer :tallaxl
+      t.integer :tallasuma
       t.references :ordenproduccion, index: true
 
       t.timestamps

@@ -14,9 +14,10 @@ class CreateOrdenproduccions < ActiveRecord::Migration
       t.string :largotendido
       t.integer :promedio
       t.string :cantidad
-      t.string :promediounidad
-      t.string :totalmetros
+      t.string :responsablecorte
+      t.integer :totalmetros
       t.string :tiqueteada
+      t.integer :capas
       t.references :prenda, index: true
 
       t.timestamps

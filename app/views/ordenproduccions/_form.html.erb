@@ -89,7 +89,10 @@
   
 <div class="col-md-12">
     <div class="col-md-4">
-   
+   <div class="field">
+    <%= f.label :capas %><br>
+    <%= f.number_field :capas, class:'form-control' %>
+  </div>
   </div>
  
   <div class="col-md-4">
@@ -100,17 +103,17 @@
   </div>
  
   <div class="col-md-4">
-    
+      <div class="field">
+    <%= f.label :responsablecorte %><br>
+    <%= f.text_field :responsablecorte, class:'form-control' %>
+  </div>
   </div>
 </div>
  
 
  <div class="col-md-12">
      <div class="col-md-4">
-     <div class="field">
-    <%= f.label :totalmetros %><br>
-    <%= f.text_field :totalmetros, class:'form-control' %>
-  </div>
+     
   </div>
  
   <div class="col-md-4">

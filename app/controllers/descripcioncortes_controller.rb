@@ -26,6 +26,7 @@ class DescripcioncortesController < ApplicationController
   def create
     @descripcioncorte = Descripcioncorte.new(descripcioncorte_params)
     @descripcioncorte.ordenproduccion_id = @ordenproduccion.id
+    @descripcioncorte.tallasuma = @descripcioncorte.tallaxs+ @descripcioncorte.tallas + @descripcioncorte.tallam + @descripcioncorte.tallal + @descripcioncorte.tallaxl
     respond_to do |format|
       if @descripcioncorte.save
         format.html { redirect_to ordenproduccion_descripcioncortes_path(@ordenproduccion), notice: 'Descripcioncorte was successfully created.' }
@@ -36,7 +37,7 @@ class DescripcioncortesController < ApplicationController
       end
     end
   end
-
+  
   # PATCH/PUT /descripcioncortes/1
   # PATCH/PUT /descripcioncortes/1.json
   def update
@@ -71,6 +72,6 @@ class DescripcioncortesController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def descripcioncorte_params
-      params.require(:descripcioncorte).permit(:tallacantidad, :capas, :color, :tallaxs, :tallas, :tallam, :tallal, :tallaxl, :ordenproduccion_id, :color_id)
+      params.require(:descripcioncorte).permit(:tallacantidad, :capas, :color, :tallaxs, :tallas, :tallam, :tallal, :tallaxl, :ordenproduccion_id, :color_id, :tallasuma)
     end
 end
