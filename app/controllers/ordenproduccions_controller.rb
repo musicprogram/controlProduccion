@@ -30,6 +30,11 @@ class OrdenproduccionsController < ApplicationController
   # POST /ordenproduccions.json
   def create
     @ordenproduccion = Ordenproduccion.new(ordenproduccion_params)
+    
+    if @ordenproduccion.largotrazo== nil then @ordenproduccion.largotrazo = 1 end
+    if @ordenproduccion.vecestrazo== nil then @ordenproduccion.vecestrazo = 1 end
+    if @ordenproduccion.capas== nil then @ordenproduccion.capas = 1 end
+    
     @ordenproduccion.promedio = @ordenproduccion.largotrazo / @ordenproduccion.vecestrazo
     @ordenproduccion.totalmetros = @ordenproduccion.largotrazo * @ordenproduccion.capas
     respond_to do |format|
@@ -46,6 +51,13 @@ class OrdenproduccionsController < ApplicationController
   # PATCH/PUT /ordenproduccions/1
   # PATCH/PUT /ordenproduccions/1.json
   def update
+    if @ordenproduccion.largotrazo== nil then @ordenproduccion.largotrazo = 1 end
+    if @ordenproduccion.vecestrazo== nil then @ordenproduccion.vecestrazo = 1 end
+    if @ordenproduccion.capas== nil then @ordenproduccion.capas = 1 end
+    
+    @ordenproduccion.promedio = @ordenproduccion.largotrazo / @ordenproduccion.vecestrazo
+    @ordenproduccion.totalmetros = @ordenproduccion.largotrazo * @ordenproduccion.capas
+    @ordenproduccion.save
     respond_to do |format|
       if @ordenproduccion.update(ordenproduccion_params)
         format.html { redirect_to @ordenproduccion, notice: 'Ordenproduccion was successfully updated.' }
@@ -75,6 +87,6 @@ class OrdenproduccionsController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def ordenproduccion_params
-      params.require(:ordenproduccion).permit(:fechaprogramacion, :ordennumero, :cliente_id, :descripcion, :referencia, :corte_id, :ancho, :tela_id, :largotrazo, :largotendido, :promedio, :cantidad, :responsablecorte, :totalmetros, :tiqueteada, :prenda_id, :vecestrazo, :capas, :totalmetros)
+      params.require(:ordenproduccion).permit(:fechaprogramacion, :cliente_id, :descripcion, :referencia, :corte_id, :ancho, :tela_id, :largotrazo, :largotendido, :promedio, :cantidad, :responsablecorte, :totalmetros, :tiqueteada, :prenda_id, :vecestrazo, :capas, :totalmetros)
     end
 end

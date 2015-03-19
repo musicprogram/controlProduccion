@@ -50,7 +50,6 @@ ActiveRecord::Schema.define(version: 20150318025228) do
 
   create_table "ordenproduccions", force: true do |t|
     t.datetime "fechaprogramacion"
-    t.string   "ordennumero"
     t.integer  "cliente_id"
     t.text     "descripcion"
     t.string   "referencia"

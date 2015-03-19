@@ -26,7 +26,15 @@ class DescripcioncortesController < ApplicationController
   def create
     @descripcioncorte = Descripcioncorte.new(descripcioncorte_params)
     @descripcioncorte.ordenproduccion_id = @ordenproduccion.id
-    @descripcioncorte.tallasuma = @descripcioncorte.tallaxs+ @descripcioncorte.tallas + @descripcioncorte.tallam + @descripcioncorte.tallal + @descripcioncorte.tallaxl
+    if @descripcioncorte.tallaxs== nil then @descripcioncorte.tallaxs = 0 end
+    if @descripcioncorte.tallas== nil then @descripcioncorte.tallas = 0 end
+    if @descripcioncorte.tallam== nil then @descripcioncorte.tallam = 0 end
+    if @descripcioncorte.tallal== nil then @descripcioncorte.tallal = 0 end
+    if @descripcioncorte.tallaxl== nil then @descripcioncorte.tallaxl = 0 end
+    
+    
+    @descripcioncorte.tallasuma = @descripcioncorte.tallaxs + @descripcioncorte.tallas + @descripcioncorte.tallam + @descripcioncorte.tallal + @descripcioncorte.tallaxl
+   
     respond_to do |format|
       if @descripcioncorte.save
         format.html { redirect_to ordenproduccion_descripcioncortes_path(@ordenproduccion), notice: 'Descripcioncorte was successfully created.' }
@@ -41,6 +49,15 @@ class DescripcioncortesController < ApplicationController
   # PATCH/PUT /descripcioncortes/1
   # PATCH/PUT /descripcioncortes/1.json
   def update
+     if @descripcioncorte.tallaxs== nil then @descripcioncorte.tallaxs = 0 end
+    if @descripcioncorte.tallas== nil then @descripcioncorte.tallas = 0 end
+    if @descripcioncorte.tallam== nil then @descripcioncorte.tallam = 0 end
+    if @descripcioncorte.tallal== nil then @descripcioncorte.tallal = 0 end
+    if @descripcioncorte.tallaxl== nil then @descripcioncorte.tallaxl = 0 end
+    
+    
+    @descripcioncorte.tallasuma = @descripcioncorte.tallaxs + @descripcioncorte.tallas + @descripcioncorte.tallam + @descripcioncorte.tallal + @descripcioncorte.tallaxl
+    @descripcioncorte.save
     respond_to do |format|
       if @descripcioncorte.update(descripcioncorte_params)
         format.html { redirect_to ordenproduccion_descripcioncortes_path(@ordenproduccion), notice: 'Descripcioncorte was successfully updated.' }

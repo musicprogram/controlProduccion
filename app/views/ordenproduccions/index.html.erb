@@ -29,18 +29,18 @@
     <% @ordenproduccions.each do |ordenproduccion| %>
       <tr>
         <td><%= ordenproduccion.fechaprogramacion %></td>
-        <td><%= ordenproduccion.ordennumero %></td>
+        <td>000<%= ordenproduccion.id %></td>
         <td><%= ordenproduccion.cliente.clientenombre %></td>
         <td><%= ordenproduccion.descripcion %></td>
         <td><%= ordenproduccion.referencia %></td>
         <td><%= ordenproduccion.corte.cortenombre %></td>
         <td><%= ordenproduccion.ancho %></td>
         <td><%= ordenproduccion.tela.telanombre %></td>
-        <td><%= ordenproduccion.largotrazo %></td>
-        <td><%= ordenproduccion.vecestrazo %></td>
+        <td><%= ordenproduccion.largotrazo rescue nil %></td>
+        <td><%= ordenproduccion.vecestrazo rescue nil%></td>
         <td><%= ordenproduccion.largotendido %></td>
         <td><%= ordenproduccion.promedio %></td>
-        <td><%= ordenproduccion.cantidad %></td>
+        <td><%= ordenproduccion.cantidad rescue nil %></td>
         <td><%= ordenproduccion.responsablecorte %></td>
         <td><%= ordenproduccion.capas %></td>
         <td><%= ordenproduccion.totalmetros %></td>

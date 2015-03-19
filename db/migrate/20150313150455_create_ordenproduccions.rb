@@ -2,7 +2,6 @@ class CreateOrdenproduccions < ActiveRecord::Migration
   def change
     create_table :ordenproduccions do |t|
       t.datetime :fechaprogramacion
-      t.string :ordennumero
       t.references :cliente, index: true
       t.text :descripcion
       t.string :referencia
