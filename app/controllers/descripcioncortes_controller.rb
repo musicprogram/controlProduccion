@@ -15,6 +15,7 @@ class DescripcioncortesController < ApplicationController
   # GET /descripcioncortes/new
   def new
     @descripcioncorte = Descripcioncorte.new
+    @descripcioncorte.ordenproduccion_id = @ordenproduccion.id
   end
 
   # GET /descripcioncortes/1/edit

@@ -1,0 +1,38 @@
+<%= form_for [@descripcioncorte, @cuadroproduccion], :html => { :class => 'form-horizontal' } do |f| %>
+  <% if @cuadroproduccion.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@cuadroproduccion.errors.count, "error") %> prohibited this cuadroproduccion from being saved:</h2>
+
+      <ul>
+      <% @cuadroproduccion.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :fechatrazo %><br>
+    <%= f.datetime_select :fechatrazo %>
+  </div>
+  <div class="field">
+    <%= f.label :anchotrazo %><br>
+    <%= f.datetime_select :anchotrazo %>
+  </div>
+  <div class="field">
+    <%= f.label :fechacorte %><br>
+    <%= f.datetime_select :fechacorte %>
+  </div>
+  <div class="field">
+    <%= f.label :fechaentradabodega %><br>
+    <%= f.datetime_select :fechaentradabodega %>
+  </div>
+  <div class="field">
+    <%= f.label :fechaentregamodulo %><br>
+    <%= f.datetime_select :fechaentregamodulo %>
+  </div>
+  <div class="actions">
+    <%= f.submit "Guardar" %>
+  </div>
+  <%= link_to "Cancelar", descripcioncorte_cuadroproduccions_path(@descripcioncorte) %>
+<% end %>

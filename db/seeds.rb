@@ -36,3 +36,8 @@ cortes = [{cortenombre: "Mecánico"},{cortenombre: "Vértical"},{cortenombre: "C
 cortes.each do |e|
 Corte.create(e) unless Corte.exists?(e)
 end
+
+modulos = [{modulonombre: "Ropa interior y Deportiva"},{modulonombre: "Jeans Dryll"},{modulonombre: "Exterior"},{modulonombre: "Produccion"}]
+modulos.each do |e|
+Modulo.create(e) unless Modulo.exists?(e)
+end

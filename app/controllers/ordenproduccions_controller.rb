@@ -20,9 +20,7 @@ class OrdenproduccionsController < ApplicationController
 
   # GET /ordenproduccions/1/edit
   def edit
-        @ordenproduccion.promedio = @ordenproduccion.largotrazo / @ordenproduccion.vecestrazo
-        @ordenproduccion.totalmetros = @ordenproduccion.largotrazo * @ordenproduccion.capas
-
+       
 
   end
 

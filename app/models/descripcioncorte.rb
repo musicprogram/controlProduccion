@@ -1,5 +1,6 @@
 class Descripcioncorte < ActiveRecord::Base
-   validates :color, :presence => true
+  validates :color, :presence => true
   belongs_to :ordenproduccion
   belongs_to :color
+  has_many :cuadroproduccions
 end

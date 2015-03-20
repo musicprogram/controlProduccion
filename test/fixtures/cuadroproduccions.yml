@@ -1,0 +1,19 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  fechatrazo: 2015-03-19 19:34:20
+  anchotrazo: 2015-03-19 19:34:20
+  fechacorte: 2015-03-19 19:34:20
+  fechaentradabodega: 2015-03-19 19:34:20
+  fechaentregamodulo: 2015-03-19 19:34:20
+  cantidad: 1
+  instructor: MyString
+
+two:
+  fechatrazo: 2015-03-19 19:34:20
+  anchotrazo: 2015-03-19 19:34:20
+  fechacorte: 2015-03-19 19:34:20
+  fechaentradabodega: 2015-03-19 19:34:20
+  fechaentregamodulo: 2015-03-19 19:34:20
+  cantidad: 1
+  instructor: MyString

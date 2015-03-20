@@ -1,0 +1,30 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Fechatrazo:</strong>
+  <%= @cuadroproduccion.fechatrazo %>
+</p>
+
+<p>
+  <strong>Anchotrazo:</strong>
+  <%= @cuadroproduccion.anchotrazo %>
+</p>
+
+<p>
+  <strong>Fechacorte:</strong>
+  <%= @cuadroproduccion.fechacorte %>
+</p>
+
+<p>
+  <strong>Fechaentradabodega:</strong>
+  <%= @cuadroproduccion.fechaentradabodega %>
+</p>
+
+<p>
+  <strong>Fechaentregamodulo:</strong>
+  <%= @cuadroproduccion.fechaentregamodulo %>
+</p>
+
+
+<%= link_to 'Edit', edit_descripcioncorte_cuadroproduccion_path(@descripcioncorte,@cuadroproduccion) %> |
+<%= link_to 'Back', descripcioncorte_cuadroproduccions_path %>

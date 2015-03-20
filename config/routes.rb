@@ -1,5 +1,9 @@
 Rails.application.routes.draw do
 
+  resources :modulos
+
+  
+
   resources :cortes
 
   get 'welcome/index'
@@ -10,15 +14,20 @@ Rails.application.routes.draw do
 
   resources :colors
 
+
+  #maestro detalle 
   resources :ordenproduccions do
-    
-  resources :descripcioncortes
+  resources :descripcioncortes 
    
-   
+  end
+
+  resources :descripcioncortes do
+  resources :cuadroproduccions
 
   end
 
-  resources :clientes
+
+    resources :clientes
 
     resources :tallas
   
