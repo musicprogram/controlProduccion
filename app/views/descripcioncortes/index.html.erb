@@ -13,7 +13,8 @@
       <th>Tallam</th>
       <th>Tallal</th>
       <th>Tallaxl</th>
-      <th>Tallasuma</th>
+      <th>Veces trazo</th>
+      <th>Total Capas</th>
       <th>Numero OP</th>
       <th colspan="3"></th>
     </tr>
@@ -23,13 +24,14 @@
     <% @descripcioncortes.each do |descripcioncorte| %>
       <tr>
         <td><%= descripcioncorte.tallacantidad %></td>
-        <td><%= descripcioncorte.capas %></td>
+        <td><%= descripcioncorte.ordenproduccion.capas %></td>
         <td><%= descripcioncorte.color.colornombre %></td>
         <td><%= descripcioncorte.tallaxs %></td>
         <td><%= descripcioncorte.tallas %></td>
         <td><%= descripcioncorte.tallam %></td>
         <td><%= descripcioncorte.tallal %></td>
         <td><%= descripcioncorte.tallaxl %></td>
+        <td><%= descripcioncorte.ordenproduccion.vecestrazo %></td>
         <td><%= descripcioncorte.tallasuma %></td>
         <td>000<%= descripcioncorte.ordenproduccion.id %></td>
         

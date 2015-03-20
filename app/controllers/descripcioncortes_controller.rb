@@ -89,6 +89,6 @@ class DescripcioncortesController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def descripcioncorte_params
-      params.require(:descripcioncorte).permit(:tallacantidad, :capas, :color, :tallaxs, :tallas, :tallam, :tallal, :tallaxl, :ordenproduccion_id, :color_id, :tallasuma)
+      params.require(:descripcioncorte).permit(:tallacantidad, :color, :tallaxs, :tallas, :tallam, :tallal, :tallaxl, :ordenproduccion_id, :color_id, :tallasuma)
     end
 end

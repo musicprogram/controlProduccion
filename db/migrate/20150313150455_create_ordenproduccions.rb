@@ -8,13 +8,13 @@ class CreateOrdenproduccions < ActiveRecord::Migration
       t.references :corte
       t.string :ancho
       t.references :tela, index: true
-      t.integer :largotrazo
-      t.integer :vecestrazo
+      t.float :largotrazo
+      t.float :vecestrazo
       t.string :largotendido
-      t.integer :promedio
+      t.float :promedio
       t.string :cantidad
       t.string :responsablecorte
-      t.integer :totalmetros
+      t.float :totalmetros
       t.string :tiqueteada
       t.integer :capas
       t.references :prenda, index: true
