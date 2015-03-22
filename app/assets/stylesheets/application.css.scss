@@ -42,7 +42,7 @@ background-color: transparent;
 
 body.homepage {
   background-color: #34495e;
-  background: url(http://i.imgur.com/p68Romk.jpg);
+  background: url("fondo.jpeg");
   -webkit-background-size: cover;
   -moz-background-size: cover;
   -ms-background-size: cover;
@@ -293,11 +293,13 @@ body.homepage {
 
 
 body.homepageesh{
- background-image: image-url("blog.jpg");
+ background-image: linear-gradient(
+      white, #BCBCBC
+    );
  height: auto;
-max-width: 100%;
+ max-width: 100%;
  margin: 6em auto;
-    background-position: center center;
+ background-position: center center;
 
 }
 
@@ -305,6 +307,8 @@ max-width: 100%;
 
 .btn-indies{
     border-radius: 15px;
+    box-shadow: 10px 10px 8px -6px rgba(0,0,0,0.58);
+    font-weight: bold;
 }
 
 .bien{
@@ -516,4 +520,20 @@ max-width: 100%;
       left: 60px;
       opacity: 1;
     }
+  }
+
+  h2.descripcion{
+    color: white;
+    text-shadow: -5px -5px 5px #aaa;
+    font-weight: bold;
+  }
+
+  .bien{
+     color: white;
+    text-shadow: 5px 5px 5px #aaa;
+    font-weight: bold;
+  }
+
+  .wrapper-indieandcool{
+    box-shadow: -5px -5px 5px #000000;
   }
