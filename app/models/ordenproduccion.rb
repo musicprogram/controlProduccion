@@ -19,5 +19,16 @@ class Ordenproduccion < ActiveRecord::Base
   belongs_to :prenda
   belongs_to :corte
   has_many :descripcioncortes
+
+
+  def self.search(search, page)
+      where(['upper(referencia) like ?',
+      "%#{search}%".upcase]).paginate(page: page, per_page: 5).order("referencia")
+  end
+
+
+
+
+
 end
 

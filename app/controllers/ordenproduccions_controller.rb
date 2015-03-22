@@ -4,7 +4,8 @@ class OrdenproduccionsController < ApplicationController
   # GET /ordenproduccions
   # GET /ordenproduccions.json
   def index
-    @ordenproduccions = Ordenproduccion.all
+    @ordenproduccions = Ordenproduccion.search(params[:search], params[:page])
+
     
   end
 

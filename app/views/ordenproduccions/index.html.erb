@@ -1,4 +1,13 @@
 <h1 class="center">Ordenes de Produccion</h1> <br>
+<h4 class="derecho">Total Ordenes: <%= @ordenproduccions.count %></h4 >
+<%= form_tag ordenproduccions_path, :method => 'get' do %>
+     <% content_tag :label do %>
+         
+         <%= text_field_tag :search, params[:search], class:'form-control'  %> <br>
+         <%= submit_tag "Buscar por Referencia", :referencia => nil, class:'btn btn-succes'%>
+     <% end %>
+<% end %>
+
 <div class="table-responsive ">
   <div class="tablero1">
 <table class="table table-condensed tablero">
@@ -61,4 +70,7 @@
 </div>
 
 <%= link_to "<i class='fa fa-plus-circle fa-4x'></i>".html_safe, new_ordenproduccion_path %>
+
+<%= will_paginate @ordenproduccions, :previous_label => '&laquo; Anterior', :next_label => 'Siguiente &raquo;' %>
+<br>
 
