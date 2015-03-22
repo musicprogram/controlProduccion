@@ -1,5 +1,6 @@
 <h1 class="center">Ordenes de Produccion</h1> <br>
-<h4 class="derecho">Total Ordenes: <%= @ordenproduccions.count %></h4 >
+<h4 class="derecho">Total Ordenes: <span class="badge"> <%= @ordenproduccions.count %> </span></h4 >
+
 <%= form_tag ordenproduccions_path, :method => 'get' do %>
      <% content_tag :label do %>
          
