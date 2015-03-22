@@ -1,21 +1,50 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title>ControlProduccion</title>
-  <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
-  <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
-  <%= csrf_meta_tags %>
+	<title>ControlProduccion</title>
+	<%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
+	<%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
+
+	<%= csrf_meta_tags %>
 </head>
 
-<% if @home_page == true %>
-<body class="homepagee">
-	<% end %>
-<div class="container">
-	<div class="row">
-		
-<%= yield %>
-	</div>
-</div>
+<% if @home_pagee == true %>
+<body class="homepageesh">
+	<% elsif @home_page == true %>
+	<body class="homepage">
+		<% end %>
+		<div class="container">
+			<div class="row">
+				<% if usuario_signed_in? %>
+				<nav class="navbar navbar-fixed-left navbar-minimal animate" role="navigation">
+					<div class="navbar-toggler animate">
+						<span class="menu-icon"></span>
+					</div>
+					<ul class="navbar-menu animate">
+						
+						<li><%= link_to "<i class='fa fa-user-times fa-2x'></i>".html_safe, destroy_usuario_session_path, :method => :delete, class: 'active' %></li>
 
-</body>
-</html>
+						
+					</ul>
+				</nav>
+
+
+
+				
+				
+
+
+
+				<% end%>
+				<p class="notice"><%= notice %></p>
+				<p class="alert"><%= alert %></p>
+
+				
+				<%= yield %>
+			</div>
+		</div>
+
+	</body>
+	</html>
+
+
