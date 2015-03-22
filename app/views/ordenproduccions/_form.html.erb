@@ -20,7 +20,10 @@
   </div>
 </div>
 <div class="col-md-4">
-  
+   <div class="field">
+    <%= f.label :tiqueteada %><br>
+    <%= f.text_field :tiqueteada, class:'form-control' %>
+  </div>
  
 </div>
 <div class="col-md-4">
@@ -110,7 +113,11 @@
 
  <div class="col-md-12">
      <div class="col-md-4">
-     
+     <div class="field">
+     Prenda <br>
+    <%= f.collection_select :prenda_id, Prenda.all, :id, :prendanombre,{prompt: "Seleccione Prenda"},{ class: "form-control"} %>
+  </div>
+
   </div>
  
   <div class="col-md-4">
@@ -123,38 +130,26 @@
   </div>
   
   <div class="col-md-4">
-     <div class="field">
-    <%= f.label :tiqueteada %><br>
-    <%= f.text_field :tiqueteada, class:'form-control' %>
-  </div>
+    
   </div>
  </div>
 
  
 <div class="col-md-12">
-    <div class="col-md-4">
-     <div class="field">
-     Prenda <br>
-    <%= f.collection_select :prenda_id, Prenda.all, :id, :prendanombre,{prompt: "Seleccione Prenda"},{ class: "form-control"} %>
-  </div>
-
-  </div>
+    
   <div class="col-md-8">
   <div class="field">
     <%= f.label :descripcion %><br>
     <%= f.text_area :descripcion, class:'form-control' %>
   </div>
   </div>
- 
- </div>
-
-
-<div class="col-md-12">  
-  <div class="actions">
+  <div class="col-md-4">
+      <div class="actions">
   <%= f.submit "Guardar",class:'btn btn-default btn-lg btn-block'%>
    <% end %>
   </div>
+  </div>
  
-</div>
+ </div>
 
 

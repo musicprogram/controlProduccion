@@ -6,7 +6,10 @@
   <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
   <%= csrf_meta_tags %>
 </head>
-<body>
+
+<% if @home_page == true %>
+<body class="homepagee">
+	<% end %>
 <div class="container">
 	<div class="row">
 		

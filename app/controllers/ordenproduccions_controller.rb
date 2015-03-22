@@ -5,13 +5,13 @@ class OrdenproduccionsController < ApplicationController
   # GET /ordenproduccions.json
   def index
     @ordenproduccions = Ordenproduccion.search(params[:search], params[:page])
-
     
   end
 
   # GET /ordenproduccions/1
   # GET /ordenproduccions/1.json
-  def show
+  def show    
+     @home_pagee = true
   end
 
   # GET /ordenproduccions/new
