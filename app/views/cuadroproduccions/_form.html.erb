@@ -11,28 +11,80 @@
     </div>
   <% end %>
 
+  <div class="col-md-12">
+
+<div class="col-md-4">
+
   <div class="field">
     <%= f.label :fechatrazo %><br>
     <%= f.datetime_select :fechatrazo %>
   </div>
-  <div class="field">
+  
+</div>
+<div class="col-md-4">
+<div class="field">
     <%= f.label :anchotrazo %><br>
     <%= f.datetime_select :anchotrazo %>
-  </div>
-  <div class="field">
+  </div></div>
+
+  <div class="col-md-4">
+ <div class="field">
     <%= f.label :fechacorte %><br>
     <%= f.datetime_select :fechacorte %>
   </div>
+  </div>
+  </div>
+
+
+<div class="col-md-12">
+
+<div class="col-md-4">
+
   <div class="field">
     <%= f.label :fechaentradabodega %><br>
     <%= f.datetime_select :fechaentradabodega %>
   </div>
+</div>
+
+
+
+<div class="col-md-4">
+
   <div class="field">
+     Modulo<br>
+    <%= f.collection_select :modulo_id, Modulo.all, :id, :modulonombre, class: "form-control",     prompt: "Seleccione Modulo" %>
+</div>
+
+
+</div>
+
+<div class="col-md-4">
+<div class="field">
     <%= f.label :fechaentregamodulo %><br>
     <%= f.datetime_select :fechaentregamodulo %>
   </div>
-  <div class="actions">
-    <%= f.submit "Guardar" %>
+</div>
+</div>
+
+
+<div class="col-md-12">
+
+<div class="col-md-4">
+
+
+</div>
+
+
+
+<div class="col-md-4">
+<div class="actions">
+    <%= f.submit "Guardar",class:'btn btn-default btn-lg btn-block' %>
   </div>
-  <%= link_to "Cancelar", descripcioncorte_cuadroproduccions_path(@descripcioncorte) %>
+
+</div>
+<div class="col-md-4"></div>
+</div>
+
+
+
 <% end %>

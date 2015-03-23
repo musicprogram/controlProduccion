@@ -1,54 +1,114 @@
 <p id="notice"><%= notice %></p>
 
-<p>
-  <strong>Tallacantidad:</strong>
-  <%= @descripcioncorte.tallacantidad %>
-</p>
-
-<p>
-  <strong>Capas:</strong>
-  <%= @descripcioncorte.ordenproduccion.capas %>
-</p>
-
-<p>
-  <strong>Color:</strong>
-  <%= @descripcioncorte.color.colornombre %>
-</p>
-
-<p>
-  <strong>Tallaxs:</strong>
-  <%= @descripcioncorte.tallaxs %>
-</p>
-
-<p>
-  <strong>Tallas:</strong>
-  <%= @descripcioncorte.tallas %>
-</p>
-
-<p>
-  <strong>Tallam:</strong>
-  <%= @descripcioncorte.tallam %>
-</p>
-
-<p>
-  <strong>Tallal:</strong>
-  <%= @descripcioncorte.tallal %>
-</p>
-
-<p>
-  <strong>Tallaxl:</strong>
-  <%= @descripcioncorte.tallaxl %>
-</p>
-<p>
-  <strong>Tallasuma:</strong>
-  <%= @descripcioncorte.tallasuma %>
-</p>
-
-<p>
-  <strong>Ordenproduccion:</strong>
-  <%= @descripcioncorte.ordenproduccion %>
-</p>
 
 
-<%= link_to 'Edit', edit_descripcioncorte_path(@descripcioncorte) %> |
-<%= link_to 'Back', descripcioncortes_path %>
+
+
+
+
+<div class="col-md-12">
+  <div class="col-md-2"></div>
+  <div class="col-md-8">
+
+
+    <div >
+      <div class="panel panel-succes">
+        <div class="panel-heading center">
+          <h3 class="panel-title">
+            <h2 class="center">Programacion de corte</h2></h3><strong>Ordennumero:</strong>
+            000<%= @descripcioncorte.ordenproduccion.id %>
+          </div>
+          <div class="panel-body">
+            <div class="the-price">
+              <h3>
+              </h3>
+              <small>Centro de formacion en diseño, confeccion y Moda</small>
+            </div>
+            <table class="table">
+              <tr>
+                <td>
+                  <div class="col-md-6">
+                    <strong>Tallacantidad:</strong>
+                    <%= @descripcioncorte.tallacantidad %>
+                  </div>
+                  <div class="col-md-6">
+                   <strong>Capas:</strong>
+                   <%= @descripcioncorte.ordenproduccion.capas %>
+                 </div>
+
+               </td>
+             </tr>
+             <tr class="active">
+              <td>
+
+               <div class="col-md-6">
+
+                <strong>Color:</strong>
+                <%= @descripcioncorte.color.colornombre %>
+              </div>
+              <div class="col-md-6">
+                <strong>Tallaxs:</strong>
+                <%= @descripcioncorte.tallaxs %>
+              </div>
+
+            </td>
+          </tr>
+          <tr>
+            <td>
+
+              <div class="col-md-6">
+                <strong>Tallam:</strong>
+                <%= @descripcioncorte.tallam %>
+              </div>
+              <div class="col-md-6">
+               <strong>Tallal:</strong>
+               <%= @descripcioncorte.tallal %>
+
+             </div>
+
+
+
+           </td>
+         </tr>
+         <tr class="active">
+          <td>
+            <div class="col-md-6">
+             <strong>Tallaxl:</strong>
+             <%= @descripcioncorte.tallaxl %>
+           </div>
+
+<div class="col-md-6">
+            <strong>Tallas:</strong>
+            <%= @descripcioncorte.tallas %>
+
+          </div>
+
+
+
+
+        </td>
+      </tr>
+
+      <tr>
+        <td>
+           <div class="col-md-12">
+            <strong>Total Unidad:</strong>
+            <%= @descripcioncorte.tallasuma %>
+
+          </div>
+        </td>
+      </tr>
+
+
+    </table>
+  </div>
+  <div class="panel-footer">
+
+    <%= link_to 'Edit', edit_descripcioncorte_path(@descripcioncorte) %> |
+    <%= link_to 'Back', descripcioncortes_path %>
+  </div>
+</div>
+
+
+
+</div>

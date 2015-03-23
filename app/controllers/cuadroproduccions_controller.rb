@@ -70,6 +70,6 @@ before_action :authenticate_usuario!
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def cuadroproduccion_params
-      params.require(:cuadroproduccion).permit(:fechatrazo, :anchotrazo, :fechacorte, :fechaentradabodega, :fechaentregamodulo, :descripcioncorte_id)
+      params.require(:cuadroproduccion).permit(:fechatrazo, :anchotrazo, :fechacorte, :fechaentradabodega, :fechaentregamodulo, :descripcioncorte_id, :modulo_id)
     end
 end

@@ -1,30 +1,157 @@
 <p class="info" id="notice"><%= notice %></p>
 
-<p>
-  <strong>Fechatrazo:</strong>
-  <%= @cuadroproduccion.fechatrazo %>
-</p>
-
-<p>
-  <strong>Anchotrazo:</strong>
-  <%= @cuadroproduccion.anchotrazo %>
-</p>
-
-<p>
-  <strong>Fechacorte:</strong>
-  <%= @cuadroproduccion.fechacorte %>
-</p>
-
-<p>
-  <strong>Fechaentradabodega:</strong>
-  <%= @cuadroproduccion.fechaentradabodega %>
-</p>
-
-<p>
-  <strong>Fechaentregamodulo:</strong>
-  <%= @cuadroproduccion.fechaentregamodulo %>
-</p>
 
 
-<%= link_to 'Edit', edit_descripcioncorte_cuadroproduccion_path(@descripcioncorte,@cuadroproduccion) %> |
-<%= link_to 'Back', descripcioncorte_cuadroproduccions_path %>
+<div >
+  <div class="panel panel-succes">
+    <div class="panel-heading center">
+      <h3 class="panel-title">
+        <h2 class="center">Cuadro de Produccion</h2></h3><strong>Ordennumero:</strong>
+        000<%= @cuadroproduccion.descripcioncorte.ordenproduccion.id %>
+      </div>
+      <div class="panel-body">
+        <div class="the-price">
+          <h3>
+          </h3>
+          <small>Centro de formacion en diseño, confeccion y Moda</small>
+        </div>
+        <table class="table">
+          <tr class="active">
+            <td>
+              <div class="col-md-6">
+                <strong>Color:</strong>
+                <%= @cuadroproduccion.descripcioncorte.color.colornombre %> 
+              </div>
+
+
+
+            </div>
+
+            <div class="col-md-6">
+             
+
+              <strong>Referencia:</strong>
+              <%= @cuadroproduccion.descripcioncorte.ordenproduccion.referencia %> 
+            </div>
+          </td>
+        </tr>
+        <tr >
+          <td>
+            <div class="col-md-6">
+              <strong>Corte:</strong>
+              <%= @cuadroproduccion.descripcioncorte.ordenproduccion.corte.cortenombre %>
+            </div>
+
+            <div class="col-md-6">
+              <strong>Tela:</strong>
+              <%= @cuadroproduccion.descripcioncorte.ordenproduccion.tela.telanombre %>
+            </div>
+          </td>
+        </tr>
+        <tr>
+         
+        </tr>
+        <tr class="active">
+          <td>
+            <div class="col-md-6">
+              <strong>Largotrazo:</strong>
+              <%= @cuadroproduccion.descripcioncorte.ordenproduccion.largotrazo %>
+            </div>
+            <div class="col-md-6">
+             <strong>Vecestrazo:</strong>
+             <%= @cuadroproduccion.descripcioncorte.ordenproduccion.vecestrazo %>
+           </div>
+
+
+         </td>
+       </tr>
+
+       <tr>
+        <td>
+          <div class="col-md-6">
+            <strong>Promedio:</strong>
+            <%= @cuadroproduccion.descripcioncorte.ordenproduccion.promedio %>
+          </div>
+          <div class="col-md-6">
+
+            <strong>Responsable:</strong>
+            <%= @cuadroproduccion.descripcioncorte.ordenproduccion.responsablecorte %>
+
+          </div>
+
+
+        </td>
+      </tr>
+
+      
+
+
+
+      <tr class="active">
+        <td>
+          <div class="col-md-6">
+            <strong>Fechatrazo:</strong>
+            <%= @cuadroproduccion.fechatrazo %>
+          </div>
+          <div class="col-md-6">
+            <strong>Anchotrazo:</strong>
+            <%= @cuadroproduccion.anchotrazo %>
+          </div>
+
+        </td>
+      </tr>
+      <tr>
+        <td>
+
+         <div class="col-md-6">
+
+          <strong>Fechacorte:</strong>
+          <%= @cuadroproduccion.fechacorte %>
+        </div>
+        <div class="col-md-6">
+         <strong>Fechaentradabodega:</strong>
+         <%= @cuadroproduccion.fechaentradabodega %>
+       </div>
+
+     </td>
+   </tr>
+   <tr class="active">
+    <td>
+
+      <div class="col-md-6">
+       <strong>Fechaentregamodulo:</strong>
+       <%= @cuadroproduccion.fechaentregamodulo %>
+     </div>
+     <div class="col-md-6">
+      <strong>Modulo:</strong>
+      <%= @cuadroproduccion.modulo.modulonombre %>
+
+    </div>
+
+
+
+  </td>
+</tr>
+
+<tr>
+  <td>
+
+    <div class="col-md-12">
+
+     <strong>Descripcion:</strong>
+     <%= @cuadroproduccion.descripcioncorte.ordenproduccion.descripcion %> 
+   </div>
+ </td>
+</tr>
+
+
+
+</table>
+</div>
+<div class="panel-footer">
+
+  <%= link_to "<i class='fa fa-pencil fa-4x'></i>".html_safe, edit_descripcioncorte_cuadroproduccion_path(@descripcioncorte,@cuadroproduccion) %> |
+  <%= link_to "<i class='fa fa-times fa-4x'></i>".html_safe, descripcioncorte_cuadroproduccions_path %>
+
+</div>
+</div>

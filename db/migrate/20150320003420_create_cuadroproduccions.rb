@@ -7,6 +7,8 @@ class CreateCuadroproduccions < ActiveRecord::Migration
       t.datetime :fechaentradabodega
       t.datetime :fechaentregamodulo
       t.references :descripcioncorte, index: true
+      t.references :modulo, index: true
+
       t.timestamps
     end
   end
