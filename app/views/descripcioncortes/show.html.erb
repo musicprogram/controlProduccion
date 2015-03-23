@@ -1,7 +1,7 @@
 <p id="notice"><%= notice %></p>
 
 
-
+<br><br>
 
 
 
@@ -77,7 +77,7 @@
              <%= @descripcioncorte.tallaxl %>
            </div>
 
-<div class="col-md-6">
+           <div class="col-md-6">
             <strong>Tallas:</strong>
             <%= @descripcioncorte.tallas %>
 
@@ -91,22 +91,22 @@
 
       <tr>
         <td>
-           <div class="col-md-12">
-            <strong>Total Unidad:</strong>
-            <%= @descripcioncorte.tallasuma %>
+         <div class="col-md-12">
+          <strong>Total Unidad:</strong>
+          <%= @descripcioncorte.tallasuma %>
 
-          </div>
-        </td>
-      </tr>
+        </div>
+      </td>
+    </tr>
 
 
-    </table>
-  </div>
-  <div class="panel-footer">
+  </table>
+</div>
+<div class="panel-footer">
 
-    <%= link_to 'Edit', edit_descripcioncorte_path(@descripcioncorte) %> |
-    <%= link_to 'Back', descripcioncortes_path %>
-  </div>
+  <%= link_to "<i class='fa fa-pencil fa-2x'></i>".html_safe, edit_descripcioncorte_path(@descripcioncorte) %> |
+  <%= link_to "<i class='fa fa-times-circle fa-2x'></i>".html_safe, descripcioncortes_path %>
+</div>
 </div>
 
 
