@@ -14,6 +14,7 @@
 //= require jquery_ujs
 //= require turbolinks
 //= require bootstrap
+//= require bootstrap-datepicker
 //= require_tree .
 
 
@@ -27,3 +28,24 @@ $(document).on('page:change', function () {
 			$(this).closest('.navbar-minimal').toggleClass('open');
 		})
 });
+
+$(document).on('page:change', function () {
+	
+		$('.datepicker').datepicker({
+		
+			language: "es",
+			
+			format: "yyyy/mm/dd",
+			clearBtn: true,
+			keyboardNavigation: false,
+			forceParse: false,
+			autoclose: true,
+			todayHighlight: true,
+			toggleActive: true
+		
+	
+			})
+	})
+
+	
+    
