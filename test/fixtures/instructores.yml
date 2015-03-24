@@ -1,0 +1,23 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  nombre: MyString
+  fecharecibo: 2015-03-24 17:08:36
+  cantidad: 1
+  tallaunidad: MyString
+  primeras: 1
+  segundas: 1
+  totalrecibidas: 1
+  observacionescalidad: MyString
+  fechasalidaalmacen: 2015-03-24 17:08:36
+
+two:
+  nombre: MyString
+  fecharecibo: 2015-03-24 17:08:36
+  cantidad: 1
+  tallaunidad: MyString
+  primeras: 1
+  segundas: 1
+  totalrecibidas: 1
+  observacionescalidad: MyString
+  fechasalidaalmacen: 2015-03-24 17:08:36

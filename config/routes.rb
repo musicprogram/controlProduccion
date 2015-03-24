@@ -1,5 +1,7 @@
 Rails.application.routes.draw do
 
+  resources :instructores
+
   devise_for :usuarios
   resources :modulos
 

@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20150322153418) do
+ActiveRecord::Schema.define(version: 20150324180127) do
 
   create_table "clientes", force: true do |t|
     t.string   "clientenombre"
@@ -61,6 +61,24 @@ ActiveRecord::Schema.define(version: 20150322153418) do
   end
 
   add_index "descripcioncortes", ["ordenproduccion_id"], name: "index_descripcioncortes_on_ordenproduccion_id"
+
+  create_table "instructores", force: true do |t|
+    t.string   "nombre"
+    t.datetime "fecharecibo"
+    t.integer  "cantidad"
+    t.string   "tallaunidad"
+    t.integer  "primeras"
+    t.integer  "segundas"
+    t.integer  "totalrecibidas"
+    t.string   "observacionescalidad"
+    t.datetime "fechasalidaalmacen"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+    t.string   "imagen_file_name"
+    t.string   "imagen_content_type"
+    t.integer  "imagen_file_size"
+    t.datetime "imagen_updated_at"
+  end
 
   create_table "modulos", force: true do |t|
     t.string   "modulonombre"

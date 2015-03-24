@@ -42,3 +42,4 @@ gem 'bootstrap-sass', '~> 3.3.3'
 gem "font-awesome-rails"
 gem 'will_paginate', '~> 3.0.7'
 gem 'devise'
+gem "paperclip", "~> 4.2"

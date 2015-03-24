@@ -1,4 +1,6 @@
 <h1 class="center">Cuadro de Produccion</h1>
+
+
 <br>
 <div class="table-responsive ">
 
@@ -44,7 +46,7 @@
         <td><%= cuadroproduccion.fechaentradabodega %></td>
         <td><%= cuadroproduccion.modulo.modulonombre rescue nil %></td>
         <td><%= cuadroproduccion.fechaentregamodulo %></td>
-        
+        <td><%= link_to "<i class='fa fa-eye fa-2x encima'></i>".html_safe, descripcioncorte_cuadroproduccion_path(@descripcioncorte, cuadroproduccion) %></td>
         <td><%= link_to "<i class='fa fa-pencil fa-2x encima'>".html_safe, edit_descripcioncorte_cuadroproduccion_path(@descripcioncorte,cuadroproduccion) %></td>
         <td><%= link_to "<i class='fa fa-eraser fa-2x encima'>".html_safe, descripcioncorte_cuadroproduccion_path(@descripcioncorte,cuadroproduccion), method: :delete, data: { confirm: 'Are you sure?' } %></td>
       </tr>
@@ -55,3 +57,5 @@
 <br>
 
 <%= link_to "<i class='fa fa-plus-circle fa-4x'></i>".html_safe, new_descripcioncorte_cuadroproduccion_path(@descripcioncorte) %>
+<%= link_to "<i class='fa fa-arrow-circle-left fa-4x'></i>".html_safe, ordenproduccion_descripcioncortes_path(@descripcioncorte) %>
+

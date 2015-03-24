@@ -1,0 +1,60 @@
+<%= form_for @instructor, html: { multipart: true } do |f| %>
+  <% if @instructor.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@instructor.errors.count, "error") %> prohibited this instructor from being saved:</h2>
+
+      <ul>
+      <% @instructor.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :nombre %><br>
+    <%= f.text_field :nombre %>
+    
+  </div>
+  
+  <div class="field">
+    <%= f.label :imagen %>
+    <%= f.file_field :imagen %>
+  </div>
+
+  <div class="field">
+    <%= f.label :fecharecibo %><br>
+    <%= f.datetime_select :fecharecibo %>
+  </div>
+  <div class="field">
+    <%= f.label :cantidad %><br>
+    <%= f.number_field :cantidad %>
+  </div>
+  <div class="field">
+    <%= f.label :tallaunidad %><br>
+    <%= f.text_field :tallaunidad %>
+  </div>
+  <div class="field">
+    <%= f.label :primeras %><br>
+    <%= f.number_field :primeras %>
+  </div>
+  <div class="field">
+    <%= f.label :segundas %><br>
+    <%= f.number_field :segundas %>
+  </div>
+  <div class="field">
+    <%= f.label :totalrecibidas %><br>
+    <%= f.number_field :totalrecibidas %>
+  </div>
+  <div class="field">
+    <%= f.label :observacionescalidad %><br>
+    <%= f.text_field :observacionescalidad %>
+  </div>
+  <div class="field">
+    <%= f.label :fechasalidaalmacen %><br>
+    <%= f.datetime_select :fechasalidaalmacen %>
+  </div>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>

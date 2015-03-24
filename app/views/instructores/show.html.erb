@@ -1,0 +1,54 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Nombre:</strong>
+  <%= @instructor.nombre %>
+</p>
+
+<p>
+  <strong>Imagen:</strong>
+  <%= image_tag @instructor.imagen.url(:medium) %>
+</p>
+
+<p>
+  <strong>Fecharecibo:</strong>
+  <%= @instructor.fecharecibo %>
+</p>
+
+<p>
+  <strong>Cantidad:</strong>
+  <%= @instructor.cantidad %>
+</p>
+
+<p>
+  <strong>Tallaunidad:</strong>
+  <%= @instructor.tallaunidad %>
+</p>
+
+<p>
+  <strong>Primeras:</strong>
+  <%= @instructor.primeras %>
+</p>
+
+<p>
+  <strong>Segundas:</strong>
+  <%= @instructor.segundas %>
+</p>
+
+<p>
+  <strong>Totalrecibidas:</strong>
+  <%= @instructor.totalrecibidas %>
+</p>
+
+<p>
+  <strong>Observacionescalidad:</strong>
+  <%= @instructor.observacionescalidad %>
+</p>
+
+<p>
+  <strong>Fechasalidaalmacen:</strong>
+  <%= @instructor.fechasalidaalmacen %>
+</p>
+
+<%= link_to 'Edit', edit_instructor_path(@instructor) %> |
+<%= link_to 'Back', instructores_path %>
