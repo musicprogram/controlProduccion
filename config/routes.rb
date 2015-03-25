@@ -1,11 +1,10 @@
 Rails.application.routes.draw do
 
-  resources :instructores
 
   devise_for :usuarios
   resources :modulos
 
-  
+ 
 
   resources :cortes
 
@@ -25,8 +24,13 @@ Rails.application.routes.draw do
   end
 
   resources :descripcioncortes do
-  resources :cuadroproduccions
+  resources :cuadroproduccions 
 
+  end
+  
+  resources :cuadroproduccions do
+  resources :instructores
+  
   end
 
 

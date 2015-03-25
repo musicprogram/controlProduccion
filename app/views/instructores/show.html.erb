@@ -50,5 +50,9 @@
   <%= @instructor.fechasalidaalmacen %>
 </p>
 
-<%= link_to 'Edit', edit_instructor_path(@instructor) %> |
-<%= link_to 'Back', instructores_path %>
+
+
+
+  <%= link_to "<i class='fa fa-pencil fa-4x'></i>".html_safe, edit_cuadroproduccion_instructor_path(@cuadroproduccion,@instructor) %> |
+  <%= link_to "<i class='fa fa-arrow-circle-left fa-4x'></i>".html_safe, cuadroproduccion_instructores_path %>
+  

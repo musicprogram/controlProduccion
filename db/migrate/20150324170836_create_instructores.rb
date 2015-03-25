@@ -10,6 +10,7 @@ class CreateInstructores < ActiveRecord::Migration
       t.integer :totalrecibidas
       t.string :observacionescalidad
       t.datetime :fechasalidaalmacen
+      t.references :cuadroproduccion, index: true
 
       t.timestamps
     end

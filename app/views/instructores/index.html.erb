@@ -30,9 +30,12 @@
         <td><%= instructor.totalrecibidas %></td>
         <td><%= instructor.observacionescalidad %></td>
         <td><%= instructor.fechasalidaalmacen %></td>
-        <td><%= link_to 'Show', instructor %></td>
-        <td><%= link_to 'Edit', edit_instructor_path(instructor) %></td>
-        <td><%= link_to 'Destroy', instructor, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+        
+        
+         <td><%= link_to "<i class='fa fa-eye fa-2x encima'></i>".html_safe, cuadroproduccion_instructor_path(@cuadroproduccion, instructor) %></td>
+        <td><%= link_to "<i class='fa fa-pencil fa-2x encima'>".html_safe, edit_cuadroproduccion_instructor_path(@cuadroproduccion,instructor) %></td>
+        <td><%= link_to "<i class='fa fa-eraser fa-2x encima'>".html_safe, cuadroproduccion_instructor_path(@cuadroproduccion,instructor), method: :delete, data: { confirm: 'Are you sure?' } %></td>
+        
       </tr>
     <% end %>
   </tbody>
@@ -40,4 +43,11 @@
 
 <br>
 
-<%= link_to 'New Instructor', new_instructor_path %>
+
+
+<%= link_to "<i class='fa fa-plus-circle fa-4x'></i>".html_safe, new_cuadroproduccion_instructor_path(@cuadroproduccion) %>
+<%= link_to "<i class='fa fa-arrow-circle-left fa-4x'></i>".html_safe, descripcioncorte_cuadroproduccions_path(@cuadroproduccion) %>
+
+
+
+

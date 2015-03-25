@@ -2,5 +2,9 @@
 
 <%= render 'form' %>
 
-<%= link_to 'Show', @instructor %> |
-<%= link_to 'Back', instructores_path %>
+
+
+
+
+<%= link_to "<i class='fa fa-eye fa-4x encima'></i>".html_safe, cuadroproduccion_instructor_path(@instructor, @cuadroproduccion) %> |
+<%= link_to "<i class='fa fa-arrow-circle-left fa-4x'></i>".html_safe, cuadroproduccion_instructor_path %>

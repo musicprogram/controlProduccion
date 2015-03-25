@@ -72,6 +72,7 @@ ActiveRecord::Schema.define(version: 20150324180127) do
     t.integer  "totalrecibidas"
     t.string   "observacionescalidad"
     t.datetime "fechasalidaalmacen"
+    t.integer  "cuadroproduccion_id"
     t.datetime "created_at"
     t.datetime "updated_at"
     t.string   "imagen_file_name"
@@ -79,6 +80,8 @@ ActiveRecord::Schema.define(version: 20150324180127) do
     t.integer  "imagen_file_size"
     t.datetime "imagen_updated_at"
   end
+
+  add_index "instructores", ["cuadroproduccion_id"], name: "index_instructores_on_cuadroproduccion_id"
 
   create_table "modulos", force: true do |t|
     t.string   "modulonombre"
