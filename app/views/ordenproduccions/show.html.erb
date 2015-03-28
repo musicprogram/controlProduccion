@@ -27,16 +27,30 @@
                 <tr>
                   <td>
                   <div class="col-md-6">
-                    <strong>Fechaprogramacion:</strong>
-                   <%= @ordenproduccion.fechaprogramacion %>
+                   <h5 class="izquierda"> <strong class="izquierda">Fechaprogramacion:</strong><%= @ordenproduccion.fechaprogramacion %></h5>
+                   
                   </div>
                   <div class="col-md-6">
-                    <strong>Cliente:</strong>
-                 <%= @ordenproduccion.cliente.clientenombre %>
+                    <h5 class="derecha"><strong>Cliente:</strong><%= @ordenproduccion.cliente.clientenombre %></h5>
+                    
                   </div>
                   
                  </td>
                </tr>
+               
+               
+               <style>
+                   
+                   .izquierda{
+                       text-align:left;
+                       font-size:90%;
+                   }
+                   .derecha{
+                       text-align:right;
+                       font-size:90%;
+                   }
+               </style>
+               
                <tr class="active">
                 <td>
                  

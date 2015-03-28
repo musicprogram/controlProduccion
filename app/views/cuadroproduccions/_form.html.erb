@@ -17,20 +17,20 @@
 
   <div class="field">
     <%= f.label :fechatrazo %><br>
-    <%= f.datetime_select :fechatrazo %>
+    <%= f.text_field :fechatrazo, class:'datepicker form-control' %>
   </div>
   
 </div>
 <div class="col-md-4">
 <div class="field">
     <%= f.label :anchotrazo %><br>
-    <%= f.datetime_select :anchotrazo %>
+    <%= f.text_field :anchotrazo, class:'datepicker form-control' %>
   </div></div>
 
   <div class="col-md-4">
  <div class="field">
     <%= f.label :fechacorte %><br>
-    <%= f.datetime_select :fechacorte %>
+    <%= f.text_field :fechacorte, class:'datepicker form-control' %>
   </div>
   </div>
   </div>
@@ -42,7 +42,7 @@
 
   <div class="field">
     <%= f.label :fechaentradabodega %><br>
-    <%= f.datetime_select :fechaentradabodega %>
+    <%= f.text_field :fechaentradabodega, class:'datepicker form-control' %>
   </div>
 </div>
 
@@ -52,7 +52,7 @@
 
   <div class="field">
      Modulo<br>
-    <%= f.collection_select :modulo_id, Modulo.all, :id, :modulonombre, class: "form-control",     prompt: "Seleccione Modulo" %>
+    <%= f.collection_select :modulo_id, Modulo.all, :id, :modulonombre,{prompt: "Seleccione Modulo"},{ class: "form-control"} %>
 </div>
 
 
@@ -61,7 +61,7 @@
 <div class="col-md-4">
 <div class="field">
     <%= f.label :fechaentregamodulo %><br>
-    <%= f.datetime_select :fechaentregamodulo %>
+    <%= f.text_field :fechaentregamodulo, class:'datepicker form-control' %>
   </div>
 </div>
 </div>

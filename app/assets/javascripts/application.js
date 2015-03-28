@@ -41,7 +41,8 @@ $(document).on('page:change', function () {
 			forceParse: false,
 			autoclose: true,
 			todayHighlight: true,
-			toggleActive: true
+			toggleActive: true,
+			orientation: "top right"
 		
 	
 			})

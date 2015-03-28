@@ -10,56 +10,38 @@
 <% end %>
 
 <div class="table-responsive ">
-  <div class="tablero1">
-<table class="table table-condensed tablero">
+  <div class="">
+<table class="table table-condensed table-hover ">
   <thead>
     <tr class="active">
-      <th>Fechaprogramacion</th>
-      <th>Ordennumero</th>
-      <th>Cliente</th>
-      <th>Descripcion</th>
-      <th>Referencia</th>
-      <th>Corte</th>
-      <th>Ancho</th>
-      <th>Tela</th>
-      <th>Largotrazo</th>
-      <th>Vecestrazo</th>
-      <th>Largotendido</th>
-      <th>promedio</th>
-      <th>Cantidad</th>
-      <th>Responsable Corte</th>
-      <th>Capas</th>
-      <th>Total Metros</th>
-      <th>Tiqueteada</th>
-      <th>Prenda</th>
+        <th>Numero Orden</th>
+          <th>Referencia</th>
+        <th>Fecha</th>
+        
+        <th>Descripcion</th>
+      
+        
+        <th>Cantidad</th>
+      
       <th colspan="3"></th>
     </tr>
   </thead>
   <tbody>
     <% @ordenproduccions.each do |ordenproduccion| %>
       <tr>
-        <td><%= ordenproduccion.fechaprogramacion %></td>
         <td>000<%= ordenproduccion.id %></td>
-        <td><%= ordenproduccion.cliente.clientenombre %></td>
+        <td><%= ordenproduccion.fechaprogramacion %></td>
+        
+               <td><%= ordenproduccion.referencia %></td>
         <td><%= ordenproduccion.descripcion %></td>
-        <td><%= ordenproduccion.referencia %></td>
-        <td><%= ordenproduccion.corte.cortenombre %></td>
-        <td><%= ordenproduccion.ancho %></td>
-        <td><%= ordenproduccion.tela.telanombre %></td>
-        <td><%= ordenproduccion.largotrazo rescue nil %></td>
-        <td><%= ordenproduccion.vecestrazo rescue nil%></td>
-        <td><%= ordenproduccion.largotendido %></td>
-        <td><%= ordenproduccion.promedio %></td>
+
+       
         <td><%= ordenproduccion.cantidad rescue nil %></td>
-        <td><%= ordenproduccion.responsablecorte %></td>
-        <td><%= ordenproduccion.capas %></td>
-        <td><%= ordenproduccion.totalmetros %></td>
-        <td><%= ordenproduccion.tiqueteada %></td>
-        <td><%= ordenproduccion.prenda.prendanombre %></td>
-        <td><%= link_to "<i class='fa fa-scissors fa-2x encima'>".html_safe, ordenproduccion_descripcioncortes_path(ordenproduccion) %></td>
-        <td><%= link_to "<i class='fa fa-eye fa-2x encima'>".html_safe, ordenproduccion %></td>
-        <td><%= link_to "<i class='fa fa-pencil fa-2x encima'>".html_safe, edit_ordenproduccion_path(ordenproduccion) %></td>
-        <td><%= link_to "<i class='fa fa-eraser fa-2x encima'>".html_safe, ordenproduccion, method: :delete, data: { confirm: 'Estas seguro?' } %></td>
+      
+        <td><%= link_to "<i class='fa fa-scissors fa-3x encima'>".html_safe, ordenproduccion_descripcioncortes_path(ordenproduccion) %></td>
+        <td><%= link_to "<i class='fa fa-eye fa-3x encima'>".html_safe, ordenproduccion %></td>
+        <td><%= link_to "<i class='fa fa-pencil fa-3x encima'>".html_safe, edit_ordenproduccion_path(ordenproduccion) %></td>
+        <td><%= link_to "<i class='fa fa-eraser fa-3x encima'>".html_safe, ordenproduccion, method: :delete, data: { confirm: 'Estas seguro?' } %></td>
        
         
       

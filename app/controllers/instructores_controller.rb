@@ -5,16 +5,13 @@ class InstructoresController < ApplicationController
 
   def index
     @instructores = @cuadroproduccion.instructores.all
-    respond_with(@instructores)
   end
 
   def show
-    respond_with(@instructor)
   end
 
   def new
     @instructor = Instructor.new
-    respond_with(@instructor)
   end
 
   def edit

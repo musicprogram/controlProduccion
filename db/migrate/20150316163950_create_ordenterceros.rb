@@ -7,8 +7,8 @@ class CreateOrdenterceros < ActiveRecord::Migration
       t.string :direccion
       t.string :telefono
       t.string :email
-      t.datetime :fechaingreso
-      t.datetime :fechasalida
+      t.date :fechaingreso
+      t.date :fechasalida
       t.string :responsable
       t.references :proceso, index: true
       t.string :cantidad

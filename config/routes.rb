@@ -24,13 +24,11 @@ Rails.application.routes.draw do
   end
 
   resources :descripcioncortes do
-  resources :cuadroproduccions 
-
+      resources :cuadroproduccions 
   end
   
   resources :cuadroproduccions do
-  resources :instructores
-  
+     resources :instructores
   end
 
 
