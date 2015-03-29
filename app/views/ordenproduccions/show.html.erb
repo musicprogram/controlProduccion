@@ -5,175 +5,164 @@
 
 
 
-<div class="col-md-12">
-  <div class="col-md-2"></div>
-  <div class="col-md-8">
+  <div class="col-md-12">
+    <div class="col-md-2"></div>
+    <div class="col-md-8">
 
 
-    <div >
-      <div class="panel panel-succes">
-        <div class="panel-heading center">
-          <h3 class="panel-title">
-            <h2 class="center">Programacion de corte</h2></h3><strong>Ordennumero:</strong>
-            000<%= @ordenproduccion.id %>
-          </div>
-          <div class="panel-body">
-            <div class="the-price">
-              <h3>
+      <div >
+        <div class="panel panel-succes">
+          <div class="panel-heading center">
+            <h3 class="panel-title">
+              <h2 class="center">Programacion de corte</h2></h3>
+              <h4><strong>Ordennumero: </strong>
+              000<%= @ordenproduccion.id %></h4>
+            </div>
+            <div class="panel-body">
+              <div class="the-price">
+                <h3>
                 </h3>
                 <small>Centro de formacion en diseño, confeccion y Moda</small>
               </div>
               <table class="table">
                 <tr>
                   <td>
-                  <div class="col-md-6">
-                   <h5 class="izquierda"> <strong class="izquierda">Fechaprogramacion:</strong><%= @ordenproduccion.fechaprogramacion %></h5>
-                   
-                  </div>
-                  <div class="col-md-6">
-                    <h5 class="derecha"><strong>Cliente:</strong><%= @ordenproduccion.cliente.clientenombre %></h5>
+                    <div class="col-md-6">
+                      <h5 class="izquierda"> <strong class="izquierda">Fechaprogramacion: </strong><%= @ordenproduccion.fechaprogramacion %></h5>
+
+                   </div>
+                   <div class="col-md-6">
+                    <h5 class="derecha"><strong>Cliente: </strong><%= @ordenproduccion.cliente.clientenombre %></h5>
                     
                   </div>
                   
-                 </td>
-               </tr>
-               
-               
-               <style>
-                   
-                   .izquierda{
-                       text-align:left;
-                       font-size:90%;
-                   }
-                   .derecha{
-                       text-align:right;
-                       font-size:90%;
-                   }
-               </style>
-               
-               <tr class="active">
+                </td>
+              </tr>
+
+
+              <tr class="active">
                 <td>
-                 
+
                  <div class="col-md-6">
-                   
-<strong>Referencia:</strong>
-              <%= @ordenproduccion.referencia %>
-                 </div>
-                 <div class="col-md-6">
- <strong>Prenda:</strong>
-               <%= @ordenproduccion.prenda.prendanombre %>
-                 </div>
 
-               </td>
-             </tr>
-             <tr>
-              <td>
-              
-  <div class="col-md-6">
-     <strong>Corte:</strong>
-             <%= @ordenproduccion.corte.cortenombre %>
-
-  </div>
-  <div class="col-md-6">
-<strong>Ancho:</strong>
-            <%= @ordenproduccion.ancho %>
-
-  </div>
-
-
+                 <h5 class="izquierda"> <strong>Referencia: </strong><%= @ordenproduccion.referencia %></h5>
+                </div>
+                <div class="col-md-6">
+                 <h5 class="derecha"><strong>Prenda: </strong>
+                 <%= @ordenproduccion.prenda.prendanombre %></h5>
+               </div>
 
              </td>
            </tr>
-           <tr class="active">
+           <tr>
             <td>
+
               <div class="col-md-6">
- <strong>Tela:</strong>
-           <%= @ordenproduccion.tela.telanombre %>
-              </div>
-              <div class="col-md-6">
-<strong>Largotrazo:</strong>
-         <%= @ordenproduccion.largotrazo %>
+               <h5 class="izquierda"><strong>Corte: </strong>
+               <%= @ordenproduccion.corte.cortenombre %></h5>
+
+             </div>
+             <div class="col-md-6">
+             <h5 class="derecha"> <strong>Ancho: </strong>
+              <%= @ordenproduccion.ancho %></h5>
+
+            </div>
 
 
-              </div>
-
-
-
-
-
-            </td>
-          </tr>
-          <tr>
-            <td>
-            
-<div class="col-md-6">
-  <strong>Veces en el Trazo:</strong>
-       <%= @ordenproduccion.vecestrazo %> 
-</div>
-<div class="col-md-6">
-<strong>Largotendido:</strong>
-      <%= @ordenproduccion.largotendido %>
-
-</div>
-
-
-
-           </td>
-         </tr>
-         <tr class="active">
-          <td>
-            
-<div class="col-md-6">
-
-<strong>Promedio:</strong>
-     <%= @ordenproduccion.promedio %>
-</div>
-<div class="col-md-6">
- <strong>Cantidad:</strong>
-    <%= @ordenproduccion.cantidad %>
-</div>
 
           </td>
         </tr>
-        <tr>
+        <tr class="active">
           <td>
-          
-<div class="col-md-6"><strong>Responsable Corte:</strong>
-   <%= @ordenproduccion.responsablecorte %>  
-</div>
-<div class="col-md-6">
-  <strong>Capas:</strong>
-   <%= @ordenproduccion.capas %>
-</div>
+            <div class="col-md-6">
+            <h5 class="izquierda"> <strong>Tela: </strong>
+             <%= @ordenproduccion.tela.telanombre %></h5>
+           </div>
+           <div class="col-md-6">
+           <h5 class="derecha"> <strong>Largotrazo: </strong>
+            <%= @ordenproduccion.largotrazo %></h5>
 
 
-         </td>
-       </tr>
+          </div>
 
-       <tr class="active">
+
+
+
+
+        </td>
+      </tr>
+      <tr>
         <td>
-         
-<div class="col-md-6">
-<strong>Totalmetros:</strong>
-    <%= @ordenproduccion.totalmetros %>sss  
-</div>
-<div class="col-md-6">
-<strong>Tiqueteada:</strong>
-    <%= @ordenproduccion.tiqueteada %>
 
-</div>
+          <div class="col-md-6">
+           <h5 class="izquierda"> <strong>Veces en el Trazo: </strong>
+            <%= @ordenproduccion.vecestrazo %> </h5>
+          </div>
+          <div class="col-md-6">
+           <h5 class="derecha"> <strong>Largotendido: </strong>
+            <%= @ordenproduccion.largotendido %>
+</h5>
+          </div>
 
+
+
+        </td>
+      </tr>
+      <tr class="active">
+        <td>
+
+          <div class="col-md-6">
+
+           <h5 class="izquierda"> <strong>Promedio: </strong>
+            <%= @ordenproduccion.promedio %></h5>
+          </div>
+          <div class="col-md-6">
+          <h5 class="derecha"> <strong>Cantidad: </strong>
+           <%= @ordenproduccion.cantidad %></h5>
+         </div>
 
        </td>
      </tr>
      <tr>
       <td>
-      <strong>Descripcion:</strong>
-    <%= @ordenproduccion.descripcion %>
 
-     </td>
-   </tr>
-   
+        <div class="col-md-6">
+         <h5 class="izquierda"> <strong>Responsable Corte: </strong>
+         <%= @ordenproduccion.responsablecorte %>  </h5>
+       </div>
+       <div class="col-md-6">
+       <h5 class="derecha"> <strong>Capas: </strong>
+        <%= @ordenproduccion.capas %></h5>
+      </div>
+
+
+    </td>
+  </tr>
+
+  <tr class="active">
+    <td>
+
+      <div class="col-md-6">
+       <h5 class="izquierda"> <strong>Totalmetros:</strong>
+        <%= @ordenproduccion.totalmetros %></h5>
+      </div>
+      <div class="col-md-6">
+        <h5 class="derecha"><strong>Tiqueteada: </strong>
+        <%= @ordenproduccion.tiqueteada %></h5>
+
+      </div>
+
+
+    </td>
+  </tr>
+  <tr>
+    <td>
+      <h5><strong>Descripcion: </strong>
+      <%= @ordenproduccion.descripcion %></h5>
+
+    </td>
+  </tr>
+
 </table>
 </div>
 <div class="panel-footer">

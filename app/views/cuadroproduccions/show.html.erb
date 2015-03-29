@@ -1,3 +1,8 @@
+<div class="col-md-12">
+<div class="col-md-2"></div>
+
+<div class="col-md-8">
+
 <p class="info" id="notice"><%= notice %></p>
 
 
@@ -6,8 +11,9 @@
   <div class="panel panel-succes">
     <div class="panel-heading center">
       <h3 class="panel-title">
-        <h2 class="center">Cuadro de Produccion</h2></h3><strong>Ordennumero:</strong>
-        000<%= @cuadroproduccion.descripcioncorte.ordenproduccion.id %>
+        <h2 class="center">Cuadro de Produccion</h2></h3>
+        <h4><strong>Numero Orden: </strong>
+        000<%= @cuadroproduccion.descripcioncorte.ordenproduccion.id %></h4>
       </div>
       <div class="panel-body">
         <div class="the-price">
@@ -19,8 +25,8 @@
           <tr class="active">
             <td>
               <div class="col-md-6">
-                <strong>Color:</strong>
-                <%= @cuadroproduccion.descripcioncorte.color.colornombre %> 
+               <h5 class="izquierda"> <strong>Color: </strong>
+                <%= @cuadroproduccion.descripcioncorte.color.colornombre %> </h5>
               </div>
 
 
@@ -29,22 +35,22 @@
 
             <div class="col-md-6">
              
-
-              <strong>Referencia:</strong>
-              <%= @cuadroproduccion.descripcioncorte.ordenproduccion.referencia %> 
+<h5 class="derecha">
+              <strong>Referencia: </strong>
+              <%= @cuadroproduccion.descripcioncorte.ordenproduccion.referencia %> </h5>
             </div>
           </td>
         </tr>
         <tr >
           <td>
             <div class="col-md-6">
-              <strong>Corte:</strong>
-              <%= @cuadroproduccion.descripcioncorte.ordenproduccion.corte.cortenombre %>
+             <h5 class="izquierda"> <strong>Corte: </strong>
+              <%= @cuadroproduccion.descripcioncorte.ordenproduccion.corte.cortenombre %></h5>
             </div>
 
             <div class="col-md-6">
-              <strong>Tela:</strong>
-              <%= @cuadroproduccion.descripcioncorte.ordenproduccion.tela.telanombre %>
+              <h5 class="derecha"><strong>Tela: </strong>
+              <%= @cuadroproduccion.descripcioncorte.ordenproduccion.tela.telanombre %></h5>
             </div>
           </td>
         </tr>
@@ -54,12 +60,12 @@
         <tr class="active">
           <td>
             <div class="col-md-6">
-              <strong>Largotrazo:</strong>
-              <%= @cuadroproduccion.descripcioncorte.ordenproduccion.largotrazo %>
+              <h5 class="izquierda"><strong>Largotrazo: </strong>
+              <%= @cuadroproduccion.descripcioncorte.ordenproduccion.largotrazo %></h5>
             </div>
             <div class="col-md-6">
-             <strong>Vecestrazo:</strong>
-             <%= @cuadroproduccion.descripcioncorte.ordenproduccion.vecestrazo %>
+           <h5 class="derecha">  <strong>Vecestrazo: </strong>
+             <%= @cuadroproduccion.descripcioncorte.ordenproduccion.vecestrazo %></h5>
            </div>
 
 
@@ -69,14 +75,14 @@
        <tr>
         <td>
           <div class="col-md-6">
-            <strong>Promedio:</strong>
-            <%= @cuadroproduccion.descripcioncorte.ordenproduccion.promedio %>
+            <h5 class="izquierda"><strong>Promedio: </strong>
+            <%= @cuadroproduccion.descripcioncorte.ordenproduccion.promedio %></h5>
           </div>
           <div class="col-md-6">
 
-            <strong>Responsable:</strong>
+           <h5 class="derecha"> <strong>Responsable: </strong>
             <%= @cuadroproduccion.descripcioncorte.ordenproduccion.responsablecorte %>
-
+</h5>
           </div>
 
 
@@ -90,12 +96,12 @@
       <tr class="active">
         <td>
           <div class="col-md-6">
-            <strong>Fechatrazo:</strong>
-            <%= @cuadroproduccion.fechatrazo %>
+            <h5 class="izquierda"><strong>Fechatrazo: </strong>
+            <%= @cuadroproduccion.fechatrazo %></h5>
           </div>
           <div class="col-md-6">
-            <strong>Anchotrazo:</strong>
-            <%= @cuadroproduccion.anchotrazo %>
+            <h5 class="derecha"><strong>Anchotrazo: </strong>
+            <%= @cuadroproduccion.anchotrazo %></h5>
           </div>
 
         </td>
@@ -105,12 +111,12 @@
 
          <div class="col-md-6">
 
-          <strong>Fechacorte:</strong>
+         <h5 class="izquierda"> <strong>Fechacorte: </strong>
           <%= @cuadroproduccion.fechacorte %>
-        </div>
+        </div></h5>
         <div class="col-md-6">
-         <strong>Fechaentradabodega:</strong>
-         <%= @cuadroproduccion.fechaentradabodega %>
+         <h5 class="derecha"><strong>Fechaentradabodega: </strong>
+         <%= @cuadroproduccion.fechaentradabodega %></h5>
        </div>
 
      </td>
@@ -119,12 +125,12 @@
     <td>
 
       <div class="col-md-6">
-       <strong>Fechaentregamodulo:</strong>
-       <%= @cuadroproduccion.fechaentregamodulo %>
+      <h5 class="izquierda"> <strong>Fechaentregamodulo: </strong>
+       <%= @cuadroproduccion.fechaentregamodulo %></h5>
      </div>
      <div class="col-md-6">
-      <strong>Modulo:</strong>
-      <%= @cuadroproduccion.modulo.modulonombre rescue nil %>
+     <h5 class="derecha"> <strong>Modulo: </strong>
+      <%= @cuadroproduccion.modulo.modulonombre rescue nil %></h5>
 
     </div>
 
@@ -137,9 +143,9 @@
   <td>
 
     <div class="col-md-12">
-
+<h5>
      <strong>Descripcion:</strong>
-     <%= @cuadroproduccion.descripcioncorte.ordenproduccion.descripcion %> 
+     <%= @cuadroproduccion.descripcioncorte.ordenproduccion.descripcion %> </h5>
    </div>
  </td>
 </tr>
@@ -154,4 +160,10 @@
   <%= link_to "<i class='fa fa-arrow-circle-left fa-4x'></i>".html_safe, descripcioncorte_cuadroproduccions_path %>
 
 </div>
+</div>
+  
+</div>
+
+<div class="col-md-2"></div>
+
 </div>
