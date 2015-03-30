@@ -1,6 +1,5 @@
 class CuadroproduccionsController < ApplicationController
   before_action :set_cuadroproduccion, only: [:show, :edit, :update, :destroy, :index, :new, :create]
-  before_action :authenticate_usuario!
   # GET /cuadroproduccions
   # GET /cuadroproduccions.json
   def index

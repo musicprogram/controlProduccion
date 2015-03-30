@@ -1,6 +1,5 @@
 class TelasController < ApplicationController
   before_action :set_tela, only: [:show, :edit, :update, :destroy]
-before_action :authenticate_usuario!
   # GET /telas
   # GET /telas.json
   def index

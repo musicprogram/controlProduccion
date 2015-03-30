@@ -1,60 +1,68 @@
-<p id="notice"><%= notice %></p>
-
-<p>
-  <strong>Nombre:</strong>
-  <%= @instructor.nombre %>
-</p>
 
 
+<p class="info" id="notice"><%= notice %></p>
 
-<p>
-  <strong>Imagen:</strong>
-  <%= image_tag @instructor.imagen.url(:medium) %>
-</p>
-
-<p>
-  <strong>Fecharecibo:</strong>
-  <%= @instructor.fecharecibo %>
-</p>
-
-<p>
-  <strong>Cantidad:</strong>
-  <%= @instructor.cantidad %>
-</p>
-
-<p>
-  <strong>Tallaunidad:</strong>
-  <%= @instructor.tallaunidad %>
-</p>
-
-<p>
-  <strong>Primeras:</strong>
-  <%= @instructor.primeras %>
-</p>
-
-<p>
-  <strong>Segundas:</strong>
-  <%= @instructor.segundas %>
-</p>
-
-<p>
-  <strong>Totalrecibidas:</strong>
-  <%= @instructor.totalrecibidas %>
-</p>
-
-<p>
-  <strong>Observacionescalidad:</strong>
-  <%= @instructor.observacionescalidad %>
-</p>
-
-<p>
-  <strong>Fechasalidaalmacen:</strong>
-  <%= @instructor.fechasalidaalmacen %>
-</p>
+<br>
 
 
+<div class="container perfil" style="margin-top: 20px; margin-bottom: 20px;">
+  <div class="row panel">
+    <div class="col-md-4 bg_blur ">
+    </div>
+    <div class="col-md-8  col-xs-12">
+      <%= image_tag @instructor.imagen.url(:medium),:class => 'img-thumbnail picture hidden-xs' %>
+      <img src="http://lorempixel.com/output/people-q-c-100-100-1.jpg" class="img-thumbnail visible-xs picture_mob" />
+      <div class="header">
+        <h1> Instructor <strong><%= @instructor.nombre %></strong></h1>
+        <div class="col-md-12">
+
+          <div class="col-md-6">
+            <h4 class="izquierda">  <strong>Fecha de Recibo: </strong><%= @instructor.fecharecibo %></h4></div>
+            <div class="col-md-6">
+              <h4 class="derecha"> <strong>Cantidad: </strong><%= @instructor.cantidad %></h4>
+            </div>
+          </div>
+
+          <div class="col-md-12">
+            <div class="col-md-6">                  <h4 class="izquierda"> <strong>Talla Unidad: </strong><%= @instructor.tallaunidad %></h4>
+            </div>
+            <div class="col-md-6">                  <h4 class="derecha"> <strong>Primeras: </strong><%= @instructor.primeras %></h4>
+            </div>
 
 
-  <%= link_to "<i class='fa fa-pencil fa-4x'></i>".html_safe, edit_cuadroproduccion_instructor_path(@cuadroproduccion,@instructor) %> |
-  <%= link_to "<i class='fa fa-arrow-circle-left fa-4x'></i>".html_safe, cuadroproduccion_instructores_path %>
-  
+          </div>
+
+          <div class="col-md-12">
+            <div class="col-md-6">                  <h4 class="izquierda"> <strong>Segundas: </strong><%= @instructor.segundas %></h4>
+            </div>
+            <div class="col-md-6">                  <h4 class="derecha"><strong>Total Recibidas: </strong> <%= @instructor.totalrecibidas %></h4>
+            </div>
+
+
+          </div>
+          <div class="col-md-12">
+            <div class="col-md-6">                  <h4 class="izquierda"> <strong>Observaciones de Calidad: </strong><%= @instructor.observacionescalidad %></h4>
+            </div>
+            <div class="col-md-6">                  <h4 class="derecha"> <strong>Fecha se Salida: </strong><%= @instructor.fechasalidaalmacen %></h4>
+            </div>
+
+
+          </div>
+
+
+        </div>
+      </div>
+    </div>   
+
+    <br>
+
+    <div class="row nav">    
+      <div class="col-md-4"></div>
+      <div class="col-md-12 col-xs-12" style="margin: 0px;padding: 0px;">
+        <div class="col-md-6 col-xs-6 well"><%= link_to "<i class='fa fa-pencil fa-4x'></i>".html_safe, edit_cuadroproduccion_instructor_path(@cuadroproduccion,@instructor) %></div>
+        <div class="col-md-6 col-xs-6 well"><%= link_to "<i class='fa fa-arrow-circle-left fa-4x'></i>".html_safe, cuadroproduccion_instructores_path %></div>
+      </div>
+    </div>
+  </div>
+
+

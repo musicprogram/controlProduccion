@@ -1,6 +1,5 @@
 class DescripcioncortesController < ApplicationController
   before_action :set_descripcioncorte, only: [:show, :edit, :update, :destroy, :index, :new, :create]
-  before_action :authenticate_usuario!
   # GET /descripcioncortes
   # GET /descripcioncortes.json
   def index

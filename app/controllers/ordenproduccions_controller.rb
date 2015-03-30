@@ -1,6 +1,5 @@
 class OrdenproduccionsController < ApplicationController
   before_action :set_ordenproduccion, only: [:show, :edit, :update, :destroy]
-before_action :authenticate_usuario!
   # GET /ordenproduccions
   # GET /ordenproduccions.json
   def index

@@ -1,6 +1,5 @@
 class CortesController < ApplicationController
   before_action :set_corte, only: [:show, :edit, :update, :destroy]
- before_action :authenticate_usuario!
   # GET /cortes
   # GET /cortes.json
   def index

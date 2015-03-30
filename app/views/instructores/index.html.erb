@@ -1,15 +1,11 @@
 <h1 class="center">Instructores</h1>
 <br>
-<table>
+<div class="table-responsive">
+  <table class="table table-condensed table-hover">
   <thead>
     <tr>
       <th>Nombre</th>
       <th>Imagen</th>
-      <th>Fecharecibo</th>
-      <th>Cantidad</th>
-      <th>Tallaunidad</th>
-      <th>Primeras</th>
-      <th>Segundas</th>
       <th>Totalrecibidas</th>
       <th>Observacionescalidad</th>
       <th>Fechasalidaalmacen</th>
@@ -22,24 +18,20 @@
       <tr>
         <td><%= instructor.nombre %></td>
         <td><%= image_tag instructor.imagen.url(:thumb)%></td>
-        <td><%= instructor.fecharecibo %></td>
-        <td><%= instructor.cantidad %></td>
-        <td><%= instructor.tallaunidad %></td>
-        <td><%= instructor.primeras %></td>
-        <td><%= instructor.segundas %></td>
         <td><%= instructor.totalrecibidas %></td>
         <td><%= instructor.observacionescalidad %></td>
         <td><%= instructor.fechasalidaalmacen %></td>
         
         
-         <td><%= link_to "<i class='fa fa-eye fa-2x encima'></i>".html_safe, cuadroproduccion_instructor_path(@cuadroproduccion, instructor) %></td>
-        <td><%= link_to "<i class='fa fa-pencil fa-2x encima'>".html_safe, edit_cuadroproduccion_instructor_path(@cuadroproduccion,instructor) %></td>
-        <td><%= link_to "<i class='fa fa-eraser fa-2x encima'>".html_safe, cuadroproduccion_instructor_path(@cuadroproduccion,instructor), method: :delete, data: { confirm: 'Are you sure?' } %></td>
+         <td><%= link_to "<i class='fa fa-eye fa-3x encima'></i>".html_safe, cuadroproduccion_instructor_path(@cuadroproduccion, instructor) %></td>
+        <td><%= link_to "<i class='fa fa-pencil fa-3x encima'>".html_safe, edit_cuadroproduccion_instructor_path(@cuadroproduccion,instructor) %></td>
+        <td><%= link_to "<i class='fa fa-eraser fa-3x encima'>".html_safe, cuadroproduccion_instructor_path(@cuadroproduccion,instructor), method: :delete, data: { confirm: 'Are you sure?' } %></td>
         
       </tr>
     <% end %>
   </tbody>
 </table>
+</div>
 
 <br>
 

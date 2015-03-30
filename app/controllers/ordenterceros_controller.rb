@@ -1,6 +1,5 @@
 class OrdentercerosController < ApplicationController
   before_action :set_ordentercero, only: [:show, :edit, :update, :destroy]
-before_action :authenticate_usuario!
   # GET /ordenterceros
   # GET /ordenterceros.json
   def index
