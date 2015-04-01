@@ -20,6 +20,13 @@ class InstructoresController < ApplicationController
   def create
     @instructor = Instructor.new(instructor_params)
     @instructor.cuadroproduccion_id = @cuadroproduccion.id
+    
+    @instructor.totalrecibidas = @instructor.primeras + @instructor.segundas
+    
+    @instructor.observacionescalidad = @instructor.primeras * 100
+    @instructor.observacionescalidad = @instructor.observacionescalidad / @instructor.totalrecibidas
+     
+    
 
       respond_to do |format|
       if @instructor.save
@@ -34,6 +41,10 @@ class InstructoresController < ApplicationController
 
   def update
    
+       @instructor.totalrecibidas = @instructor.primeras + @instructor.segundas
+       @instructor.observacionescalidad = @instructor.primeras * 100
+       @instructor.observacionescalidad = @instructor.observacionescalidad / @instructor.totalrecibidas
+       @instructor.save    
     respond_to do |format|
       if @instructor.update(instructor_params)
         format.html { redirect_to cuadroproduccion_instructores_path(@cuadroproduccion), notice: 'Instructor was successfully updated.' }

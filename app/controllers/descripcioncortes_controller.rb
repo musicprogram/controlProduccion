@@ -49,7 +49,8 @@ class DescripcioncortesController < ApplicationController
   # PATCH/PUT /descripcioncortes/1
   # PATCH/PUT /descripcioncortes/1.json
   def update
-     if @descripcioncorte.tallaxs== nil then @descripcioncorte.tallaxs = 0 end
+    
+    if @descripcioncorte.tallaxs== nil then @descripcioncorte.tallaxs = 0 end
     if @descripcioncorte.tallas== nil then @descripcioncorte.tallas = 0 end
     if @descripcioncorte.tallam== nil then @descripcioncorte.tallam = 0 end
     if @descripcioncorte.tallal== nil then @descripcioncorte.tallal = 0 end

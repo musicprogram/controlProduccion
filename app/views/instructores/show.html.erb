@@ -48,6 +48,20 @@
 
 
           </div>
+          
+          <% if   %>
+          <% @instructor.observacionescalidad.to_i > 90 %>
+          <i class="fa fa-smile-o fa-4x"></i>
+          <% elsif %>
+          <% @instructor.observacionescalidad.to_i >= 70 && @instructor.observacionescalidad.to_i <= 89  %>
+          <i class="fa fa-frown-o fa-4x"></i>
+          <% elsif %>
+          <% @instructor.observacionescalidad.to_i <= 69 %>
+          <i class="fa fa-exclamation-triangle fa-4x"></i>
+         
+          <% end %>
+       
+         
 
 
         </div>
