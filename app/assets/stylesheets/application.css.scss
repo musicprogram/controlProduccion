@@ -182,7 +182,6 @@ body.homepage {
 
 
 .panel-succes{
-
 }
 
 .panel
@@ -198,7 +197,8 @@ body.homepage {
 
 .the-price
 {
-  background-image: -webkit-radial-gradient(center, circle farthest-corner, #FFFFFF 0%, #001824 100%);
+  background-image: -webkit-radial-gradient(center, circle farthest-corner, #565656 0%, #2d2d2d 100%);
+
   padding: 5px;
   margin: 0;
 }
@@ -601,10 +601,12 @@ body.homepageesh{
 
           .bg_blur
           {
-              background: url("fondo.jpeg");
+            
+            background: url("bustos.jpg");
 
-            height: 300px;
+            height: 315px;
             background-size: cover;
+            
           }
 
           .follow_btn {
@@ -713,4 +715,28 @@ body.homepageesh{
 
  
     
+}
+
+
+body.fonpage{
+  
+  background-color: #34495e;
+  background: url("fondod.png");
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -ms-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+  background-attachment: fixed;
+  background-repeat: no-repeat;
+  background-position: top center;
+  -webkit-touch-callout: none;
+  -webkit-tap-highlight-color: transparent;
+}
+
+.tbla{
+  background-color:white;
+  padding:5px;
+  padding-top:5px;
+  
 }
