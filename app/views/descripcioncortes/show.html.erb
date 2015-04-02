@@ -1,5 +1,4 @@
 <body class="homepageesh">
-    <p id="notice"><%= notice %></p>
 
 
 <br><br>
@@ -21,9 +20,11 @@
           </div>
           <div class="panel-body">
             <div class="the-price">
-              <h3>
-              </h3>
-              <small>Centro de formacion en diseño, confeccion y Moda</small>
+              <div class="center-block">
+                    
+                  <%= image_tag("sena.png")%>
+                  </div>
+             
             </div>
             <table class="table">
               <tr>
@@ -93,7 +94,7 @@
       <tr>
         <td>
          <div class="col-md-12">
-         <h5> <strong>Total Unidad: </strong>
+         <h5 class="izquierda"> <strong>Total Unidad: </strong>
           <%= @descripcioncorte.tallasuma %></h5>
 
         </div>
@@ -104,8 +105,9 @@
   </table>
 </div>
 <div class="panel-footer">
+     <small>Centro de formación en diseño, confección y Moda</small> <br>
 
-  <%= link_to "<i class='fa fa-pencil fa-4x'></i>".html_safe, edit_ordenproduccion_descripcioncorte_path(@ordenproduccion,@descripcioncorte) %> |
+  <%= link_to "<i class='fa fa-pencil fa-4x'></i>".html_safe, edit_ordenproduccion_descripcioncorte_path(@ordenproduccion,@descripcioncorte) %>
   <%= link_to "<i class='fa fa-arrow-circle-left fa-4x'></i>".html_safe,  ordenproduccion_descripcioncortes_path %>
 </div>
 </div>

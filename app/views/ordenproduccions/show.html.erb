@@ -1,7 +1,7 @@
 
 
 <body class="homepageesh">
-  <p class="info" id="notice"><%= notice %></p>
+  
 
 
 
@@ -20,9 +20,11 @@
             </div>
             <div class="panel-body">
               <div class="the-price">
-                <h3>
-                </h3>
-                <small>Centro de formacion en diseño, confeccion y Moda</small>
+                   <div class="center-block">
+                    
+                  <%= image_tag("sena.png")%>
+                  </div>
+                
               </div>
               <table class="table">
                 <tr>
@@ -157,7 +159,7 @@
   </tr>
   <tr>
     <td>
-      <h5><strong>Descripcion: </strong>
+      <h5 class="izquierda"><strong>Descripcion: </strong>
       <%= @ordenproduccion.descripcion %></h5>
 
     </td>
@@ -166,7 +168,8 @@
 </table>
 </div>
 <div class="panel-footer">
-  <%= link_to "<i class='fa fa-pencil fa-4x'></i>".html_safe, edit_ordenproduccion_path(@ordenproduccion) %> |
+    <small>Centro de formación en diseño, confección y Moda</small> <br>
+  <%= link_to "<i class='fa fa-pencil fa-4x'></i>".html_safe, edit_ordenproduccion_path(@ordenproduccion) %> 
   <%= link_to "<i class='fa fa-arrow-circle-left fa-4x'></i>".html_safe, ordenproduccions_path %>
 </div>
 </div>
