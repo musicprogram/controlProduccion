@@ -1,14 +1,15 @@
-<h1 class="center">Instructores</h1>
+
+    <h1 class="center cubo">Instructores</h1>
 <br>
-<div class="table-responsive">
+<div class="table-responsive cubo">
   <table class="table table-condensed table-hover">
   <thead>
-    <tr>
+    <tr class="active">
       <th>Nombre</th>
       <th>Imagen</th>
-      <th>Totalrecibidas</th>
-      <th>Observacionescalidad</th>
-      <th>Fechasalidaalmacen</th>
+      <th>Total Recibidas</th>
+      <th>Calidad</th>
+      <th>Salida del Almacen</th>
       <th colspan="3"></th>
     </tr>
   </thead>
@@ -23,7 +24,7 @@
         <td><%= instructor.fechasalidaalmacen %></td>
         
         
-         <td><%= link_to "<i class='fa fa-eye fa-3x encima'></i>".html_safe, cuadroproduccion_instructor_path(@cuadroproduccion, instructor) %></td>
+        <td><%= link_to "<i class='fa fa-eye fa-3x encima'></i>".html_safe, cuadroproduccion_instructor_path(@cuadroproduccion, instructor) %></td>
         <td><%= link_to "<i class='fa fa-pencil fa-3x encima'>".html_safe, edit_cuadroproduccion_instructor_path(@cuadroproduccion,instructor) %></td>
         <td><%= link_to "<i class='fa fa-eraser fa-3x encima'>".html_safe, cuadroproduccion_instructor_path(@cuadroproduccion,instructor), method: :delete, data: { confirm: 'Are you sure?' } %></td>
         
@@ -39,5 +40,4 @@
 
 <%= link_to "<i class='fa fa-plus-circle fa-4x'></i>".html_safe, new_cuadroproduccion_instructor_path(@cuadroproduccion) %>
 <%= link_to "<i class='fa fa-arrow-circle-left fa-4x'></i>".html_safe, descripcioncorte_cuadroproduccions_path(@cuadroproduccion.descripcioncorte_id) %>
-
 

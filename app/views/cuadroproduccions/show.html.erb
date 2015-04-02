@@ -1,4 +1,5 @@
-<div class="col-md-12">
+<body class="homepageesh">
+    <div class="col-md-12">
 <div class="col-md-2"></div>
 
 <div class="col-md-8">
@@ -11,15 +12,17 @@
   <div class="panel panel-succes">
     <div class="panel-heading center">
       <h3 class="panel-title">
-        <h2 class="center">Cuadro de Produccion</h2></h3>
+        <h2 class="center">Cuadro de Producción</h2></h3>
         <h4><strong>Numero Orden: </strong>
         000<%= @cuadroproduccion.descripcioncorte.ordenproduccion.id %></h4>
       </div>
       <div class="panel-body">
         <div class="the-price">
-          <h3>
-          </h3>
-          <small>Centro de formacion en diseño, confeccion y Moda</small>
+          <div class="center-block">
+                    
+                  <%= image_tag("sena.png")%>
+                  </div>
+          
         </div>
         <table class="table">
           <tr class="active">
@@ -60,11 +63,11 @@
         <tr class="active">
           <td>
             <div class="col-md-6">
-              <h5 class="izquierda"><strong>Largotrazo: </strong>
+              <h5 class="izquierda"><strong>Largo del Trazo: </strong>
               <%= @cuadroproduccion.descripcioncorte.ordenproduccion.largotrazo %></h5>
             </div>
             <div class="col-md-6">
-           <h5 class="derecha">  <strong>Vecestrazo: </strong>
+           <h5 class="derecha">  <strong>Veces en el Trazo: </strong>
              <%= @cuadroproduccion.descripcioncorte.ordenproduccion.vecestrazo %></h5>
            </div>
 
@@ -96,11 +99,11 @@
       <tr class="active">
         <td>
           <div class="col-md-6">
-            <h5 class="izquierda"><strong>Fechatrazo: </strong>
+            <h5 class="izquierda"><strong>Fecha del Trazo: </strong>
             <%= @cuadroproduccion.fechatrazo %></h5>
           </div>
           <div class="col-md-6">
-            <h5 class="derecha"><strong>Anchotrazo: </strong>
+            <h5 class="derecha"><strong>Ancho del Trazo: </strong>
             <%= @cuadroproduccion.anchotrazo %></h5>
           </div>
 
@@ -111,11 +114,11 @@
 
          <div class="col-md-6">
 
-         <h5 class="izquierda"> <strong>Fechacorte: </strong>
+         <h5 class="izquierda"> <strong>Fecha del Corte: </strong>
           <%= @cuadroproduccion.fechacorte %>
         </div></h5>
         <div class="col-md-6">
-         <h5 class="derecha"><strong>Fechaentradabodega: </strong>
+         <h5 class="derecha"><strong>Fecha de Entrada: </strong>
          <%= @cuadroproduccion.fechaentradabodega %></h5>
        </div>
 
@@ -125,7 +128,7 @@
     <td>
 
       <div class="col-md-6">
-      <h5 class="izquierda"> <strong>Fechaentregamodulo: </strong>
+      <h5 class="izquierda"> <strong>Fecha de Entrega: </strong>
        <%= @cuadroproduccion.fechaentregamodulo %></h5>
      </div>
      <div class="col-md-6">
@@ -143,8 +146,8 @@
   <td>
 
     <div class="col-md-12">
-<h5>
-     <strong>Descripcion:</strong>
+<h5 class="izquierda">
+     <strong>Descripción:</strong>
      <%= @cuadroproduccion.descripcioncorte.ordenproduccion.descripcion %> </h5>
    </div>
  </td>
@@ -155,8 +158,9 @@
 </table>
 </div>
 <div class="panel-footer">
+    <small>Centro de formación en diseño, confección y Moda</small><br>
 
-  <%= link_to "<i class='fa fa-pencil fa-4x'></i>".html_safe, edit_descripcioncorte_cuadroproduccion_path(@descripcioncorte,@cuadroproduccion) %> |
+  <%= link_to "<i class='fa fa-pencil fa-4x'></i>".html_safe, edit_descripcioncorte_cuadroproduccion_path(@descripcioncorte,@cuadroproduccion) %>
   <%= link_to "<i class='fa fa-arrow-circle-left fa-4x'></i>".html_safe, descripcioncorte_cuadroproduccions_path %>
 
 </div>
@@ -167,3 +171,4 @@
 <div class="col-md-2"></div>
 
 </div>
+</body>

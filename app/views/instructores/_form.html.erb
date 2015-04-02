@@ -12,46 +12,111 @@
     </div>
   <% end %>
 
+
+<div class="col-md-12">
+  
+ 
+
+  <div class="col-md-4">
+      
+      
   <div class="field">
     <%= f.label :nombre %><br>
-    <%= f.text_field :nombre %>
+    <%= f.text_field :nombre, class:'form-control' %>
     
   </div>
-  
-  <div class="field">
+    </div>
+    
+    <div class="col-md-4">
+      <div class="field">
     <%= f.label :imagen %>
-    <%= f.file_field :imagen %>
+    <%= f.file_field :imagen, class:'form-control' %>
   </div>
+      
+    </div>
 
+
+
+    <div class="col-md-4">
+        
   <div class="field">
     <%= f.label :fecharecibo %><br>
-    <%= f.text_field :fecharecibo, class: 'datepicker' %>
+    <%= f.text_field :fecharecibo, class: 'datepicker form-control' %>
   </div>
+      
+    </div>
+    
+    <div class="col-md-4">
+      
   
   <div class="field">
     <%= f.label :cantidad %><br>
-    <%= f.number_field :cantidad %>
+    <%= f.number_field :cantidad, class:'form-control' %>
   </div>
+      
+    </div>
+ 
+
+    <div class="col-md-4">
+      
+      
+
   <div class="field">
     <%= f.label :tallaunidad %><br>
-    <%= f.text_field :tallaunidad %>
+    <%= f.text_field :tallaunidad, class:'form-control' %>
   </div>
-  <div class="field">
-    <%= f.label :primeras %><br>
-    <%= f.number_field :primeras %>
-  </div>
-  <div class="field">
-    <%= f.label :segundas %><br>
-    <%= f.number_field :segundas %>
-  </div>
- 
+    </div>
+    
+    <div class="col-md-4">
+      
   
   <div class="field">
+    <%= f.label :primeras %><br>
+    <%= f.number_field :primeras, class:'form-control' %>
+  </div>
+      
+    </div>
+    
+    
+    <div class="col-md-4">
+      
+      <div class="field">
+    <%= f.label :segundas %><br>
+    <%= f.number_field :segundas, class:'form-control' %>
+  </div>
+    </div>
+    
+    <div class="col-md-4">
+      
+        <div class="field">
     <%= f.label :fechasalidaalmacen %><br>
-    <%= f.text_field :fechasalidaalmacen, class: 'datepicker' %>
+    <%= f.text_field :fechasalidaalmacen, class: 'datepicker form-control' %>
   </div>
+    </div>
 
-  <div class="actions">
-    <%= f.submit %>
+
+    
+
+ 
+  
+</div>
+
+
+<div class="col-md-12">
+  
+  <div class="col-md-4"></div>
+  <div class="col-md-4">
+    
+
+
   </div>
+  
+ 
+  <div class="col-md-4">
+     <hr>
+  <div class="actions">
+    <%= f.submit "Guardar",class:'btn btn-default btn-lg btn-block'%>
+  </div>
+  </div>
+</div>
 <% end %>

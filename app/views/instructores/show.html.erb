@@ -1,4 +1,5 @@
-
+<body class="homepageesh">
+  
 
 <p class="info" id="notice"><%= notice %></p>
 
@@ -41,7 +42,7 @@
 
           </div>
           <div class="col-md-12">
-            <div class="col-md-6">                  <h4 class="izquierda"> <strong>Observaciones de Calidad: </strong><%= @instructor.observacionescalidad %></h4>
+            <div class="col-md-6">                  <h4 class="izquierda"> <strong>Calidad: </strong><%= @instructor.observacionescalidad %></h4>
             </div>
             <div class="col-md-6">                  <h4 class="derecha"> <strong>Fecha se Salida: </strong><%= @instructor.fechasalidaalmacen %></h4>
             </div>
@@ -51,18 +52,16 @@
           
           <% if   %>
           <% @instructor.observacionescalidad.to_i > 90 %>
-          <i class="fa fa-smile-o fa-4x"></i>
+          <i class="fa fa-smile-o fa-4x option animated wobble"></i>
           <% elsif %>
           <% @instructor.observacionescalidad.to_i >= 70 && @instructor.observacionescalidad.to_i <= 89  %>
-          <i class="fa fa-frown-o fa-4x"></i>
+          <i class="fa fa-frown-o fa-4x option animated wobble"></i>
           <% elsif %>
           <% @instructor.observacionescalidad.to_i <= 69 %>
-          <i class="fa fa-exclamation-triangle fa-4x"></i>
+          <i class="fa fa-exclamation-triangle fa-4x option animated wobble"></i>
          
           <% end %>
        
-         
-
 
         </div>
       </div>
@@ -80,3 +79,5 @@
   </div>
 
 
+
+</body>

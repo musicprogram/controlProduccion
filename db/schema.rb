@@ -33,7 +33,7 @@ ActiveRecord::Schema.define(version: 20150324180127) do
 
   create_table "cuadroproduccions", force: true do |t|
     t.date     "fechatrazo"
-    t.date     "anchotrazo"
+    t.integer  "anchotrazo"
     t.date     "fechacorte"
     t.date     "fechaentradabodega"
     t.date     "fechaentregamodulo"
@@ -70,7 +70,7 @@ ActiveRecord::Schema.define(version: 20150324180127) do
     t.integer  "primeras"
     t.integer  "segundas"
     t.integer  "totalrecibidas"
-    t.string   "observacionescalidad"
+    t.integer  "observacionescalidad"
     t.date     "fechasalidaalmacen"
     t.integer  "cuadroproduccion_id"
     t.datetime "created_at"

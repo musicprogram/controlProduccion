@@ -55,7 +55,7 @@ body.homepage {
   background-position: top center;
   -webkit-touch-callout: none;
   -webkit-tap-highlight-color: transparent;
-  margin: 10em auto;
+ 
 }
 
 body.homepage:before {
@@ -198,9 +198,8 @@ body.homepage {
 
 .the-price
 {
-  background-color: rgba(220,220,220,.17);
-  box-shadow: 0 1px 0 #dcdcdc, inset 0 1px 0 #fff;
-  padding: 20px;
+  background-image: -webkit-radial-gradient(center, circle farthest-corner, #FFFFFF 0%, #001824 100%);
+  padding: 5px;
   margin: 0;
 }
 
@@ -296,7 +295,7 @@ body.homepage {
 
 body.homepageesh{
  background-image: linear-gradient(
-      white, #BCBCBC
+      #2d2d2d, #565656
     );
  height: auto;
  max-width: 100%;
@@ -543,9 +542,9 @@ body.homepageesh{
   .label-default{
 
     font-size: 15px;
-    background-color: rgba(000, 0, 0, 0.10);
-        box-shadow: -5px -5px 5px #CCCCCC;
-        margin-top: 10px;
+    background-color: rgba(000, 0, 0, 0.5);
+    box-shadow: -5px -5px 5px #474747;
+    margin-top: 10px;
     margin-bottom: 10px;
     margin-right: 15px;
     margin-left: 5px;
@@ -688,3 +687,30 @@ body.homepageesh{
               margin-top : 30px;
             }
           }                   
+  
+  
+  .fondoinstruc{
+    background-color:#f9f9f9;
+   
+    border-radius: 10px 10px 10px 10px;
+    
+  }        
+  
+  .cubo{
+    margin: 5px 5px 5px 5px;
+  }
+  
+  .option {
+    -webkit-animation-duration: 3s;
+    -webkit-animation-delay: 2s;
+    -webkit-animation-iteration-count: infinite;
+}
+
+.shake{
+    
+      -webkit-animation-duration: 5s;
+      -webkit-animation-iteration-count: infinite;
+
+ 
+    
+}
