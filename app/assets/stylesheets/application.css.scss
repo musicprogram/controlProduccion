@@ -20,7 +20,13 @@
 @import "animate";
 
 .center{
-	text-align: center
+	text-align: center;
+  color: #2c2c2c;
+    letter-spacing: .05em;
+    text-shadow: 
+      4px 4px 0px white, 
+      7px 7px 0px rgba(0, 0, 0, 0.2);
+  
 
 }
 
@@ -89,12 +95,12 @@ body.homepage:before {
 }
 
 .wrapper-indieandcool h1 {
-  font-family: "RobotoDraft", sans-serif;
+  font-family: 'Oswald', sans-serif;
   font-size: 4em;
   margin: 1em auto;
 }
 .wrapper-indieandcool h2.descripcion {
-  font-family: "Roboto", sans-serif;
+  font-family: sans-serif;
   font-size: 1.47em;
   margin: -1.80em auto;
 }
@@ -106,7 +112,7 @@ body.homepage:before {
   color: #000;
   border: none;
   padding: .3em 1em;
-  font-family: "RobotoDraft", sans-serif;
+  font-family: sans-serif;
   font-size: 2em;
   font-weight: bold;
   text-decoration: none;
@@ -163,7 +169,7 @@ body.homepage {
   border: none;
   padding: .3em 1em;
   max-width: 100%;
-  font-family: "RobotoDraft", sans-serif;
+  font-family: sans-serif;
   font-size: 2em;
   font-weight: bold;
   text-decoration: none;
@@ -740,3 +746,17 @@ body.fonpage{
   padding-top:5px;
   
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+

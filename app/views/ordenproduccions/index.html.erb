@@ -1,7 +1,8 @@
 
 <body class="fonpage">
-  <h1 class="center">ORDENES DE PRODUCCIÓN</h1> <br>
-<h4 class="derecho">Total Ordenes: <span class="badge option animated wobble"> <%= @ordenproduccions.count %> </span></h4 >
+  <h1 class="center">ORDENES DE PRODUCCIÓN</h1> 
+  <br>
+<h4 class="derecho"><span class="badge option animated wobble"> <%= @ordenproduccions.count %> </span></h4 >
 
   <%= form_tag ordenproduccions_path, :method => 'get' do %>
   <% content_tag :label do %>
