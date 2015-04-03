@@ -16,11 +16,12 @@ class OrdenproduccionsController < ApplicationController
   # GET /ordenproduccions/new
   def new
     @ordenproduccion = Ordenproduccion.new
+    @fondo_hand = true
   end
 
   # GET /ordenproduccions/1/edit
   def edit
-       
+       @home_pagee = true
 
   end
 
