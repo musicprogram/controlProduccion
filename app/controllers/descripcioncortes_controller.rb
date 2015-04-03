@@ -4,6 +4,7 @@ class DescripcioncortesController < ApplicationController
   # GET /descripcioncortes.json
   def index
     @descripcioncortes = @ordenproduccion.descripcioncortes.all
+    @fondo_hand = true
   end
 
   # GET /descripcioncortes/1

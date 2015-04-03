@@ -1,10 +1,12 @@
-<h1 class="center">DESCRIPCIÓN DEL CORTE</h1>
+
+<body class="handfondo">
+  <h1 class="center">DESCRIPCIÓN DEL CORTE</h1>
 <br><h4 class="derecho"><span class="badge option animated wobble"> <%= @descripcioncortes.count %> </span></h4 >
 <br>
 
-<div class="table-reponsive">
+<div class="table-reponsive tbla">
   
-<table class="table table-condensed table-hover ">
+<table class="table table-condensed table-hover tbla">
   <thead>
     <tr class="active">
       <th>Numero Orden</th>
@@ -57,3 +59,5 @@
 <%= link_to "<i class='fa fa-plus-circle fa-4x'></i>".html_safe, new_ordenproduccion_descripcioncorte_path(@ordenproduccion) %>
         	
 <%= link_to "<i class='fa fa-arrow-circle-left fa-4x'></i>".html_safe, ordenproduccions_path(@ordenproduccion) %>
+
+</body>
