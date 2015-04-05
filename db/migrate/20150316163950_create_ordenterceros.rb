@@ -2,7 +2,6 @@ class CreateOrdenterceros < ActiveRecord::Migration
   def change
     create_table :ordenterceros do |t|
       t.string :referencia
-      t.string :numeroop
       t.string :nombreproveedor
       t.string :direccion
       t.string :telefono

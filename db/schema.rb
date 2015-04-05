@@ -117,7 +117,6 @@ ActiveRecord::Schema.define(version: 20150324180127) do
 
   create_table "ordenterceros", force: true do |t|
     t.string   "referencia"
-    t.string   "numeroop"
     t.string   "nombreproveedor"
     t.string   "direccion"
     t.string   "telefono"

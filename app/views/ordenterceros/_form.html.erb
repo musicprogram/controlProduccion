@@ -20,26 +20,20 @@
     </div></div>
     <div class="col-md-4">
       <div class="field">
-        <%= f.label :numeroop %><br>
-        <%= f.text_field :numeroop, class:'form-control'  %>
+       <%= f.label :nombreproveedor %><br>
+        <%= f.text_field :nombreproveedor, class:'form-control'  %>
       </div>
     </div>
     <div class="col-md-4">
       <div class="field">
-        <%= f.label :nombreproveedor %><br>
-        <%= f.text_field :nombreproveedor, class:'form-control'  %>
+         <%= f.label :direccion %><br>
+        <%= f.text_field :direccion, class:'form-control' %>
       </div>
     </div>
   </div>
   
   <div class="col-md-12">
 
-    <div class="col-md-4">
-      <div class="field">
-        <%= f.label :direccion %><br>
-        <%= f.text_field :direccion, class:'form-control' %>
-      </div>
-    </div>
     <div class="col-md-4">
       <div class="field">
         <%= f.label :telefono %><br>
@@ -48,8 +42,14 @@
     </div>
     <div class="col-md-4">
       <div class="field">
-        <%= f.label :email %><br>
+       <%= f.label :email %><br>
         <%= f.text_field :email, class:'form-control' %>
+      </div>
+    </div>
+    <div class="col-md-4">
+      <div class="field">
+        <%= f.label :fechaingreso %><br>
+        <%= f.text_field :fechaingreso, class:'datepicker form-control' %>
       </div>
     </div>
   </div>
@@ -58,14 +58,8 @@
   <div class="col-md-12">
     <div class="col-md-4">
       <div class="field">
-        <%= f.label :fechaingreso %><br>
-        <%= f.datetime_select :fechaingreso %>
-      </div>
-    </div>
-    <div class="col-md-4">
-      <div class="field">
         <%= f.label :fechasalida %><br>
-        <%= f.datetime_select :fechasalida %>
+        <%= f.text_field :fechasalida, class:'datepicker form-control' %>
       </div>
     </div>
     <div class="col-md-4">
@@ -74,6 +68,13 @@
         <%= f.text_field :responsable, class:'form-control' %>
       </div>
     </div>
+    <div class="col-md-4">
+      <div class="field">
+         Proceso <br>
+       <%= f.collection_select :proceso_id, Proceso.all, :id, :procesonombre,{ prompt: "Seleccione Proceso"}, {class: "form-control"} %>
+     
+      </div>
+    </div>
 
   </div>
   
@@ -82,9 +83,9 @@
 
     <div class="col-md-4">
       <div class="field">
-       Proceso <br>
-       <%= f.collection_select :proceso_id, Proceso.all, :id, :procesonombre,{ prompt: "Seleccione Proceso"}, {class: "form-control"} %>
-     </div>
+      <%= f.label :cantidad %><br>
+      <%= f.text_field :cantidad, class:'form-control' %>
+      </div>
 
    </div>
 
@@ -92,8 +93,8 @@
    
    <div class="col-md-4">
      <div class="field">
-      <%= f.label :cantidad %><br>
-      <%= f.text_field :cantidad, class:'form-control' %>
+       <%= f.label :pieza %><br>
+    <%= f.text_field :pieza, class:'form-control' %>
     </div>
 
     
@@ -101,8 +102,9 @@
 
   <div class="col-md-4">
    <div class="field">
-    <%= f.label :pieza %><br>
-    <%= f.text_field :pieza, class:'form-control' %>
+   Color <br>
+     <%= f.collection_select :color_id, Color.all, :id, :colornombre,{ prompt: "Seleccione Color"}, {class: "form-control"} %>
+
   </div>
 </div>
 
@@ -112,8 +114,8 @@
 
   <div class="col-md-4">
    <div class="field">
-     Color <br>
-     <%= f.collection_select :color_id, Color.all, :id, :colornombre,{ prompt: "Seleccione Color"}, {class: "form-control"} %>
+   <%= f.label :transportador %><br>
+    <%= f.text_field :transportador, class:'form-control' %>
    </div>
 
  </div>
@@ -124,15 +126,15 @@
  <div class="col-md-4">
 
   <div class="field">
-    <%= f.label :transportador %><br>
-    <%= f.text_field :transportador, class:'form-control' %>
+    <%= f.label :totalunidad %><br>
+    <%= f.number_field :totalunidad, class:'form-control' %>
   </div>
 </div>
 
 <div class="col-md-4">
   <div class="field">
-    <%= f.label :totalunidad %><br>
-    <%= f.number_field :totalunidad, class:'form-control' %>
+   <%= f.label :observacion %><br>
+  <%= f.text_area :observacion, class:'form-control' %>
   </div>
 
 </div>
@@ -142,23 +144,19 @@
 
 <div class="col-md-12">
   
-<div class="col-md-4">
-  <div class="field">
-  <%= f.label :observacion %><br>
-  <%= f.text_area :observacion, class:'form-control' %>
-</div>
-</div>
-
-<div class="col-md-4">
-  
-
-</div>
-<hr>
-<div class="col-md-8">
+<div class="col-md-6">
+<div class="field">
   <div class="actions">
   <%= f.submit "Guardar",class:'btn btn-default btn-lg btn-block' %>
 </div>
 </div>
+</div>
+
+<div class="col-md-6">
+  
+
+</div>
+
 </div>
 
 

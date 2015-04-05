@@ -1,84 +1,179 @@
-<p id="notice"><%= notice %></p>
+<br>
+<br>
 
-<p>
-  <strong>Referencia:</strong>
-  <%= @ordentercero.referencia %>
-</p>
 
-<p>
-  <strong>Numeroop:</strong>
-  <%= @ordentercero.numeroop %>
-</p>
+<body class="homepageesh footer_tuto1">
+  
 
-<p>
-  <strong>Nombreproveedor:</strong>
-  <%= @ordentercero.nombreproveedor %>
-</p>
 
-<p>
-  <strong>Direccion:</strong>
-  <%= @ordentercero.direccion %>
-</p>
 
-<p>
-  <strong>Telefono:</strong>
-  <%= @ordentercero.telefono %>
-</p>
+  <div class="col-md-12">
+    <div class="col-md-2"></div>
+    <div class="col-md-8">
 
-<p>
-  <strong>Email:</strong>
-  <%= @ordentercero.email %>
-</p>
 
-<p>
-  <strong>Fechaingreso:</strong>
-  <%= @ordentercero.fechaingreso %>
-</p>
+      <div >
+        <div class="panel panel-succes">
+          <div class="panel-heading center">
+            <h3 class="panel-title">
+              <h2 class="center">Orden Terceros</h2></h3>
+              <h4><strong>Orden Numero: </strong>
+              000<%= @ordentercero.id %></h4>
+            </div>
+            <div class="panel-body">
+              <div class="the-price">
+                   <div class="center-block">
+                    
+                  <%= image_tag("senab.png")%>
+                  </div>
+                
+              </div>
+              <table class="table">
+                <tr>
+                  <td>
+                    <div class="col-md-6">
+                      <h5 class="izquierda"> <strong class="izquierda">Referencia: </strong><%= @ordentercero.referencia %></h5>
 
-<p>
-  <strong>Fechasalida:</strong>
-  <%= @ordentercero.fechasalida %>
-</p>
+                   </div>
+                   <div class="col-md-6">
+                    <h5 class="derecha"><strong>Nombre Proveedor: </strong><%= @ordentercero.nombreproveedor %></h5>
+                    
+                  </div>
+                  
+                </td>
+              </tr>
 
-<p>
-  <strong>Responsable:</strong>
-  <%= @ordentercero.responsable %>
-</p>
 
-<p>
-  <strong>Proceso:</strong>
-  <%= @ordentercero.proceso.procesonombre %>
-</p>
+              <tr class="active">
+                <td>
 
-<p>
-  <strong>Cantidad:</strong>
-  <%= @ordentercero.cantidad %>
-</p>
+                 <div class="col-md-6">
 
-<p>
-  <strong>Pieza:</strong>
-  <%= @ordentercero.pieza %>
-</p>
+                 <h5 class="izquierda"> <strong>Dirección: </strong><%= @ordentercero.direccion %></h5>
+                </div>
+                <div class="col-md-6">
+                 <h5 class="derecha"><strong>Telefono: </strong>
+                 <%= @ordentercero.telefono %></h5>
+               </div>
 
-<p>
-  <strong>Color:</strong>
-  <%= @ordentercero.color.colornombre %>
-</p>
+             </td>
+           </tr>
+           <tr>
+            <td>
 
-<p>
-  <strong>Transportador:</strong>
-  <%= @ordentercero.transportador %>
-</p>
+              <div class="col-md-6">
+               <h5 class="izquierda"><strong>Email: </strong>
+               <%= @ordentercero.email %></h5>
 
-<p>
-  <strong>Totalunidad:</strong>
-  <%= @ordentercero.totalunidad %>
-</p>
+             </div>
+             <div class="col-md-6">
+             <h5 class="derecha"> <strong>Fecha de Ingreso: </strong>
+              <%= @ordentercero.fechaingreso %></h5>
 
-<p>
-  <strong>Observacion:</strong>
-  <%= @ordentercero.observacion %>
-</p>
+            </div>
 
-<%= link_to 'Edit', edit_ordentercero_path(@ordentercero) %> |
-<%= link_to 'Back', ordenterceros_path %>
+
+
+          </td>
+        </tr>
+        <tr class="active">
+          <td>
+            <div class="col-md-6">
+            <h5 class="izquierda"> <strong>Fecha de Salida: </strong>
+             <%= @ordentercero.fechasalida %></h5>
+           </div>
+           <div class="col-md-6">
+           <h5 class="derecha"> <strong>Responsable: </strong>
+            <%= @ordentercero.responsable %></h5>
+
+
+          </div>
+
+
+
+
+
+        </td>
+      </tr>
+      <tr>
+        <td>
+
+          <div class="col-md-6">
+           <h5 class="izquierda"> <strong>Proceso: </strong>
+            <%= @ordentercero.proceso.procesonombre %> </h5>
+          </div>
+          <div class="col-md-6">
+           <h5 class="derecha"> <strong>Cantidad: </strong>
+            <%= @ordentercero.cantidad %>
+</h5>
+          </div>
+
+
+
+        </td>
+      </tr>
+      <tr class="active">
+        <td>
+
+          <div class="col-md-6">
+
+           <h5 class="izquierda"> <strong>Pieza: </strong>
+            <%= @ordentercero.pieza %></h5>
+          </div>
+          <div class="col-md-6">
+          <h5 class="derecha"> <strong>Color: </strong>
+           <%= @ordentercero.color.colornombre %></h5>
+         </div>
+
+       </td>
+     </tr>
+     <tr>
+      <td>
+
+        <div class="col-md-6">
+         <h5 class="izquierda"> <strong>Transportador: </strong>
+         <%= @ordentercero.transportador %>  </h5>
+       </div>
+       <div class="col-md-6">
+       <h5 class="derecha"> <strong>Total Unidad: </strong>
+        <%= @ordentercero.totalunidad %></h5>
+      </div>
+
+
+    </td>
+  </tr>
+
+  <tr class="active">
+    <td>
+
+      <div class="col-md-6">
+       <h5 class="izquierda"> <strong>Observación:</strong>
+        <%= @ordentercero.observacion %></h5>
+      </div>
+      <div class="col-md-6">
+        
+        
+
+      </div>
+
+
+    </td>
+  </tr>
+  
+
+</table>
+</div>
+<div class="panel-footer">
+        
+  <%= link_to "<i class='fa fa-pencil fa-4x'></i>".html_safe, edit_ordentercero_path(@ordentercero) %> 
+  <%= link_to "<i class='fa fa-arrow-circle-left fa-4x'></i>".html_safe, ordenterceros_path %>
+</div>
+</div>
+
+
+
+</div>
+<div class="col-md-2"></div>
+</div>
+
+</body>

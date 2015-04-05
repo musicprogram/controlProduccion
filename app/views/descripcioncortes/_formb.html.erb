@@ -1,0 +1,108 @@
+<%= form_for [@ordenproduccion,@descripcioncorte], :html => { :class => 'form-horizontal' } do |f| %>
+<% if @descripcioncorte.errors.any? %>
+<div id="error_explanation">
+  <h2><%= pluralize(@descripcioncorte.errors.count, "error") %> prohibited this descripcioncorte from being saved:</h2>
+
+  <ul>
+    <% @descripcioncorte.errors.full_messages.each do |message| %>
+    <li><%= message %></li>
+    <% end %>
+  </ul>
+</div>
+<% end %>
+
+
+
+<div class="col-md-12">
+
+
+  <div class="col-md-4">
+
+    <div class="field">
+       <%= f.label :TallaCantidad  %><br>
+      <%= f.number_field :tallacantidad , class:'form-control'%>
+    </div>
+  </div>
+
+
+
+
+  <div class="col-md-4">
+   <div class="field">
+    <%= f.label :Color  %><br>
+   <%= f.collection_select :color_id, Color.all, :id, :colornombre,{prompt: "Seleccione Color"},{ class: "form-control"} %>
+ </div>
+</div>
+
+
+<div class="col-md-4">
+ <div class="field">
+       <%= f.label :TallaXS  %><br>
+      <%= f.number_field :tallaxs , class:'form-control'%>
+    </div>
+  
+</div>
+
+
+
+</div>
+
+
+
+
+
+<div class="col-md-12">
+  <div class="col-md-4">
+      <div class="field">
+       <%= f.label :TallaS  %><br>
+      <%= f.number_field :tallas , class:'form-control'%>
+    </div>
+  </div>
+
+  <div class="col-md-4">
+ <div class="field">
+       <%= f.label :TallaM %><br>
+      <%= f.number_field :tallam , class:'form-control'%>
+    </div>
+  </div>
+
+  <div class="col-md-4">
+    <div class="field">
+     <%= f.label :TallaL  %><br>
+    <%= f.number_field :tallal , class:'form-control'%>
+  </div>
+  </div>
+  
+
+</div>
+
+
+
+
+
+<div class="col-md-12">
+ <div class="col-md-4">
+   <div class="field">
+     <%= f.label :TallaXL  %><br>
+    <%= f.number_field :tallaxl , class:'form-control'%>
+  </div>
+</div> 
+
+
+<br><hr>
+<div class="col-md-8">
+  <div class="actions">
+    <%= f.submit "Guardar",class:'btn btn-default btn-lg btn-block'%>
+  </div>
+</div>
+
+
+
+</div>
+
+
+
+
+
+
+<% end %>

@@ -1,5 +1,5 @@
 
-<body class="fonpage">
+<body class="fonpage orden_p">
   <h1 class="center">ORDENES DE PRODUCCIÓN</h1> 
   <br>
 <h4 class="derecho"><span class="badge option animated wobble"> <%= @ordenproduccions.count %> </span></h4 >
@@ -33,9 +33,8 @@
           <% @ordenproduccions.each do |ordenproduccion| %>
           <tr>
             <td>000<%= ordenproduccion.id %></td>
-            <td><%= ordenproduccion.fechaprogramacion %></td>
-
             <td><%= ordenproduccion.referencia %></td>
+            <td><%= ordenproduccion.fechaprogramacion %></td>
             <td><%= ordenproduccion.descripcion %></td>
 
 

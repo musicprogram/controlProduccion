@@ -5,21 +5,27 @@ class DescripcioncortesController < ApplicationController
   def index
     @descripcioncortes = @ordenproduccion.descripcioncortes.all
     @fondo_hand = true
+    @fondo_desc = true
   end
 
   # GET /descripcioncortes/1
   # GET /descripcioncortes/1.json
   def show
+    @footer_tuto1 = true
   end
 
   # GET /descripcioncortes/new
   def new
     @descripcioncorte = Descripcioncorte.new
     @descripcioncorte.ordenproduccion_id = @ordenproduccion.id
+    @home_pagee = true
+    @footer_tuto = true
   end
 
   # GET /descripcioncortes/1/edit
   def edit
+    @fondo_page = true
+    @footer_tuto = true
   end
 
   # POST /descripcioncortes

@@ -19,7 +19,7 @@
   <div class="col-md-4">
 
     <div class="field">
-      Talla Cantidad<br>
+       <%= f.label :TallaCantidad, class:'letrablanca'  %><br>
       <%= f.number_field :tallacantidad , class:'form-control'%>
     </div>
   </div>
@@ -29,7 +29,7 @@
 
   <div class="col-md-4">
    <div class="field">
-   Color <br>
+    <%= f.label :Color, class:'letrablanca'  %><br>
    <%= f.collection_select :color_id, Color.all, :id, :colornombre,{prompt: "Seleccione Color"},{ class: "form-control"} %>
  </div>
 </div>
@@ -37,7 +37,7 @@
 
 <div class="col-md-4">
  <div class="field">
-      Talla XS<br>
+       <%= f.label :TallaXS, class:'letrablanca'  %><br>
       <%= f.number_field :tallaxs , class:'form-control'%>
     </div>
   
@@ -54,21 +54,21 @@
 <div class="col-md-12">
   <div class="col-md-4">
       <div class="field">
-      Talla S<br>
+       <%= f.label :TallaS, class:'letrablanca'  %><br>
       <%= f.number_field :tallas , class:'form-control'%>
     </div>
   </div>
 
   <div class="col-md-4">
  <div class="field">
-      Talla M<br>
+       <%= f.label :TallaM, class:'letrablanca'  %><br>
       <%= f.number_field :tallam , class:'form-control'%>
     </div>
   </div>
 
   <div class="col-md-4">
     <div class="field">
-    Talla L<br>
+     <%= f.label :TallaL, class:'letrablanca'  %><br>
     <%= f.number_field :tallal , class:'form-control'%>
   </div>
   </div>
@@ -83,7 +83,7 @@
 <div class="col-md-12">
  <div class="col-md-4">
    <div class="field">
-    Talla XL<br>
+     <%= f.label :TallaXL, class:'letrablanca'  %><br>
     <%= f.number_field :tallaxl , class:'form-control'%>
   </div>
 </div> 

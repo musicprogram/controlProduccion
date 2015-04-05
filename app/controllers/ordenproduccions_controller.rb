@@ -1,27 +1,32 @@
 class OrdenproduccionsController < ApplicationController
+  before_action :authenticate_usuario!
   before_action :set_ordenproduccion, only: [:show, :edit, :update, :destroy]
   # GET /ordenproduccions
   # GET /ordenproduccions.json
   def index
     @ordenproduccions = Ordenproduccion.search(params[:search], params[:page])
     @fondo_page = true
+    @orden_p = true
   end
 
   # GET /ordenproduccions/1
   # GET /ordenproduccions/1.json
   def show    
      @home_pagee = true
+     @footer_tuto1 = true
   end
 
   # GET /ordenproduccions/new
   def new
     @ordenproduccion = Ordenproduccion.new
     @fondo_hand = true
+    @footer_tuto = true
   end
 
   # GET /ordenproduccions/1/edit
   def edit
        @home_pagee = true
+       @footer_tuto1 = true
 
   end
 

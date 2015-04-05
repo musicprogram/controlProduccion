@@ -87,7 +87,7 @@ body.homepage:before {
   text-transform: uppercase;
   width: 100%;
   color: #fff;
-  height: 9em;
+  height: 65%;
   background: rgba(0,0,0,0.5);
 }
 
@@ -297,9 +297,17 @@ body.homepage {
 
 
 body.homepageesh{
- background-image: linear-gradient(
-      #2d2d2d, #565656
-    );
+ background-image: -webkit-linear-gradient(top, #000000 0%, #FFFFFF 100%);
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -ms-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+  background-attachment: fixed;
+  background-repeat: no-repeat;
+  background-position: top center;
+  -webkit-touch-callout: none;
+  -webkit-tap-highlight-color: transparent;
  
 }
 
@@ -321,6 +329,7 @@ body.homepageesh{
 
 .wrapper-indieandcool{
   border-radius: 15px;
+  
 }
 
 .navbar{
@@ -821,7 +830,7 @@ body.handfondo{
 .footer #container{
 	margin-top:5px;
 	width:100%;
-height:100%;
+ height:100%;
   position:relative;
   top:0;
   left:0;
@@ -845,7 +854,16 @@ height:100%;
 	font-family: sans-serif;
 	color:white;
 	font-size: 15px;
-	font-weight: 70;
+	font-weight: bold;
+	margin-top:70px;
+	margin-left:40px;
+}
+
+.footer h2{
+	font-family: sans-serif;
+	color:white;
+	font-size: 25px;
+	font-weight: bold;
 	margin-top:70px;
 	margin-left:40px;
 }

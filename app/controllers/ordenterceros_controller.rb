@@ -4,20 +4,29 @@ class OrdentercerosController < ApplicationController
   # GET /ordenterceros.json
   def index
     @ordenterceros = Ordentercero.all
+    @fondo_page = true
+    @footer_terce = true
+    
   end
 
   # GET /ordenterceros/1
   # GET /ordenterceros/1.json
   def show
+    @home_pagee = true
+    @footer_tuto1 = true
   end
 
   # GET /ordenterceros/new
   def new
     @ordentercero = Ordentercero.new
+    @fondo_hand = true
+    @footer_tuto = true
   end
 
   # GET /ordenterceros/1/edit
   def edit
+    @fondo_hand = true
+    @footer_tuto = true
   end
 
   # POST /ordenterceros
@@ -68,6 +77,6 @@ class OrdentercerosController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def ordentercero_params
-      params.require(:ordentercero).permit(:referencia, :numeroop, :nombreproveedor, :direccion, :telefono, :email, :fechaingreso, :fechasalida, :responsable, :proceso_id, :cantidad, :pieza, :color_id, :transportador, :totalunidad, :observacion)
+      params.require(:ordentercero).permit(:referencia, :nombreproveedor, :direccion, :telefono, :email, :fechaingreso, :fechasalida, :responsable, :proceso_id, :cantidad, :pieza, :color_id, :transportador, :totalunidad, :observacion)
     end
 end
