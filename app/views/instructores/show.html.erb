@@ -6,12 +6,11 @@
 
 
 <div class="container perfil" style="margin-top: 20px; margin-bottom: 20px;">
-  <div class="row panel">
+  <div class="row panel" id="mydiv">
     <div class="col-md-4 bg_blur ">
     </div>
     <div class="col-md-8  col-xs-12">
       <%= image_tag @instructor.nombre.avatar.url(:medium),:class => 'img-thumbnail picture hidden-xs' %>
-      <img src="http://lorempixel.com/output/people-q-c-100-100-1.jpg" class="img-thumbnail visible-xs picture_mob" />
       <div class="header">
       
       <div class="col-md-12">
@@ -129,7 +128,34 @@
   </div>
 
 
+<input type="button" value="Print Div" onclick="PrintElem('#mydiv')" />
+
 
 </body>
 
 
+
+<script>
+    function PrintElem(elem)
+    {
+        Popup($(elem).html());
+    }
+
+    function Popup(data) 
+    {
+        var mywindow = window.open('', 'my div', 'height=400,width=600');
+        mywindow.document.write('<html><head><title><%=@instructor.nombre.nombreinstructor%></title>');
+        /*optional stylesheet*/ //mywindow.document.write('<link rel="stylesheet" href="main.css" type="text/css" />');
+        mywindow.document.write('</head><body >');
+        mywindow.document.write(data);
+        mywindow.document.write('</body></html>');
+
+        mywindow.document.close(); // necessary for IE >= 10
+        mywindow.focus(); // necessary for IE >= 10
+
+        mywindow.print();
+        mywindow.close();
+
+        return true;
+    }
+</script>
