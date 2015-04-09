@@ -7,7 +7,9 @@
 #   Mayor.create(name: 'Emanuel', city: cities.first)
 
 
-colors = [{colornombre: "negro"}]
+colors = [{colornombre: "Negro"},{colornombre: "Blanco"},{colornombre: "Azul"},{colornombre: "Morado"},{colornombre: "Beige"},
+{colornombre: "Rosado"},{colornombre: "Amarillo"}, {colornombre: "Naranja"}, {colornombre: "Café"},{colornombre: "Neon"},
+{colornombre: "Verde"},{colornombre: "Estampado"}]
 colors.each do |e|
 Color.create(e) unless Color.exists?(e)
 end
@@ -22,7 +24,9 @@ prendas.each do |e|
 Prenda.create(e) unless Prenda.exists?(e)
 end
 
-telas = [{telanombre: "Denim"}]
+telas = [{telanombre: "Algodon"},{telanombre: "Dacron"},{telanombre: "Viscosa"},{telanombre: "Lycra"},{telanombre: "Poliester"},
+{telanombre: "Encaje"},{telanombre: "Indigo"},{telanombre: "Chalis"},{telanombre: "Chifon"},{telanombre: "Popelina"},
+{telanombre: "Nautica"},{telanombre: "Piqué"},{telanombre: "Drill"},{telanombre: "Blonda"}, {telanombre: "Satin"},{telanombre: "Maya"},{telanombre: "Denim"}]
 telas.each do |e|
 Tela.create(e) unless Tela.exists?(e)
 end
@@ -40,4 +44,9 @@ end
 modulos = [{modulonombre: "Ropa interior y Deportiva"},{modulonombre: "Jeans Dryll"},{modulonombre: "Exterior"},{modulonombre: "Produccion"}]
 modulos.each do |e|
 Modulo.create(e) unless Modulo.exists?(e)
+end
+
+nombres = [{nombreinstructor: "Arelis Sierra"},{nombreinstructor: "Jennifer Vargaz"},{nombreinstructor: "Henry Ramirez"},{nombreinstructor: "Maydee Guevara"},{nombreinstructor: "Elsa Rodriguez"},{nombreinstructor: "Carolina Paniagua"},{nombreinstructor: "Maria Eugenia Bedoya"}, { nombreinstructor: "Jhon Jairo Clavijo"} ,{nombreinstructor: "Mauricio echeverry"},{nombreinstructor: "Lennis Giraldo"},{nombreinstructor: "Aura Jaramillo"},{nombreinstructor: "Doris Llano"},{nombreinstructor: "Ruth Mesa"},{nombreinstructor: "Gladis Patiño"},{nombreinstructor: "Angela Quintero"},{nombreinstructor: "Viky Toro"},{nombreinstructor: "Johanna Velasquez"},{nombreinstructor: "Salon Parejo"},{nombreinstructor: "Dolores Correa"},{nombreinstructor: "Natalia Mesa"},{nombreinstructor: "Fanny Rodriguez"},{nombreinstructor: "Martha Tapias"},{nombreinstructor: "Diana Lujan"},{nombreinstructor: "Maria Martinez"},{nombreinstructor: "Beatriz Martinez"},{nombreinstructor: "Angela Alvarez"},{nombreinstructor: "Ana Lucia"},{nombreinstructor: "Jose Luis Cardona"},{nombreinstructor: "Yadira Ochoa"}]
+nombres.each do |e|
+Nombre.create(e) unless Nombre.exists?(e)
 end

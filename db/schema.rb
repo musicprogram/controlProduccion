@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20150324180127) do
+ActiveRecord::Schema.define(version: 20150409154814) do
 
   create_table "clientes", force: true do |t|
     t.string   "clientenombre"
@@ -33,7 +33,6 @@ ActiveRecord::Schema.define(version: 20150324180127) do
 
   create_table "cuadroproduccions", force: true do |t|
     t.date     "fechatrazo"
-    t.integer  "anchotrazo"
     t.date     "fechacorte"
     t.date     "fechaentradabodega"
     t.date     "fechaentregamodulo"
@@ -47,7 +46,6 @@ ActiveRecord::Schema.define(version: 20150324180127) do
   add_index "cuadroproduccions", ["modulo_id"], name: "index_cuadroproduccions_on_modulo_id"
 
   create_table "descripcioncortes", force: true do |t|
-    t.integer  "tallacantidad"
     t.integer  "color_id"
     t.integer  "tallaxs"
     t.integer  "tallas"
@@ -63,7 +61,7 @@ ActiveRecord::Schema.define(version: 20150324180127) do
   add_index "descripcioncortes", ["ordenproduccion_id"], name: "index_descripcioncortes_on_ordenproduccion_id"
 
   create_table "instructores", force: true do |t|
-    t.string   "nombre"
+    t.integer  "nombre_id"
     t.date     "fecharecibo"
     t.integer  "cantidad"
     t.string   "tallaunidad"
@@ -82,11 +80,22 @@ ActiveRecord::Schema.define(version: 20150324180127) do
   end
 
   add_index "instructores", ["cuadroproduccion_id"], name: "index_instructores_on_cuadroproduccion_id"
+  add_index "instructores", ["nombre_id"], name: "index_instructores_on_nombre_id"
 
   create_table "modulos", force: true do |t|
     t.string   "modulonombre"
     t.datetime "created_at"
     t.datetime "updated_at"
+  end
+
+  create_table "nombres", force: true do |t|
+    t.string   "nombreinstructor"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+    t.string   "avatar_file_name"
+    t.string   "avatar_content_type"
+    t.integer  "avatar_file_size"
+    t.datetime "avatar_updated_at"
   end
 
   create_table "ordenproduccions", force: true do |t|

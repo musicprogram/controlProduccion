@@ -17,8 +17,8 @@
   <tbody>
     <% @instructores.each do |instructor| %>
       <tr>
-        <td><%= instructor.nombre %></td>
-        <td><%= image_tag instructor.imagen.url(:thumb)%></td>
+        <td><%= instructor.nombre.nombreinstructor %></td>
+        <td><%= image_tag instructor.nombre.avatar.url(:thumb)%></td>
         <td><%= instructor.totalrecibidas %></td>
         <td><%= instructor.observacionescalidad %>%</td>
         <td><%= instructor.fechasalidaalmacen %></td>

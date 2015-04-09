@@ -1,6 +1,8 @@
 Rails.application.routes.draw do
 
 
+  resources :nombres
+
   devise_for :usuarios
   resources :modulos
 

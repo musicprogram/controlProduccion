@@ -1,7 +1,7 @@
 class CreateInstructores < ActiveRecord::Migration
   def change
     create_table :instructores do |t|
-      t.string :nombre
+      t.references :nombre, index: true
       t.date :fecharecibo
       t.integer :cantidad
       t.string :tallaunidad

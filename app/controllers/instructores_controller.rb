@@ -8,6 +8,8 @@ class InstructoresController < ApplicationController
   end
 
   def show
+    
+    @descripcioncortes = Descripcioncorte.all
   end
 
   def new
@@ -20,17 +22,11 @@ class InstructoresController < ApplicationController
   def create
     @instructor = Instructor.new(instructor_params)
     @instructor.cuadroproduccion_id = @cuadroproduccion.id
-    
-    @instructor.totalrecibidas = @instructor.primeras + @instructor.segundas
-    
-    @instructor.observacionescalidad = @instructor.primeras * 100
-    @instructor.observacionescalidad = @instructor.observacionescalidad / @instructor.totalrecibidas
-     
-    
+   
 
       respond_to do |format|
       if @instructor.save
-        format.html { redirect_to cuadroproduccion_instructores_path(@cuadroproduccion), notice: 'Instructor was successfully created.' }
+        format.html { redirect_to cuadroproduccion_instructor_path(@cuadroproduccion, @instructor), notice: 'Instructor was successfully created.' }
         format.json { render :show, status: :created, location: @instructor }
       else
         format.html { render :new }
@@ -40,14 +36,19 @@ class InstructoresController < ApplicationController
   end
 
   def update
-   
+  
        @instructor.totalrecibidas = @instructor.primeras + @instructor.segundas
+       
        @instructor.observacionescalidad = @instructor.primeras * 100
        @instructor.observacionescalidad = @instructor.observacionescalidad / @instructor.totalrecibidas
-       @instructor.save    
+      
+      
+       @instructor.save
+     
+       
     respond_to do |format|
       if @instructor.update(instructor_params)
-        format.html { redirect_to cuadroproduccion_instructores_path(@cuadroproduccion), notice: 'Instructor was successfully updated.' }
+        format.html { redirect_to cuadroproduccion_instructor_path(@cuadroproduccion, @instructor), notice: 'Instructor was successfully updated.' }
         format.json { render :show, status: :ok, location: @instructor }
       else
         format.html { render :edit }
@@ -71,6 +72,6 @@ class InstructoresController < ApplicationController
     end
 
     def instructor_params
-      params.require(:instructor).permit(:nombre, :imagen, :fecharecibo, :cantidad, :tallaunidad, :primeras, :segundas, :totalrecibidas, :observacionescalidad, :fechasalidaalmacen, :cuadroproduccion_id)
+      params.require(:instructor).permit(:nombre, :fecharecibo, :cantidad, :tallaunidad, :primeras, :segundas, :totalrecibidas, :observacionescalidad, :fechasalidaalmacen, :cuadroproduccion_id, :nombre_id)
     end
 end

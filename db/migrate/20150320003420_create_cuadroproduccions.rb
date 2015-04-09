@@ -2,7 +2,6 @@ class CreateCuadroproduccions < ActiveRecord::Migration
   def change
     create_table :cuadroproduccions do |t|
       t.date :fechatrazo
-      t.integer :anchotrazo
       t.date :fechacorte
       t.date :fechaentradabodega
       t.date :fechaentregamodulo

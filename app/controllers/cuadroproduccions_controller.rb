@@ -4,6 +4,7 @@ class CuadroproduccionsController < ApplicationController
   # GET /cuadroproduccions.json
   def index
     @cuadroproduccions = @descripcioncorte.cuadroproduccions.all
+    @fondo_cuadro = true
   end
 
   # GET /cuadroproduccions/1
@@ -69,6 +70,6 @@ class CuadroproduccionsController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def cuadroproduccion_params
-      params.require(:cuadroproduccion).permit(:fechatrazo, :anchotrazo, :fechacorte, :fechaentradabodega, :fechaentregamodulo, :descripcioncorte_id, :modulo_id)
+      params.require(:cuadroproduccion).permit(:fechatrazo, :fechacorte, :fechaentradabodega, :fechaentregamodulo, :descripcioncorte_id, :modulo_id)
     end
 end

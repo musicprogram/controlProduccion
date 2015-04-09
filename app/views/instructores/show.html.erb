@@ -10,10 +10,34 @@
     <div class="col-md-4 bg_blur ">
     </div>
     <div class="col-md-8  col-xs-12">
-      <%= image_tag @instructor.imagen.url(:medium),:class => 'img-thumbnail picture hidden-xs' %>
+      <%= image_tag @instructor.nombre.avatar.url(:medium),:class => 'img-thumbnail picture hidden-xs' %>
       <img src="http://lorempixel.com/output/people-q-c-100-100-1.jpg" class="img-thumbnail visible-xs picture_mob" />
       <div class="header">
-        <h1> Instructor <strong><%= @instructor.nombre %></strong></h1>
+      
+      <div class="col-md-12">
+        
+        <div class="col-md-8">
+          <h3 class="nombrein"> Instructor <strong><%= @instructor.nombre.nombreinstructor %></strong></h3>
+        </div>
+        <div class="col-md-4">
+      <h3>
+              
+        <% if   %>
+          <% @instructor.observacionescalidad.to_i > 90 %>
+          <i class="fa fa-smile-o fa-3x option animated wobble"></i>
+          <% elsif %>
+          <% @instructor.observacionescalidad.to_i >= 70 && @instructor.observacionescalidad.to_i <= 89  %>
+          <i class="fa fa-frown-o fa-3x option animated wobble"></i>
+          <% elsif %>
+          <% @instructor.observacionescalidad.to_i <= 69 %>
+          <i class="fa fa-exclamation-triangle fa-3x option animated wobble "></i>
+         
+          <% end %>
+      </h3>
+        </div>
+      </div>
+      
+      
         <div class="col-md-12">
 
           <div class="col-md-6">
@@ -49,17 +73,44 @@
 
           </div>
           
-          <% if   %>
-          <% @instructor.observacionescalidad.to_i > 90 %>
-          <i class="fa fa-smile-o fa-4x option animated wobble"></i>
-          <% elsif %>
-          <% @instructor.observacionescalidad.to_i >= 70 && @instructor.observacionescalidad.to_i <= 89  %>
-          <i class="fa fa-frown-o fa-4x option animated wobble"></i>
-          <% elsif %>
-          <% @instructor.observacionescalidad.to_i <= 69 %>
-          <i class="fa fa-exclamation-triangle fa-4x option animated wobble"></i>
-         
-          <% end %>
+          
+       
+       
+       
+       
+<a  >
+   <i class="fa fa-chevron-down fa-4x animated" data-toggle="collapse" href="#collapseExample" aria-expanded="false" aria-controls="collapseExample"></i>
+</a>
+
+<div class="collapse" id="collapseExample">
+  <div class="">
+    <div class="col-md-12" >
+          
+          <% @descripcioncortes.each do |descripcioncorte| %>
+            <% if descripcioncorte.ordenproduccion.id == @instructor.cuadroproduccion.descripcioncorte.ordenproduccion.id %>
+            
+            <div class="col-md-6"><h5 class="izquierda"> <strong>Color: </strong><%= descripcioncorte.color.colornombre %></h5>
+            </div>
+            <div class="col-md-6"><h5 class="derecha"> <strong>Cantidad: </strong> <%= descripcioncorte.tallasuma %></h5>
+            </div>
+            
+          
+           
+         <% end %>
+        
+       
+       <% end %>
+       
+
+          </div>
+  </div>
+</div>
+
+
+       
+       
+      
+
        
 
         </div>
@@ -80,3 +131,5 @@
 
 
 </body>
+
+

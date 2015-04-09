@@ -16,6 +16,9 @@
 		<body class="fonpage">
 			<% elsif @fondo_hand == true %>
 			<body class="handfondo">
+				<% elsif @fondo_cuadro == true %>
+				<body class="fondo_cuadro">
+				
 	
 		<% end %>
 		
@@ -52,64 +55,10 @@
 			</div>
 		</div>
 		<br><br>
-<div class="footer">
-  <div id="button"></div>
-	<div id="container">
-		<div id="cont">
-			<div class="footer_center">
-	   
-		  
-		   <h3 class=" letrablanca ">
-		   	
-		   	<%if @orden_p == true %>
-				<body class="orden_p">
-			
-					<i class='fa fa-scissors fa-2x   '> Descripción del Corte</i><br>
-					<i class='fa fa-eye  '>  Mostrar la Orden</i><br>
-					<i class='fa fa-plus-circle  '> Crear nueva Orden</i>
-				
-				</body>
-			
-			<%elsif @footer_tuto == true%>
-				<body class="footer_tuto">
-					 Soporte Técnico: <br>
-					 	<i class='fa fa-user-md fa-2x'><br>jahenao17@misena.edu.co</i>  
-				   		
-			    </body>
-			<%elsif @footer_tuto1 == true%>
-				<body class="footer_tuto1">
-					<h2>CENTRO DE FORMACIÓN EN DISEÑO, CONFECCIÓN Y MODA</h2>
-				</body>
-		   
-		   <%elsif @fondo_desc == true%>
-		   <body class="fondo_desc">
-		   			<i class='fa fa-check-circle-o fa-2x   '> Cuadro de Producción</i><br>
-					<i class='fa fa-eye   '>  Mostrar la Programación de Corte</i><br>
-					<i class='fa fa-plus-circle  '> Crear nueva Descripción</i>
-		   </body>
-		   
-		   <%elsif @footer_terce == true%>
-		   <body class="footer_terce">
-		   	 		
-					<i class='fa fa-eye  '>  Mostrar la Orden</i><br>
-					<i class='fa fa-pencil  '>  Editar la Orden</i><br>
-					<i class='fa fa-plus-circle fa-2x '> Crear nueva Orden</i>
-		   </body>
-		   
-		   <%elsif @footer_welcome == true%>
-		   <body class="footer_welcome">
-		   	
-		   <%= link_to "<i class='fa fa-code fa-4x'></i>".html_safe, ordenproduccions_path, class:'btn-indies'%>
-		   </body>
-			<%end%>
-			
-			
-			</h3>
-	   
-</div>
-</div>
-</div>
-</div>
+
+
+    <%= render 'layouts/footer' %>
+
 	</body>
 	</html>
 

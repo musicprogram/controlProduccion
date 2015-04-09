@@ -1,13 +1,15 @@
-<h1 class="center">CUADRO DE PRODUCCIÓN</h1><br>
+
+<body class="fondo_cuadro">
+  <h1 class="center">CUADRO DE PRODUCCIÓN</h1><br>
 <h4 class="derecho"><span class="badge option animated wobble"> <%= @cuadroproduccions.count %> </span></h4 >
 
 
 <br>
-<div class="table-responsive ">
+<div class="table-responsive tbla">
 
-  <table class="table table-condensed table-hover">
+  <table class="table table-condensed table-hover tbla">
     <thead>
-      <tr class="active">
+      <tr class="active tablasom">
         <th>Numero Orden</th>
         <th>Referencia</th>
         <th>Descripcion</th>
@@ -48,3 +50,4 @@
 <%= link_to "<i class='fa fa-plus-circle fa-4x'></i>".html_safe, new_descripcioncorte_cuadroproduccion_path(@descripcioncorte) %>
 <%= link_to "<i class='fa fa-arrow-circle-left fa-4x'></i>".html_safe, ordenproduccion_descripcioncortes_path(@descripcioncorte) %>
 
+</body>

@@ -19,8 +19,7 @@
   <div class="col-md-4">
 
     <div class="field">
-       <%= f.label :TallaCantidad, class:'letrablanca'  %><br>
-      <%= f.number_field :tallacantidad , class:'form-control'%>
+      
     </div>
   </div>
 
@@ -38,7 +37,7 @@
 <div class="col-md-4">
  <div class="field">
        <%= f.label :TallaXS, class:'letrablanca'  %><br>
-      <%= f.number_field :tallaxs , class:'form-control'%>
+      <%= f.number_field :tallaxs , class:'form-control', :id => 'xs'%>
     </div>
   
 </div>
@@ -55,21 +54,21 @@
   <div class="col-md-4">
       <div class="field">
        <%= f.label :TallaS, class:'letrablanca'  %><br>
-      <%= f.number_field :tallas , class:'form-control'%>
+      <%= f.number_field :tallas , class:'form-control', :id => 's'%>
     </div>
   </div>
 
   <div class="col-md-4">
  <div class="field">
        <%= f.label :TallaM, class:'letrablanca'  %><br>
-      <%= f.number_field :tallam , class:'form-control'%>
+      <%= f.number_field :tallam , class:'form-control',:id => 'm'%>
     </div>
   </div>
 
   <div class="col-md-4">
     <div class="field">
      <%= f.label :TallaL, class:'letrablanca'  %><br>
-    <%= f.number_field :tallal , class:'form-control'%>
+    <%= f.number_field :tallal , class:'form-control', :id => 'l'%>
   </div>
   </div>
   
@@ -81,28 +80,55 @@
 
 
 <div class="col-md-12">
- <div class="col-md-4">
-   <div class="field">
-     <%= f.label :TallaXL, class:'letrablanca'  %><br>
-    <%= f.number_field :tallaxl , class:'form-control'%>
-  </div>
-</div> 
+     <div class="col-md-4">
+       <div class="field">
+         <%= f.label :TallaXL, class:'letrablanca'  %><br>
+        <%= f.number_field :tallaxl , class:'form-control' , :id => "xl", :onblur => 'sum()' %>
+      </div>
+    </div> 
+    
+    
+      
+    
+    
+    <br><hr>
+    <div class="col-md-8">
+      <div class="actions">
+        <%= f.submit "Guardar",class:'btn btn-default btn-lg btn-block'%>
+      </div>
+    </div>
 
 
-<br><hr>
-<div class="col-md-8">
-  <div class="actions">
-    <%= f.submit "Guardar",class:'btn btn-default btn-lg btn-block'%>
-  </div>
+
 </div>
 
-
-
-</div>
-
-
+ <div class="field">
+     
+         <%= f.label :Tallasuma, class:'letrablanca'  %><br>
+        <%= f.text_field :tallasuma , class:'form-control' , :id => "suma" %>
+      </div>
 
 
 
 
 <% end %>
+
+
+
+<script>
+    
+    function sum(){
+        
+        var tallaxl = document.getElementById('xl').value;
+        var tallal = document.getElementById('l').value;
+        var tallas = document.getElementById('s').value;
+        var tallaxs = document.getElementById('xs').value;
+        var tallam = document.getElementById('m').value;
+        
+        sumas= (parseInt(tallaxs) +parseInt(tallaxl) +parseInt(tallas) +parseInt(tallal) +parseInt(tallam) );
+        
+        document.getElementById('suma').value = sumas;
+    }
+</script>
+
+

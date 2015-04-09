@@ -32,6 +32,7 @@ class DescripcioncortesController < ApplicationController
   # POST /descripcioncortes.json
   def create
     @descripcioncorte = Descripcioncorte.new(descripcioncorte_params)
+    
     @descripcioncorte.ordenproduccion_id = @ordenproduccion.id
     if @descripcioncorte.tallaxs== nil then @descripcioncorte.tallaxs = 0 end
     if @descripcioncorte.tallas== nil then @descripcioncorte.tallas = 0 end
@@ -39,12 +40,9 @@ class DescripcioncortesController < ApplicationController
     if @descripcioncorte.tallal== nil then @descripcioncorte.tallal = 0 end
     if @descripcioncorte.tallaxl== nil then @descripcioncorte.tallaxl = 0 end
     
-    
-    @descripcioncorte.tallasuma = @descripcioncorte.tallaxs + @descripcioncorte.tallas + @descripcioncorte.tallam + @descripcioncorte.tallal + @descripcioncorte.tallaxl
-   
     respond_to do |format|
       if @descripcioncorte.save
-        format.html { redirect_to ordenproduccion_descripcioncortes_path(@ordenproduccion), notice: 'Descripcioncorte was successfully created.' }
+        format.html { redirect_to ordenproduccion_descripcioncorte_path(@ordenproduccion, @descripcioncorte), notice: 'Descripcioncorte was successfully created.' }
         format.json { render :show, status: :created, location: @descripcioncorte }
       else
         format.html { render :new }
@@ -55,27 +53,28 @@ class DescripcioncortesController < ApplicationController
   
   # PATCH/PUT /descripcioncortes/1
   # PATCH/PUT /descripcioncortes/1.json
+
+  
   def update
-    
     if @descripcioncorte.tallaxs== nil then @descripcioncorte.tallaxs = 0 end
     if @descripcioncorte.tallas== nil then @descripcioncorte.tallas = 0 end
     if @descripcioncorte.tallam== nil then @descripcioncorte.tallam = 0 end
     if @descripcioncorte.tallal== nil then @descripcioncorte.tallal = 0 end
     if @descripcioncorte.tallaxl== nil then @descripcioncorte.tallaxl = 0 end
-    
-    
-    @descripcioncorte.tallasuma = @descripcioncorte.tallaxs + @descripcioncorte.tallas + @descripcioncorte.tallam + @descripcioncorte.tallal + @descripcioncorte.tallaxl
-    @descripcioncorte.save
-    respond_to do |format|
-      if @descripcioncorte.update(descripcioncorte_params)
-        format.html { redirect_to ordenproduccion_descripcioncortes_path(@ordenproduccion), notice: 'Descripcioncorte was successfully updated.' }
-        format.json { render :show, status: :ok, location: @descripcioncorte }
-      else
-        format.html { render :edit }
-        format.json { render json: @descripcioncorte.errors, status: :unprocessable_entity }
+   
+      respond_to do |format|
+        if @descripcioncorte.update(descripcioncorte_params)
+          format.html { redirect_to ordenproduccion_descripcioncorte_path(@ordenproduccion, @descripcioncorte),  notice: 'Persona was successfully updated.' }
+          format.json { render :show, status: :ok, location:  @descripcioncorte }
+        else
+          format.html { render :edit }
+          format.json { render json:  @descripcioncorte.errors, status: :unprocessable_entity }
+        end
       end
-    end
   end
+  
+  
+  
 
   # DELETE /descripcioncortes/1
   # DELETE /descripcioncortes/1.json
@@ -97,6 +96,6 @@ class DescripcioncortesController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def descripcioncorte_params
-      params.require(:descripcioncorte).permit(:tallacantidad, :color, :tallaxs, :tallas, :tallam, :tallal, :tallaxl, :ordenproduccion_id, :color_id, :tallasuma)
+      params.require(:descripcioncorte).permit(:tallaxs, :tallas, :tallam, :tallal, :tallaxl, :ordenproduccion_id, :color_id, :tallasuma)
     end
 end

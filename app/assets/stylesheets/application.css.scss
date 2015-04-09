@@ -653,7 +653,7 @@ body.homepageesh{
           .header{
             color : #808080;
             margin-left:10%;
-            margin-top:70px;
+            margin-top:15px;
           }
 
           .picture{
@@ -724,6 +724,10 @@ body.homepageesh{
 
  
     
+}
+.rubberBand{
+  -webkit-animation-duration: 5s;
+  -webkit-animation-iteration-count: infinite;
 }
 
 
@@ -861,7 +865,7 @@ body.handfondo{
 
 .footer h2{
 	font-family: sans-serif;
-	color:white;
+	color:white; 
 	font-size: 25px;
 	font-weight: bold;
 	margin-top:70px;
@@ -869,3 +873,16 @@ body.handfondo{
 }
 
 
+.fondo_cuadro{
+  background: url("fondosena.png");
+}
+
+.botoncolores{
+  background-color:#3E3F3F;
+}
+
+
+.nombrein{
+  font-size: 200%;
+  text-align:left;
+}
