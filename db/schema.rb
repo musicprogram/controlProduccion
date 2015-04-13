@@ -73,10 +73,6 @@ ActiveRecord::Schema.define(version: 20150409154814) do
     t.integer  "cuadroproduccion_id"
     t.datetime "created_at"
     t.datetime "updated_at"
-    t.string   "imagen_file_name"
-    t.string   "imagen_content_type"
-    t.integer  "imagen_file_size"
-    t.datetime "imagen_updated_at"
   end
 
   add_index "instructores", ["cuadroproduccion_id"], name: "index_instructores_on_cuadroproduccion_id"
