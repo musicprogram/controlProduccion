@@ -22,7 +22,8 @@
   </thead>
   
 
-<% re = 0%>
+<% re = 0
+c = 0 %>
   <tbody>
     <% @descripcioncortes.each do |descripcioncorte| %>
       <tr>
@@ -34,13 +35,13 @@
         <td><%= descripcioncorte.ordenproduccion.vecestrazo %></td>
         <td><%= descripcioncorte.tallasuma %></td>
         
-        
-        <% if descripcioncorte.id == 1 %>
+        <% c+=1
+        if c == 1
+        %>
         <td><%= link_to "<i class='fa fa-check-circle-o fa-3x ojos'></i>".html_safe, descripcioncorte_cuadroproduccions_path(descripcioncorte) %></td>
         <% else %>
         <td></td>
         <% end %>
-                
         <td><%= link_to "<i class='fa fa-eye fa-3x encima'></i>".html_safe, ordenproduccion_descripcioncorte_path(@ordenproduccion, descripcioncorte) %>
 
         <td><%= link_to "<i class='fa fa-pencil fa-3x encima'>".html_safe, edit_ordenproduccion_descripcioncorte_path(@ordenproduccion,descripcioncorte) %></td>

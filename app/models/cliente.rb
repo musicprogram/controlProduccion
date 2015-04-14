@@ -1,5 +1,6 @@
 class Cliente < ActiveRecord::Base
 	
     validates :clientenombre, :presence =>true
-    has_many :ordenproduccion
+    has_many :ordenproduccions
+    
 end

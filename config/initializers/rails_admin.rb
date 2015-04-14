@@ -1,4 +1,15 @@
 RailsAdmin.config do |config|
+  config.model Ordenproduccion do
+      field :tela do
+        inverse_of :ordenproduccions
+      end
+  end
+  
+  config.model Ordenproduccion do
+      field :cliente do
+        inverse_of :ordenproduccions
+      end
+  end
 
   ### Popular gems integration
   ## == Devise ==

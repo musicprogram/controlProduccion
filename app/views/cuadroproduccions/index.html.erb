@@ -3,7 +3,7 @@
   <h1 class="center">CUADRO DE PRODUCCIÓN</h1><br>
 <h4 class="derecho"><span class="badge option animated wobble"> <%= @cuadroproduccions.count %> </span></h4 >
 
-
+<% c= 0 %>
 <br>
 <div class="table-responsive tbla">
 
@@ -36,7 +36,10 @@
         
         <td><%= cuadroproduccion.modulo.modulonombre rescue nil %></td>
         
-        <% if cuadroproduccion.id == 1 %>
+        <% c+=1
+        if c == 1
+          
+        %>
         <td><%= link_to "<i class='fa fa-user fa-3x'></i>".html_safe, cuadroproduccion_instructores_path(cuadroproduccion) %></td>
         <%else%>
         <td></td>

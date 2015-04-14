@@ -1,5 +1,6 @@
 class Prenda < ActiveRecord::Base
    validates :prendanombre, :presence =>true
    
-   has_many :ordenproduccion    
+   has_many :ordenproduccions 
+   
 end

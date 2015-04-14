@@ -12,6 +12,7 @@ Rails.application.routes.draw do
   resources :cortes
 
   get 'welcome/index'
+  get 'instructores/showinstructores'
 
   resources :ordenterceros
 

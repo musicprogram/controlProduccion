@@ -30,6 +30,5 @@ class Ordenproduccion < ActiveRecord::Base
 
 
 
-
 end
 

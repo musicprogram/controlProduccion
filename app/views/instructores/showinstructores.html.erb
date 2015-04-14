@@ -1,0 +1,43 @@
+<div class="table-responsive cubo">
+  <table class="table table-condensed table-hover">
+  <thead>
+    <tr class="active">
+      <th>Nombre</th>
+      <th>Imagen</th>
+      <th>Total Recibidas</th>
+      <th>Calidad</th>
+      <th>Salida del Almacen</th>
+    </tr>
+  </thead>
+
+  <tbody>
+    
+    <% @instructores.each do |instructor| %>
+      <tr>
+        <% $z = instructor.nombre.nombreinstructor %>
+        <td><%= instructor.nombre.nombreinstructor %></td>
+        <td><%= image_tag instructor.nombre.avatar.url(:thumb)%></td>
+        <td><%= instructor.totalrecibidas %></td>
+        <td><%= instructor.observacionescalidad %>%</td>
+        <td><%= instructor.fechasalidaalmacen %></td>
+      </tr>
+      <% break %>
+    <% end %>
+    
+     <% @instructores.each do |instructor| %>
+     <% if $z != instructor.nombre.nombreinstructor %>
+      <tr>
+        <td><%= instructor.nombre.nombreinstructor %></td>
+        <td><%= image_tag instructor.nombre.avatar.url(:thumb)%></td>
+        <td><%= instructor.totalrecibidas %></td>
+        <td><%= instructor.observacionescalidad %>%</td>
+        <td><%= instructor.fechasalidaalmacen %></td>
+      </tr>
+      <% else %>
+      <% break %>
+      <% end %>
+    <% end %>
+    
+  </tbody>
+</table>
+</div>

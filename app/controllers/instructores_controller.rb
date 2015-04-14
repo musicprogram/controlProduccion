@@ -6,6 +6,12 @@ class InstructoresController < ApplicationController
   def index
     @instructores = @cuadroproduccion.instructores.all
   end
+  
+  def showinstructores
+    
+    @instructores = Instructor.all
+    
+  end
 
   def show
     
