@@ -50,8 +50,3 @@ nombres = [{nombreinstructor: "Arelis Sierra"},{nombreinstructor: "Jennifer Varg
 nombres.each do |e|
 Nombre.create(e) unless Nombre.exists?(e)
 end
-
-nombres = [{ide: "1"},{ide: "2"},{ide: "3"},{ide: "4"},{ide: "5"},{ide: "6"},{ide: "7"}, { ide: "8"} ,{ide: "9"},{ide: "10"},{ide: "11"},{ide: "12"},{ide: "13"},{ide: "14"},{ide: "15"},{ide: "16"},{ide: "17"},{ide: "18"},{ide: "19"},{ide: "20"},{ide: "21"},{ide: "22"},{ide: "23"},{ide: "24"},{ide: "25"},{ide: "26"},{ide: "27"},{ide: "28"},{nombreinstructor: "29"}]
-nombres.each do |e|
-Nombre.create(e) unless Nombre.exists?(e)
-end

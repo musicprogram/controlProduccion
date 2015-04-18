@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20150413174923) do
+ActiveRecord::Schema.define(version: 20150409154814) do
 
   create_table "clientes", force: true do |t|
     t.string   "clientenombre"
@@ -92,7 +92,6 @@ ActiveRecord::Schema.define(version: 20150413174923) do
     t.string   "avatar_content_type"
     t.integer  "avatar_file_size"
     t.datetime "avatar_updated_at"
-    t.string   "ide"
   end
 
   create_table "ordenproduccions", force: true do |t|
