@@ -1,88 +1,72 @@
 <%= form_for [@descripcioncorte, @cuadroproduccion], :html => { :class => 'form-horizontal' } do |f| %>
-  <% if @cuadroproduccion.errors.any? %>
-    <div id="error_explanation">
-      <h2><%= pluralize(@cuadroproduccion.errors.count, "error") %> prohibited this cuadroproduccion from being saved:</h2>
+<% if @cuadroproduccion.errors.any? %>
+<div id="error_explanation">
+  <h2><%= pluralize(@cuadroproduccion.errors.count, "error") %> prohibited this cuadroproduccion from being saved:</h2>
 
-      <ul>
-      <% @cuadroproduccion.errors.full_messages.each do |message| %>
-        <li><%= message %></li>
-      <% end %>
-      </ul>
-    </div>
-  <% end %>
-
-  <div class="col-md-12">
-
-<div class="col-md-4">
-
-  <div class="field">
-   Fecha Trazo<br>
-    <%= f.text_field :fechatrazo, class:'datepicker form-control' %>
-  </div>
-  
+  <ul>
+    <% @cuadroproduccion.errors.full_messages.each do |message| %>
+    <li><%= message %></li>
+    <% end %>
+  </ul>
 </div>
-<div class="col-md-4">
-<div class="field">
-   
-  </div></div>
+<% end %>
+
+<div class="col-md-12">
 
   <div class="col-md-4">
+
+    <div class="field">
+     Fecha Trazo<br>
+     <%= f.text_field :fechatrazo, class:'datepicker form-control' %>
+   </div>
+
+ </div>
+ <div class="col-md-4">
+  <div class="field">
+   Fecha del Corte<br>
+  <%= f.text_field :fechacorte, class:'datepicker form-control' %>
+  </div>
+</div>
+
+<div class="col-md-4">
  <div class="field">
-    Fecha del Corte<br>
-    <%= f.text_field :fechacorte, class:'datepicker form-control' %>
-  </div>
-  </div>
-  </div>
+ Fecha Entrega Bodega<br>
+ <%= f.text_field :fechaentradabodega, class:'datepicker form-control' %>
+</div>
+</div>
+</div>
 
 
 <div class="col-md-12">
 
-<div class="col-md-4">
+  <div class="col-md-4">
 
-  <div class="field">
-    Fecha Entrega Bodega<br>
-    <%= f.text_field :fechaentradabodega, class:'datepicker form-control' %>
+    <div class="field">
+      Modulo<br>
+     <%= f.collection_select :modulo_id, Modulo.all, :id, :modulonombre,{prompt: "Seleccione Modulo"},{ class: "form-control"} %>
+    </div>
   </div>
-</div>
 
 
 
-<div class="col-md-4">
+  <div class="col-md-4">
 
-  <div class="field">
-     Modulo<br>
-    <%= f.collection_select :modulo_id, Modulo.all, :id, :modulonombre,{prompt: "Seleccione Modulo"},{ class: "form-control"} %>
-</div>
-
-
-</div>
-
-<div class="col-md-4">
-<div class="field">
-    Fecha Entrega Modulo<br>
+    <div class="field">
+     Fecha Entrega Modulo<br>
     <%= f.text_field :fechaentregamodulo, class:'datepicker form-control' %>
-  </div>
+   </div>
+
+
+ </div>
+
+ <div class="col-md-4">
+  <div class="actions">
+      <%= f.submit "Guardar",class:'btn btn-default btn-lg btn-block' %>
+    </div>
 </div>
 </div>
 
 
-<div class="col-md-12">
-
-<div class="col-md-4">
-
-
-</div>
-
-
-
-<div class="col-md-4">
-<div class="actions">
-    <%= f.submit "Guardar",class:'btn btn-default btn-lg btn-block' %>
-  </div>
-
-</div>
-<div class="col-md-4"></div>
-</div>
 
 
 

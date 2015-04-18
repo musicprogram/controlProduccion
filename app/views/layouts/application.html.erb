@@ -4,8 +4,6 @@
 	<title>ControlProduccion</title>
 	<%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
 	<%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
-	<%= javascript_include_tag :defaults, "nested_form" %>
-
 	<%= csrf_meta_tags %>
 </head>
 
@@ -19,50 +17,50 @@
 			<body class="handfondo">
 				<% elsif @fondo_cuadro == true %>
 				<body class="fondo_cuadro">
-				
-	
-		<% end %>
-		
-		
-	
-		<div class="container">
-			<div class="row">
-				<% if usuario_signed_in? %>
-				<nav class="navbar navbar-fixed-left navbar-minimal animate" role="navigation">
-					<div class="navbar-toggler animate">
-						<span class="menu-icon"></span>
+
+
+					<% end %>
+
+
+
+					<div class="container">
+						<div class="row">
+							<% if usuario_signed_in? %>
+							<nav class="navbar navbar-fixed-left navbar-minimal animate" role="navigation">
+								<div class="navbar-toggler animate">
+									<span class="menu-icon"></span>
+								</div>
+								<ul class="navbar-menu animate">
+
+
+									<li><%= link_to "<i class='fa fa-desktop fa-2x'></i>".html_safe, rails_admin_path %></li>
+
+
+									<li><%= link_to "<i class='fa fa-code fa-2x'></i>".html_safe, ordenproduccions_path %></li>
+
+									<li><%= link_to "<i class='fa fa-paperclip fa-2x'></i>".html_safe, ordenterceros_path %></li>
+
+									<li><%= link_to "<i class='fa fa-user-times fa-2x'></i>".html_safe, destroy_usuario_session_path, :method => :delete, class: 'active' %></li>
+
+
+
+								</ul>
+							</nav>
+
+
+							<% end%>
+
+
+							<span class="label label-default animated shake "><%= notice %></span>
+							<span class="label label-default animated shake"><%= alert %></span>
+							<%= yield %>
+						</div>
 					</div>
-					<ul class="navbar-menu animate">
-						<li><%= link_to "<i class='fa fa-desktop fa-2x'></i>".html_safe, rails_admin_path %></li>
-						
-						<li><%= link_to "<i class='fa fa-code fa-2x'></i>".html_safe, ordenproduccions_path %></li>
-						
-						<li><%= link_to "<i class='fa fa-paperclip fa-2x'></i>".html_safe, ordenterceros_path %></li>
-						
-						<li><%= link_to "<i class='fa fa-user-times fa-2x'></i>".html_safe, destroy_usuario_session_path, :method => :delete, class: 'active' %></li>
-						
-						
-						
-					</ul>
-				</nav>
+					<br><br>
 
 
-				<% end%>
-			
+					<%= render 'layouts/footer' %>
 
-				<span class="label label-default animated shake "><%= notice %></span>
-				<span class="label label-default animated shake"><%= alert %></span>
-				<%= yield %>
-			</div>
-		</div>
-		<br><br>
+</body>
+</html>
 
-
-    <%= render 'layouts/footer' %>
-
-	</body>
-	</html>
-
-<style>
-
-</style>

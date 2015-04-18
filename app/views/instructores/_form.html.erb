@@ -21,7 +21,7 @@
       
       
   <div class="field">
-     Nombre <br>
+     <%= f.label :Nombre %><br>
     <%= f.collection_select :nombre_id, Nombre.all, :id, :nombreinstructor,{prompt: "Instructor"}, {class: "form-control"}  %>
 </div>
 
@@ -29,19 +29,16 @@
     
     <div class="col-md-4">
       <div class="field">
-    
+    <%= f.label :fecha_salida_del_almacen %><br>
+    <%= f.text_field :fechasalidaalmacen, class: 'datepicker form-control', :id => 'salida', :onblur => 'fecha()' %>
   </div>
-      
     </div>
 
 
 
     <div class="col-md-4">
         
-  <div class="field">
-    <%= f.label :fecharecibo %><br>
-    <%= f.text_field :fecharecibo, class: 'datepicker form-control' %>
-  </div>
+  
       
     </div>
     
@@ -61,7 +58,7 @@
       
 
   <div class="field">
-    <%= f.label :tallaunidad %><br>
+    <%= f.label :Talla_Unidad %><br>
     <%= f.text_field :tallaunidad, class:'form-control' %>
   </div>
     </div>
@@ -86,18 +83,12 @@
     </div>
     
     <div class="col-md-4">
-      
-        <div class="field">
-    <%= f.label :fechasalidaalmacen %><br>
-    <%= f.text_field :fechasalidaalmacen, class: 'datepicker form-control' %>
+      <div class="field">
+    <%= f.label :fecha_de_recibo %><br>
+    <%= f.text_field :fecharecibo, class: 'datepicker form-control', :id => 'recibo', :onblur => 'fecha()' %>
   </div>
+        
     </div>
-    
-    
-
-
-    
-
  
   
 </div>
@@ -108,27 +99,36 @@
   <div class="col-md-4"></div>
   <div class="col-md-4">
     
-<div class="field">
+<div class="field  invisi ">
      
          <%= f.label :observacionescalidad  %><br>
-        <%= f.text_field :observacionescalidad , class:'form-control' , :id => "suma" %>
+        <%= f.text_field :observacionescalidad , class:'form-control ' , :id => "suma" %>
       </div>
 
   </div>
-  <div class="field">
+  <div class="field invisi  ">
      
          <%= f.label :totalrecibidas  %><br>
-        <%= f.text_field :totalrecibidas , class:'form-control' , :id => "total" %>
+        <%= f.text_field :totalrecibidas , class:'form-control ' , :id => "total" %>
       </div>
 
-  </div>
+      <div class="field invisi  ">
+     
+         <%= f.label :duracion  %><br>
+        <%= f.text_field :duracion , class:'form-control ' , :id => "totaldu", :onblur => 'fecha()' %>
+      </div
+
  
+
   <div class="col-md-4">
      <hr>
   <div class="actions">
     <%= f.submit "Guardar",class:'btn btn-default btn-lg btn-block'%>
   </div>
   </div>
+
+
+  
 </div>
 <% end %>
 
@@ -141,14 +141,27 @@
         
         var primer = document.getElementById('pri').value;
         var segun = document.getElementById('seg').value;
-       
+      
         tota= (parseInt(primer) +parseInt(segun) );
         prome =  (parseInt(primer) * 100);
         prome =  prome/tota;
-        
+     
         document.getElementById('total').value = tota;
         document.getElementById('suma').value = prome;
-    }
+        
+}
+
+    function fecha(){
+        var reci = document.getElementById('recibo').value;
+        var sali = document.getElementById('salida').value;
+
+        duracio = (parseFloat(reci) - parseFloat(sali) );
+        document.getElementById('totaldu').value = duracio;
+
+}
+
+    
+
 </script>
 
  

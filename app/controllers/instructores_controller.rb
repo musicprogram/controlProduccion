@@ -28,6 +28,8 @@ class InstructoresController < ApplicationController
   def create
     @instructor = Instructor.new(instructor_params)
     @instructor.cuadroproduccion_id = @cuadroproduccion.id
+
+    @instructor.duracion = @instructor.fecharecibo - @instructor.fechasalidaalmacen
    
 
       respond_to do |format|
@@ -43,13 +45,8 @@ class InstructoresController < ApplicationController
 
   def update
   
-       @instructor.totalrecibidas = @instructor.primeras + @instructor.segundas
-       
-       @instructor.observacionescalidad = @instructor.primeras * 100
-       @instructor.observacionescalidad = @instructor.observacionescalidad / @instructor.totalrecibidas
-      
-      
-       @instructor.save
+    @instructor.inspect
+    @instructor.save(:validate => false)
      
        
     respond_to do |format|
@@ -78,6 +75,6 @@ class InstructoresController < ApplicationController
     end
 
     def instructor_params
-      params.require(:instructor).permit(:nombre, :fecharecibo, :cantidad, :tallaunidad, :primeras, :segundas, :totalrecibidas, :observacionescalidad, :fechasalidaalmacen, :cuadroproduccion_id, :nombre_id)
+      params.require(:instructor).permit(:nombre, :fecharecibo, :cantidad, :tallaunidad, :primeras, :segundas, :totalrecibidas, :observacionescalidad, :fechasalidaalmacen, :cuadroproduccion_id, :nombre_id, :duracion)
     end
 end

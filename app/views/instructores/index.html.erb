@@ -3,6 +3,7 @@
     <br><h4 class="derecho"><span class="badge option animated wobble"> <%= @instructores.count %> </span></h4 >
 
 <br>
+
 <div class="table-responsive cubo">
   <table class="table table-condensed table-hover">
   <thead>
@@ -11,7 +12,7 @@
       <th>Imagen</th>
       <th>Total Recibidas</th>
       <th>Calidad</th>
-      <th>Salida del Almacen</th>
+      <th>Tiempo de entrega</th>
       <th colspan="3"></th>
     </tr>
   </thead>
@@ -19,11 +20,13 @@
   <tbody>
     <% @instructores.each do |instructor| %>
       <tr>
+       <% instructor.duracion = instructor.fecharecibo - instructor.fechasalidaalmacen%>
+
         <td><%= instructor.nombre.nombreinstructor %></td>
         <td><%= image_tag instructor.nombre.avatar.url(:thumb)%></td>
         <td><%= instructor.totalrecibidas %></td>
         <td><%= instructor.observacionescalidad %>%</td>
-        <td><%= instructor.fechasalidaalmacen %></td>
+        <td><%= instructor.duracion %> Dias</td>
         
         
         <td><%= link_to "<i class='fa fa-eye fa-3x encima'></i>".html_safe, cuadroproduccion_instructor_path(@cuadroproduccion, instructor) %></td>

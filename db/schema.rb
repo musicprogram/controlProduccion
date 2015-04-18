@@ -70,6 +70,7 @@ ActiveRecord::Schema.define(version: 20150409154814) do
     t.integer  "totalrecibidas"
     t.integer  "observacionescalidad"
     t.date     "fechasalidaalmacen"
+    t.integer  "duracion"
     t.integer  "cuadroproduccion_id"
     t.datetime "created_at"
     t.datetime "updated_at"
