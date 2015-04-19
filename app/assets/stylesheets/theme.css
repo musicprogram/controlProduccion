@@ -2435,7 +2435,7 @@ table th[class*="col-"] {
 .table-responsive {
   overflow-x: auto;
   min-height: 0.01%;
-  height:420px;
+  height:380px;
   overflow-y:scroll;
   overflow-x:none;
   

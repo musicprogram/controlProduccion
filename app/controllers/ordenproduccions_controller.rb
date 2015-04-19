@@ -19,13 +19,13 @@ class OrdenproduccionsController < ApplicationController
   # GET /ordenproduccions/new
   def new
     @ordenproduccion = Ordenproduccion.new
-    @fondo_hand = true
+    @fondo_aguja = true
     @footer_tuto = true
   end
 
   # GET /ordenproduccions/1/edit
   def edit
-       @home_pagee = true
+       
        @footer_tuto1 = true
 
   end

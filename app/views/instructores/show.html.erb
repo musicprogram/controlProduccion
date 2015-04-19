@@ -38,7 +38,7 @@
 
 
           <div class="col-md-12">
- <%  @instructor.duracion = @instructor.fecharecibo - @instructor.fechasalidaalmacen %>
+ 
       
 
             <div class="col-md-6">
@@ -61,7 +61,7 @@
             <div class="col-md-12">
               <div class="col-md-6">  <h4 class="izquierda tota"> <strong>Total Recibidas: </strong> <%= @instructor.totalrecibidas %></h4>
               </div>
-              <div class="col-md-6">                  <h4 class="derecha"></h4>
+              <div class="col-md-6">    <h4 class="derecha"></h4>
               </div>
 
 
@@ -128,34 +128,7 @@
   </div>
 
 
-  <input type="button" value="Print Div" onclick="PrintElem('#mydiv')" />
-
 
 </body>
 
 
-
-<script>
-function PrintElem(elem)
-{
-  Popup($(elem).html());
-}
-
-function Popup(data) 
-{
-  var mywindow = window.open('', 'my div', 'height=400,width=600');
-  mywindow.document.write('<html><head><title><%=@instructor.nombre.nombreinstructor%></title>');
-        /*optional stylesheet*/ //mywindow.document.write('<link rel="stylesheet" href="main.css" type="text/css" />');
-        mywindow.document.write('</head><body >');
-        mywindow.document.write(data);
-        mywindow.document.write('</body></html>');
-
-        mywindow.document.close(); // necessary for IE >= 10
-        mywindow.focus(); // necessary for IE >= 10
-
-        mywindow.print();
-        mywindow.close();
-
-        return true;
-      }
-      </script>

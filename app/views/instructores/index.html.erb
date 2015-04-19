@@ -1,11 +1,12 @@
-
+<body class="insumo">
+  
     <h1 class="center cubo">INSTRUCTORES</h1>
     <br><h4 class="derecho"><span class="badge option animated wobble"> <%= @instructores.count %> </span></h4 >
 
 <br>
 
-<div class="table-responsive cubo">
-  <table class="table table-condensed table-hover">
+<div class="table-responsive cubo tbla">
+  <table class="table table-condensed table-hover tbla">
   <thead>
     <tr class="active">
       <th>Nombre</th>
@@ -20,8 +21,7 @@
   <tbody>
     <% @instructores.each do |instructor| %>
       <tr>
-       <% instructor.duracion = instructor.fecharecibo - instructor.fechasalidaalmacen%>
-
+       
         <td><%= instructor.nombre.nombreinstructor %></td>
         <td><%= image_tag instructor.nombre.avatar.url(:thumb)%></td>
         <td><%= instructor.totalrecibidas %></td>
@@ -46,3 +46,5 @@
 <%= link_to "<i class='fa fa-plus-circle fa-4x'></i>".html_safe, new_cuadroproduccion_instructor_path(@cuadroproduccion) %>
 <%= link_to "<i class='fa fa-arrow-circle-left fa-4x'></i>".html_safe, descripcioncorte_cuadroproduccions_path(@cuadroproduccion.descripcioncorte_id) %>
 
+
+</body>

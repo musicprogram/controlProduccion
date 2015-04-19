@@ -29,9 +29,6 @@ class InstructoresController < ApplicationController
     @instructor = Instructor.new(instructor_params)
     @instructor.cuadroproduccion_id = @cuadroproduccion.id
 
-    @instructor.duracion = @instructor.fecharecibo - @instructor.fechasalidaalmacen
-   
-
       respond_to do |format|
       if @instructor.save
         format.html { redirect_to cuadroproduccion_instructor_path(@cuadroproduccion, @instructor), notice: 'Instructor was successfully created.' }
@@ -45,10 +42,6 @@ class InstructoresController < ApplicationController
 
   def update
   
-    @instructor.inspect
-    @instructor.save(:validate => false)
-     
-       
     respond_to do |format|
       if @instructor.update(instructor_params)
         format.html { redirect_to cuadroproduccion_instructor_path(@cuadroproduccion, @instructor), notice: 'Instructor was successfully updated.' }
