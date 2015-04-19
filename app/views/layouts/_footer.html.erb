@@ -13,7 +13,7 @@
 					<i class='fa fa-scissors fa-2x   '> Descripción del Corte</i><br>
 					<i class='fa fa-eye  '>  Mostrar la Orden</i><br>
 					<i class='fa fa-plus-circle  '> Crear nueva Orden</i> <br>
-					<a href="https://www.youtube.com/embed/7FR56CdLSew">Guía</a>
+					<a href="https://www.youtube.com/embed/7FR56CdLSew"><i class="fa fa-youtube-play fa-2x"></i></a>
 					
 				
 				</body>
@@ -34,7 +34,7 @@
 		   			<i class='fa fa-check-circle-o fa-2x   '> Cuadro de Producción</i><br>
 					<i class='fa fa-eye   '>  Mostrar la Programación de Corte</i><br>
 					<i class='fa fa-plus-circle  '> Crear nueva Descripción</i> <br>
-					<a href="https://www.youtube.com/embed/wWPZTIkLfNM">Guía</a>
+					<a href="https://www.youtube.com/embed/wWPZTIkLfNM"><i class="fa fa-youtube-play fa-2x"></i></a>
 		   </body>
 		   
 		   <%elsif @footer_terce == true%>
@@ -48,8 +48,13 @@
 		   <%elsif @footer_welcome == true%>
 		   <body class="footer_welcome">
 		   	
+		   <% if usuario_signed_in? %>	
+		   <%= link_to "<i class='fa fa-code fa-4x'></i>".html_safe, ordenproduccions_path, class:'btn-indies'%>
+		   <% elsif%>
 		   <%= link_to "<i class='fa fa-code fa-4x'></i>".html_safe, ordenproduccions_path, class:'btn-indies'%> <br>
-		   <a href="https://www.youtube.com/embed/Rv6ft2W6W1Q">Guía</a>
+		   <a href="https://www.youtube.com/embed/Rv6ft2W6W1Q"><i class="fa fa-youtube-play fa-2x"></i></a>
+		   <%end%>	
+		   
 		   </body>
 		   
 		   
@@ -57,13 +62,13 @@
 		   
 		   <body class="tuto">
 		   	<i class='fa fa-eye fa-2x'> Ingresar a Instructor </i> <br>
-		   	<a href="https://www.youtube.com/watch?v=HL8GiGhU3ac">Guía</a>
+		   	<a href="https://www.youtube.com/watch?v=HL8GiGhU3ac"><i class="fa fa-youtube-play fa-2x"></i></a>
 		   </body>
 		   
 		   <% elsif @tuto_videoins = true%>
 		   <body class="tutovi">
 		   	<i class='fa fa-user-md fa-2x'><br>jahenao17@misena.edu.co</i> <br>
-		   	<a href="https://www.youtube.com/embed/W_1Nc-pQ-gs">Guía</a> 
+		   	<a href="https://www.youtube.com/embed/W_1Nc-pQ-gs"><i class="fa fa-youtube-play fa-2x"></i></a> 
 		   </body>
 			<%end%>
 			

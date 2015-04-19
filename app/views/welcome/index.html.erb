@@ -4,7 +4,13 @@
  <div class="wrapper-indieandcool">
   <br>
   <h1 class="bien">Control de la producción</h1>
-  <%=image_tag("senab.png")%> <br><br><br><br>
+  
+  <div class="questo">
+   
+  <%=image_tag("senab.png", class:"animated pulse")%>
+  </div>
+  
+  <br><br><br><br>
   <h2 class="descripcion">centro de formación en diseño, confección y moda</h2><br>
   <br></br>
   <br></br>
@@ -20,3 +26,11 @@
   
 </div>
 </body>
+
+<script>
+ $(".questo").hover( function (e) {
+    $(this).addClass('animated shake');
+ }, function(e){
+    $(this).removeClass('animated shake');
+ });
+</script>

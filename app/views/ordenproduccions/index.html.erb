@@ -8,9 +8,17 @@
   <% content_tag :label do %>
 
   <%= text_field_tag :search, params[:search], class:'form-control'  %> <br>
-  <%= submit_tag "Buscar por Referencia", :referencia => nil, class:'btn btn-succes'%>
+  <%= submit_tag "Buscar por Referencia", :referencia => nil, class:'btn btn-succes questo'%>
   <% end %>
   <% end %>
+  
+  <script>
+ $(".questo").hover( function (e) {
+    $(this).addClass('animated shake');
+ }, function(e){
+    $(this).removeClass('animated shake');
+ });
+</script>
 
   <div class="table-responsive ">
     <div class="tbla">
