@@ -5,6 +5,7 @@ class InstructoresController < ApplicationController
 
   def index
     @instructores = @cuadroproduccion.instructores.all
+    @tuto_videoins = true
   end
   
   def showinstructores

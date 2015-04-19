@@ -5,6 +5,7 @@ class CuadroproduccionsController < ApplicationController
   def index
     @cuadroproduccions = @descripcioncorte.cuadroproduccions.all
     @fondo_cuadro = true
+    @tuto_video = true
   end
 
   # GET /cuadroproduccions/1
