@@ -12,46 +12,15 @@
 <% end %>
 
 
-
 <div class="col-md-12">
-
-
-  <div class="col-md-4">
+    
+ <div class="col-md-4">
     <div class="field">
       <%= f.label :Color, class:'letrablanca'  %><br>
       <%= f.collection_select :color_id, Color.all, :id, :colornombre,{prompt: "Seleccione Color"},{ class: "form-control"} %>
     </div>
   </div>
-
-
-
-
-  <div class="col-md-4">
-
-   <div class="field">
-     <%= f.label :Talla_XL, class:'letrablanca'  %><br>
-     <%= f.number_field :tallaxl , class:'form-control' , :id => "xl", :onblur => 'sum()' %>
-   </div>
- </div>
-
-
- <div class="col-md-4">
-   <div class="field">
-     <%= f.label :Talla_Xs, class:'letrablanca'  %><br>
-     <%= f.number_field :tallaxs , class:'form-control', :id => 'xs', :onblur => 'sum()'%>
-   </div>
-
- </div>
-
-
-
-</div>
-
-
-
-
-
-<div class="col-md-12">
+  
   <div class="col-md-4">
     <div class="field">
      <%= f.label :Talla_S, class:'letrablanca'  %><br>
@@ -66,15 +35,42 @@
    </div>
  </div>
 
- <div class="col-md-4">
-  <div class="field">
-   <%= f.label :Talla_L, class:'letrablanca'  %><br>
-   <%= f.number_field :tallal , class:'form-control', :id => 'l', :onblur => 'sum()'%>
+
+
+
+</div>
+
+
+<div class="col-md-12">
+
+     <div class="col-md-4">
+      <div class="field">
+       <%= f.label :Talla_L, class:'letrablanca'  %><br>
+       <%= f.number_field :tallal , class:'form-control', :id => 'l', :onblur => 'sum()'%>
+     </div>
+    </div>
+    
+    <div class="col-md-4">
+       <div class="field">
+         <%= f.label :Talla_Xs, class:'letrablanca'  %><br>
+         <%= f.number_field :tallaxs , class:'form-control', :id => 'xs', :onblur => 'sum()'%>
+       </div>
+    </div>
+
+  <div class="col-md-4">
+
+   <div class="field">
+     <%= f.label :Talla_XL, class:'letrablanca'  %><br>
+     <%= f.number_field :tallaxl , class:'form-control' , :id => "xl", :onblur => 'sum()' %>
+   </div>
  </div>
+
 </div>
 
 
-</div>
+
+
+
 <div class="field invisi">
 
  <%= f.label :Tallasuma, class:'letrablanca'  %><br>

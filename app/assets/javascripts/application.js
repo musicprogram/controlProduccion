@@ -20,7 +20,13 @@
 
 
 
-
+$(document).on('page:change', function () {
+	$(".questo").hover( function (e) {
+	    $(this).addClass('animated tada');
+		 }, function(e){
+		    $(this).removeClass('animated tada');
+		 });
+});
 
 
 $(document).on('page:change', function () {

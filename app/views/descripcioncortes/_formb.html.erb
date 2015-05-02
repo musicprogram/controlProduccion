@@ -11,47 +11,16 @@
 </div>
 <% end %>
 
-
-
 <div class="col-md-12">
-
-
-  <div class="col-md-4">
+    
+     <div class="col-md-4">
     <div class="field">
       <%= f.label :Color  %><br>
       <%= f.collection_select :color_id, Color.all, :id, :colornombre,{prompt: "Seleccione Color"},{ class: "form-control"} %>
     </div>
   </div>
-
-
-
-
-  <div class="col-md-4">
-
-   <div class="field">
-     <%= f.label :Talla_XL  %><br>
-     <%= f.number_field :tallaxl , class:'form-control' , :id => "xl", :onblur => 'sum()' %>
-   </div>
- </div>
-
-
- <div class="col-md-4">
-   <div class="field">
-     <%= f.label :Talla_Xs  %><br>
-     <%= f.number_field :tallaxs , class:'form-control', :id => 'xs', :onblur => 'sum()'%>
-   </div>
-
- </div>
-
-
-
-</div>
-
-
-
-
-
-<div class="col-md-12">
+    
+    
   <div class="col-md-4">
     <div class="field">
      <%= f.label :Talla_S  %><br>
@@ -66,6 +35,13 @@
    </div>
  </div>
 
+ 
+
+</div>
+
+<div class="col-md-12">
+
+
  <div class="col-md-4">
   <div class="field">
    <%= f.label :Talla_L  %><br>
@@ -74,7 +50,34 @@
 </div>
 
 
+
+ <div class="col-md-4">
+   <div class="field">
+     <%= f.label :Talla_Xs  %><br>
+     <%= f.number_field :tallaxs , class:'form-control', :id => 'xs', :onblur => 'sum()'%>
+   </div>
+
+ </div>
+ 
+ <div class="col-md-4">
+
+   <div class="field">
+     <%= f.label :Talla_XL  %><br>
+     <%= f.number_field :tallaxl , class:'form-control' , :id => "xl", :onblur => 'sum()' %>
+   </div>
+ </div>
+
+
+
+
 </div>
+
+
+
+
+
+
+
 <div class="field invisi">
 
  <%= f.label :Tallasuma  %><br>

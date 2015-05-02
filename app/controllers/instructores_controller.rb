@@ -10,10 +10,14 @@ class InstructoresController < ApplicationController
   
   def showinstructores
     
-    @instructores = Instructor.all
+    #Promedio 
+    @instructores = Instructor.select('nombre_id').group('nombre_id').average('observacionescalidad')
+    @instructoresdura = Instructor.select('nombre_id').group('nombre_id').average('duracion')
+    @instructorestotal = Instructor.select('nombre_id').group('nombre_id').sum('totalrecibidas')
+    @tuto_estadisticas = true
     
   end
-
+  
   def show
     
     @descripcioncortes = Descripcioncorte.all

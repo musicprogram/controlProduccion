@@ -2,9 +2,6 @@
 
 
 
-
-
-
 <div class="col-md-12">
   <div class="col-md-2"></div>
   <div class="col-md-8">
@@ -30,11 +27,12 @@
               <tr>
                 <td>
                   <div class="col-md-6">
-                   
+                       <h5 class="izquierda"> <strong>Color: </strong>
+                       <%= @descripcioncorte.color.colornombre %></h5>
                   </div>
                   <div class="col-md-6">
-                   <h5 class="derecha"><strong>Capas: </strong>
-                   <%= @descripcioncorte.ordenproduccion.capas %></h5>
+                       <h5 class="derecha"><strong>Capas: </strong>
+                       <%= @descripcioncorte.ordenproduccion.capas %></h5>
                  </div>
 
                </td>
@@ -43,13 +41,14 @@
               <td>
 
                <div class="col-md-6">
-
-               <h5 class="izquierda"> <strong>Color: </strong>
-                <%= @descripcioncorte.color.colornombre %></h5>
+                <h5 class="izquierda"> <strong>Talla S: </strong>
+                <%= @descripcioncorte.tallas %></h5>
+               
               </div>
               <div class="col-md-6">
-                <h5 class="derecha"><strong>Talla XS: </strong>
-                <%= @descripcioncorte.tallaxs %></h5>
+                  <h5 class="derecha"> <strong>Talla M: </strong>
+                <%= @descripcioncorte.tallam %></h5>
+                
               </div>
 
             </td>
@@ -58,12 +57,12 @@
             <td>
 
               <div class="col-md-6">
-               <h5 class="izquierda"> <strong>Talla M: </strong>
-                <%= @descripcioncorte.tallam %></h5>
+                   <h5 class="izquierda"> <strong>Talla L: </strong>
+                   <%= @descripcioncorte.tallal %></h5>
               </div>
               <div class="col-md-6">
-              <h5 class="derecha"> <strong>Talla L: </strong>
-               <%= @descripcioncorte.tallal %></h5>
+                   <h5 class="derecha"><strong>Talla XS: </strong>
+                    <%= @descripcioncorte.tallaxs %></h5>
 
              </div>
 
@@ -73,19 +72,16 @@
          </tr>
          <tr class="active">
           <td>
+               <div class="col-md-6">
+                  <h5 class="izquierda"><strong>Tallax XL: </strong>
+                 <%= @descripcioncorte.tallaxl %></h5>
+
+              </div>
             <div class="col-md-6">
-             <h5 class="izquierda"><strong>Tallax XL: </strong>
-             <%= @descripcioncorte.tallaxl %></h5>
+             
            </div>
 
-           <div class="col-md-6">
-           <h5 class="derecha"> <strong>Talla S: </strong>
-            <%= @descripcioncorte.tallas %></h5>
-
-          </div>
-
-
-
+          
 
         </td>
       </tr>
