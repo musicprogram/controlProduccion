@@ -44,6 +44,21 @@ background-color: transparent;
 	border-radius: 10px;
 }
 
+body.estadisti {
+  background: url("textil.jpg");
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -ms-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+  background-attachment: fixed;
+  background-repeat: no-repeat;
+  background-position: top center;
+  -webkit-touch-callout: none;
+  -webkit-tap-highlight-color: transparent;
+}
+
+
 body.agujaa {
   background: url("fondo1.jpg");
   -webkit-background-size: cover;
@@ -952,3 +967,7 @@ body.handfondo{
   background: rgba(0,0,0,0.5);
 }
 
+
+.blanco{
+  color:white;
+}
