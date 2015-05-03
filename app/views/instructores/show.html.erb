@@ -42,7 +42,7 @@
       
 
             <div class="col-md-6">
-              <h4 class="izquierda"> <strong>Talla Unidad: </strong><%= @instructor.tallaunidad %>   </h4></div>
+              <h4 class="izquierda"> <strong>Talla Unidad: </strong><%= @instructor.talla.nombre rescue nil %>   </h4></div>
               <div class="col-md-6">
                 <h4 class="derecha"> <strong>Cantidad: </strong><%= @instructor.cantidad %></h4>
               </div>

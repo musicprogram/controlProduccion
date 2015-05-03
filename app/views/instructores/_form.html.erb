@@ -57,11 +57,11 @@
     <div class="col-md-4">
       
       
-
   <div class="field">
-    <%= f.label :Talla_Unidad %><br>
-    <%= f.text_field :tallaunidad, class:'form-control' %>
-  </div>
+     <%= f.label :Talla %><br>
+     <%= f.collection_select :talla_id, Talla.all, :id, :nombre,{prompt: "Talla"}, {class: "form-control"}  %>
+</div>
+
     </div>
     
     <div class="col-md-4">

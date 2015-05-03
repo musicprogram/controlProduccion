@@ -52,6 +52,11 @@ Nombre.create(e) unless Nombre.exists?(e)
 end
 
 
+tallas = [{nombre: "S"},{nombre: "M"},{nombre: "L"},{nombre: "XS"},{nombre: "XL"}]
+tallas.each do |e|
+Talla.create(e) unless Talla.exists?(e)
+end
+
 #nombres = [{nombreinstructor: "Arelis Sierra"},{nombreinstructor: "Jennifer Vargaz"},{nombreinstructor: "Henry Ramirez"},{nombreinstructor: "Maydee Guevara"},{nombreinstructor: "Elsa Rodriguez"},{nombreinstructor: "Carolina Paniagua"},{nombreinstructor: "Maria Eugenia Bedoya"}, { nombreinstructor: "Jhon Jairo Clavijo"} ,{nombreinstructor: "Mauricio echeverry"},{nombreinstructor: "Lennis Giraldo"},{nombreinstructor: "Aura Jaramillo"},{nombreinstructor: "Doris Llano"},{nombreinstructor: "Ruth Mesa"},{nombreinstructor: "Gladis Patiño"},{nombreinstructor: "Angela Quintero"},{nombreinstructor: "Viky Toro"},{nombreinstructor: "Johanna Velasquez"},{nombreinstructor: "Salon Parejo"},{nombreinstructor: "Dolores Correa"},{nombreinstructor: "Natalia Mesa"},{nombreinstructor: "Fanny Rodriguez"},{nombreinstructor: "Martha Tapias"},{nombreinstructor: "Diana Lujan"},{nombreinstructor: "Maria Martinez"},{nombreinstructor: "Beatriz Martinez"},{nombreinstructor: "Angela Alvarez"},{nombreinstructor: "Ana Lucia"},{nombreinstructor: "Jose Luis Cardona"},{nombreinstructor: "Yadira Ochoa"}]
 #nombres.each do |e|
 #Nombre.create(e) unless Nombre.exists?(e)

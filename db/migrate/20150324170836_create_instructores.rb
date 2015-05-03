@@ -4,7 +4,7 @@ class CreateInstructores < ActiveRecord::Migration
       t.references :nombre, index: true
       t.date :fecharecibo
       t.integer :cantidad
-      t.string :tallaunidad
+      t.references :talla, index: true
       t.integer :primeras
       t.integer :segundas
       t.integer :totalrecibidas

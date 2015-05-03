@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20150409154814) do
+ActiveRecord::Schema.define(version: 20150502160733) do
 
   create_table "clientes", force: true do |t|
     t.string   "clientenombre"
@@ -64,7 +64,7 @@ ActiveRecord::Schema.define(version: 20150409154814) do
     t.integer  "nombre_id"
     t.date     "fecharecibo"
     t.integer  "cantidad"
-    t.string   "tallaunidad"
+    t.integer  "talla_id"
     t.integer  "primeras"
     t.integer  "segundas"
     t.integer  "totalrecibidas"
@@ -78,6 +78,7 @@ ActiveRecord::Schema.define(version: 20150409154814) do
 
   add_index "instructores", ["cuadroproduccion_id"], name: "index_instructores_on_cuadroproduccion_id"
   add_index "instructores", ["nombre_id"], name: "index_instructores_on_nombre_id"
+  add_index "instructores", ["talla_id"], name: "index_instructores_on_talla_id"
 
   create_table "modulos", force: true do |t|
     t.string   "modulonombre"
@@ -152,6 +153,12 @@ ActiveRecord::Schema.define(version: 20150409154814) do
 
   create_table "procesos", force: true do |t|
     t.string   "procesonombre"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  create_table "tallas", force: true do |t|
+    t.string   "nombre"
     t.datetime "created_at"
     t.datetime "updated_at"
   end

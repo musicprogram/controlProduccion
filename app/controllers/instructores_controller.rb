@@ -73,6 +73,6 @@ class InstructoresController < ApplicationController
     end
 
     def instructor_params
-      params.require(:instructor).permit(:nombre, :fecharecibo, :cantidad, :tallaunidad, :primeras, :segundas, :totalrecibidas, :observacionescalidad, :fechasalidaalmacen, :cuadroproduccion_id, :nombre_id, :duracion)
+      params.require(:instructor).permit(:nombre, :fecharecibo, :cantidad, :primeras, :segundas, :totalrecibidas, :observacionescalidad, :fechasalidaalmacen, :cuadroproduccion_id, :nombre_id, :duracion, :talla_id)
     end
 end
