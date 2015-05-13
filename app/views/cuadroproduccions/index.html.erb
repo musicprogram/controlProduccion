@@ -28,19 +28,19 @@
     <tbody>
       <% @cuadroproduccions.each do |cuadroproduccion| %>
       <tr>
-        <td>000<%= cuadroproduccion.descripcioncorte.ordenproduccion.id%></td>
-        <td><%= cuadroproduccion.descripcioncorte.ordenproduccion.referencia%></td>
-        <td><%= cuadroproduccion.descripcioncorte.ordenproduccion.descripcion%></td>
-        <td><%= cuadroproduccion.descripcioncorte.ordenproduccion.tela.telanombre%></td>
-        <td><%= cuadroproduccion.descripcioncorte.color.colornombre%></td>
+        <td class="minus">000<%= cuadroproduccion.descripcioncorte.ordenproduccion.id%></td>
+        <td class="minus"><%= cuadroproduccion.descripcioncorte.ordenproduccion.referencia%></td>
+        <td class="minus"><%= cuadroproduccion.descripcioncorte.ordenproduccion.descripcion%></td>
+        <td class="minus"><%= cuadroproduccion.descripcioncorte.ordenproduccion.tela.telanombre%></td>
+        <td class="minus"><%= cuadroproduccion.descripcioncorte.color.colornombre%></td>
         
-        <td><%= cuadroproduccion.modulo.modulonombre rescue nil %></td>
+        <td class="minus"><%= cuadroproduccion.modulo.modulonombre rescue nil %></td>
         
         <% c+=1
         if c == 1
           
         %>
-        <td><%= link_to "<i class='fa fa-user fa-3x'></i>".html_safe, cuadroproduccion_instructores_path(cuadroproduccion) %></td>
+        <td><%= link_to "<i class='fa fa-user fa-3x questo1'></i>".html_safe, cuadroproduccion_instructores_path(cuadroproduccion) %></td>
         <%else%>
         <td></td>
         <%end%>

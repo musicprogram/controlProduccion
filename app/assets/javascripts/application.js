@@ -28,6 +28,14 @@ $(document).on('page:change', function () {
 		 });
 });
 
+$(document).on('page:change', function () {
+	$(".questo1").hover( function (e) {
+	    $(this).addClass('animated bounce');
+		 }, function(e){
+		    $(this).removeClass('animated bounce');
+		 });
+});
+
 
 $(document).on('page:change', function () {
   $('.navbar-toggler').on('click', function(event) {

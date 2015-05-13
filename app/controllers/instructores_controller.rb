@@ -16,6 +16,8 @@ class InstructoresController < ApplicationController
     @instructorestotal = Instructor.select('nombre_id').group('nombre_id').sum('totalrecibidas')
     @tuto_estadisticas = true
     
+    @instructores1 = Instructor.group(:nombre_id).select([:nombre_id, "average(observacionescalidad)", "average(duracion)", "sum(totalrecibidas)" ])
+    
   end
   
   def show

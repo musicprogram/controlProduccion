@@ -27,18 +27,18 @@ c = 0 %>
   <tbody>
     <% @descripcioncortes.each do |descripcioncorte| %>
       <tr>
-        <td>000<%= descripcioncorte.ordenproduccion.id %></td>
-        <td><%= descripcioncorte.color.colornombre %></td>
-        <td><%= descripcioncorte.ordenproduccion.capas %></td>
+        <td class="minus">000<%= descripcioncorte.ordenproduccion.id %></td>
+        <td class="minus"><%= descripcioncorte.color.colornombre %></td>
+        <td class="minus"><%= descripcioncorte.ordenproduccion.capas %></td>
        
        
-        <td><%= descripcioncorte.ordenproduccion.vecestrazo %></td>
-        <td><%= descripcioncorte.tallasuma %></td>
+        <td class="minus"><%= descripcioncorte.ordenproduccion.vecestrazo %></td>
+        <td class="minus"><%= descripcioncorte.tallasuma %></td>
         
         <% c+=1
         if c == 1
         %>
-        <td><%= link_to "<i class='fa fa-check-circle-o fa-3x ojos'></i>".html_safe, descripcioncorte_cuadroproduccions_path(descripcioncorte) %></td>
+        <td><%= link_to "<i class='fa fa-check-circle-o fa-3x ojos questo1'></i>".html_safe, descripcioncorte_cuadroproduccions_path(descripcioncorte) %></td>
         <% else %>
         <td></td>
         <% end %>

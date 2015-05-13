@@ -22,14 +22,14 @@
     <% @instructores.each do |instructor| %>
       <tr>
        
-        <td><%= instructor.nombre.nombreinstructor %></td>
-        <td><%= image_tag instructor.nombre.avatar.url(:thumb)%></td>
-        <td><%= instructor.totalrecibidas %></td>
-        <td><%= instructor.observacionescalidad %>%</td>
-        <td><%= instructor.duracion %> Dias</td>
+        <td class="minus"><%= instructor.nombre.nombreinstructor %></td>
+        <td class="minus"><%= image_tag instructor.nombre.avatar.url(:thumb), class:'img-circle'%></td>
+        <td class="minus"><%= instructor.totalrecibidas %></td>
+        <td class="minus"><%= instructor.observacionescalidad %>%</td>
+        <td class="minus"><%= instructor.duracion %> Dias</td>
         
         
-        <td><%= link_to "<i class='fa fa-eye fa-3x encima'></i>".html_safe, cuadroproduccion_instructor_path(@cuadroproduccion, instructor) %></td>
+        <td><%= link_to "<i class='fa fa-eye fa-3x encima questo1'></i>".html_safe, cuadroproduccion_instructor_path(@cuadroproduccion, instructor) %></td>
         <td><%= link_to "<i class='fa fa-pencil fa-3x encima'>".html_safe, edit_cuadroproduccion_instructor_path(@cuadroproduccion,instructor) %></td>
         <td><%= link_to "<i class='fa fa-eraser fa-3x encima'>".html_safe, cuadroproduccion_instructor_path(@cuadroproduccion,instructor), method: :delete, data: { confirm: 'Are you sure?' } %></td>
         

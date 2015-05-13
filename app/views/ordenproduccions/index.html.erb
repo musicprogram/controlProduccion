@@ -33,15 +33,15 @@
         <tbody>
           <% @ordenproduccions.each do |ordenproduccion| %>
           <tr>
-            <td>000<%= ordenproduccion.id %></td>
-            <td><%= ordenproduccion.referencia %></td>
-            <td><%= ordenproduccion.fechaprogramacion %></td>
-            <td><%= ordenproduccion.descripcion %></td>
+            <td class="minus">000<%= ordenproduccion.id %></td>
+            <td class="minus"><%= ordenproduccion.referencia %></td>
+            <td class="minus"><%= ordenproduccion.fechaprogramacion %></td>
+            <td class="minus"><%= ordenproduccion.descripcion %></td>
 
 
-            <td><%= ordenproduccion.cantidad rescue nil %></td>
+            <td class="minus"><%= ordenproduccion.cantidad rescue nil %></td>
 
-            <td><%= link_to "<i class='fa fa-scissors fa-3x encima'>".html_safe, ordenproduccion_descripcioncortes_path(ordenproduccion) %></td>
+            <td><%= link_to "<i class='fa fa-scissors fa-3x encima questo1'>".html_safe, ordenproduccion_descripcioncortes_path(ordenproduccion) %></td>
             <td><%= link_to "<i class='fa fa-eye fa-3x encima'>".html_safe, ordenproduccion %></td>
             <td><%= link_to "<i class='fa fa-pencil fa-3x encima'>".html_safe, edit_ordenproduccion_path(ordenproduccion) %></td>
             <td><%= link_to "<i class='fa fa-eraser fa-3x encima'>".html_safe, ordenproduccion, method: :delete, data: { confirm: 'Estas seguro?' } %></td>

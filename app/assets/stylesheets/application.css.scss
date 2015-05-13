@@ -42,6 +42,8 @@ background-color: transparent;
 
 .form-control{
 	border-radius: 10px;
+	
+
 }
 
 body.estadisti {
@@ -631,11 +633,13 @@ body.homepageesh{
 
        .izquierda{
                        text-align:left;
-                       font-size:90%;
+                       font-size:110%;
+                       
                    }
                    .derecha{
                        text-align:right;
-                       font-size:90%;
+                       font-size:110%;
+                       
                    }
 
 
@@ -980,7 +984,12 @@ body.handfondo{
 
 td{
   text-align:left;
+  
 }
 th{
   text-align:left;
+}
+
+.minus{
+  text-transform: lowercase;
 }
