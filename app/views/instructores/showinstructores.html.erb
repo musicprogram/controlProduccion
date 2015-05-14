@@ -15,27 +15,25 @@
 
 
 
-<div class="panel-group" id="accordion" role="tablist" aria-multiselectable="true">
-  <div class="panel panel-default">
-    <div class="panel-heading" role="tab" id="headingOne">
-      <h4 class="panel-title">
-        <a data-toggle="collapse" data-parent="#accordion" href="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
-         <h4 class="center"> Calidad  General <br>    <i class="fa fa-bar-chart fa-2x"></i></h4>
-        </a>
-      </h4>
-    </div>
-    <div id="collapseOne" class="panel-collapse collapse in" role="tabpanel" aria-labelledby="headingOne">
-      <div class="panel-body">
+<div class="prome">
+  
+<div class="col-md-12">
+  
+  <div class="col-md-6">
+    
 
-      <div class="table-responsive cubo">
+
+
+      <div class="table-responsive1 cubo">
   <table class="table table-condensed table-hover">
   <thead>
+     <br><br>
     <tr class="active">
       <th class="invisi">Id Instructor</th>
     
       <th>Instructor</th>
       <th>Imagen</th>
-      <th>Promedio General Calidad</th>
+      <th>Calidad</th>
     </tr>
   </thead>
 
@@ -49,9 +47,11 @@
         <% nombre = Nombre.find(x) %>
         <td class="invisi"><%= x %></td>
         
-        <td><%= nombre.nombreinstructor %></td>
+        <td><h4><%= nombre.nombreinstructor %></h4></td>
         <td><%= image_tag nombre.avatar.url(:thumb), class:'img-circle' %></td>
-        <td><%= y.to_i %> %</td>
+        <td><h3><%= y.to_i %> %</h3></td>
+        
+      
 
       </tr>
      
@@ -61,30 +61,21 @@
 </table>
 </div>
 
-
-      </div>
-    </div>
   </div>
-  <div class="panel panel-default">
-    <div class="panel-heading" role="tab" id="headingTwo">
-      <h4 class="panel-title">
-        <a class="collapsed" data-toggle="collapse" data-parent="#accordion" href="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
-          <h4 class="center">Promedio Días de Entregas <br>   <i class="fa fa-barcode fa-2x"></i></h4>
-        </a>
-      </h4>
-    </div>
-    <div id="collapseTwo" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingTwo">
-      <div class="panel-body">
+  
+  <div class="col-md-3">
+    
+    
 
-      <div class="table-responsive cubo">
+      <div class="table-responsive1 cubo">
   <table class="table table-condensed table-hover">
   <thead>
+    <br><br>
     <tr class="active">
       <th class="invisi">Id Instructor</th>
     
-      <th>Instructor</th>
-      <th>Imagen</th>
-      <th>Promedio Días de Entrega</th>
+     
+      <th>Promedio Entrega</th>
     </tr>
   </thead>
 
@@ -98,10 +89,9 @@
         <% nombre = Nombre.find(x) %>
         <td class="invisi"><%= x %></td>
         
-        <td><%= nombre.nombreinstructor %></td>
-        <td><%= image_tag nombre.avatar.url(:thumb), class:'img-circle' %></td>
-        <td><%= y.to_i %> Días</td>
-
+       
+        <td><h3><%= y.to_i %> días</h3></td>
+       
       </tr>
      
     <% end %>
@@ -110,29 +100,18 @@
 </table>
 </div>
 
-      </div>
-    </div>
   </div>
-  <div class="panel panel-default">
-    <div class="panel-heading" role="tab" id="headingThree">
-      <h4 class="panel-title">
-        <a class="collapsed" data-toggle="collapse" data-parent="#accordion" href="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
-          <h4 class="center">Total Entregas <br>   <i class="fa fa-bars fa-2x"></i></h4>
-        </a>
-      </h4>
-    </div>
-    <div id="collapseThree" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingThree">
-      <div class="panel-body">
-
-<div class="table-responsive cubo">
+  
+  <div class="col-md-3">
+          <div class="table-responsive1 cubo">
   <table class="table table-condensed table-hover">
   <thead>
+     <br><br>
     <tr class="active">
       <th class="invisi">Id Instructor</th>
     
-      <th>Instructor</th>
-      <th>Imagen</th>
-      <th>Total Entregas</th>
+     
+      <th>Total </th>
     </tr>
   </thead>
 
@@ -146,9 +125,8 @@
         <% nombre = Nombre.find(x) %>
         <td class="invisi"><%= x %></td>
         
-        <td><%= nombre.nombreinstructor %></td>
-        <td><%= image_tag nombre.avatar.url(:thumb), class:'img-circle' %></td>
-        <td><%= y.to_i %> Entregas</td>
+       
+        <td><h3><%= y.to_i %> Entregas</h3> </td>
 
       </tr>
      
@@ -157,10 +135,23 @@
   </tbody>
 </table>
 </div>
-
-      </div>
-    </div>
   </div>
+  
 </div>
 
+
+
+
+
+
+
+
+
+
+
+</div>
+
+
 </body>
+
+

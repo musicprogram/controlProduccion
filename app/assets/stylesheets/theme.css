@@ -2440,6 +2440,24 @@ table th[class*="col-"] {
   overflow-x:none;
   
 }
+
+.table-responsive1 {
+  
+  min-height: 0.01%;
+  height:380px;
+  
+  
+}
+
+.prome{
+  overflow-x: auto;
+  min-height: 0.01%;
+  height:380px;
+  overflow-y:scroll;
+  overflow-x:none;
+  background-color:white;
+}
+
 @media screen and (max-width: 767px) {
   .table-responsive {
     width: 100%;
