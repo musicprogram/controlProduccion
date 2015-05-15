@@ -2456,6 +2456,7 @@ table th[class*="col-"] {
   overflow-y:scroll;
   overflow-x:none;
   background-color:white;
+  border-radius: 10px;
 }
 
 @media screen and (max-width: 767px) {

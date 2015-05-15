@@ -1,143 +1,145 @@
 <body class="estadisti estadisticas">
   <br>
 
-<h4 class="derecho"><span class="badge option animated wobble"> <%= @instructores.count %> </span></h4 >
-<br>
-<br>
+  <h4 class="derecho"><span class="badge option animated wobble"> <%= @instructores.count %> </span></h4 >
+    <br>
+    <br>
 
 
 
-<br>
+    <br>
 
-<h1 class="center blanco"> Centro de Formación en Diseño, Confección y Moda </h1>
-
-
+    <h1 class="center blanco"> Centro de Formación en Diseño, Confección y Moda </h1>
 
 
 
-<div class="prome">
-  
-<div class="col-md-12">
-  
-  <div class="col-md-6">
-    
+    <h2 class="center blanco"> Promedio General de Instructores </h2>
 
 
 
-      <div class="table-responsive1 cubo">
-  <table class="table table-condensed table-hover">
-  <thead>
-     <br><br>
-    <tr class="active">
-      <th class="invisi">Id Instructor</th>
-    
-      <th>Instructor</th>
-      <th>Imagen</th>
-      <th>Calidad</th>
-    </tr>
-  </thead>
-
-  <tbody>
-    
-   
-    <% @instructores.each do |x, y| %>
-     
-      <tr>
-     
-        <% nombre = Nombre.find(x) %>
-        <td class="invisi"><%= x %></td>
-        
-        <td><h4><%= nombre.nombreinstructor %></h4></td>
-        <td><%= image_tag nombre.avatar.url(:thumb), class:'img-circle' %></td>
-        <td><h3><%= y.to_i %> %</h3></td>
-        
+    <div class="prome">
       
-
-      </tr>
-     
-    <% end %>
-    
-  </tbody>
-</table>
-</div>
-
-  </div>
-  
-  <div class="col-md-3">
-    
-    
-
-      <div class="table-responsive1 cubo">
-  <table class="table table-condensed table-hover">
-  <thead>
-    <br><br>
-    <tr class="active">
-      <th class="invisi">Id Instructor</th>
-    
-     
-      <th>Promedio Entrega</th>
-    </tr>
-  </thead>
-
-  <tbody>
-    
-   
-    <% @instructoresdura.each do |x, y| %>
-     
-      <tr>
-     
-        <% nombre = Nombre.find(x) %>
-        <td class="invisi"><%= x %></td>
+      <div class="col-md-12">
         
-       
-        <td><h3><%= y.to_i %> días</h3></td>
-       
-      </tr>
-     
-    <% end %>
-    
-  </tbody>
-</table>
-</div>
+        <div class="col-md-6">
+          
 
-  </div>
-  
-  <div class="col-md-3">
+
+
           <div class="table-responsive1 cubo">
-  <table class="table table-condensed table-hover">
-  <thead>
-     <br><br>
-    <tr class="active">
-      <th class="invisi">Id Instructor</th>
-    
-     
-      <th>Total </th>
-    </tr>
-  </thead>
+            <table class="table table-condensed table-hover">
+              <thead>
+               <br><br>
+               <tr class="active">
+                <th class="invisi">Id Instructor</th>
+                
+                <th>Instructor</th>
+                <th>Imagen</th>
+                <th>Calidad</th>
+              </tr>
+            </thead>
 
-  <tbody>
-    
-   
-    <% @instructorestotal.each do |x, y| %>
-     
-      <tr>
-     
-        <% nombre = Nombre.find(x) %>
-        <td class="invisi"><%= x %></td>
+            <tbody>
+              
+             
+              <% @instructores.each do |x, y| %>
+              
+              <tr>
+               
+                <% nombre = Nombre.find(x) %>
+                <td class="invisi"><%= x %></td>
+                
+                <td><h4><%= nombre.nombreinstructor %></h4></td>
+                <td><%= image_tag nombre.avatar.url(:thumb), class:'img-circle' %></td>
+                <td><h3><%= y.to_i %> %</h3></td>
+                
+                
+
+              </tr>
+              
+              <% end %>
+              
+            </tbody>
+          </table>
+        </div>
+
+      </div>
+      
+      <div class="col-md-3">
         
-       
-        <td><h3><%= y.to_i %> Entregas</h3> </td>
+        
 
-      </tr>
-     
-    <% end %>
+        <div class="table-responsive1 cubo">
+          <table class="table table-condensed table-hover">
+            <thead>
+              <br><br>
+              <tr class="active">
+                <th class="invisi">Id Instructor</th>
+                
+                
+                <th>Promedio Entrega</th>
+              </tr>
+            </thead>
+
+            <tbody>
+              
+             
+              <% @instructoresdura.each do |x, y| %>
+              
+              <tr>
+               
+                <% nombre = Nombre.find(x) %>
+                <td class="invisi"><%= x %></td>
+                
+                
+                <td><h3><%= y.to_i %> días</h3></td>
+                
+              </tr>
+              
+              <% end %>
+              
+            </tbody>
+          </table>
+        </div>
+
+      </div>
+      
+      <div class="col-md-3">
+        <div class="table-responsive1 cubo">
+          <table class="table table-condensed table-hover">
+            <thead>
+             <br><br>
+             <tr class="active">
+              <th class="invisi">Id Instructor</th>
+              
+              
+              <th>Total </th>
+            </tr>
+          </thead>
+
+          <tbody>
+            
+           
+            <% @instructorestotal.each do |x, y| %>
+            
+            <tr>
+             
+              <% nombre = Nombre.find(x) %>
+              <td class="invisi"><%= x %></td>
+              
+              
+              <td><h3><%= y.to_i %> Entregas</h3> </td>
+
+            </tr>
+            
+            <% end %>
+            
+          </tbody>
+        </table>
+      </div>
+    </div>
     
-  </tbody>
-</table>
-</div>
   </div>
-  
-</div>
 
 
 
