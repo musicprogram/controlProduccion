@@ -156,3 +156,72 @@
 </body>
 
 
+
+
+
+
+<br><br>
+
+<a class="btn btn-primary" data-toggle="collapse" href="#collapseExample" aria-expanded="false" aria-controls="collapseExample">
+  Total de ordenes
+</a>
+
+<div class="collapse" id="collapseExample">
+  <div class="well1">
+    
+    
+
+
+<div class="table-responsive1 cubo">
+          <table class="table table-condensed table-hover">
+            <thead>
+             <br><br>
+             <tr class="active">
+              <th>Numero de Orden </th>
+              <th>Nombre Instructor </th>
+              <th></th>
+              <th>Primeras</th>
+              <th>Segundas</th>
+              <th>Fecha Salida</th>
+              <th>Fecha Entrega</th>
+              <th>Calidad</th>
+              <th>Duración</th>
+              <th>Total</th>
+            </tr>
+          </thead>
+
+          <tbody>
+            
+           
+            <% @instructores1.each do |instructor|%>
+            
+            <tr>
+             
+              <td>000<%= instructor.cuadroproduccion.descripcioncorte.ordenproduccion.id %></td>
+              <td><%= instructor.nombre.nombreinstructor %></td>
+              <td><%= image_tag instructor.nombre.avatar.url(:thumb), class:'img-circle' %></td>
+              <td><%= instructor.primeras %> Recibidas</td>
+              <td><%= instructor.segundas %> Recibidas</td>
+              <td><%= instructor.fecharecibo %></td>
+              <td><%= instructor.fechasalidaalmacen %></td>
+              <td><%= instructor.observacionescalidad %> %</td>
+              <td><%= instructor.duracion %> Días</td>
+              <td><%= instructor.totalrecibidas %></td>
+              
+             
+
+            </tr>
+            
+            <% end %>
+            
+          </tbody>
+        </table>
+      </div>
+  </div>
+</div>
+
+
+
+
+
+
