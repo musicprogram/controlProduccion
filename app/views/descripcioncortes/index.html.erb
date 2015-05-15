@@ -1,8 +1,11 @@
 
 <body class="handfondo fondo_desc">
+  <br><br>
+  <h4 class="derecho"><span class="badge option animated wobble"> <%= @descripcioncortes.count %> </span></h4 >
+  <br>
   <h1 class="center">DESCRIPCIÓN DEL CORTE</h1>
-<br><h4 class="derecho"><span class="badge option animated wobble"> <%= @descripcioncortes.count %> </span></h4 >
 <br>
+
 
 <div class="table-reponsive tbla">
   
@@ -27,25 +30,25 @@ c = 0 %>
   <tbody>
     <% @descripcioncortes.each do |descripcioncorte| %>
       <tr>
-        <td class="minus">000<%= descripcioncorte.ordenproduccion.id %></td>
-        <td class="minus"><%= descripcioncorte.color.colornombre %></td>
-        <td class="minus"><%= descripcioncorte.ordenproduccion.capas %></td>
+        <td class="minus"><h3><b>000<%= descripcioncorte.ordenproduccion.id %></b></h3></td>
+        <td class="minus"><h3><%= descripcioncorte.color.colornombre %></h3></td>
+        <td class="minus"><h3><%= descripcioncorte.ordenproduccion.capas %></h3></td>
        
        
-        <td class="minus"><%= descripcioncorte.ordenproduccion.vecestrazo %></td>
-        <td class="minus"><%= descripcioncorte.tallasuma %></td>
+        <td class="minus"><h3><%= descripcioncorte.ordenproduccion.vecestrazo %></h3></td>
+        <td class="minus"><h3><%= descripcioncorte.tallasuma %></h3></td>
         
         <% c+=1
         if c == 1
         %>
-        <td><%= link_to "<i class='fa fa-check-circle-o fa-3x ojos questo1'></i>".html_safe, descripcioncorte_cuadroproduccions_path(descripcioncorte) %></td>
+        <td><%= link_to "<i class='fa fa-check-circle-o fa-4x ojos questo1'></i>".html_safe, descripcioncorte_cuadroproduccions_path(descripcioncorte) %></td>
         <% else %>
         <td></td>
         <% end %>
-        <td><%= link_to "<i class='fa fa-eye fa-3x encima'></i>".html_safe, ordenproduccion_descripcioncorte_path(@ordenproduccion, descripcioncorte) %>
+        <td><%= link_to "<i class='fa fa-eye fa-4x encima'></i>".html_safe, ordenproduccion_descripcioncorte_path(@ordenproduccion, descripcioncorte) %>
 
-        <td><%= link_to "<i class='fa fa-pencil fa-3x encima'>".html_safe, edit_ordenproduccion_descripcioncorte_path(@ordenproduccion,descripcioncorte) %></td>
-        <td><%= link_to "<i class='fa fa-eraser fa-3x encima'>".html_safe, ordenproduccion_descripcioncorte_path(@ordenproduccion,descripcioncorte), method: :delete, data: { confirm: 'Estas Seguro?' } %></td>  
+        <td><%= link_to "<i class='fa fa-pencil fa-4x encima'>".html_safe, edit_ordenproduccion_descripcioncorte_path(@ordenproduccion,descripcioncorte) %></td>
+        <td><%= link_to "<i class='fa fa-eraser fa-4x encima'>".html_safe, ordenproduccion_descripcioncorte_path(@ordenproduccion,descripcioncorte), method: :delete, data: { confirm: 'Estas Seguro?' } %></td>  
         <strong><%
         if descripcioncorte.tallaxs== nil then descripcioncorte.tallaxs = 0 end
         if descripcioncorte.tallas== nil then descripcioncorte.tallas = 0 end
@@ -66,7 +69,7 @@ c = 0 %>
 </div>
 
 <br>
-<h1>Total Unidad: <%= re %></h1>
+<h1><b>Total Unidad: <%= re %></b></h1>
 
 
 <%= link_to "<i class='fa fa-plus-circle fa-4x'></i>".html_safe, new_ordenproduccion_descripcioncorte_path(@ordenproduccion) %>

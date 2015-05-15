@@ -1,16 +1,22 @@
 <body class="insumo tutovi">
+  <br>
+  
+  <h4 class="derecho"><span class="badge option animated wobble"> <%= @instructores.count %> </span></h4 >
+  <br>
+ 
   
     <h1 class="center cubo">INSTRUCTORES</h1>
-    <br><h4 class="derecho"><span class="badge option animated wobble"> <%= @instructores.count %> </span></h4 >
+    <br>
 
 <br>
+
 
 <div class="table-responsive cubo tbla">
   <table class="table table-condensed table-hover tbla">
   <thead>
     <tr class="active">
       <th>Nombre</th>
-      <th>Imagen</th>
+      <th></th>
       <th>Total Recibidas</th>
       <th>Calidad</th>
       <th>Tiempo de entrega</th>
@@ -22,11 +28,11 @@
     <% @instructores.each do |instructor| %>
       <tr>
        
-        <td class="minus"><%= instructor.nombre.nombreinstructor %></td>
+        <td class="minus"><h3><b><%= instructor.nombre.nombreinstructor %></b></h3></td>
         <td class="minus"><%= image_tag instructor.nombre.avatar.url(:thumb), class:'img-circle'%></td>
-        <td class="minus"><%= instructor.totalrecibidas %></td>
-        <td class="minus"><%= instructor.observacionescalidad %>%</td>
-        <td class="minus"><%= instructor.duracion %> Dias</td>
+        <td class="minus"><h3><%= instructor.totalrecibidas %></h3></td>
+        <td class="minus"><h3><%= instructor.observacionescalidad %> %</h3></td>
+        <td class="minus"><h3><%= instructor.duracion %> Días</h3></td>
         
         
         <td><%= link_to "<i class='fa fa-eye fa-3x encima questo1'></i>".html_safe, cuadroproduccion_instructor_path(@cuadroproduccion, instructor) %></td>

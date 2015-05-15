@@ -7,7 +7,6 @@
 
 
 
-    <br>
 
     <h1 class="center blanco"> Centro de Formación en Diseño, Confección y Moda </h1>
 
@@ -15,7 +14,7 @@
 
     <h2 class="center blanco"> Promedio General de Instructores </h2>
 
-
+<br><br>
 
     <div class="prome">
       
@@ -34,7 +33,7 @@
                 <th class="invisi">Id Instructor</th>
                 
                 <th>Instructor</th>
-                <th>Imagen</th>
+                <th></th>
                 <th>Calidad</th>
               </tr>
             </thead>
@@ -49,7 +48,7 @@
                 <% nombre = Nombre.find(x) %>
                 <td class="invisi"><%= x %></td>
                 
-                <td><h4><%= nombre.nombreinstructor %></h4></td>
+                <td><h3><b><%= nombre.nombreinstructor %></b></h3></td>
                 <td><%= image_tag nombre.avatar.url(:thumb), class:'img-circle' %></td>
                 <td><h3><%= y.to_i %> %</h3></td>
                 
@@ -92,7 +91,7 @@
                 <td class="invisi"><%= x %></td>
                 
                 
-                <td><h3><%= y.to_i %> días</h3></td>
+                <td><h3><%= y.to_i %> Días</h3></td>
                 
               </tr>
               

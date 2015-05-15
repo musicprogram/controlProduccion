@@ -1,7 +1,9 @@
 
 <body class="fondo_cuadro tuto">
+  <h4 class="derecho"><span class="badge option animated wobble"> <%= @cuadroproduccions.count %> </span></h4 >
+  <br>
   <h1 class="center">CUADRO DE PRODUCCIÓN</h1><br>
-<h4 class="derecho"><span class="badge option animated wobble"> <%= @cuadroproduccions.count %> </span></h4 >
+
 
 <% c= 0 %>
 <br>
@@ -28,26 +30,26 @@
     <tbody>
       <% @cuadroproduccions.each do |cuadroproduccion| %>
       <tr>
-        <td class="minus">000<%= cuadroproduccion.descripcioncorte.ordenproduccion.id%></td>
-        <td class="minus"><%= cuadroproduccion.descripcioncorte.ordenproduccion.referencia%></td>
-        <td class="minus"><%= cuadroproduccion.descripcioncorte.ordenproduccion.descripcion%></td>
-        <td class="minus"><%= cuadroproduccion.descripcioncorte.ordenproduccion.tela.telanombre%></td>
-        <td class="minus"><%= cuadroproduccion.descripcioncorte.color.colornombre%></td>
+        <td class="minus"><h3><b>000<%= cuadroproduccion.descripcioncorte.ordenproduccion.id%></b></h3></td>
+        <td class="minus"><h3><%= cuadroproduccion.descripcioncorte.ordenproduccion.referencia%></h3></td>
+        <td class="minus"><h3><%= cuadroproduccion.descripcioncorte.ordenproduccion.descripcion%></h3></td>
+        <td class="minus"><h3><%= cuadroproduccion.descripcioncorte.ordenproduccion.tela.telanombre%></h3></td>
+        <td class="minus"><h3><%= cuadroproduccion.descripcioncorte.color.colornombre%></h3></td>
         
-        <td class="minus"><%= cuadroproduccion.modulo.modulonombre rescue nil %></td>
+        <td class="minus"><h3><%= cuadroproduccion.modulo.modulonombre rescue nil %></h3></td>
         
         <% c+=1
         if c == 1
           
         %>
-        <td><%= link_to "<i class='fa fa-user fa-3x questo1'></i>".html_safe, cuadroproduccion_instructores_path(cuadroproduccion) %></td>
+        <td><%= link_to "<i class='fa fa-user fa-4x questo1'></i>".html_safe, cuadroproduccion_instructores_path(cuadroproduccion) %></td>
         <%else%>
         <td></td>
         <%end%>
         
-        <td><%= link_to "<i class='fa fa-eye fa-3x encima'></i>".html_safe, descripcioncorte_cuadroproduccion_path(@descripcioncorte, cuadroproduccion) %></td>
-        <td><%= link_to "<i class='fa fa-pencil fa-3x encima'>".html_safe, edit_descripcioncorte_cuadroproduccion_path(@descripcioncorte,cuadroproduccion) %></td>
-        <td><%= link_to "<i class='fa fa-eraser fa-3x encima'>".html_safe, descripcioncorte_cuadroproduccion_path(@descripcioncorte,cuadroproduccion), method: :delete, data: { confirm: 'Are you sure?' } %></td>
+        <td><%= link_to "<i class='fa fa-eye fa-4x encima'></i>".html_safe, descripcioncorte_cuadroproduccion_path(@descripcioncorte, cuadroproduccion) %></td>
+        <td><%= link_to "<i class='fa fa-pencil fa-4x encima'>".html_safe, edit_descripcioncorte_cuadroproduccion_path(@descripcioncorte,cuadroproduccion) %></td>
+        <td><%= link_to "<i class='fa fa-eraser fa-4x encima'>".html_safe, descripcioncorte_cuadroproduccion_path(@descripcioncorte,cuadroproduccion), method: :delete, data: { confirm: 'Are you sure?' } %></td>
       </tr>
       <% end %>
     </tbody>
