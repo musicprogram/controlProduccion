@@ -1,20 +1,13 @@
 <body class="estadisti estadisticas">
-  <br>
+ 
 
   <h4 class="derecho"><span class="badge option animated wobble"> <%= @instructores.count %> </span></h4 >
-    <br>
-    <br>
+  
 
 
+    <h2 class="center blanco">PROMEDIO GENERAL DE INSTRUCTORES </h2>
 
-
-    <h1 class="center blanco"> Centro de Formación en Diseño, Confección y Moda </h1>
-
-
-
-    <h2 class="center blanco"> Promedio General de Instructores </h2>
-
-<br><br>
+<br>
 
     <div class="prome">
       
@@ -22,14 +15,15 @@
         
         <div class="col-md-6">
           
-
-
-
+<% suma = 0  %>
+<% dia = 0%>
+<% re = 0%>
+<% re2 = 0%>
           <div class="table-responsive1 cubo">
-            <table class="table table-condensed table-hover">
+            <table class="table table-condensed ">
               <thead>
-               <br><br>
-               <tr class="active">
+               <br>
+               <tr class="barra">
                 <th class="invisi">Id Instructor</th>
                 
                 <th><h3><b>Instructor</b></h3></th>
@@ -59,8 +53,8 @@
                   <% elsif y.to_i < 70 %>
                       <td><h3><%= y.to_i %> % <i class="fa fa-exclamation-triangle"></i></h3></td>
                 <% end %>
-                
-                
+                <% re2 +=1 %>
+              <% re = re + calidad( y, re2 ) %>  
 
               </tr>
               
@@ -72,15 +66,19 @@
 
       </div>
       
+     
+      
+      
+      
       <div class="col-md-3">
         
         
 
         <div class="table-responsive1 cubo">
-          <table class="table table-condensed table-hover">
+          <table class="table table-condensed">
             <thead>
-              <br><br>
-              <tr class="active">
+              <br>
+              <tr class="barra">
                 <th class="invisi">Id Instructor</th>
                 
                 
@@ -105,6 +103,8 @@
                 <% end %>
               </tr>
               
+              
+              <% dia = dia + prom(y, re2) %>
               <% end %>
               
             </tbody>
@@ -115,10 +115,10 @@
       
       <div class="col-md-3">
         <div class="table-responsive1 cubo">
-          <table class="table table-condensed table-hover">
+          <table class="table table-condensed">
             <thead>
-             <br><br>
-             <tr class="active">
+             <br>
+             <tr class="barra">
               <th class="invisi">Id Instructor</th>
               
               
@@ -140,13 +140,14 @@
               <td><h3><%= y.to_i %> Entregas</h3> </td>
 
             </tr>
-            
+              <% suma = suma+ sum(y,re2) %>
             <% end %>
             
           </tbody>
         </table>
       </div>
     </div>
+  
     
   </div>
 
@@ -161,17 +162,28 @@
 
 
 </div>
+<br>
+<div class="col-md-12">
+  <div class="col-md-2"></div>
+  <div class="col-md-8">
+    <div class="genera">
+    
+     <h3 class="blanco">Promedio General de la Operación: <b><%= re / re2 %> %</b></h3>
+     <h3 class="blanco">Promedio General de Entregas: <b><%= dia / re2 %> Días</b></h3>
+     <h3 class="blanco">Total: <b><%= suma %> Entregas</b></h3>
+   
+    </div> 
 
-
-</body>
-
-
-
+  </div>
+  <div class="col-md-2"></div>
+  
+</div>
 <br>
 <br>
 <br>
-
-
+<br>
+<br><br>
+<br><br>
 
 
 
@@ -191,22 +203,22 @@
               <br><br>
               
 
-<div class="prome">
+<div class="prome otro">
   <div class="table-responsive1 cubo">
-          <table class="table table-condensed table-hover">
+          <table class="table table-condensed">
             <thead>
              <br><br>
-             <tr class="active">
-              <th>Orden</th>
-              <th>Instructor</th>
+             <tr class="barra">
+              <th><h4><b>Orden</b></h4></th>
+              <th><h4><b>Instructor</b></h4></th>
               <th></th>
-              <th>Primeras</th>
-              <th>Segundas</th>
-              <th>Fecha Salida</th>
-              <th>Fecha Entrega</th>
-              <th>Calidad</th>
-              <th>Duración</th>
-              <th>Total</th>
+              <th><h4><b>Primeras</b></h4></th>
+              <th><h4><b>Segundas</b></h4></th>
+              <th><h4><b>Fecha Salida</b></h4></th>
+              <th><h4><b>Fecha Entrega</b></h4></th>
+              <th><h4><b>Calidad</b></h4></th>
+              <th><h4><b>Duración</b></h4></th>
+              <th><h4><b>Total</b></h4></th>
             </tr>
           </thead>
 
@@ -219,30 +231,30 @@
              
               
              
-              <td><b>000<%= instructor.cuadroproduccion.descripcioncorte.ordenproduccion.id %></b></td>
-              <td><%= instructor.nombre.nombreinstructor %></td>
+              <td><h4><b>000<%= instructor.cuadroproduccion.descripcioncorte.ordenproduccion.id %></b></h4></td>
+              <td><h4><%= instructor.nombre.nombreinstructor %></h4></td>
               <td><%= image_tag instructor.nombre.avatar.url(:thumb), class:'img-circle' %></td>
               
               <% if instructor.primeras > instructor.segundas %>
               
-               <td><b><%= instructor.primeras %></b></td>
-               <td><%= instructor.segundas %></td>
+               <td><h4><b><%= instructor.primeras %></b></h4></td>
+               <td><h4><%= instructor.segundas %></h4></td>
               <% else %>
               
-              <td><%= instructor.primeras %></td>
-              <td><b><%= instructor.segundas %></b></td>
+              <td><h4><%= instructor.primeras %></h4></td>
+              <td><h4><b><%= instructor.segundas %></b></h4></td>
               
               <% end %>
               
-              <td><%= instructor.fecharecibo %></td>
-              <td><%= instructor.fechasalidaalmacen %></td>
+              <td><h4><%= instructor.fecharecibo %></h4></td>
+              <td><h4><%= instructor.fechasalidaalmacen %></h4></td>
               
               
              
-              <td><b><%= instructor.observacionescalidad %> %</b></td>
+              <td><h4><b><%= instructor.observacionescalidad %> %</b></h4></td>
               
-              <td><b><%= instructor.duracion %> Días</b></td>
-              <td><b><%= instructor.totalrecibidas %> Recibidas</b></td>
+              <td><h4><b><%= instructor.duracion %> Días</b></h4></td>
+              <td><h4><b><%= instructor.totalrecibidas %> Recibidas</b></h4></td>
               
          
 
@@ -258,4 +270,8 @@
               
             </div>
           </div>
+
+
+</body>
+
 
