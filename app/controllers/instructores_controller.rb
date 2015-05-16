@@ -17,6 +17,7 @@ class InstructoresController < ApplicationController
     @tuto_estadisticas = true
     
     @instructores1 = Instructor.all
+
     
   end
   

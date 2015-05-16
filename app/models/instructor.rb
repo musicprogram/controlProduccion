@@ -12,7 +12,9 @@ class Instructor < ActiveRecord::Base
         self.duracion = fecharecibo - fechasalidaalmacen
     end
         
- 
+    
+  
+    
 
         
 end

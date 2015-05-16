@@ -2457,6 +2457,9 @@ table th[class*="col-"] {
   overflow-x:none;
   background-color:white;
   border-radius: 20px;
+  -webkit-box-shadow: 0px 0px 29px 0px rgba(0,0,0,0.75);
+  -moz-box-shadow: 0px 0px 29px 0px rgba(0,0,0,0.75);
+  box-shadow: 0px 0px 29px 0px rgba(0,0,0,0.75);
 }
 
 @media screen and (max-width: 767px) {

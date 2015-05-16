@@ -32,9 +32,9 @@
                <tr class="active">
                 <th class="invisi">Id Instructor</th>
                 
-                <th>Instructor</th>
+                <th><h3><b>Instructor</b></h3></th>
                 <th></th>
-                <th>Calidad</th>
+                <th><h3><b>Calidad</b></h3></th>
               </tr>
             </thead>
 
@@ -50,7 +50,15 @@
                 
                 <td><h3><b><%= nombre.nombreinstructor %></b></h3></td>
                 <td><%= image_tag nombre.avatar.url(:thumb), class:'img-circle' %></td>
-                <td><h3><%= y.to_i %> %</h3></td>
+                
+                
+                 <% if y.to_i > 90 %>
+                      <td><h3><%= y.to_i %> % <i class="fa fa-smile-o option animated wobble"></i></h3></td>
+                  <% elsif y.to_i >= 70 && y.to_i < 90 %>
+                      <td><h3><%= y.to_i %> % <i class="fa fa-frown-o"></i></h3></td>
+                  <% elsif y.to_i < 70 %>
+                      <td><h3><%= y.to_i %> % <i class="fa fa-exclamation-triangle"></i></h3></td>
+                <% end %>
                 
                 
 
@@ -76,7 +84,7 @@
                 <th class="invisi">Id Instructor</th>
                 
                 
-                <th>Promedio Entrega</th>
+                <th><h3><b>Promedio Entrega</b></h3></th>
               </tr>
             </thead>
 
@@ -90,9 +98,11 @@
                 <% nombre = Nombre.find(x) %>
                 <td class="invisi"><%= x %></td>
                 
-                
-                <td><h3><%= y.to_i %> Días</h3></td>
-                
+                 <% if y.to_i == 1 %>
+                  <td><h3><%= y.to_i %> Día</h3></td>
+                  <% elsif y.to_i >1 %>
+                  <td><h3><%= y.to_i %> Días</h3></td>
+                <% end %>
               </tr>
               
               <% end %>
@@ -112,7 +122,7 @@
               <th class="invisi">Id Instructor</th>
               
               
-              <th>Total </th>
+              <th><h3><b>Total</b></h3></th>
             </tr>
           </thead>
 
@@ -157,28 +167,38 @@
 
 
 
+<br>
+<br>
+<br>
 
 
 
-<br><br>
-
-<a class="btn btn-primary" data-toggle="collapse" href="#collapseExample" aria-expanded="false" aria-controls="collapseExample">
-  Total de ordenes
-</a>
-
-<div class="collapse" id="collapseExample">
-  <div class="well1">
-    
-    
 
 
-<div class="table-responsive1 cubo">
+
+
+<h2 class="blanco">Ver todas las Ordenes asociadas a los diferentes Instructores</h2>
+           <a>
+             <i class="fa fa-chevron-down fa-4x animated rubberBand" data-toggle="collapse" href="#collapseExample" aria-expanded="false" aria-controls="collapseExample"></i>
+           </a>
+
+           <div class="collapse" id="collapseExample">
+            <div class="">
+              
+              
+ <h4 class="derecho"><span class="badge option animated wobble"> <%= @instructores1.count %> </span></h4 >
+              
+              <br><br>
+              
+
+<div class="prome">
+  <div class="table-responsive1 cubo">
           <table class="table table-condensed table-hover">
             <thead>
              <br><br>
              <tr class="active">
-              <th>Numero de Orden </th>
-              <th>Nombre Instructor </th>
+              <th>Orden</th>
+              <th>Instructor</th>
               <th></th>
               <th>Primeras</th>
               <th>Segundas</th>
@@ -197,18 +217,34 @@
             
             <tr>
              
-              <td>000<%= instructor.cuadroproduccion.descripcioncorte.ordenproduccion.id %></td>
-              <td><%= instructor.nombre.nombreinstructor %></td>
-              <td><%= image_tag instructor.nombre.avatar.url(:thumb), class:'img-circle' %></td>
-              <td><%= instructor.primeras %> Recibidas</td>
-              <td><%= instructor.segundas %> Recibidas</td>
-              <td><%= instructor.fecharecibo %></td>
-              <td><%= instructor.fechasalidaalmacen %></td>
-              <td><%= instructor.observacionescalidad %> %</td>
-              <td><%= instructor.duracion %> Días</td>
-              <td><%= instructor.totalrecibidas %></td>
               
              
+              <td><b>000<%= instructor.cuadroproduccion.descripcioncorte.ordenproduccion.id %></b></td>
+              <td><%= instructor.nombre.nombreinstructor %></td>
+              <td><%= image_tag instructor.nombre.avatar.url(:thumb), class:'img-circle' %></td>
+              
+              <% if instructor.primeras > instructor.segundas %>
+              
+               <td><b><%= instructor.primeras %></b></td>
+               <td><%= instructor.segundas %></td>
+              <% else %>
+              
+              <td><%= instructor.primeras %></td>
+              <td><b><%= instructor.segundas %></b></td>
+              
+              <% end %>
+              
+              <td><%= instructor.fecharecibo %></td>
+              <td><%= instructor.fechasalidaalmacen %></td>
+              
+              
+             
+              <td><b><%= instructor.observacionescalidad %> %</b></td>
+              
+              <td><b><%= instructor.duracion %> Días</b></td>
+              <td><b><%= instructor.totalrecibidas %> Recibidas</b></td>
+              
+         
 
             </tr>
             
@@ -217,11 +253,9 @@
           </tbody>
         </table>
       </div>
-  </div>
-</div>
-
-
-
-
-
+            
+</div>  
+              
+            </div>
+          </div>
 
