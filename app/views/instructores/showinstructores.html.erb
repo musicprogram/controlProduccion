@@ -1,12 +1,14 @@
 <body class="estadisti estadisticas">
- 
+
 
   <h4 class="derecho"><span class="badge option animated wobble"> <%= @instructores.count %> </span></h4 >
   
-
+<div class="genera">
+  
 
     <h2 class="center blanco">PROMEDIO GENERAL DE INSTRUCTORES </h2>
-
+</div>
+ <div class="parallax imagen-1">
 <br>
 
     <div class="prome">
@@ -163,21 +165,26 @@
 
 </div>
 <br>
+</div>
+<br>
+
 <div class="col-md-12">
+  <div class="">
   <div class="col-md-2"></div>
   <div class="col-md-8">
     <div class="genera">
     
-     <h3 class="blanco">Promedio General de la Operación: <b><%= re / re2 %> %</b></h3>
-     <h3 class="blanco">Promedio General de Entregas: <b><%= dia / re2 %> Días</b></h3>
-     <h3 class="blanco">Total: <b><%= suma %> Entregas</b></h3>
-   
+     <h3 class="blanco barra bar">Promedio General de la Operación: <b class="barra1"><%= re / re2 %> </b> %</h3>
+     <h3 class="blanco barra bar">Promedio General de Entregas en : <b class="barra1"><%= dia / re2 %> </b> </h3>
+     <h3 class="blanco barra bar">Total de Entregas: <b class="barra1"><%= suma %><b/></h3>
+
     </div> 
 
   </div>
   <div class="col-md-2"></div>
-  
+  </div>
 </div>
+
 <br>
 <br>
 <br>
@@ -185,14 +192,16 @@
 <br><br>
 <br><br>
 
+<div class="parallax imagen-3">
 
 
 
-
-<h2 class="blanco">Ver todas las Ordenes asociadas a los diferentes Instructores</h2>
+<div class="genera">
+  <h2 class="blanco">Ver todas las Ordenes asociadas a los diferentes Instructores</h2>
            <a>
              <i class="fa fa-chevron-down fa-4x animated rubberBand" data-toggle="collapse" href="#collapseExample" aria-expanded="false" aria-controls="collapseExample"></i>
            </a>
+</div>
 
            <div class="collapse" id="collapseExample">
             <div class="">
@@ -200,10 +209,13 @@
               
  <h4 class="derecho"><span class="badge option animated wobble"> <%= @instructores1.count %> </span></h4 >
               
-              <br><br>
+             
               
 
-<div class="prome otro">
+<div class="prome otro ">
+  
+  <br>
+  <div class="">
   <div class="table-responsive1 cubo">
           <table class="table table-condensed">
             <thead>
@@ -214,6 +226,7 @@
               <th></th>
               <th><h4><b>Primeras</b></h4></th>
               <th><h4><b>Segundas</b></h4></th>
+              
               <th><h4><b>Fecha Salida</b></h4></th>
               <th><h4><b>Fecha Entrega</b></h4></th>
               <th><h4><b>Calidad</b></h4></th>
@@ -267,11 +280,12 @@
       </div>
             
 </div>  
-              
+              </div>
+              <br>
             </div>
           </div>
 
-
+</div>
 </body>
 
 
