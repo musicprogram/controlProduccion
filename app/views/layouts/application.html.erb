@@ -8,7 +8,7 @@
 </head>
 
 <% if @home_pagee == true %>
-<body class="homepageesh">
+<body class="homepage">
 	<% elsif @home_page == true %>
 	<body class="homepage">
 		<% elsif @fondo_page == true %>
@@ -17,7 +17,9 @@
 			<body class="handfondo">
 				<% elsif @fondo_cuadro == true %>
 				<body class="fondo_cuadro">
-					
+					<% elsif 	@home_pagee12 == true %>
+				<body class="homepageesh12">
+				
 
 
 					<% end %>
@@ -41,13 +43,13 @@
 									
 									<li><%= link_to "<i class='fa fa-cog fa-2x questo1'></i>".html_safe, ordenterceros_path %></li>
 									
-									<% if current_usuario == Usuario.find(1)%>
+									<%# if current_usuario == Usuario.find(1)%>
 									
 										<li><%= link_to "<i class='fa fa-bar-chart fa-2x questo'></i>".html_safe, instructores_showinstructores_path %></li>
 										
 										<li><%= link_to "<i class='fa fa-user-secret fa-2x questo1'></i>".html_safe, rails_admin_path %></li>
 										
-									<% end%>
+									<%# end%>
 									
 									<li><%= link_to "<i class='fa fa-user-times fa-2x questo'></i>".html_safe, destroy_usuario_session_path, :method => :delete, class: 'active' %></li>
 

@@ -18,7 +18,7 @@ class DescripcioncortesController < ApplicationController
   def new
     @descripcioncorte = Descripcioncorte.new
     @descripcioncorte.ordenproduccion_id = @ordenproduccion.id
-    @home_pagee = true
+    @home_pagee12 = true
     @footer_tuto = true
   end
 

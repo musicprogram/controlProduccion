@@ -262,6 +262,16 @@ body.homepage {
 .panel
 {
   text-align: center;
+ 
+  background: rgba(0,0,0,0.5);
+  border-radius: 10px;
+  -webkit-box-shadow: 0px 0px 16px 6px rgba(0,0,0,0.75);
+  -moz-box-shadow: 0px 0px 16px 6px rgba(0,0,0,0.75);
+  box-shadow: 0px 0px 16px 6px rgba(0,0,0,0.75); 
+  
+  h4{
+    color: white;
+  }
 }
 .panel:hover { box-shadow: 0px 2px 39px -7px rgba(0,0,0,0.77); }
 .panel-body
@@ -369,7 +379,7 @@ body.homepage {
 
 
 body.homepageesh{
- background-image: -webkit-linear-gradient(top, #000000 0%, #FFFFFF 100%);
+ background: url("textil.jpg");
   -webkit-background-size: cover;
   -moz-background-size: cover;
   -ms-background-size: cover;
@@ -380,8 +390,21 @@ body.homepageesh{
   background-position: top center;
   -webkit-touch-callout: none;
   -webkit-tap-highlight-color: transparent;
- 
 }
+body.homepageesh12{
+ background: url("tijeras.jpg");
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -ms-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+  background-attachment: fixed;
+  background-repeat: no-repeat;
+  background-position: top center;
+  -webkit-touch-callout: none;
+  -webkit-tap-highlight-color: transparent;
+}
+
 
 
 
@@ -648,19 +671,24 @@ body.homepageesh{
        .izquierda{
                        text-align:left;
                        font-size:110%;
+                       color: white;
                        
                    }
                    .derecha{
                        text-align:right;
                        font-size:110%;
-                       
+                        color: white;
                    }
 
 
           .well {
             margin-top:-20px;
-            background-color:#3E3F3F;
-            border:2px solid #717577;
+             background: rgba(0,0,0,0.5);
+  border-radius: 10px;
+  -webkit-box-shadow: 0px 0px 16px 6px rgba(0,0,0,0.95);
+  -moz-box-shadow: 0px 0px 16px 6px rgba(0,0,0,0.95);
+  box-shadow: 0px 0px 16px 6px rgba(0,0,0,0.95); 
+            
             text-align:center;
             cursor:pointer;
             font-size: 25px;
@@ -670,14 +698,17 @@ body.homepageesh{
 
           .well:hover {
             margin-top:-20px;
-            background-color:#333333;
-            border:2px solid #333333;
+            background: rgba(0,0,0,0.5);
+  border-radius: 10px;
+  -webkit-box-shadow: 0px 0px 16px 6px rgba(0,0,0,0.75);
+  -moz-box-shadow: 0px 0px 16px 6px rgba(0,0,0,0.75);
+  box-shadow: 0px 0px 16px 6px rgba(0,0,0,0.75); 
             text-align:center;
             cursor:pointer;
             font-size: 25px;
             padding: 15px;
             border-radius: 5px !important;
-            border-bottom : 2px solid rgba(97, 203, 255, 0.65);
+          
           }
           
           .well1 {
@@ -695,7 +726,7 @@ body.homepageesh{
 
             height: 330px;
             background-size: cover;
-            
+            border-radius: 10px;
           }
 
           .follow_btn {
@@ -734,6 +765,10 @@ body.homepageesh{
             color : #808080;
             margin-left:10%;
             margin-top:15px;
+            
+            h3{
+              color: white;
+            }
           }
 
           .picture{
@@ -965,6 +1000,7 @@ body.handfondo{
 .nombrein{
   font-size: 200%;
   text-align:left;
+  color: white;
 }
 
 .resultado{
@@ -1071,6 +1107,16 @@ text-shadow: 4px 4px 11px rgba(150, 150, 150, 1);
    border-radius: 10px;
   }
   
-.yarallax{
-  
+.perfil{
+  background: rgba(0,0,0,0.5);
+  border-radius: 10px;
+  -webkit-box-shadow: 0px 0px 16px 6px rgba(0,0,0,0.75);
+  -moz-box-shadow: 0px 0px 16px 6px rgba(0,0,0,0.75);
+  box-shadow: 0px 0px 16px 6px rgba(0,0,0,0.75); 
+}
+
+.questo11{
+  position: relative;
+  bottom: -100px;
+
 }
