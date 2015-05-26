@@ -37,7 +37,8 @@ class InstructoresController < ApplicationController
   def create
     @instructor = Instructor.new(instructor_params)
     @instructor.cuadroproduccion_id = @cuadroproduccion.id
-
+    
+   
       respond_to do |format|
       if @instructor.save
         format.html { redirect_to cuadroproduccion_instructor_path(@cuadroproduccion, @instructor), notice: 'Instructor was successfully created.' }

@@ -75,14 +75,14 @@
   <div class="col-md-4">
      <div class="field">
       <%= f.label :Largo_del_trazo  %><br>
-      <%= f.number_field :largotrazo , class:'form-control'%>
+      <%= f.number_field :largotrazo , :type => 'float' , :in => 0..100, :step => 0.01, class:'form-control'%>
     </div>
   </div>
  
   <div class="col-md-4">
      <div class="field">
       <%= f.label :Veces_en_el_trazo %><br>
-      <%= f.number_field :vecestrazo , class:'form-control'%>
+      <%= f.number_field :vecestrazo , :type => 'float' , :in => 0..100, :step => 0.01, class:'form-control'%>
     </div>
   </div>
 </div>

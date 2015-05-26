@@ -34,11 +34,7 @@ class DescripcioncortesController < ApplicationController
     @descripcioncorte = Descripcioncorte.new(descripcioncorte_params)
     
     @descripcioncorte.ordenproduccion_id = @ordenproduccion.id
-    if @descripcioncorte.tallaxs== nil then @descripcioncorte.tallaxs = 0 end
-    if @descripcioncorte.tallas== nil then @descripcioncorte.tallas = 0 end
-    if @descripcioncorte.tallam== nil then @descripcioncorte.tallam = 0 end
-    if @descripcioncorte.tallal== nil then @descripcioncorte.tallal = 0 end
-    if @descripcioncorte.tallaxl== nil then @descripcioncorte.tallaxl = 0 end
+   
     
     respond_to do |format|
       if @descripcioncorte.save
@@ -56,12 +52,7 @@ class DescripcioncortesController < ApplicationController
 
   
   def update
-    if @descripcioncorte.tallaxs== nil then @descripcioncorte.tallaxs = 0 end
-    if @descripcioncorte.tallas== nil then @descripcioncorte.tallas = 0 end
-    if @descripcioncorte.tallam== nil then @descripcioncorte.tallam = 0 end
-    if @descripcioncorte.tallal== nil then @descripcioncorte.tallal = 0 end
-    if @descripcioncorte.tallaxl== nil then @descripcioncorte.tallaxl = 0 end
-   
+    
       respond_to do |format|
         if @descripcioncorte.update(descripcioncorte_params)
           format.html { redirect_to ordenproduccion_descripcioncorte_path(@ordenproduccion, @descripcioncorte),  notice: 'Persona was successfully updated.' }

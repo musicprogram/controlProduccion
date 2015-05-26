@@ -11,13 +11,13 @@
       <div class="col-md-4 bg_blur ">
       </div>
       <div class="col-md-8  col-xs-12">
-        <%= image_tag @instructor.nombre.avatar.url(:medium),:class => 'img-thumbnail picture hidden-xs questo' %>
+        <%= image_tag @instructor.nombre.avatar.url(:medium),:class => 'img-thumbnail picture hidden-xs questo' rescue nil %>
         <div class="header">
 
           <div class="col-md-12">
 
             <div class="col-md-8">
-              <h3 class="izquierda fonts"><strong><%= @instructor.nombre.nombreinstructor %></strong></h3>
+              <h3 class="izquierda fonts"><strong><%= @instructor.nombre.nombreinstructor rescue nil %></strong></h3>
             </div>
             <div class="col-md-4">
               <h3>
@@ -58,11 +58,24 @@
 
 
             </div>
+            
+            
+            <div class="col-md-12">
+              <div class="col-md-6"><h4 class="izquierda "> <strong>Fecha de salida: </strong> <%= @instructor.fechasalidaalmacen %></h4></div>
+              <div class="col-md-6"><h4 class="derecha "> <strong>Fecha Recibida: </strong> <%= @instructor.fecharecibo %></h4></div>
+              
+            </div>
 
             <div class="col-md-12">
               <div class="col-md-6">  <h4 class="izquierda "> <strong>Total Recibidas: </strong> <%= @instructor.totalrecibidas %></h4>
               </div>
-              <div class="col-md-6">    <h4 class="derecha"> <strong>Tiempo de Entrega: </strong><%= @instructor.duracion %> Dias </h4>
+              <div class="col-md-6">    
+              
+              <% if @instructor.duracion == 1%>
+              <h4 class="derecha"> <strong>Tiempo de Entrega: </strong><%= @instructor.duracion %> Dia </h4>
+              <% elsif @instructor.duracion > 1%>
+              <h4 class="derecha"> <strong>Tiempo de Entrega: </strong><%= @instructor.duracion %> Dias </h4>
+              <% end %>
               </div>
 
 
@@ -78,39 +91,7 @@
             </div>
              
 
-            <a  >
-             <i class="fa fa-chevron-down fa-4x animated" data-toggle="collapse" href="#collapseExample" aria-expanded="false" aria-controls="collapseExample"></i>
-           </a>
-
-           <div class="collapse" id="collapseExample">
-            <div class="">
-              <div class="col-md-12" >
-
-                <% @descripcioncortes.each do |descripcioncorte| %>
-                <% if descripcioncorte.ordenproduccion.id == @instructor.cuadroproduccion.descripcioncorte.ordenproduccion.id %>
-
-                <div class="col-md-6"><h5 class="izquierda"> <strong>Color: </strong><%= descripcioncorte.color.colornombre %></h5>
-                </div>
-                <div class="col-md-6"><h5 class="derecha"> <strong>Cantidad: </strong> <%= descripcioncorte.tallasuma %></h5>
-                </div>
-
-
-
-                <% end %>
-
-
-                <% end %>
-
-
-              </div>
-            </div>
-          </div>
-
-
-
-
-
-
+           
 
 
         </div>

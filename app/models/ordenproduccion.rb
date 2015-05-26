@@ -1,14 +1,6 @@
 class Ordenproduccion < ActiveRecord::Base
   
-  validates :cliente, :presence => true
-  validates :prenda, :presence => true
-  validates :tela, :presence => true
- 
-  validates :corte, :presence => true
-  validates :ancho, :presence => true
-  validates :largotrazo, :presence => true
-  validates :vecestrazo, :presence => true
-  validates :largotendido, :presence => true
+
   
  
   belongs_to :cliente
@@ -25,6 +17,18 @@ class Ordenproduccion < ActiveRecord::Base
 
 
 
+   before_validation :sumas
+
+    def sumas
+      
+    if largotrazo != nil && vecestrazo != nil         
+      self.promedio = largotrazo / vecestrazo
+      self.totalmetros = largotrazo * capas
+    end  
+  
+  
+    end
+        
 
 end
 

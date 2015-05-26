@@ -34,7 +34,7 @@
 
                    </div>
                    <div class="col-md-6">
-                    <h5 class="derecha"><strong>Cliente: </strong><%= @ordenproduccion.cliente.clientenombre %></h5>
+                    <h5 class="derecha"><strong>Cliente: </strong><%= @ordenproduccion.cliente.clientenombre rescue nil %></h5>
                     
                   </div>
                   
@@ -51,7 +51,7 @@
                 </div>
                 <div class="col-md-6">
                  <h5 class="derecha"><strong>Prenda: </strong>
-                 <%= @ordenproduccion.prenda.prendanombre %></h5>
+                 <%= @ordenproduccion.prenda.prendanombre rescue nil %></h5>
                </div>
 
              </td>
@@ -61,7 +61,7 @@
 
               <div class="col-md-6">
                <h5 class="izquierda"><strong>Corte: </strong>
-               <%= @ordenproduccion.corte.cortenombre %></h5>
+               <%= @ordenproduccion.corte.cortenombre rescue nil %></h5>
 
              </div>
              <div class="col-md-6">
@@ -78,7 +78,7 @@
           <td>
             <div class="col-md-6">
             <h5 class="izquierda"> <strong>Tela: </strong>
-             <%= @ordenproduccion.tela.telanombre %></h5>
+             <%= @ordenproduccion.tela.telanombre rescue nil %></h5>
            </div>
            <div class="col-md-6">
            <h5 class="derecha"> <strong>Largo del Trazo: </strong>

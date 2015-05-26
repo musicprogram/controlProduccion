@@ -35,12 +35,10 @@ class OrdenproduccionsController < ApplicationController
   def create
     @ordenproduccion = Ordenproduccion.new(ordenproduccion_params)
     
-    if @ordenproduccion.largotrazo== nil then @ordenproduccion.largotrazo = 1 end
-    if @ordenproduccion.vecestrazo== nil then @ordenproduccion.vecestrazo = 1 end
-    if @ordenproduccion.capas== nil then @ordenproduccion.capas = 1 end
+    if @ordenproduccion.largotrazo== nil then @ordenproduccion.largotrazo = 0 end
+    if @ordenproduccion.vecestrazo== nil then @ordenproduccion.vecestrazo = 0 end
+    if @ordenproduccion.capas== nil then @ordenproduccion.capas = 0  end
     
-    @ordenproduccion.promedio = @ordenproduccion.largotrazo / @ordenproduccion.vecestrazo
-    @ordenproduccion.totalmetros = @ordenproduccion.largotrazo * @ordenproduccion.capas
     respond_to do |format|
       if @ordenproduccion.save
         format.html { redirect_to @ordenproduccion, notice: 'Ordenproduccion was successfully created.' }
@@ -59,9 +57,7 @@ class OrdenproduccionsController < ApplicationController
     if @ordenproduccion.vecestrazo== nil then @ordenproduccion.vecestrazo = 1 end
     if @ordenproduccion.capas== nil then @ordenproduccion.capas = 1 end
     
-    @ordenproduccion.promedio = @ordenproduccion.largotrazo / @ordenproduccion.vecestrazo
-    @ordenproduccion.totalmetros = @ordenproduccion.largotrazo * @ordenproduccion.capas
-    @ordenproduccion.save
+   
     respond_to do |format|
       if @ordenproduccion.update(ordenproduccion_params)
         format.html { redirect_to @ordenproduccion, notice: 'Ordenproduccion was successfully updated.' }

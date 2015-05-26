@@ -29,7 +29,7 @@ class CuadroproduccionsController < ApplicationController
     @cuadroproduccion.descripcioncorte_id = @descripcioncorte.id
     respond_to do |format|
       if @cuadroproduccion.save
-        format.html { redirect_to descripcioncorte_cuadroproduccions_path(@descripcioncorte), notice: 'Cuadroproduccion was successfully created.' }
+        format.html { redirect_to descripcioncorte_cuadroproduccion_path(@descripcioncorte, @cuadroproduccion), notice: 'Cuadroproduccion was successfully created.' }
         format.json { render :show, status: :created, location: @cuadroproduccion }
       else
         format.html { render :new }
@@ -43,7 +43,7 @@ class CuadroproduccionsController < ApplicationController
   def update
     respond_to do |format|
       if @cuadroproduccion.update(cuadroproduccion_params)
-        format.html { redirect_to descripcioncorte_cuadroproduccions_path(@descripcioncorte), notice: 'Cuadroproduccion was successfully updated.' }
+        format.html { redirect_to descripcioncorte_cuadroproduccion_path(@descripcioncorte, @cuadroproduccion), notice: 'Cuadroproduccion was successfully updated.' }
         format.json { render :show, status: :ok, location: @cuadroproduccion }
       else
         format.html { render :edit }

@@ -31,7 +31,7 @@ c = 0 %>
     <% @descripcioncortes.each do |descripcioncorte| %>
       <tr>
         <td class="minus"><h3><b>000<%= descripcioncorte.ordenproduccion.id %></b></h3></td>
-        <td class="minus"><h3><%= descripcioncorte.color.colornombre %></h3></td>
+        <td class="minus"><h3><%= descripcioncorte.color.colornombre  rescue nil%></h3></td>
         <td class="minus"><h3><%= descripcioncorte.ordenproduccion.capas %></h3></td>
        
        

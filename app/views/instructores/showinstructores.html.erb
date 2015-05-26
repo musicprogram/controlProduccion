@@ -242,34 +242,33 @@
             
             <tr>
              
+           
+                <td><h4><b>000<%= instructor.cuadroproduccion.descripcioncorte.ordenproduccion.id %></b></h4></td>
+                <td><h4><%= instructor.nombre.nombreinstructor %></h4></td>
+                <td><%= image_tag instructor.nombre.avatar.url(:thumb), class:'img-circle' %></td>
+                
+                <% if instructor.primeras > instructor.segundas %>
+                
+                 <td><h4><b><%= instructor.primeras %></b></h4></td>
+                 <td><h4><%= instructor.segundas %></h4></td>
+                <% else %>
+                
+                <td><h4><%= instructor.primeras %></h4></td>
+                <td><h4><b><%= instructor.segundas %></b></h4></td>
+                
+                <% end %>
+                
+                <td><h4><%= instructor.fecharecibo %></h4></td>
+                <td><h4><%= instructor.fechasalidaalmacen %></h4></td>
+                
+                
+               
+                <td><h4><b><%= instructor.observacionescalidad %> %</b></h4></td>
+                
+                <td><h4><b><%= instructor.duracion %> Días</b></h4></td>
+                <td><h4><b><%= instructor.totalrecibidas %> Recibidas</b></h4></td>
               
-             
-              <td><h4><b>000<%= instructor.cuadroproduccion.descripcioncorte.ordenproduccion.id %></b></h4></td>
-              <td><h4><%= instructor.nombre.nombreinstructor %></h4></td>
-              <td><%= image_tag instructor.nombre.avatar.url(:thumb), class:'img-circle' %></td>
-              
-              <% if instructor.primeras > instructor.segundas %>
-              
-               <td><h4><b><%= instructor.primeras %></b></h4></td>
-               <td><h4><%= instructor.segundas %></h4></td>
-              <% else %>
-              
-              <td><h4><%= instructor.primeras %></h4></td>
-              <td><h4><b><%= instructor.segundas %></b></h4></td>
-              
-              <% end %>
-              
-              <td><h4><%= instructor.fecharecibo %></h4></td>
-              <td><h4><%= instructor.fechasalidaalmacen %></h4></td>
-              
-              
-             
-              <td><h4><b><%= instructor.observacionescalidad %> %</b></h4></td>
-              
-              <td><h4><b><%= instructor.duracion %> Días</b></h4></td>
-              <td><h4><b><%= instructor.totalrecibidas %> Recibidas</b></h4></td>
-              
-         
+           
 
             </tr>
             

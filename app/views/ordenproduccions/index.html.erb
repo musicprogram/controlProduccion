@@ -24,7 +24,6 @@
 
             <th>Descripcion</th>
 
-
             <th>Cantidad</th>
 
             <th colspan="4"></th>
@@ -36,11 +35,11 @@
             <td class="minus"><h3><b>000<%= ordenproduccion.id %></b></h3></td>
             <td class="minus"><h3><%= ordenproduccion.referencia %></h3></td>
             <td class="minus"><h3><%= ordenproduccion.fechaprogramacion %></h3></td>
-            <td class="minus"><h3><%= ordenproduccion.descripcion %></h3></td>
+            <td class="minus"><h4><%= ordenproduccion.descripcion %></h4></td>
 
 
             <td class="minus"><h3><%= ordenproduccion.cantidad rescue nil %></h3></td>
-
+            
             <td><%= link_to "<i class='fa fa-scissors fa-4x encima questo1'>".html_safe, ordenproduccion_descripcioncortes_path(ordenproduccion) %></td>
             <td><%= link_to "<i class='fa fa-eye fa-4x encima'>".html_safe, ordenproduccion %></td>
             <td><%= link_to "<i class='fa fa-pencil fa-4x encima'>".html_safe, edit_ordenproduccion_path(ordenproduccion) %></td>

@@ -33,8 +33,8 @@
         <td class="minus"><h3><b>000<%= cuadroproduccion.descripcioncorte.ordenproduccion.id%></b></h3></td>
         <td class="minus"><h3><%= cuadroproduccion.descripcioncorte.ordenproduccion.referencia%></h3></td>
         <td class="minus"><h3><%= cuadroproduccion.descripcioncorte.ordenproduccion.descripcion%></h3></td>
-        <td class="minus"><h3><%= cuadroproduccion.descripcioncorte.ordenproduccion.tela.telanombre%></h3></td>
-        <td class="minus"><h3><%= cuadroproduccion.descripcioncorte.color.colornombre%></h3></td>
+        <td class="minus"><h3><%= cuadroproduccion.descripcioncorte.ordenproduccion.tela.telanombre rescue nil%></h3></td>
+        <td class="minus"><h3><%= cuadroproduccion.descripcioncorte.color.colornombre rescue nil%></h3></td>
         
         <td class="minus"><h3><%= cuadroproduccion.modulo.modulonombre rescue nil %></h3></td>
         

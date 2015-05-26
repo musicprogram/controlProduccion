@@ -29,7 +29,7 @@
             <td>
               <div class="col-md-6">
                <h5 class="izquierda"> <strong>Color: </strong>
-                <%= @cuadroproduccion.descripcioncorte.color.colornombre %> </h5>
+                <%= @cuadroproduccion.descripcioncorte.color.colornombre rescue nil %> </h5>
               </div>
 
 
@@ -48,12 +48,12 @@
           <td>
             <div class="col-md-6">
              <h5 class="izquierda"> <strong>Corte: </strong>
-              <%= @cuadroproduccion.descripcioncorte.ordenproduccion.corte.cortenombre %></h5>
+              <%= @cuadroproduccion.descripcioncorte.ordenproduccion.corte.cortenombre rescue nil %></h5>
             </div>
 
             <div class="col-md-6">
               <h5 class="derecha"><strong>Tela: </strong>
-              <%= @cuadroproduccion.descripcioncorte.ordenproduccion.tela.telanombre %></h5>
+              <%= @cuadroproduccion.descripcioncorte.ordenproduccion.tela.telanombre rescue nil %></h5>
             </div>
           </td>
         </tr>

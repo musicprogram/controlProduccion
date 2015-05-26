@@ -16,21 +16,21 @@
     
  <div class="col-md-4">
     <div class="field">
-      <%= f.label :Color, class:'letrablanca'  %><br>
+      <%= f.label :Color, class:''  %><br>
       <%= f.collection_select :color_id, Color.all, :id, :colornombre,{prompt: "Seleccione Color"},{ class: "form-control"} %>
     </div>
   </div>
   
   <div class="col-md-4">
     <div class="field">
-     <%= f.label :Talla_S, class:'letrablanca'  %><br>
+     <%= f.label :Talla_S, class:''  %><br>
      <%= f.number_field :tallas , class:'form-control', :id => 's', :onblur => 'sum()'%>
    </div>
  </div>
 
  <div class="col-md-4">
    <div class="field">
-     <%= f.label :Talla_M, class:'letrablanca'  %><br>
+     <%= f.label :Talla_M, class:''  %><br>
      <%= f.number_field :tallam , class:'form-control',:id => 'm', :onblur => 'sum()'%>
    </div>
  </div>
@@ -45,14 +45,14 @@
 
      <div class="col-md-4">
       <div class="field">
-       <%= f.label :Talla_L, class:'letrablanca'  %><br>
+       <%= f.label :Talla_L, class:''  %><br>
        <%= f.number_field :tallal , class:'form-control', :id => 'l', :onblur => 'sum()'%>
      </div>
     </div>
     
     <div class="col-md-4">
        <div class="field">
-         <%= f.label :Talla_Xs, class:'letrablanca'  %><br>
+         <%= f.label :Talla_Xs, class:''  %><br>
          <%= f.number_field :tallaxs , class:'form-control', :id => 'xs', :onblur => 'sum()'%>
        </div>
     </div>
@@ -60,7 +60,7 @@
   <div class="col-md-4">
 
    <div class="field">
-     <%= f.label :Talla_XL, class:'letrablanca'  %><br>
+     <%= f.label :Talla_XL, class:''  %><br>
      <%= f.number_field :tallaxl , class:'form-control' , :id => "xl", :onblur => 'sum()' %>
    </div>
  </div>
@@ -73,7 +73,7 @@
 
 <div class="field invisi">
 
- <%= f.label :Tallasuma, class:'letrablanca'  %><br>
+ <%= f.label :Tallasuma, class:''  %><br>
  <%= f.text_field :tallasuma , class:'form-control' , :id => "suma", :onblur => 'sum()' %>
 </div>
 
@@ -104,20 +104,3 @@
 
 <% end %>
 
-
-
-<script>
-    
-    function sum(){
-        
-        var tallaxl = document.getElementById('xl').value;
-        var tallal = document.getElementById('l').value;
-        var tallas = document.getElementById('s').value;
-        var tallaxs = document.getElementById('xs').value;
-        var tallam = document.getElementById('m').value;
-        
-        sumas= (parseInt(tallaxs) +parseInt(tallaxl) +parseInt(tallas) +parseInt(tallal) +parseInt(tallam) );
-        
-        document.getElementById('suma').value = sumas;
-    }
-</script>

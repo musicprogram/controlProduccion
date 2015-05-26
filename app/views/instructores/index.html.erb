@@ -28,8 +28,8 @@
     <% @instructores.each do |instructor| %>
       <tr>
        
-        <td class="minus"><h3><b><%= instructor.nombre.nombreinstructor %></b></h3></td>
-        <td class="minus"><%= image_tag instructor.nombre.avatar.url(:thumb), class:'img-circle'%></td>
+        <td class="minus"><h3><b><%= instructor.nombre.nombreinstructor  rescue nil%></b></h3></td>
+        <td class="minus"><%= image_tag instructor.nombre.avatar.url(:thumb), class:'img-circle' rescue nil %></td>
         <td class="minus"><h3><%= instructor.totalrecibidas %></h3></td>
         <td class="minus"><h3><%= instructor.observacionescalidad %> %</h3></td>
         <td class="minus"><h3><%= instructor.duracion %> Días</h3></td>

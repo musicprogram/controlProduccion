@@ -45,3 +45,4 @@ gem 'devise'
 gem "paperclip", "~> 4.2"
 gem 'bootstrap-datepicker-rails'
 gem 'rails_admin'
+gem 'bootstrap-tooltip-rails'
