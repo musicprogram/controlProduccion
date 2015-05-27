@@ -2,7 +2,7 @@
 <body class="fondo_cuadro tuto">
   <h4 class="derecho"><span class="badge option animated wobble"> <%= @cuadroproduccions.count %> </span></h4 >
   <br>
-  <h1 class="center">CUADRO DE PRODUCCIÓN</h1><br>
+  <h1 class="center1">CUADRO DE PRODUCCIÓN</h1><br>
 
 
 <% c= 0 %>
@@ -12,16 +12,16 @@
   <table class="table table-condensed table-hover tbla">
     <thead>
       <tr class="active tablasom">
-        <th>Numero Orden</th>
-        <th>Referencia</th>
-        <th>Descripcion</th>
-        
-        <th>Tela</th>
+        <th><h3><b>Numero Orden</b></h3></th>
+        <th><h3><b>Referencia</b></h3></th>
         
         
-        <th>Color</th>
+        <th><h3><b>Tela</b></h3></th>
         
-        <th>Modulo</th>
+        
+        <th><h3><b>Color</b></h3></th>
+        
+        <th><h3><b>Modulo</b></h3></th>
         
         <th colspan="4"></th>
       </tr>
@@ -32,7 +32,7 @@
       <tr>
         <td class="minus"><h3><b>000<%= cuadroproduccion.descripcioncorte.ordenproduccion.id%></b></h3></td>
         <td class="minus"><h3><%= cuadroproduccion.descripcioncorte.ordenproduccion.referencia%></h3></td>
-        <td class="minus"><h3><%= cuadroproduccion.descripcioncorte.ordenproduccion.descripcion%></h3></td>
+        
         <td class="minus"><h3><%= cuadroproduccion.descripcioncorte.ordenproduccion.tela.telanombre rescue nil%></h3></td>
         <td class="minus"><h3><%= cuadroproduccion.descripcioncorte.color.colornombre rescue nil%></h3></td>
         

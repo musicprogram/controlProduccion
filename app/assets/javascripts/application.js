@@ -71,4 +71,4 @@ $(document).on('page:change', function () {
 	});
 	
 	
-	
+$('.encima').css("display", "block");

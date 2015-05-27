@@ -16,8 +16,6 @@ Rails.application.routes.draw do
   get 'welcome/index'
   get 'instructores/showinstructores'
 
-  resources :ordenterceros
-
   resources :procesos
 
   resources :colors

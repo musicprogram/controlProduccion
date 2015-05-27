@@ -11,7 +11,12 @@ class Instructor < ActiveRecord::Base
     def set_duracion
         
         if fechasalidaalmacen != nil && fecharecibo != nil
-        self.duracion = fecharecibo - fechasalidaalmacen
+        self.duracion = fechasalidaalmacen - fecharecibo
+        
+            if duracion < 0
+            self.duracion = duracion * -1            
+            end
+        
         end
     end
         

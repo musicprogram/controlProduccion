@@ -14,7 +14,7 @@ colors.each do |e|
 Color.create(e) unless Color.exists?(e)
 end
 
-clientes = [{clientenombre: "Sena"}]
+clientes = [{clientenombre: "Sena"},{clientenombre: "Otro"}]
 clientes.each do |e|
 Cliente.create(e) unless Cliente.exists?(e)
 end
@@ -52,7 +52,7 @@ Nombre.create(e) unless Nombre.exists?(e)
 end
 
 
-tallas = [{nombre: "S"},{nombre: "M"},{nombre: "L"},{nombre: "XS"},{nombre: "XL"}]
+tallas = [{nombre: "XS"},{nombre: "S"},{nombre: "M"},{nombre: "L"},{nombre: "XL"}]
 tallas.each do |e|
 Talla.create(e) unless Talla.exists?(e)
 end

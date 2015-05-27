@@ -16,21 +16,21 @@
   <div class="col-md-4">
 
     <div class="field">
-     Fecha Trazo<br>
+     <h5><b>FECHA DE TRAZO</b></h5>
      <%= f.text_field :fechatrazo, class:'datepicker form-control' %>
    </div>
 
  </div>
  <div class="col-md-4">
   <div class="field">
-   Fecha del Corte<br>
+   <h5><b>FECHA DEL CORTE</b></h5>
   <%= f.text_field :fechacorte, class:'datepicker form-control' %>
   </div>
 </div>
 
 <div class="col-md-4">
  <div class="field">
- Fecha Entrega Bodega<br>
+ <h5><b>FECHA ENTREGA A BODEGA</b></h5>
  <%= f.text_field :fechaentradabodega, class:'datepicker form-control' %>
 </div>
 </div>
@@ -42,7 +42,7 @@
   <div class="col-md-4">
 
     <div class="field">
-      Modulo<br>
+      <h5><b>MODULO</b></h5>
      <%= f.collection_select :modulo_id, Modulo.all, :id, :modulonombre,{prompt: "Seleccione Modulo"},{ class: "form-control"} %>
     </div>
   </div>
@@ -52,7 +52,7 @@
   <div class="col-md-4">
 
     <div class="field">
-     Fecha Entrega Modulo<br>
+     <h5><b>FECHA ENTREGA DE MODULO</b></h5>
     <%= f.text_field :fechaentregamodulo, class:'datepicker form-control' %>
    </div>
 
@@ -61,7 +61,7 @@
 
  <div class="col-md-4">
   <div class="actions">
-      <%= f.submit "Guardar",class:'btn btn-default btn-lg btn-block' %>
+      <%= f.submit "Guardar",class:'btn btn-succes questo tex1' %>
     </div>
 </div>
 </div>

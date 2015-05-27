@@ -1,1 +1,0 @@
-json.extract! @ordentercero, :id, :referencia, :numeroop, :nombreproveedor, :direccion, :telefono, :email, :fechaingreso, :fechasalida, :responsable, :proceso_id, :cantidad, :pieza, :color_id, :transportador, :totalunidad, :observacion, :created_at, :updated_at

@@ -22,7 +22,7 @@
       
       
   <div class="field">
-     <%= f.label :Nombre %><br>
+     <h5><b>NOMBRE</b></h5>
     <%= f.collection_select :nombre_id, Nombre.all, :id, :nombreinstructor,{prompt: "Instructor"}, {class: "form-control"}  %>
 </div>
 
@@ -30,7 +30,7 @@
     
     <div class="col-md-4">
       <div class="field">
-    <%= f.label :fecha_salida_del_almacen %><br>
+    <h5><b>FECHA SALIDA DEL ALMACEN</b></h5>
     <%= f.text_field :fechasalidaalmacen, class: 'datepicker form-control', :id => 'salida', :onblur => 'fecha()' %>
   </div>
     </div>
@@ -47,7 +47,7 @@
       
   
   <div class="field">
-    <%= f.label :cantidad %><br>
+    <h5><b>CANTIDAD</b></h5>
     <%= f.number_field :cantidad, class:'form-control' %>
   </div>
       
@@ -58,7 +58,7 @@
       
       
   <div class="field">
-     <%= f.label :Talla %><br>
+     <h5><b>TALLA</b></h5>
      <%= f.collection_select :talla_id, Talla.all, :id, :nombre,{prompt: "Talla"}, {class: "form-control"}  %>
 </div>
 
@@ -68,7 +68,7 @@
       
   
   <div class="field">
-    <%= f.label :primeras %><br>
+    <h5><b>PRIMERAS</b></h5>
     <%= f.number_field :primeras, class:'form-control', :id => 'pri', :onblur => 'pro()'  %>
   </div>
       
@@ -78,14 +78,14 @@
     <div class="col-md-4">
       
       <div class="field">
-    <%= f.label :segundas %><br>
+   <h5><b>SEGUNDAS</b></h5>
     <%= f.number_field :segundas, class:'form-control', :id => 'seg', :onblur => 'pro()' %>
   </div>
     </div>
     
     <div class="col-md-4">
       <div class="field">
-    <%= f.label :fecha_de_recibo %><br>
+    <h5><b>FECHA DE RECIBO</b></h5>
     <%= f.text_field :fecharecibo, class: 'datepicker form-control', :id => 'recibo', :onblur => 'fecha()' %>
   </div>
         
@@ -124,7 +124,7 @@
   <div class="col-md-4">
      <hr>
   <div class="actions">
-    <%= f.submit "Guardar",class:'btn btn-default btn-lg btn-block'%>
+    <%= f.submit "GUARDAR",class:'btn btn-succes questo tex1'%>
   </div>
   </div>
 

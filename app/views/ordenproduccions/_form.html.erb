@@ -15,13 +15,13 @@
   <div class="col-md-4">
   
   <div class="field">
-    <%= f.label :Fecha_de_programacion %><br>
+<h5><b>FECHA DE PROGRAMACIÓN</b></h5>
     <%= f.text_field :fechaprogramacion, class:'datepicker form-control' %>
   </div>
 </div>
 <div class="col-md-4">
    <div class="field">
-    <%= f.label :tiqueteada %><br>
+    <h5><b>TIQUETEADA</b></h5>
     <%= f.text_field :tiqueteada, class:'form-control' %>
   </div>
  
@@ -31,7 +31,7 @@
   
   <div class="field">
      
-     <%= f.label :Cliente %><br>
+     <h5><b>CLIENTE</b></h5>
     <%= f.collection_select :cliente_id, Cliente.all, :id, :clientenombre,{prompt: "Seleccione Cliente"}, {class: "form-control"}  %>
   </div>
 </div>
@@ -41,7 +41,7 @@
 <div class="col-md-12">
     <div class="col-md-4">
       <div class="field">
-    <%= f.label :referencia %><br>
+    <h5><b>REFERENCIA</b></h5>
     <%= f.text_field :referencia, class:'form-control' %>
   </div>
   </div>
@@ -49,7 +49,7 @@
   <div class="col-md-4">
       
   <div class="field">
-     <%= f.label :Corte%><br>
+     <h5><b>CORTE</b></h5>
     <%= f.collection_select :corte_id, Corte.all, :id, :cortenombre,{prompt: "Seleccione Corte"}, {class: "form-control"}  %>
   </div>
      
@@ -57,7 +57,7 @@
  
   <div class="col-md-4">
     <div class="field">
-    <%= f.label :ancho %><br>
+    <h5><b>ANCHO</b></h5>
     <%= f.text_field :ancho, class:'form-control' %>
   </div>
   </div>
@@ -67,21 +67,21 @@
 <div class="col-md-12">
    <div class="col-md-4">
      <div class="field">
-     <%= f.label :Tela %><br>
+     <h5><b>TELA</b></h5>
     <%= f.collection_select :tela_id, Tela.all, :id, :telanombre,{prompt: "Seleccione Tela"}, {class: "form-control"} %>
   </div>
   </div>
  
   <div class="col-md-4">
      <div class="field">
-      <%= f.label :Largo_del_trazo %><br>
+      <h5><b>LARGO DEL TRAZO</b></h5>
       <%= f.number_field :largotrazo , :type => 'float' , :in => 0..100, :step => 0.01, class:'form-control'%>
     </div>
   </div>
  
   <div class="col-md-4">
      <div class="field">
-      <%= f.label :Veces_en_el_trazo %><br>
+      <h5><b>VECES EN EL TRAZO</b></h5>
       <%= f.number_field :vecestrazo , :type => 'float' , :in => 0..100, :step => 0.01, class:'form-control'%>
     </div>
   </div>
@@ -91,21 +91,21 @@
 <div class="col-md-12">
     <div class="col-md-4">
    <div class="field">
-    <%= f.label :capas %><br>
+    <h5><b>CAPAS</b></h5>
     <%= f.number_field :capas, class:'form-control' %>
   </div>
   </div>
  
   <div class="col-md-4">
      <div class="field">
-    <%= f.label :cantidad %><br>
+    <h5><b>CANTIDAD</b></h5>
     <%= f.text_field :cantidad, class:'form-control' %>
   </div>
   </div>
  
   <div class="col-md-4">
       <div class="field">
-    <%= f.label :Responsable_del_corte %><br>
+    <h5><b>RESPONSABLE DEL CORTE</b></h5>
     <%= f.text_field :responsablecorte, class:'form-control' %>
   </div>
   </div>
@@ -115,7 +115,7 @@
  <div class="col-md-12">
      <div class="col-md-4">
      <div class="field">
-     <%= f.label :Prenda %><br>
+     <h5><b>PRENDA</b></h5>
     <%= f.collection_select :prenda_id, Prenda.all, :id, :prendanombre,{prompt: "Seleccione Prenda"},{ class: "form-control"} %>
   </div>
 
@@ -124,7 +124,7 @@
   <div class="col-md-4">
     
     <div class="field">
-    <%= f.label :largo_del_tendido %><br>
+    <h5><b>LARGO DEL TENDIDO</b></h5>
     <%= f.text_field :largotendido, class:'form-control', class:'form-control' %>
   </div>
     
@@ -140,14 +140,14 @@
     
   <div class="col-md-8">
   <div class="field">
-    <%= f.label :descripcion %><br>
+    <h5><b>DESCRIPCIÓN</b></h5>
     <%= f.text_area :descripcion, class:'form-control' %>
   </div>
   </div>
   <div class="col-md-4">
        
        <div class="actions">
-        <%= f.submit "Guardar",class:'btn btn-default btn-lg btn-block'%>
+        <%= f.submit "GUARDAR",class:'btn btn-succes questo tex1'%>
    <% end %>
   </div>
   </div>

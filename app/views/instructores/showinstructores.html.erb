@@ -1,14 +1,27 @@
-<body class="estadisti estadisticas">
+<body class="homepageesh estadisticas">
+<% if Instructor.first == nil %>
+<h1>No hay valores</h1>
 
+<h1>CONTROL PRODUCCIÓN</h1>
 
-  <h4 class="derecho"><span class="badge option animated wobble"> <%= @instructores.count %> </span></h4 >
+<h1>CENTRO DE FORMACIÓN EN DISEÑO, CONFECCIÓN Y MODA</h1>
+
+<% elsif %>
+
   
-<div class="genera">
-  
+   <br>
+<div class="genera1">
+  <br>
 
-    <h2 class="center blanco">PROMEDIO GENERAL DE INSTRUCTORES </h2>
+    <h2 class="center1">PROMEDIO GENERAL DE INSTRUCTORES </h2>
+    <div class="center-block">
+                    
+                  <%= image_tag("senab.png")%>
+                  </div>
+                  <br>
 </div>
- <div class="parallax imagen-1">
+ <div class="">
+   <h4 class="derecho"><span class="badge option animated wobble"> <%= @instructores.count %> </span></h4 >
 <br>
 
     <div class="prome">
@@ -98,7 +111,9 @@
                 <% nombre = Nombre.find(x) %>
                 <td class="invisi"><%= x %></td>
                 
-                 <% if y.to_i == 1 %>
+                 <% if y.to_i <=0 %>
+                 <td>La fecha de salida no puede ser mayor a fecha de entrada </td>
+                 <% elsif y.to_i == 1 %>
                   <td><h3><%= y.to_i %> Día</h3></td>
                   <% elsif y.to_i >1 %>
                   <td><h3><%= y.to_i %> Días</h3></td>
@@ -172,10 +187,10 @@
   <div class="">
   <div class="col-md-2"></div>
   <div class="col-md-8">
-    <div class="genera">
+    <div class="">
     
-     <h3 class="blanco barra bar">Promedio General de la Operación: <b class="barra1"><%= re.to_i / re2.to_i %> </b> %</h3>
-     <h3 class="blanco barra bar">Promedio General de Entregas en : <b class="barra1"><%= dia.to_i / re2.to_i %> </b> </h3>
+     <h3 class="blanco barra bar">Promedio General de la Poducción: <b class="barra1"><%= re.to_i / re2.to_i %> </b> %</h3>
+     <h3 class="blanco barra bar">Promedio General días de Entregas en : <b class="barra1"><%= dia.to_i / re2.to_i %> </b> </h3>
      <h3 class="blanco barra bar">Total de Entregas: <b class="barra1"><%= suma %><b/></h3>
 
     </div> 
@@ -192,27 +207,29 @@
 <br><br>
 <br><br>
 
-<div class="parallax imagen-3">
+<div class="">
 
 
 
-<div class="genera">
-  <h2 class="blanco">Ver todas las Ordenes asociadas a los diferentes Instructores</h2>
+<div class="genera1">
+  <h2 class="center1">Ver todas las Ordenes asociadas a los diferentes Instructores</h2>
            <a>
              <i class="fa fa-chevron-down fa-4x animated rubberBand" data-toggle="collapse" href="#collapseExample" aria-expanded="false" aria-controls="collapseExample"></i>
            </a>
 </div>
+<br><br>
+<h4 class="derecho"><span class="badge option animated wobble"> <%= @instructores1.count %> </span></h4 >
 
            <div class="collapse" id="collapseExample">
             <div class="">
               
               
- <h4 class="derecho"><span class="badge option animated wobble"> <%= @instructores1.count %> </span></h4 >
+ 
               
              
               
 
-<div class="prome otro ">
+<div class="prome1 otro ">
   
   <br>
   <div class="">
@@ -285,6 +302,11 @@
           </div>
 
 </div>
+
+
+<% end %>
+
+
 </body>
 
 

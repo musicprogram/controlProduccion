@@ -11,7 +11,7 @@
       <div class="col-md-4 bg_blur ">
       </div>
       <div class="col-md-8  col-xs-12">
-        <%= image_tag @instructor.nombre.avatar.url(:medium),:class => 'img-thumbnail picture hidden-xs questo' rescue nil %>
+        <%= image_tag @instructor.nombre.avatar.url(:medium),:class => 'img-thumbnail picture hidden-xs questo som' rescue nil %>
         <div class="header">
 
           <div class="col-md-12">
@@ -71,10 +71,15 @@
               </div>
               <div class="col-md-6">    
               
+              <% if @instructor.duracion == nil %>
+              <% @instructor.duracion = 0 %>
+              <%elsif %>
+              
               <% if @instructor.duracion == 1%>
               <h4 class="derecha"> <strong>Tiempo de Entrega: </strong><%= @instructor.duracion %> Dia </h4>
               <% elsif @instructor.duracion > 1%>
               <h4 class="derecha"> <strong>Tiempo de Entrega: </strong><%= @instructor.duracion %> Dias </h4>
+              <% end %>
               <% end %>
               </div>
 
@@ -100,16 +105,15 @@
 
     <br>
 
-    <div class="row nav">    
+  <br><br>
+   <div class="row nav">    
       <div class="col-md-4"></div>
       <div class="col-md-12 col-xs-12" style="margin: 0px;padding: 0px;">
         <div class="col-md-6 col-xs-6 well"><%= link_to "<i class='fa fa-pencil fa-4x'></i>".html_safe, edit_cuadroproduccion_instructor_path(@cuadroproduccion,@instructor) %></div>
         <div class="col-md-6 col-xs-6 well"><%= link_to "<i class='fa fa-arrow-circle-left fa-4x'></i>".html_safe, cuadroproduccion_instructores_path %></div>
       </div>
     </div>
-  </div>
-
-
+ 
 
 </body>
 
