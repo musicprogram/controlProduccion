@@ -71,6 +71,7 @@ c = 0 %>
 <br>
 <h1><b>Total Unidad: <%= re %></b></h1>
 
+  <%= link_to "<i class='fa fa-print fa-4x'></i>".html_safe, ordenproduccion_descripcioncortes_path(@ordenproduccion, :format => 'pdf') %>   
 
 <%= link_to "<i class='fa fa-plus-circle fa-4x'></i>".html_safe, new_ordenproduccion_descripcioncorte_path(@ordenproduccion) %>
         	

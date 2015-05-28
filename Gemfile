@@ -46,3 +46,6 @@ gem "paperclip", "~> 4.2"
 gem 'bootstrap-datepicker-rails'
 gem 'rails_admin'
 gem 'bootstrap-tooltip-rails'
+
+gem 'prawn'
+gem "prawnto_2", :require => "prawnto"

@@ -6,6 +6,7 @@ class DescripcioncortesController < ApplicationController
     @descripcioncortes = @ordenproduccion.descripcioncortes.all
     @fondo_hand = true
     @fondo_desc = true
+    
   end
 
   # GET /descripcioncortes/1

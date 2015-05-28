@@ -91,18 +91,21 @@
         <td>
          <div class="col-md-12 sumaa">
          <h5 class="izquierda "> <strong>Total Unidad: </strong>
-          <%= @descripcioncorte.tallasuma %></h5>
+          <%= @descripcioncorte.tallasuma %> </h5>
+          
+          
 
         </div>
       </td>
     </tr>
 
 
+
+
   </table>
 </div>
 <div class="panel-footer">
      <small>Centro de formación en diseño, confección y Moda</small> <br>
-
   <%= link_to "<i class='fa fa-pencil fa-4x'></i>".html_safe, edit_ordenproduccion_descripcioncorte_path(@ordenproduccion,@descripcioncorte) %>
   <%= link_to "<i class='fa fa-arrow-circle-left fa-4x'></i>".html_safe,  ordenproduccion_descripcioncortes_path %>
 </div>
@@ -114,3 +117,4 @@
 </body>
 
 <br><br>
+

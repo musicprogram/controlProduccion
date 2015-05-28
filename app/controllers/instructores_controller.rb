@@ -6,6 +6,7 @@ class InstructoresController < ApplicationController
   def index
     @instructores = @cuadroproduccion.instructores.all
     @tuto_videoins = true
+    @filename = 'index.pdf'
   end
   
   def showinstructores
@@ -25,8 +26,12 @@ class InstructoresController < ApplicationController
   def show
     
     @descripcioncortes = Descripcioncorte.all
+    
+    
+   
   end
-
+  
+ 
   def new
     @instructor = Instructor.new
   end
