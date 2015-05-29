@@ -36,14 +36,14 @@ ActiveRecord::Schema.define(version: 20150529145605) do
     t.date     "fechacorte"
     t.date     "fechaentradabodega"
     t.date     "fechaentregamodulo"
-    t.integer  "descripcioncorte_id"
+    t.integer  "ordenproduccion_id"
     t.integer  "modulo_id"
     t.datetime "created_at"
     t.datetime "updated_at"
   end
 
-  add_index "cuadroproduccions", ["descripcioncorte_id"], name: "index_cuadroproduccions_on_descripcioncorte_id"
   add_index "cuadroproduccions", ["modulo_id"], name: "index_cuadroproduccions_on_modulo_id"
+  add_index "cuadroproduccions", ["ordenproduccion_id"], name: "index_cuadroproduccions_on_ordenproduccion_id"
 
   create_table "descripcioncortes", force: true do |t|
     t.integer  "color_id"

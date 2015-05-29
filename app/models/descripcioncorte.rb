@@ -28,3 +28,4 @@ class Descripcioncorte < ActiveRecord::Base
   
   
 end
+

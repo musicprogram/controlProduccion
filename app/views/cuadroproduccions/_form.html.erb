@@ -1,4 +1,4 @@
-<%= form_for [@descripcioncorte, @cuadroproduccion], :html => { :class => 'form-horizontal' } do |f| %>
+<%= form_for [@ordenproduccion, @cuadroproduccion], :html => { :class => 'form-horizontal' } do |f| %>
 <% if @cuadroproduccion.errors.any? %>
 <div id="error_explanation">
   <h2><%= pluralize(@cuadroproduccion.errors.count, "error") %> prohibited this cuadroproduccion from being saved:</h2>

@@ -40,6 +40,8 @@
 
             <td class="minus"><h3><%= ordenproduccion.cantidad rescue nil %></h3></td>
             
+            <td><%= link_to "<i class='fa fa-check-circle-o fa-4x ojos questo1'></i>".html_safe, ordenproduccion_cuadroproduccions_path(ordenproduccion) %></td>
+
             <td><%= link_to "<i class='fa fa-eye fa-4x encima'>".html_safe, ordenproduccion %></td>
             <td><%= link_to "<i class='fa fa-pencil fa-4x encima'>".html_safe, edit_ordenproduccion_path(ordenproduccion) %></td>
             <td><%= link_to "<i class='fa fa-eraser fa-4x encima'>".html_safe, ordenproduccion, method: :delete, data: { confirm: 'Estas seguro?' } %></td>

@@ -3,7 +3,7 @@ class CuadroproduccionsController < ApplicationController
   # GET /cuadroproduccions
   # GET /cuadroproduccions.json
   def index
-    @cuadroproduccions = @descripcioncorte.cuadroproduccions.all
+    @cuadroproduccions = @ordenproduccion.cuadroproduccions.all
     @fondo_cuadro = true
     @tuto_video = true
   end
@@ -26,10 +26,10 @@ class CuadroproduccionsController < ApplicationController
   # POST /cuadroproduccions.json
   def create
     @cuadroproduccion = Cuadroproduccion.new(cuadroproduccion_params)
-    @cuadroproduccion.descripcioncorte_id = @descripcioncorte.id
+    @cuadroproduccion.ordenproduccion_id = @ordenproduccion.id
     respond_to do |format|
       if @cuadroproduccion.save
-        format.html { redirect_to descripcioncorte_cuadroproduccion_path(@descripcioncorte, @cuadroproduccion), notice: 'Cuadroproduccion was successfully created.' }
+        format.html { redirect_to ordenproduccion_cuadroproduccion_path(@ordenproduccion, @cuadroproduccion), notice: 'Cuadroproduccion was successfully created.' }
         format.json { render :show, status: :created, location: @cuadroproduccion }
       else
         format.html { render :new }
@@ -43,7 +43,7 @@ class CuadroproduccionsController < ApplicationController
   def update
     respond_to do |format|
       if @cuadroproduccion.update(cuadroproduccion_params)
-        format.html { redirect_to descripcioncorte_cuadroproduccion_path(@descripcioncorte, @cuadroproduccion), notice: 'Cuadroproduccion was successfully updated.' }
+        format.html { redirect_to ordenproduccion_cuadroproduccion_path(@ordenproduccion, @cuadroproduccion), notice: 'Cuadroproduccion was successfully updated.' }
         format.json { render :show, status: :ok, location: @cuadroproduccion }
       else
         format.html { render :edit }
@@ -57,7 +57,7 @@ class CuadroproduccionsController < ApplicationController
   def destroy
     @cuadroproduccion.destroy
     respond_to do |format|
-      format.html { redirect_to descripcioncorte_cuadroproduccions_url(@descripcioncorte), notice: 'Cuadroproduccion was successfully destroyed.' }
+      format.html { redirect_to ordenproduccion_cuadroproduccions_url(@ordenproduccion), notice: 'Cuadroproduccion was successfully destroyed.' }
       format.json { head :no_content }
     end
   end
@@ -65,12 +65,12 @@ class CuadroproduccionsController < ApplicationController
   private
     # Use callbacks to share common setup or constraints between actions.
     def set_cuadroproduccion
-      @descripcioncorte = Descripcioncorte.find(params[:descripcioncorte_id])
+      @ordenproduccion = Ordenproduccion.find(params[:ordenproduccion_id])
       @cuadroproduccion = Cuadroproduccion.find(params[:id]) if params[:id]
     end
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def cuadroproduccion_params
-      params.require(:cuadroproduccion).permit(:fechatrazo, :fechacorte, :fechaentradabodega, :fechaentregamodulo, :descripcioncorte_id, :modulo_id)
+      params.require(:cuadroproduccion).permit(:fechatrazo, :fechacorte, :fechaentradabodega, :fechaentregamodulo, :ordenproduccion_id, :modulo_id)
     end
 end

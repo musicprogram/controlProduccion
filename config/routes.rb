@@ -27,7 +27,7 @@ Rails.application.routes.draw do
    
   end
 
-  resources :descripcioncortes do
+  resources :ordenproduccions do
       resources :cuadroproduccions 
   end
   

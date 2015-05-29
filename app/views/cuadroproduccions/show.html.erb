@@ -14,7 +14,7 @@
       <h3 class="panel-title">
         <h2 class="center1">Cuadro de Producción</h2></h3>
         <h4><strong>Numero Orden: </strong>
-        000<%= @cuadroproduccion.descripcioncorte.ordenproduccion.id %></h4>
+        000<%= @cuadroproduccion.ordenproduccion.id %></h4>
       </div>
       <div class="panel-body">
         <div class="the-price">
@@ -28,8 +28,9 @@
           <tr class="">
             <td>
               <div class="col-md-6">
-               <h5 class="izquierda"> <strong>Color: </strong>
-                <%= @cuadroproduccion.descripcioncorte.color.colornombre rescue nil %> </h5>
+               <h5 class="izquierda"> <strong>Referencia: </strong>
+               <%= @cuadroproduccion.ordenproduccion.referencia %>
+                 </h5>
               </div>
 
 
@@ -38,9 +39,6 @@
 
             <div class="col-md-6">
              
-<h5 class="derecha">
-              <strong>Referencia: </strong>
-              <%= @cuadroproduccion.descripcioncorte.ordenproduccion.referencia %> </h5>
             </div>
           </td>
         </tr>
@@ -48,12 +46,12 @@
           <td>
             <div class="col-md-6">
              <h5 class="izquierda"> <strong>Corte: </strong>
-              <%= @cuadroproduccion.descripcioncorte.ordenproduccion.corte.cortenombre rescue nil %></h5>
+              <%= @cuadroproduccion.ordenproduccion.corte.cortenombre rescue nil %></h5>
             </div>
 
             <div class="col-md-6">
               <h5 class="derecha"><strong>Tela: </strong>
-              <%= @cuadroproduccion.descripcioncorte.ordenproduccion.tela.telanombre rescue nil %></h5>
+              <%= @cuadroproduccion.ordenproduccion.tela.telanombre rescue nil %></h5>
             </div>
           </td>
         </tr>
@@ -64,11 +62,11 @@
           <td>
             <div class="col-md-6">
               <h5 class="izquierda"><strong>Largo del Trazo: </strong>
-              <%= @cuadroproduccion.descripcioncorte.ordenproduccion.largotrazo %></h5>
+              <%= @cuadroproduccion.ordenproduccion.largotrazo %></h5>
             </div>
             <div class="col-md-6">
            <h5 class="derecha">  <strong>Veces en el Trazo: </strong>
-             <%= @cuadroproduccion.descripcioncorte.ordenproduccion.vecestrazo %></h5>
+             <%= @cuadroproduccion.ordenproduccion.vecestrazo %></h5>
            </div>
 
 
@@ -79,12 +77,12 @@
         <td>
           <div class="col-md-6">
             <h5 class="izquierda"><strong>Promedio: </strong>
-            <%= @cuadroproduccion.descripcioncorte.ordenproduccion.promedio %></h5>
+            <%= @cuadroproduccion.ordenproduccion.promedio %></h5>
           </div>
           <div class="col-md-6">
 
            <h5 class="derecha"> <strong>Responsable: </strong>
-            <%= @cuadroproduccion.descripcioncorte.ordenproduccion.responsablecorte %>
+            <%= @cuadroproduccion.ordenproduccion.responsablecorte %>
 </h5>
           </div>
 
@@ -104,7 +102,7 @@
           </div>
           <div class="col-md-6">
             <h5 class="derecha"><strong>Ancho del Trazo: </strong>
-            <%= @cuadroproduccion.descripcioncorte.ordenproduccion.ancho %></h5>
+            <%= @cuadroproduccion.ordenproduccion.ancho %></h5>
           </div>
 
         </td>
@@ -148,7 +146,7 @@
     <div class="col-md-12">
 <h5 class="izquierda">
      <strong>Descripción:</strong>
-     <%= @cuadroproduccion.descripcioncorte.ordenproduccion.descripcion %> </h5>
+     <%= @cuadroproduccion.ordenproduccion.descripcion %> </h5>
    </div>
  </td>
 </tr>
@@ -157,11 +155,13 @@
 
 </table>
 </div>
+
+
 <div class="panel-footer">
     <small>Centro de formación en diseño, confección y Moda</small><br>
 
-  <%= link_to "<i class='fa fa-pencil fa-4x'></i>".html_safe, edit_descripcioncorte_cuadroproduccion_path(@descripcioncorte,@cuadroproduccion) %>
-  <%= link_to "<i class='fa fa-arrow-circle-left fa-4x'></i>".html_safe, descripcioncorte_cuadroproduccions_path %>
+  <%= link_to "<i class='fa fa-pencil fa-4x'></i>".html_safe, edit_ordenproduccion_cuadroproduccion_path(@ordenproduccion,@cuadroproduccion) %>
+  <%= link_to "<i class='fa fa-arrow-circle-left fa-4x'></i>".html_safe, ordenproduccion_cuadroproduccions_path %>
 
 </div>
 </div>

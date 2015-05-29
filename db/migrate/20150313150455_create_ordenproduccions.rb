@@ -19,6 +19,7 @@ class CreateOrdenproduccions < ActiveRecord::Migration
       t.integer :capas
       t.references :prenda, index: true
       
+      
 
       t.timestamps
     end
