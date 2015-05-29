@@ -1,6 +1,7 @@
 class Descripcioncorte < ActiveRecord::Base
   belongs_to :color
   belongs_to :ordenproduccion
+  belongs_to :descripcioncorte
   
   
    

@@ -158,6 +158,26 @@
 
 
 <div class="panel-footer">
+
+  
+
+<% @ordenproduccion.descripcioncortes.each do |descripcioncorte| %>
+
+  <% if descripcioncorte.ordenproduccion.id == @cuadroproduccion.ordenproduccion.id %>
+   <div class="col-md-6">
+        <h5 class="izquierda hh"> <strong>Color: </strong><%= descripcioncorte.color.colornombre rescue nil %></h5>
+    </div>
+    <div class="col-md-6">
+        <h5 class="derecha hh"> <strong>Cantidad: </strong> <%= descripcioncorte.tallasuma %></h5>
+    </div>
+
+<%end%>
+<%end%>
+
+
+
+
+
     <small>Centro de formación en diseño, confección y Moda</small><br>
 
   <%= link_to "<i class='fa fa-pencil fa-4x'></i>".html_safe, edit_ordenproduccion_cuadroproduccion_path(@ordenproduccion,@cuadroproduccion) %>
@@ -172,3 +192,14 @@
 
 </div>
 </body>
+
+
+
+
+
+<style>
+  .hh{
+    color: gray;
+    font-size: 25px;
+  }
+</style>
