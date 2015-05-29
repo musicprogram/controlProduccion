@@ -1,11 +1,9 @@
 class Descripcioncorte < ActiveRecord::Base
-  
-  belongs_to :ordenproduccion
   belongs_to :color
-  has_many :cuadroproduccions
+  belongs_to :ordenproduccion
   
   
-  
+   
   before_validation :sumatallas
   def sumatallas
     if tallal == nil then  
@@ -27,9 +25,6 @@ class Descripcioncorte < ActiveRecord::Base
       self.tallasuma = tallal + tallam + tallas + tallaxl + tallaxs  
   
   end
-  
-  
-  
   
   
 end

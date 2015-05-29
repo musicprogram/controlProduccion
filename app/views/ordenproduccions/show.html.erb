@@ -164,9 +164,230 @@
 
     </td>
   </tr>
+  
 
 </table>
 </div>
+
+ <h4><strong>Descripción del Corte</strong></h4>
+
+<% re= 0 %>
+<% @ordenproduccion.descripcioncortes.each do |descripcioncorte| %>
+ <table class="table">
+ 
+  
+  
+              <tr>
+                <td>
+                  <div class="col-md-6">
+                       <h5 class="izquierda"> <strong>Color: </strong>
+                       <%= descripcioncorte.color.colornombre rescue nil %></h5>
+                  </div>
+                  <div class="col-md-6">
+                       <h5 class="derecha"><strong>Capas: </strong>
+                       </h5>
+                 </div>
+
+               </td>
+             </tr>
+             <tr class="">
+              <td>
+
+               <div class="col-md-6">
+                <h5 class="izquierda"> <strong>TALLA XS: </strong>
+                <%= descripcioncorte.tallaxs %></h5>
+               
+              </div>
+              <div class="col-md-6">
+                  <h5 class="derecha"> <strong>TALLA S: </strong>
+                <%= descripcioncorte.tallas %></h5>
+                
+              </div>
+
+            </td>
+          </tr>
+          <tr>
+            <td>
+
+              <div class="col-md-6">
+                   <h5 class="izquierda"> <strong>TALLA M: </strong>
+                   <%= descripcioncorte.tallam %></h5>
+              </div>
+              <div class="col-md-6">
+                   <h5 class="derecha"><strong>TALLA L: </strong>
+                    <%= descripcioncorte.tallal %></h5>
+
+             </div>
+
+
+
+           </td>
+         </tr>
+         <tr class="">
+          <td>
+               <div class="col-md-6">
+                  <h5 class="izquierda"><strong>TALLA XL: </strong>
+                 <%= descripcioncorte.tallaxl %></h5>
+
+              </div>
+            <div class="col-md-6">
+             
+           </div>
+
+          
+
+        </td>
+      </tr>
+
+      <tr>
+        <td>
+         <div class="col-md-12 sumaa">
+         <h5 class="izquierda "> <strong>Total: </strong>
+          <%= descripcioncorte.tallasuma %> </h5>
+          
+          
+
+        </div>
+      </td>
+    </tr>
+
+
+<%      
+        re = re + sumar(descripcioncorte.tallasuma) 
+        %>
+<hr class="two">
+  <% end %>
+  
+   <tr>
+        <td>
+         <div class="col-md-12 sumaa">
+         <h5 class="izquierda "> <strong>Total Unidad: <%= re %></strong> </h5>
+          
+          
+
+        </div>
+      </td>
+    </tr>
+
+  </table>
+  
+ <br>
+
+
+<h5 class="izquierda"><b></b></h>
+<br>
+
+
+<div class="mode">
+    
+
+<%= form_for([@ordenproduccion, @ordenproduccion.descripcioncortes.build]) do |f| %>
+
+
+<div class="col-md-12">
+    
+ <div class="col-md-4">
+    <div class="field">
+      <h5><b>COLOR</b></h5>
+      <%= f.collection_select :color_id, Color.all, :id, :colornombre,{prompt: "Seleccione Color"},{ class: "form-control"} %>
+    </div>
+  </div>
+  
+   <div class="col-md-4">
+       <div class="field">
+         <h5><b>TALLA XS</b></h5>
+         <%= f.number_field :tallaxs , class:'form-control', :id => 'xs', :onblur => 'sum()'%>
+       </div>
+    </div>
+  <div class="col-md-4">
+    <div class="field">
+     <h5><b>TALLA S</b></h5>
+     <%= f.number_field :tallas , class:'form-control', :id => 's', :onblur => 'sum()'%>
+   </div>
+ </div>
+
+
+
+
+
+
+</div>
+
+
+<div class="col-md-12">
+
+
+ <div class="col-md-4">
+   <div class="field">
+     <h5><b>TALLA M</b></h5>
+     <%= f.number_field :tallam , class:'form-control',:id => 'm', :onblur => 'sum()'%>
+   </div>
+ </div>
+
+
+   
+     <div class="col-md-4">
+      <div class="field">
+       <h5><b>TALLA L</b></h5>
+       <%= f.number_field :tallal , class:'form-control', :id => 'l', :onblur => 'sum()'%>
+     </div>
+    </div>
+    
+   
+   
+   
+   
+
+  <div class="col-md-4">
+
+   <div class="field">
+     <h5><b>TALLA XL</b></h5>
+     <%= f.number_field :tallaxl , class:'form-control' , :id => "xl", :onblur => 'sum()' %>
+   </div>
+ </div>
+
+</div>
+
+
+
+
+
+<div class="field invisi">
+
+ <%= f.label :Tallasuma, class:''  %><br>
+ <%= f.text_field :tallasuma , class:'form-control' , :id => "suma", :onblur => 'sum()' %>
+</div>
+
+
+
+
+<div class="col-md-12">
+ <div class="col-md-6">
+
+ </div> 
+
+ <div class="col-md-3">
+  <div class="actions">
+    <%= f.submit "GUARDAR",class:'btn btn-succes questo tex1'%>
+  </div>
+</div>
+
+<div class="col-md-6">
+
+</div>
+
+</div>
+
+
+<% end %>
+
+
+
+</div>
+
+
+
+
 <div class="panel-footer">
         <small>Centro de formación en diseño, confección y Moda</small> <br>
   <%= link_to "<i class='fa fa-pencil fa-4x'></i>".html_safe, edit_ordenproduccion_path(@ordenproduccion) %> 

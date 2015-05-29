@@ -1,23 +1,21 @@
 # Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
 
 one:
-  tallacantidad: 1
-  capas: 1
-  color: MyString
+  color_id: 
   tallaxs: 1
   tallas: 1
   tallam: 1
   tallal: 1
   tallaxl: 1
+  tallasuma: 1
   ordenproduccion_id: 
 
 two:
-  tallacantidad: 1
-  capas: 1
-  color: MyString
+  color_id: 
   tallaxs: 1
   tallas: 1
   tallam: 1
   tallal: 1
   tallaxl: 1
+  tallasuma: 1
   ordenproduccion_id: 

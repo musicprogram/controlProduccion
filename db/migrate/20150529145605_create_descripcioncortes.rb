@@ -1,8 +1,7 @@
 class CreateDescripcioncortes < ActiveRecord::Migration
   def change
     create_table :descripcioncortes do |t|
-      
-      t.references :color
+      t.references :color, index: true
       t.integer :tallaxs
       t.integer :tallas
       t.integer :tallam
