@@ -7,7 +7,7 @@ class Ordenproduccion < ActiveRecord::Base
   belongs_to :tela
   belongs_to :prenda
   belongs_to :corte
-  has_many :descripcioncortes
+  has_many :descripcioncortes, dependent: :destroy
 
 
   def self.search(search, page)

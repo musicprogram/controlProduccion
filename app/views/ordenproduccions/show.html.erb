@@ -180,10 +180,10 @@
               <tr>
                 <td>
                   <div class="col-md-6">
-                       <h5 class="izquierda"> <strong>Color: </strong>
+                       <h5 class="izquierda"> <strong>COLOR: </strong>
                        <%= descripcioncorte.color.colornombre rescue nil %></h5>
                   </div>
-                  <div class="col-md-6">
+                  <div class="col-md-6 ini">
                        <h5 class="derecha"><strong>Capas: </strong>
                        </h5>
                  </div>
@@ -251,11 +251,19 @@
       </td>
     </tr>
 
-
 <%      
         re = re + sumar(descripcioncorte.tallasuma) 
         %>
 <hr class="two">
+
+<div class="col-md-12">
+ <div class="col-md-10"></div>
+ <div class="col-md-2">
+  
+<%= link_to "<i class='fa fa-eraser fa-3x'></i>".html_safe, [descripcioncorte.ordenproduccion, descripcioncorte],method: :delete, data: { confirm: 'Are you sure?' } %>
+
+ </div>
+</div>
   <% end %>
   
    <tr>
@@ -278,8 +286,9 @@
 <br>
 
 
+
 <div class="mode">
-    
+    <br><br>
 
 <%= form_for([@ordenproduccion, @ordenproduccion.descripcioncortes.build]) do |f| %>
 
@@ -368,7 +377,7 @@
 
  <div class="col-md-3">
   <div class="actions">
-    <%= f.submit "GUARDAR",class:'btn btn-succes questo tex1'%>
+    <%= f.submit "GUARDAR",class:'btn btn-succes questo tex2'%>
   </div>
 </div>
 
@@ -386,18 +395,21 @@
 </div>
 
 
-
-
 <div class="panel-footer">
+ <br>
         <small>Centro de formación en diseño, confección y Moda</small> <br>
+  <%= link_to "<i class='fa fa-print fa-4x'></i>".html_safe, ordenproduccion_path(@ordenproduccion, :format => 'pdf') %>   
   <%= link_to "<i class='fa fa-pencil fa-4x'></i>".html_safe, edit_ordenproduccion_path(@ordenproduccion) %> 
   <%= link_to "<i class='fa fa-arrow-circle-left fa-4x'></i>".html_safe, ordenproduccions_path %>
 </div>
-</div>
-
-
 
 </div>
+
+
+
+
+</div>
+
 <div class="col-md-2"></div>
 </div>
 
