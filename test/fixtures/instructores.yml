@@ -1,23 +1,27 @@
 # Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
 
 one:
-  nombre: MyString
-  fecharecibo: 2015-03-24 17:08:36
+  nombre_id: 
+  fecharecibo: 2015-05-29
   cantidad: 1
-  tallaunidad: MyString
+  talla_id: 
   primeras: 1
   segundas: 1
   totalrecibidas: 1
-  observacionescalidad: MyString
-  fechasalidaalmacen: 2015-03-24 17:08:36
+  observacionescalidad: 1
+  fechasalidaalmacen: 2015-05-29
+  duracion: 1
+  cuadroproduccion_id: 
 
 two:
-  nombre: MyString
-  fecharecibo: 2015-03-24 17:08:36
+  nombre_id: 
+  fecharecibo: 2015-05-29
   cantidad: 1
-  tallaunidad: MyString
+  talla_id: 
   primeras: 1
   segundas: 1
   totalrecibidas: 1
-  observacionescalidad: MyString
-  fechasalidaalmacen: 2015-03-24 17:08:36
+  observacionescalidad: 1
+  fechasalidaalmacen: 2015-05-29
+  duracion: 1
+  cuadroproduccion_id: 

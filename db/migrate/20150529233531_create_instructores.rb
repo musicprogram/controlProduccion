@@ -15,6 +15,5 @@ class CreateInstructores < ActiveRecord::Migration
 
       t.timestamps
     end
-      
   end
 end

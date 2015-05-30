@@ -1,9 +1,7 @@
 <body class="homepageesh">
     <div class="col-md-12">
-<div class="col-md-2"></div>
 
-<div class="col-md-8">
-
+<div class="col-md-6">
 
 
 <br>
@@ -178,6 +176,15 @@
 
 
 
+
+.
+
+
+
+
+
+
+
     <small>Centro de formación en diseño, confección y Moda</small><br>
 
   <%= link_to "<i class='fa fa-pencil fa-4x'></i>".html_safe, edit_ordenproduccion_cuadroproduccion_path(@ordenproduccion,@cuadroproduccion) %>
@@ -188,7 +195,291 @@
   
 </div>
 
-<div class="col-md-2"></div>
+</div>
+
+
+<div class="col-md-6">
+
+<div class="panel panel-succes">
+    
+      <div class="panel-body">
+        <div class="the-price">
+         
+
+
+
+
+
+  
+
+
+<div class="insshow">
+<% @cuadroproduccion.instructores.each do |instructor| %>
+
+  <div class="" style="margin-top: 20px; margin-bottom: 20px;">
+    <div class="" id="">
+      
+      <div class="col-md-12 ">
+        <%= image_tag instructor.nombre.avatar.url(:medium),:class => 'img-circle picture hidden-xs questo som' rescue nil %>
+        <div class="">
+
+          <div class="col-md-12">
+
+            <div class="col-md-8">
+              <h3 class="izquierda fonts"> Nombre<strong><%= instructor.nombre.nombreinstructor rescue nil %></strong></h3>
+            </div>
+            <div class="col-md-4">
+              <h3>
+
+                <% if   %>
+                <% instructor.observacionescalidad.to_i > 90 %>
+                <i class="fa fa-smile-o fa-2x option animated wobble"></i>
+                <% elsif %>
+                <% instructor.observacionescalidad.to_i >= 70 && instructor.observacionescalidad.to_i <= 89  %>
+                <i class="fa fa-frown-o fa-2x option animated wobble"></i>
+                <% elsif %>
+                <% instructor.observacionescalidad.to_i <= 69 %>
+                <i class="fa fa-exclamation-triangle fa-2x option animated wobble "></i>
+
+                <% end %>
+              </h3>
+            </div>
+          </div>
+            
+
+          <div class="">
+ 
+      
+
+            <div class="col-md-6">
+              <h4 class="izquierda"> <strong>Talla Unidad: </strong><%= instructor.talla.nombre rescue nil %>   </h4>
+
+            </div>
+              <div class="col-md-6">
+                <h4 class="derecha"> <strong>Cantidad: </strong><%= instructor.cantidad %></h4>
+              </div>
+            </div>
+
+            <div class="col-md-12">
+              <div class="col-md-6">  <h4 class="izquierda"> <strong>Primeras: </strong><%= instructor.primeras %> </h4>
+              </div>
+              <div class="col-md-6">  <h4 class="derecha"><strong>Segundas: </strong><%= instructor.segundas %>
+               </h4>
+              </div>
+
+
+            </div>
+            
+            
+            <div class="col-md-12">
+              <div class="col-md-6"><h4 class="izquierda "> <strong>Fecha de salida: </strong> <%= instructor.fechasalidaalmacen %></h4></div>
+              <div class="col-md-6"><h4 class="derecha "> <strong>Fecha Recibida: </strong> <%= instructor.fecharecibo %></h4></div>
+              
+            </div>
+
+            <div class="col-md-12">
+              <div class="col-md-6">  <h4 class="izquierda "> <strong>Total Recibidas: </strong> <%= instructor.totalrecibidas %></h4>
+              </div>
+              <div class="col-md-6">    
+              
+              <% if instructor.duracion == nil %>
+              <% instructor.duracion = 0 %>
+              <%elsif %>
+              
+              <% if instructor.duracion == 1%>
+              <h4 class="derecha"> <strong>Tiempo de Entrega: </strong><%= instructor.duracion %> Dia </h4>
+              <% elsif instructor.duracion > 1%>
+              <h4 class="derecha"> <strong>Tiempo de Entrega: </strong><%= instructor.duracion %> Dias </h4>
+              <% end %>
+              <% end %>
+              </div>
+
+
+            </div>
+            <div class="col-md-12">
+              <div class="col-md-6">  <h4 class="izquierda "> <strong>Calidad: </strong><%= instructor.observacionescalidad %> %</h4>
+              </div>
+              <div class="col-md-6">  <h4 class="derecha "></h4>
+              </div>
+             
+
+
+            </div>
+             
+<hr class="two">
+           
+
+
+        </div>
+      </div>
+    </div>   
+
+
+<%end%>
+</div>
+
+
+
+
+
+<div class="inst">
+  <%= form_for([@cuadroproduccion, @cuadroproduccion.instructores.build]) do |f| %>
+  
+
+    
+<div class="col-md-12">
+  
+ 
+
+  <div class="col-md-4">
+      
+      
+  <div class="field">
+     <h5><b>NOMBRE</b></h5>
+    <%= f.collection_select :nombre_id, Nombre.all, :id, :nombreinstructor,{prompt: "Instructor"}, {class: "form-control"}  %>
+</div>
+
+    </div>
+    
+    <div class="col-md-4">
+      <div class="field">
+    <h5><b>FECHA SALIDA DEL ALMACEN</b></h5>
+    <%= f.text_field :fechasalidaalmacen, class: 'datepicker form-control', :id => 'salida', :onblur => 'fecha()' %>
+  </div>
+    </div>
+
+
+
+    <div class="col-md-4">
+        
+  
+      
+    </div>
+    
+    <div class="col-md-4">
+      
+  
+  <div class="field">
+    <h5><b>CANTIDAD</b></h5>
+    <%= f.number_field :cantidad, class:'form-control' %>
+  </div>
+      
+    </div>
+ 
+
+    <div class="col-md-4">
+      
+      
+  <div class="field">
+     <h5><b>TALLA</b></h5>
+     <%= f.collection_select :talla_id, Talla.all, :id, :nombre,{prompt: "Talla"}, {class: "form-control"}  %>
+</div>
+
+    </div>
+    
+    <div class="col-md-4">
+      
+  
+  <div class="field">
+    <h5><b>PRIMERAS</b></h5>
+    <%= f.number_field :primeras, class:'form-control', :id => 'pri', :onblur => 'pro()'  %>
+  </div>
+      
+    </div>
+    
+    
+    <div class="col-md-4">
+      
+      <div class="field">
+   <h5><b>SEGUNDAS</b></h5>
+    <%= f.number_field :segundas, class:'form-control', :id => 'seg', :onblur => 'pro()' %>
+  </div>
+    </div>
+    
+    <div class="col-md-4">
+      <div class="field">
+    <h5><b>FECHA DE RECIBO</b></h5>
+    <%= f.text_field :fecharecibo, class: 'datepicker form-control', :id => 'recibo', :onblur => 'fecha()' %>
+  </div>
+        
+    </div>
+ 
+  
+</div>
+
+
+<div class="col-md-12">
+  
+  <div class="col-md-4"></div>
+  <div class="col-md-4">
+    
+<div class="field  invisi ">
+     
+         <%= f.label :observacionescalidad  %><br>
+        <%= f.text_field :observacionescalidad , class:'form-control ' , :id => "suma" %>
+      </div>
+
+  </div>
+  <div class="field invisi  ">
+     
+         <%= f.label :totalrecibidas  %><br>
+        <%= f.text_field :totalrecibidas , class:'form-control ' , :id => "total" %>
+      </div>
+
+      <div class="field invisi  ">
+     
+         <%= f.label :duracion  %><br>
+        <%= f.text_field :duracion , class:'form-control ' , :id => "totaldu", :onblur => 'fecha()' %>
+      </div
+
+ 
+
+  <div class="col-md-4">
+     <hr>
+  <div class="actions">
+    <%= f.submit "GUARDAR",class:'btn btn-succes questo tex1'%>
+  </div>
+  </div>
+
+
+  
+</div>
+
+
+
+
+  <%end%>
+</div>
+
+
+
+
+
+
+
+
+          
+            
+        </div>
+        </div>
+        </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</div>
 
 </div>
 </body>
@@ -203,3 +494,9 @@
     font-size: 25px;
   }
 </style>
+
+
+
+
+
+

@@ -1,10 +1,9 @@
 class Instructor < ActiveRecord::Base
-    
-    belongs_to :cuadroproduccion
-    belongs_to :nombre
-    belongs_to :talla
-    
-    
+  belongs_to :nombre
+  belongs_to :talla
+  belongs_to :cuadroproduccion
+
+   
     # callback para sumar datos y actualizarlos
     before_validation :set_duracion
 
@@ -35,7 +34,9 @@ class Instructor < ActiveRecord::Base
         end
     end
   
-    
 
-        
+
+
+
+
 end
