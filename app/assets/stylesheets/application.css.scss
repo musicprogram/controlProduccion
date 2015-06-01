@@ -253,7 +253,7 @@ body.homepage {
   text-align: center;
  
   background: #238276;
-  border-radius: 0px;
+  border-radius: 8px;
  
   -webkit-box-shadow: 0px 0px 24px -5px rgba(0,0,0,0.75);
   -moz-box-shadow: 0px 0px 24px -5px rgba(0,0,0,0.75);
@@ -423,6 +423,15 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#e2e2e2', end
     padding: 5px 15px;
 }
 
+.panel-footer1 {
+ 
+  color: #A0A0A0;
+  border-radius: 10px;
+  -webkit-box-shadow: 0px 0px 22px 0px rgba(0,0,0,0.75);
+  -moz-box-shadow: 0px 0px 22px 0px rgba(0,0,0,0.75);
+  box-shadow: 0px 0px 22px 0px rgba(0,0,0,0.75);
+  
+}
 .panel-footer {
   padding: 1px 15px;
   color: #A0A0A0;
@@ -779,11 +788,11 @@ box-shadow: 0px 0px 16px 0px rgba(0,0,0,0.75);
           }
 
           .picture{
-            height:150px;
-            width:150px;
+            height:80px;
+            width:80px;
             position:absolute;
-            top: 75px;
-            left:-75px;
+            top: 17px;
+            left: 46px;
           }
 
           .picture_mob{
@@ -1260,3 +1269,39 @@ hr.two {
   background-color: gray;
   border-radius: 10px;
 }
+
+.zur{
+  font-size: 20px;
+}
+
+.zur1{
+  font-size:  23px;
+}
+
+
+.cara1{
+  color: red;
+}
+
+.cara2{
+  color: #fc7323;
+}
+
+.cara3{
+  color: white;
+}
+
+
+.panel-instructor {
+  
+  background-color: red;
+  -webkit-box-shadow: 0px 0px 22px 0px rgba(0,0,0,0.75);
+  -moz-box-shadow: 0px 0px 22px 0px rgba(0,0,0,0.75);
+  box-shadow: 0px 0px 22px 0px rgba(0,0,0,0.75);
+  
+}
+
+ .hh{
+    color: #fc7323;
+    font-size: 25px;
+  }

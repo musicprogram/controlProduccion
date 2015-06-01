@@ -1,0 +1,111 @@
+
+
+<% re= 0 %>
+<% @ordenproduccion.descripcioncortes.each do |descripcioncorte| %>
+<table class="table">
+
+
+
+  <tr>
+    <td>
+      <div class="col-md-6">
+       <h5 class="izquierda zur"> <strong>COLOR: </strong>
+         <%= descripcioncorte.color.colornombre rescue nil %></h5>
+       </div>
+       <div class="col-md-6 ini">
+         <h5 class="derecha"><strong>Capas: </strong>
+         </h5>
+       </div>
+
+     </td>
+   </tr>
+   <tr class="">
+    <td>
+
+     <div class="col-md-6">
+      <h5 class="izquierda"> <strong>TALLA XS: </strong>
+        <%= descripcioncorte.tallaxs %></h5>
+
+      </div>
+      <div class="col-md-6">
+        <h5 class="derecha"> <strong>TALLA S: </strong>
+          <%= descripcioncorte.tallas %></h5>
+
+        </div>
+
+      </td>
+    </tr>
+    <tr>
+      <td>
+
+        <div class="col-md-6">
+         <h5 class="izquierda"> <strong>TALLA M: </strong>
+           <%= descripcioncorte.tallam %></h5>
+         </div>
+         <div class="col-md-6">
+           <h5 class="derecha"><strong>TALLA L: </strong>
+            <%= descripcioncorte.tallal %></h5>
+
+          </div>
+
+
+
+        </td>
+      </tr>
+      <tr class="">
+        <td>
+         <div class="col-md-6">
+          <h5 class="izquierda"><strong>TALLA XL: </strong>
+           <%= descripcioncorte.tallaxl %></h5>
+
+         </div>
+         <div class="col-md-6">
+
+         </div>
+
+
+
+       </td>
+     </tr>
+
+     <tr>
+      <td>
+       <div class="col-md-12 sumaa">
+         <h5 class="izquierda "> <strong>Total: </strong>
+          <%= descripcioncorte.tallasuma %> </h5>
+
+
+
+        </div>
+      </td>
+    </tr>
+
+    <%      
+    re = re + sumar(descripcioncorte.tallasuma) 
+    %>
+    <hr class="two">
+
+    <div class="col-md-12">
+     <div class="col-md-10"></div>
+     <div class="col-md-2">
+
+      <%= link_to "<i class='fa fa-eraser fa-3x'></i>".html_safe, [descripcioncorte.ordenproduccion, descripcioncorte],method: :delete, data: { confirm: 'Are you sure?' } %>
+
+    </div>
+  </div>
+  <% end %>
+  <tr>
+    <td>
+     <div class="col-md-12 sumaa">
+       <hr class="two">
+       <h5 class="izquierda rr"> <strong>Total Unidad: <%= re %></strong> </h5>
+
+
+
+     </div>
+   </td>
+ </tr>
+
+</table>
+
+<br>

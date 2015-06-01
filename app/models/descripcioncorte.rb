@@ -7,19 +7,19 @@ class Descripcioncorte < ActiveRecord::Base
    
   before_validation :sumatallas
   def sumatallas
-    if tallal == nil then  
+    if tallal == nil || tallal < 0 then  
       self.tallal = 0
     end
-    if tallam == nil then
+    if tallam == nil || tallam < 0 then
       self.tallam = 0
     end
-    if tallas == nil then
+    if tallas == nil || tallas < 0 then
       self.tallas = 0
     end
-    if tallaxl == nil then
+    if tallaxl == nil || tallaxl < 0 then
       self.tallaxl = 0
     end
-    if tallaxs == nil then
+    if tallaxs == nil || tallaxs < 0 then
       self.tallaxs = 0
     end
     

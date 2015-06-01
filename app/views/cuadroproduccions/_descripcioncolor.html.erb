@@ -1,0 +1,17 @@
+<div class="gray">
+	<% @ordenproduccion.descripcioncortes.each do |descripcioncorte| %>
+
+  <% if descripcioncorte.ordenproduccion.id == @cuadroproduccion.ordenproduccion.id %>
+   <div class="col-md-6">
+        <h5 class="izquierda hh"> <strong>Color: </strong><%= descripcioncorte.color.colornombre rescue nil %></h5>
+    </div>
+    <div class="col-md-6">
+        <h5 class="derecha hh"> <strong>Cantidad: </strong> <%= descripcioncorte.tallasuma %></h5>
+    </div>
+
+<%end%>
+<%end%>
+
+</div>
+
+
