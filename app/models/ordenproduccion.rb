@@ -8,12 +8,11 @@ class Ordenproduccion < ActiveRecord::Base
   belongs_to :prenda
   belongs_to :corte
   has_many :descripcioncortes, dependent: :destroy
-  has_many :cuadroproduccions, dependent: :destroy
 
 
   def self.search(search, page)
-      where(['upper(referencia) like ?',
-      "%#{search}%".upcase]).paginate(page: page, per_page: 5).order("referencia")
+      where(['upper(id) like ?',
+      "%#{search}%".upcase]).paginate(page: page, per_page: 5).order("id")
   end
 
 

@@ -25,7 +25,14 @@ class Descripcioncorte < ActiveRecord::Base
     
       self.tallasuma = tallal + tallam + tallas + tallaxl + tallaxs  
   
+  
+      
+
+
+
+
   end
+
   
   
 end

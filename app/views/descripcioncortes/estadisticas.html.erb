@@ -1,10 +1,15 @@
 <body class="homepageesh">
+
+  <% if Descripcioncorte.first == nil || Ordenproduccion.first == nil%>
+  <h1>No hay suficientes datos para obtener un Resultado </h1>
+
+  <%else%>
   <br><br>
 
 
 <div class="col-md-12 prome">
 
-  <h1> <b>Cantidad de Tallas por Color</b> </h1>
+  <h1 class="center"> <b>Cantidad de Tallas por Color</b> </h1>
 
 
 
@@ -197,8 +202,13 @@
   <div class="col-md-12">
 
   
-<h1> <b>Total de metros <%=  Ordenproduccion.sum("totalmetros") %></b></h1>
+<h1 class="black"> <b>Total de metros <%=  Ordenproduccion.sum("totalmetros") %></b></h1>
 
-<h1> <b>Promedio general <%=  Ordenproduccion.average("promedio") %></b></h1>
+<h1 class="black"> <b>Promedio general <%=  Ordenproduccion.average("promedio") %></b></h1>
 </div>
+
+<%end%>
+
 </body>
+
+

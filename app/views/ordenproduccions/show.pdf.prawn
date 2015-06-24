@@ -40,15 +40,22 @@ move_down 20
 			text "Tiqueteada: #{@ordenproduccion.tiqueteada}", :size => 15
 			text "Capas: #{@ordenproduccion.capas}"  , :size => 15
 			text "Responsable del Corte: #{@ordenproduccion.responsablecorte}", :size => 15
-			text "Prenda: #{@ordenproduccion.prenda.prendanombre rescue nil}", :size => 15
-		move_up 70
+			
+
+
+		move_up 55
 			text "Promedio: #{@ordenproduccion.promedio}", :align => :right, :size => 15
 			text "Total Metros: #{@ordenproduccion.totalmetros}", :align => :right, :size => 15 
 
-			text "#{@ordenproduccion.descripcion}", :align => :right,:size => 15
+			text "Prenda: #{@ordenproduccion.prenda.prendanombre rescue nil}",:align => :right, :size => 15
+
+
 
 			text "Corte: #{@ordenproduccion.corte.cortenombre rescue nil}", :align => :right, :size => 15
-		move_down 10	
+
+			move_down 10
+			text "#{@ordenproduccion.descripcion}", :size => 15
+		move_down 20	
 	stroke_horizontal_rule		
 
 
@@ -56,15 +63,14 @@ move_down 20
 
 	@ordenproduccion.descripcioncortes.each do |descripcioncorte|
 
-		text "Color: #{descripcioncorte.color.colornombre rescue nil}",  :size => 15
+		text "Color: #{descripcioncorte.color.colornombre rescue nil}",  :size => 20,:style => :bold
 		text "Talla S: #{descripcioncorte.tallas}", :align => :right,  :size => 15
 
 		text "Talla L: #{descripcioncorte.tallal}", :align => :right,  :size => 15
 
 		
 
-		text "Total: #{descripcioncorte.tallasuma}", :align => :right,  :size => 15
-
+		text "Total: #{descripcioncorte.tallasuma}", :align => :right,  :size => 20,:style => :bold
 
 		move_up 53
 
@@ -72,9 +78,7 @@ move_down 20
 			text "Total M: #{descripcioncorte.tallam}",  :size => 15
 			text "TallaXL: #{descripcioncorte.tallaxl}",  :size => 15
 			
-
 			stroke_horizontal_rule	
 		move_down 10
 
 	end
-

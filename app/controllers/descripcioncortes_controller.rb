@@ -21,7 +21,7 @@ class DescripcioncortesController < ApplicationController
      @descripcioncortem =  Descripcioncorte.select('color_id').group('color_id').sum('tallam')
      @descripcioncortel =  Descripcioncorte.select('color_id').group('color_id').sum('tallal')
      @descripcioncortexl =  Descripcioncorte.select('color_id').group('color_id').sum('tallaxl')
-     
+
  end
  
   private
