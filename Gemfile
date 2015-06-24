@@ -49,3 +49,4 @@ gem 'bootstrap-tooltip-rails'
 
 gem 'prawn'
 gem "prawnto_2", :require => "prawnto"
+gem "mini_magick"

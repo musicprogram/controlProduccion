@@ -2452,7 +2452,7 @@ table th[class*="col-"] {
 .prome{
   overflow-x: auto;
   min-height: 0.01%;
-  height:380px;
+  height: 580px;
   overflow-y:scroll;
   overflow-x:none;
   background: rgba(226,226,226,1);

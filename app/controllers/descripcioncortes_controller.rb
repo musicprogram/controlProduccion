@@ -12,9 +12,17 @@ class DescripcioncortesController < ApplicationController
     @descripcioncorte = @ordenproduccion.descripcioncortes.find(params[:id])
     @descripcioncorte.destroy
     redirect_to ordenproduccion_path(@ordenproduccion)
-  end
+ end
  
- 
+ def estadisticas
+     
+     @descripcioncortexs =  Descripcioncorte.select('color_id').group('color_id').sum('tallaxs')
+     @descripcioncortess =  Descripcioncorte.select('color_id').group('color_id').sum('tallas')
+     @descripcioncortem =  Descripcioncorte.select('color_id').group('color_id').sum('tallam')
+     @descripcioncortel =  Descripcioncorte.select('color_id').group('color_id').sum('tallal')
+     @descripcioncortexl =  Descripcioncorte.select('color_id').group('color_id').sum('tallaxl')
+     
+ end
  
   private
     def descripcion_params

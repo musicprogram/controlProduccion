@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20150529233531) do
+ActiveRecord::Schema.define(version: 20150529145605) do
 
   create_table "clientes", force: true do |t|
     t.string   "clientenombre"
@@ -31,20 +31,6 @@ ActiveRecord::Schema.define(version: 20150529233531) do
     t.datetime "updated_at"
   end
 
-  create_table "cuadroproduccions", force: true do |t|
-    t.date     "fechatrazo"
-    t.date     "fechacorte"
-    t.date     "fechaentradabodega"
-    t.date     "fechaentregamodulo"
-    t.integer  "ordenproduccion_id"
-    t.integer  "modulo_id"
-    t.datetime "created_at"
-    t.datetime "updated_at"
-  end
-
-  add_index "cuadroproduccions", ["modulo_id"], name: "index_cuadroproduccions_on_modulo_id"
-  add_index "cuadroproduccions", ["ordenproduccion_id"], name: "index_cuadroproduccions_on_ordenproduccion_id"
-
   create_table "descripcioncortes", force: true do |t|
     t.integer  "color_id"
     t.integer  "tallaxs"
@@ -60,32 +46,6 @@ ActiveRecord::Schema.define(version: 20150529233531) do
 
   add_index "descripcioncortes", ["color_id"], name: "index_descripcioncortes_on_color_id"
   add_index "descripcioncortes", ["ordenproduccion_id"], name: "index_descripcioncortes_on_ordenproduccion_id"
-
-  create_table "instructores", force: true do |t|
-    t.integer  "nombre_id"
-    t.date     "fecharecibo"
-    t.integer  "cantidad"
-    t.integer  "talla_id"
-    t.integer  "primeras"
-    t.integer  "segundas"
-    t.integer  "totalrecibidas"
-    t.integer  "observacionescalidad"
-    t.date     "fechasalidaalmacen"
-    t.integer  "duracion"
-    t.integer  "cuadroproduccion_id"
-    t.datetime "created_at"
-    t.datetime "updated_at"
-  end
-
-  add_index "instructores", ["cuadroproduccion_id"], name: "index_instructores_on_cuadroproduccion_id"
-  add_index "instructores", ["nombre_id"], name: "index_instructores_on_nombre_id"
-  add_index "instructores", ["talla_id"], name: "index_instructores_on_talla_id"
-
-  create_table "modulos", force: true do |t|
-    t.string   "modulonombre"
-    t.datetime "created_at"
-    t.datetime "updated_at"
-  end
 
   create_table "nombres", force: true do |t|
     t.string   "nombreinstructor"

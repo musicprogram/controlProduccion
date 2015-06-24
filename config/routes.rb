@@ -7,14 +7,12 @@ Rails.application.routes.draw do
   resources :nombres
 
   devise_for :usuarios
-  resources :modulos
-
  
 
   resources :cortes
 
   get 'welcome/index'
-  get 'instructores/showinstructores'
+  get 'descripcioncortes/estadisticas'
 
   resources :procesos
 
@@ -27,14 +25,8 @@ Rails.application.routes.draw do
    
   end
 
-  resources :ordenproduccions do
-      resources :cuadroproduccions 
-  end
   
-  resources :cuadroproduccions do
-     resources :instructores
-  end
-
+    resources :descripcioncortes 
 
     resources :clientes
 

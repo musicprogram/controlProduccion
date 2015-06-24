@@ -21,14 +21,21 @@ class Ordenproduccion < ActiveRecord::Base
    before_validation :sumas
 
     def sumas
+
       
+   
+    
     if largotrazo != nil && vecestrazo != nil         
       self.promedio = largotrazo / vecestrazo
       self.totalmetros = largotrazo * capas
     end  
-  
+    
+      
   
     end
+
+
+
         
 
 end

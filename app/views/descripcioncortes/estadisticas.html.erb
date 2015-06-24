@@ -1,0 +1,204 @@
+<body class="homepageesh">
+  <br><br>
+
+
+<div class="col-md-12 prome">
+
+  <h1> <b>Cantidad de Tallas por Color</b> </h1>
+
+
+
+   <div class="col-md-4">
+     
+    <div class="table-responsive1 cubo">
+              <table class="table table-condensed ">
+                <thead>
+                 <br>
+                 <tr class="barra">
+                  <th class="invisi">Id Instructor</th>
+                  
+                  <th><h3><b>Color</b></h3></th>
+                  
+                  <th><h3><b>Talla XS</b></h3></th>
+                </tr>
+              </thead>
+  
+              <tbody>
+                
+               
+                <% @descripcioncortexs.each do |x, y| %>
+                
+                <tr>
+                 
+                  <% color = Color.find(x) %>
+                  <td class="invisi"><%= x %></td>
+                  
+                  <td><h3><b><%= color.colornombre  %></b></h3></td>
+                  
+                  <td><h3><%= y.to_i %>  </h3></td>
+                    
+  
+                </tr>
+                
+                <% end %>
+                
+              </tbody>
+            </table>
+          </div>
+   </div> 
+   <div class="col-md-2">
+      <div class="table-responsive1 cubo">
+              <table class="table table-condensed ">
+                <thead>
+                 <br>
+                 <tr class="barra">
+                  <th class="invisi">Id Instructor</th>
+                  
+                  
+                  
+                  <th><h3><b>Talla S</b></h3></th>
+                </tr>
+              </thead>
+  
+              <tbody>
+                
+               
+                <% @descripcioncortess.each do |x, y| %>
+                
+                <tr>
+                 
+                  <% color = Color.find(x) %>
+                  <td class="invisi"><%= x %></td>
+                  
+                 
+                  
+                  <td><h3><%= y.to_i %>  </h3></td>
+                    
+  
+                </tr>
+                
+                <% end %>
+                
+              </tbody>
+            </table>
+          </div>
+   </div>
+   <div class="col-md-2">
+      <div class="table-responsive1 cubo">
+              <table class="table table-condensed ">
+                <thead>
+                 <br>
+                 <tr class="barra">
+                  <th class="invisi">Id Instructor</th>
+                  
+                  
+                  <th><h3><b>Talla M</b></h3></th>
+                </tr>
+              </thead>
+  
+              <tbody>
+                
+               
+                <% @descripcioncortem.each do |x, y| %>
+                
+                <tr>
+                 
+                  <% color = Color.find(x) %>
+                  <td class="invisi"><%= x %></td>
+                  
+                  <td><h3><%= y.to_i %>  </h3></td>
+                    
+  
+                </tr>
+                
+                <% end %>
+                
+              </tbody>
+            </table>
+          </div>
+   </div>  
+   <div class="col-md-2">
+      <div class="table-responsive1 cubo">
+              <table class="table table-condensed ">
+                <thead>
+                 <br>
+                 <tr class="barra">
+                  <th class="invisi">Id Instructor</th>
+                  
+                 
+                  <th><h3><b>Talla L</b></h3></th>
+                </tr>
+              </thead>
+  
+              <tbody>
+                
+               
+                <% @descripcioncortel.each do |x, y| %>
+                
+                <tr>
+                 
+                  <% color = Color.find(x) %>
+                  <td class="invisi"><%= x %></td>
+                  
+                 
+                  
+                  <td><h3><%= y.to_i %>  </h3></td>
+                    
+  
+                </tr>
+                
+                <% end %>
+                
+              </tbody>
+            </table>
+          </div>
+   </div>  
+   <div class="col-md-2">
+      <div class="table-responsive1 cubo">
+              <table class="table table-condensed ">
+                <thead>
+                 <br>
+                 <tr class="barra">
+                  <th class="invisi">Id Instructor</th>
+                  
+                 
+                  
+                  <th><h3><b>Talla XL</b></h3></th>
+                </tr>
+              </thead>
+  
+              <tbody>
+                
+               
+                <% @descripcioncortexl.each do |x, y| %>
+                
+                <tr>
+                 
+                  <% color = Color.find(x) %>
+                  <td class="invisi"><%= x %></td>
+                  
+                  
+                  <td><h3><%= y.to_i %>  </h3></td>
+                    
+  
+                </tr>
+                
+                <% end %>
+                
+              </tbody>
+            </table>
+          </div>
+   </div>  
+   
+   
+</div>
+  
+
+  <div class="col-md-12">
+
+  
+<h1> <b>Total de metros <%=  Ordenproduccion.sum("totalmetros") %></b></h1>
+
+<h1> <b>Promedio general <%=  Ordenproduccion.average("promedio") %></b></h1>
+</div>
+</body>

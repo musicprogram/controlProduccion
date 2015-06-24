@@ -14,7 +14,7 @@ class CreateOrdenproduccions < ActiveRecord::Migration
       t.float :promedio
       t.string :cantidad
       t.string :responsablecorte
-      t.float :totalmetros
+      t.float :totalmetros     
       t.string :tiqueteada
       t.integer :capas
       t.references :prenda, index: true

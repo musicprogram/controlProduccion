@@ -1,2 +1,0 @@
-module InstructoresHelper
-end

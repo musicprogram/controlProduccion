@@ -41,15 +41,7 @@ cortes.each do |e|
 Corte.create(e) unless Corte.exists?(e)
 end
 
-modulos = [{modulonombre: "Ropa interior y Deportiva"},{modulonombre: "Jeans Dryll"},{modulonombre: "Exterior"},{modulonombre: "Produccion"}]
-modulos.each do |e|
-Modulo.create(e) unless Modulo.exists?(e)
-end
 
-nombres = [{nombreinstructor: "Arelis Sierra"},{nombreinstructor: "Jennifer Vargaz"},{nombreinstructor: "Henry Ramirez"},{nombreinstructor: "Maydee Guevara"},{nombreinstructor: "Elsa Rodriguez"}]
-nombres.each do |e|
-Nombre.create(e) unless Nombre.exists?(e)
-end
 
 
 tallas = [{nombre: "XS"},{nombre: "S"},{nombre: "M"},{nombre: "L"},{nombre: "XL"}]

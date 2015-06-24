@@ -7,6 +7,8 @@ class OrdenproduccionsController < ApplicationController
     @ordenproduccions = Ordenproduccion.search(params[:search], params[:page])
     @fondo_page = true
     @orden_p = true
+    
+    
   end
 
   # GET /ordenproduccions/1
@@ -14,6 +16,7 @@ class OrdenproduccionsController < ApplicationController
   def show    
      @home_pagee = true
      @footer_tuto1 = true
+    
   end
 
   # GET /ordenproduccions/new
