@@ -193,22 +193,23 @@
               </tbody>
             </table>
           </div>
+          
+          
    </div>  
    
    
 </div>
   
 
-  <div class="col-md-12">
+  <div class="col-md-12 panel1">
 
+<h1 class="center1"> <b>Total de metros <%=  Ordenproduccion.sum("totalmetros").round(2) %></b></h1>
+
+<h1 class="center1"> <b>Promedio general <%=  Ordenproduccion.average("promedio").round(2) %></b></h1>
   
-<h1 class="black"> <b>Total de metros <%=  Ordenproduccion.sum("totalmetros") %></b></h1>
-
-<h1 class="black"> <b>Promedio general <%=  Ordenproduccion.average("promedio") %></b></h1>
 </div>
 
 <%end%>
 
 </body>
-
 
