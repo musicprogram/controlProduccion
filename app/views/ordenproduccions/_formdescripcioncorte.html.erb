@@ -5,6 +5,7 @@
   <%= form_for([@ordenproduccion, @ordenproduccion.descripcioncortes.build]) do |f| %>
 
 
+
   <div class="col-md-12">
 
    <div class="col-md-4">
@@ -14,60 +15,91 @@
     </div>
   </div>
 
-  <div class="col-md-4">
-   <div class="field">
-     <h5><b>TALLA XS</b></h5>
-     <%= f.number_field :tallaxs , class:'form-control', :id => 'xs', :onblur => 'sum()'%>
-   </div>
- </div>
- <div class="col-md-4">
-  <div class="field">
-   <h5><b>TALLA S</b></h5>
-   <%= f.number_field :tallas , class:'form-control', :id => 's', :onblur => 'sum()'%>
- </div>
-</div>
-
-
-
-
-
-
+  
 </div>
 
 
 <div class="col-md-12">
-
-
- <div class="col-md-4">
-   <div class="field">
+ <div class="col-md-1"></div>
+ <div class="col-md-2"><div class="field">
+     <h5><b>TALLA XS</b></h5>
+     <%= f.number_field :tallaxs , class:'form-control', :id => 'xs', :onblur => 'sum()'%>
+   </div></div>
+ <div class="col-md-2"><div class="field">
+   <h5><b>TALLA S</b></h5>
+   <%= f.number_field :tallas , class:'form-control', :id => 's', :onblur => 'sum()'%>
+ </div></div>
+ <div class="col-md-2"><div class="field">
      <h5><b>TALLA M</b></h5>
      <%= f.number_field :tallam , class:'form-control',:id => 'm', :onblur => 'sum()'%>
-   </div>
- </div>
-
-
-
- <div class="col-md-4">
-  <div class="field">
+   </div></div>
+ <div class="col-md-2"><div class="field">
    <h5><b>TALLA L</b></h5>
    <%= f.number_field :tallal , class:'form-control', :id => 'l', :onblur => 'sum()'%>
- </div>
-</div>
-
-
-
-
-
-
-<div class="col-md-4">
-
- <div class="field">
+ </div></div> 
+ <div class="col-md-2"><div class="field">
    <h5><b>TALLA XL</b></h5>
    <%= f.number_field :tallaxl , class:'form-control' , :id => "xl", :onblur => 'sum()' %>
- </div>
+ </div></div>
+ <div class="col-md-1"></div>
 </div>
 
+<div class="col-md-12">
+ <div class="col-md-1"></div>
+ <div class="col-md-2"><div class="field">
+     <h5><b>TALLA 6</b></h5>
+     <%= f.number_field :talla6 , class:'form-control', :id => 'xs', :onblur => 'sum()'%>
+   </div></div>
+ <div class="col-md-2"><div class="field">
+   <h5><b>TALLA 8</b></h5>
+   <%= f.number_field :talla8 , class:'form-control', :id => 's', :onblur => 'sum()'%>
+ </div></div>
+ <div class="col-md-2"><div class="field">
+     <h5><b>TALLA 10</b></h5>
+     <%= f.number_field :talla10 , class:'form-control',:id => 'm', :onblur => 'sum()'%>
+   </div></div>
+ <div class="col-md-2"><div class="field">
+   <h5><b>TALLA 12</b></h5>
+   <%= f.number_field :talla12 , class:'form-control', :id => 'l', :onblur => 'sum()'%>
+ </div></div> 
+ <div class="col-md-2"><div class="field">
+   <h5><b>TALLA 14</b></h5>
+   <%= f.number_field :talla14 , class:'form-control' , :id => "xl", :onblur => 'sum()' %>
+ </div></div>
+ <div class="col-md-1"></div>
 </div>
+
+<div class="col-md-12">
+ <div class="col-md-1"></div>
+ <div class="col-md-2"><div class="field">
+     <h5><b>TALLA 28</b></h5>
+     <%= f.number_field :talla28 , class:'form-control', :id => 'xs', :onblur => 'sum()'%>
+   </div></div>
+ <div class="col-md-2"><div class="field">
+   <h5><b>TALLA 30</b></h5>
+   <%= f.number_field :talla30 , class:'form-control', :id => 's', :onblur => 'sum()'%>
+ </div></div>
+ <div class="col-md-2"><div class="field">
+     <h5><b>TALLA 32</b></h5>
+     <%= f.number_field :talla32 , class:'form-control',:id => 'm', :onblur => 'sum()'%>
+   </div></div>
+ <div class="col-md-2"><div class="field">
+   <h5><b>TALLA 34</b></h5>
+   <%= f.number_field :talla34 , class:'form-control', :id => 'l', :onblur => 'sum()'%>
+ </div></div> 
+ <div class="col-md-2"><div class="field">
+   <h5><b>TALLA 36</b></h5>
+   <%= f.number_field :talla36 , class:'form-control' , :id => "xl", :onblur => 'sum()' %>
+ </div></div>
+ <div class="col-md-1"></div>
+</div>
+
+
+
+
+
+
+
 
 
 
