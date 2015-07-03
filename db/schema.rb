@@ -89,12 +89,6 @@ ActiveRecord::Schema.define(version: 20150529145605) do
     t.datetime "updated_at"
   end
 
-  create_table "procesos", force: true do |t|
-    t.string   "procesonombre"
-    t.datetime "created_at"
-    t.datetime "updated_at"
-  end
-
   create_table "tallas", force: true do |t|
     t.string   "nombre"
     t.datetime "created_at"

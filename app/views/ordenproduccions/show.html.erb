@@ -118,7 +118,7 @@
                     <div class="col-md-6">
 
                      <h5 class="izquierda"> <strong>Promedio: </strong>
-                      <%= @ordenproduccion.promedio.round(2) %></h5>
+                      <%= @ordenproduccion.promedio.round(2) rescue nil %></h5>
                     </div>
                     <div class="col-md-6">
                       <h5 class="derecha"> <strong>Cantidad: </strong>

@@ -1,6 +1,6 @@
 
 <body class="fonpage orden_p">
-  <h1 class="center">ORDENES DE PRODUCCIÓN</h1> 
+  <h1 class="center"><b>ORDENES DE PRODUCCIÓN</b></h1> 
   <br>
 <h4 class="derecho"><span class="badge option animated wobble"> <%= @ordenproduccions.count %> </span></h4 >
 
@@ -8,7 +8,7 @@
   <% content_tag :label do %>
 
   <%= text_field_tag :search, params[:search], class:'form-control'  %> <br>
-  <%= submit_tag "Buscar Orden", :id => nil, class:'btn btn-succes  tex1'%>
+  <%= submit_tag "Buscar Referencia", :referencia => nil, class:'btn btn-succes  tex1'%>
   <% end %>
   <% end %>
  <br>
@@ -35,7 +35,7 @@
           <tr>
             <td class="minus"><h3><b><%= ordenproduccion.id %></b></h3></td>
             <td class="minus"><h3><%= ordenproduccion.referencia %></h3></td>
-            <td class="minus"><h3><%= ordenproduccion.fechaprogramacion %></h3></td>
+            <td class="minus"><h5><%= ordenproduccion.fechaprogramacion %></h5></td>
             <td class="minus"><h4><%= ordenproduccion.descripcion %></h4></td>
 
 

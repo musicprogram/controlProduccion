@@ -14,8 +14,6 @@ Rails.application.routes.draw do
   get 'welcome/index'
   get 'descripcioncortes/estadisticas'
 
-  resources :procesos
-
   resources :colors
 
 
@@ -25,7 +23,7 @@ Rails.application.routes.draw do
    
   end
 
-  
+    
     resources :descripcioncortes 
 
     resources :clientes

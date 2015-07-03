@@ -14,12 +14,12 @@ colors.each do |e|
 Color.create(e) unless Color.exists?(e)
 end
 
-clientes = [{clientenombre: "Sena"},{clientenombre: "Otro"}]
+clientes = [{clientenombre: "SENA"},{clientenombre: "Otro"}]
 clientes.each do |e|
 Cliente.create(e) unless Cliente.exists?(e)
 end
 
-prendas = [{prendanombre: "Jean"}]
+prendas = [{prendanombre: "Brasier"},{prendanombre: "Brasier y Panty"},{prendanombre: "Jean"}]
 prendas.each do |e|
 Prenda.create(e) unless Prenda.exists?(e)
 end
@@ -31,17 +31,12 @@ telas.each do |e|
 Tela.create(e) unless Tela.exists?(e)
 end
 
-procesos = [{procesonombre: "Estampado"}]
-procesos.each do |e|
-Proceso.create(e) unless Proceso.exists?(e)
-end
+
 
 cortes = [{cortenombre: "Mecánico"},{cortenombre: "Vértical"},{cortenombre: "Cinfín"}]
 cortes.each do |e|
 Corte.create(e) unless Corte.exists?(e)
 end
-
-
 
 
 tallas = [{nombre: "XS"},{nombre: "S"},{nombre: "M"},{nombre: "L"},{nombre: "XL"}]
