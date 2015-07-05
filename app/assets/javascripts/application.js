@@ -64,10 +64,18 @@ $(document).on('page:change', function () {
 	})
 
 	$(document).on('page:change', function () {
-    
-    	 $('.collapse').collapse()
+    	
+    	$('.collapse').on('hidden.bs.collapse', function () {
+  				 $('.collapse').collapse('hide')
+		})
+    	
+    	  
     	 
 	});
 	
 	
 $('.encima').css("display", "block");
+
+
+
+

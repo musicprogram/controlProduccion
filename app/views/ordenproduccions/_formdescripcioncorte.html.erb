@@ -8,18 +8,56 @@
 
   <div class="col-md-12">
 
-   <div class="col-md-4">
+   <div class="col-md-3">
     <div class="field">
+     
+     
       <h5><b>COLOR</b></h5>
       <%= f.collection_select :color_id, Color.all, :id, :colornombre,{prompt: "Seleccione Color"},{ class: "form-control"} %>
     </div>
   </div>
+  
+  <div class="col-md-3">
+   <div class="filed">
+    
+<button class="btn btn-succes tallaboton" role="button" data-toggle="collapse" href="#collapseExample" aria-expanded="false" aria-controls="collapseExample">
+<b>Tallas Letras</b>
+</button>
+   </div>
+  </div>
+  
+   <div class="col-md-3">
+   <div class="filed">
+    
+<button class="btn btn-succes tallaboton" role="button" data-toggle="collapse" href="#collapseExample2" aria-expanded="false" aria-controls="collapseExample">
+<b>Tallas Unidad</b>
+</button>
+   </div>
+  </div>
+
+
+ <div class="col-md-3">
+   <div class="filed">
+    
+
+<button class="btn btn-succes tallaboton " type="button" data-toggle="collapse" data-target="#collapseExample1" aria-expanded="false" aria-controls="collapseExample">
+ <b>Tallas Unidades</b>
+</button>
+   </div>
+  </div>
+
 
   
 </div>
 
 
-<div class="col-md-12">
+
+
+
+<div class="collapse" id="collapseExample">
+  <div class="">
+
+ <div class="col-md-12">
  <div class="col-md-1"></div>
  <div class="col-md-2"><div class="field">
      <h5><b>TALLA XS</b></h5>
@@ -44,7 +82,16 @@
  <div class="col-md-1"></div>
 </div>
 
-<div class="col-md-12">
+
+
+
+
+
+
+  </div>
+</div>
+<div class="collapse" id="collapseExample2">
+  <div class="col-md-12">
  <div class="col-md-1"></div>
  <div class="col-md-2"><div class="field">
      <h5><b>TALLA 6</b></h5>
@@ -68,6 +115,12 @@
  </div></div>
  <div class="col-md-1"></div>
 </div>
+</div>
+
+
+
+<div class="collapse" id="collapseExample1">
+  
 
 <div class="col-md-12">
  <div class="col-md-1"></div>
@@ -94,13 +147,7 @@
  <div class="col-md-1"></div>
 </div>
 
-
-
-
-
-
-
-
+</div>
 
 
 
@@ -113,12 +160,11 @@
 
 
 
-
 <div class="col-md-12">
  <div class="col-md-8">
 
  </div> 
-
+<br></br>
  <div class="col-md-4">
   <div class="actions">
     <%= f.submit "GUARDAR",class:'btn btn-succes questo tex2'%>
@@ -133,3 +179,5 @@
 
 
 </div>
+
+

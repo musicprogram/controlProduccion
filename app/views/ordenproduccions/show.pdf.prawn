@@ -46,8 +46,8 @@ move_up 35
 
 
 		move_up 55
-			text "Promedio: #{@ordenproduccion.promedio.round(2)}", :align => :right, :size => 15,:style => :bold
-			text "Total Metros: #{@ordenproduccion.totalmetros.round(2)}", :align => :right, :size => 15 ,:style => :bold
+			text "Promedio: #{@ordenproduccion.promedio}", :align => :right, :size => 15,:style => :bold
+			text "Total Metros: #{@ordenproduccion.totalmetros}", :align => :right, :size => 15 ,:style => :bold
 
 		
 
