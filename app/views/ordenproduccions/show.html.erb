@@ -190,9 +190,9 @@
          <br>
          <br>
          <strong class="zur1"><b>Centro de formación en diseño, confección y Moda</b></strong> <br>
-         <%= link_to "<i class='fa fa-print fa-4x'></i>".html_safe, ordenproduccion_path(@ordenproduccion, :format => 'pdf') %>   
+         <%= link_to "<i class='fa fa-print fa-4x'></i>".html_safe, ordenproduccion_path(@ordenproduccion, :format => 'pdf'), { :class => 'tooltips', 'data-toggle' => 'tooltip', 'data-placement' => 'left', :title => '', 'data-original-title' => 'Imprimir PDF' } %>   
          <%= link_to "<i class='fa fa-pencil fa-4x'></i>".html_safe, edit_ordenproduccion_path(@ordenproduccion) %> 
-         <%= link_to "<i class='fa fa-arrow-circle-left fa-4x'></i>".html_safe, ordenproduccions_path %>
+         <%= link_to "<i class='fa fa-arrow-circle-left fa-4x'></i>".html_safe, ordenproduccions_path, { :class => 'tooltips', 'data-toggle' => 'tooltip', 'data-placement' => 'right', :title => '', 'data-original-title' => 'Atras' } %>
        
 
        </div>

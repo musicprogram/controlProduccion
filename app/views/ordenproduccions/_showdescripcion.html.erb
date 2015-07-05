@@ -1,146 +1,198 @@
 <body class="homepageesh">
  
+ 
+
 
 <% re= 0 %>
 <% @ordenproduccion.descripcioncortes.each do |descripcioncorte| %>
 <table class="table">
 
 
-
-  <tr>
-    <td>
-      <div class="col-md-6">
-       <h5 class="izquierda zur"> <strong>COLOR: </strong>
-         <%= descripcioncorte.color.colornombre rescue nil %></h5>
-       </div>
-       <div class="col-md-6 ini">
-         <h5 class="derecha"><strong>Capas: </strong>
-         </h5>
-       </div>
-
-     </td>
-   </tr>
-   <tr class="">
-    <td>
-
-     <div class="col-md-12">
-      <div class="col-md-1"></div>
-      <div class="col-md-2">
-      <h5 class="izquierda"> <strong>TALLA XS: </strong>
-        <%= descripcioncorte.tallaxs %></h5>
-
-      </div>
-      <div class="col-md-2">
-        <h5 class="derecha"> <strong>TALLA S: </strong>
-          <%= descripcioncorte.tallas %></h5>
-
-        </div>
-        <div class="col-md-2">
-         <h5 class="izquierda"> <strong>TALLA M: </strong>
-           <%= descripcioncorte.tallam %></h5>
-        </div>
-        <div class="col-md-2">
-          <h5 class="derecha"><strong>TALLA L: </strong>
-            <%= descripcioncorte.tallal %></h5>
-        </div>
-        <div class="col-md-2">
-           <h5 class="izquierda"><strong>TALLA XL: </strong>
-            <%= descripcioncorte.tallaxl %></h5>
+ <hr class="two">
+    <hr class="two">
  
-          </div>
-              <div class="col-md-1"></div>
+ <% if  descripcioncorte.color  == nil%>
+   
+   
+  <% elsif %>
+ <ul class="list-group">
 
-     </div>
-     
+ 
+  
+  <% if  descripcioncorte.tallaxs < 1 %>
+  
+  <% elsif %>
+  
+   <li class="list-group-item">
+     <span class="badge"><%= descripcioncorte.tallaxs %></span>
+     <strong>TALLA XS: </strong>
+   </li>
+  
+   <% end %>
+   
+   <% if  descripcioncorte.tallas < 1 %>
+  
+  <% elsif %>
+    <li class="list-group-item">
+      <span class="badge"><%= descripcioncorte.tallas %></span>
+      <strong>TALLA S: </strong>
+    </li>
+    
+  <% end %>
+  
+  
+  
+   <% if  descripcioncorte.tallam < 1 %>
+  
+  <% elsif %>
+    
+    <li class="list-group-item">
+      <span class="badge"> <%= descripcioncorte.tallam %></span>
+      <strong>TALLA M: </strong>
+    </li>
+  <% end %>
+  
+   
+  <% if  descripcioncorte.tallal < 1 %>
+  
+  <% elsif %> 
+    <li class="list-group-item">
+      <span class="badge"> <%= descripcioncorte.tallal %></span>
+      <strong>TALLA L: </strong>
+    </li>
+  
+  <% end %>
+  
+  
+   <% if  descripcioncorte.tallaxl < 1 %>
+  
+    <% elsif %>
+    <li class="list-group-item">
+      <span class="badge"> <%= descripcioncorte.tallaxl %></span>
+      <strong>TALLA XL: </strong>
+    </li>
+    
+    <% end %>
+    
+    
+   <% if  descripcioncorte.talla6 < 1 %>
+  
+  <% elsif %>  
+  <li class="list-group-item">
+    <span class="badge"> <%= descripcioncorte.talla6 %></span>
+    <strong>TALLA 6: </strong>
+  </li>
+  
+  <% end %>
+  
+  
+   <% if  descripcioncorte.talla8 < 1 %>
+  
+  <% elsif %>
+  <li class="list-group-item">
+    <span class="badge"> <%= descripcioncorte.talla8 %></span>
+    <strong>TALLA 8: </strong>
+  </li>
+  
+  <% end %>
+  
+  
+   <% if  descripcioncorte.talla10 < 1 %>
+  
+  <% elsif %>
+  
+  <li class="list-group-item">
+    <span class="badge"> <%= descripcioncorte.talla10 %></span>
+    <strong>TALLA 10: </strong>
+  </li>
+  
+  
+  <% end %>
+  
+   <% if  descripcioncorte.talla12 < 1 %>
+  
+  <% elsif %>
+  <li class="list-group-item">
+    <span class="badge"> <%= descripcioncorte.talla12 %></span>
+    <strong>TALLA 12: </strong>
+  </li>
+  
+  
+  <% end %>
+  
+  
+   <% if  descripcioncorte.talla14 < 1 %>
+  
+  <% elsif %>
+  <li class="list-group-item">
+    <span class="badge"> <%= descripcioncorte.talla14 %></span>
+    <strong>TALLA 14: </strong>
+  </li>
+  
+  <% end %>
+  
+   <% if  descripcioncorte.talla28 < 1 %>
+  
+  <% elsif %>
+  <li class="list-group-item">
+    <span class="badge"> <%= descripcioncorte.talla28 %></span>
+    <strong>TALLA 28: </strong>
+  </li>
+  
+  <% end %>
+  
+   <% if  descripcioncorte.talla30 < 1 %>
+  
+  <% elsif %>
+  <li class="list-group-item">
+    <span class="badge"> <%= descripcioncorte.talla30 %></span>
+    <strong>TALLA 30: </strong>
+  </li>
+  
+  <% end %>
+  
+   <% if  descripcioncorte.talla32 < 1 %>
+  
+  <% elsif %>
+  <li class="list-group-item">
+    <span class="badge"> <%= descripcioncorte.talla32 %></span>
+    <strong>TALLA 32: </strong>
+  </li>
+  
+  <% end %>
+  
+   <% if  descripcioncorte.talla34 < 1 %>
+  
+  <% elsif %>
+  
+  <li class="list-group-item">
+    <span class="badge"> <%= descripcioncorte.talla34 %></span>
+    <strong>TALLA 34: </strong>
+  </li>
+  
+  <% end %>
+  
+   <% if  descripcioncorte.talla36 < 1 %>
+  
+  <% elsif %>
+  <li class="list-group-item">
+    <span class="badge"> <%= descripcioncorte.talla36 %></span>
+    <strong>TALLA 36: </strong>
+  </li>
 
-      </td>
-    </tr>
-    <tr>
-     
-      </tr>
-      <tr class="">
-        <td>
-         
-         <div class="col-md-12">
-          
-          <div class="col-md-1"></div>
-          
-          <div class="col-md-2">
-           <h5 class="izquierda"> <strong>TALLA 6:</strong>
-           <%= descripcioncorte.talla6 %></h5>
-          </div>
-          <div class="col-md-2">
-          <h5 class="derecha"> <strong>TALLA 8:</strong>
-           <%= descripcioncorte.talla8 %></h5>
-          </div>
-         
-          <div class="col-md-2">
-          <h5 class="izquierda"> <strong>TALLA 10:</strong>
-           <%= descripcioncorte.talla10 %></h5>
-          </div>
-         
-          <div class="col-md-2">
-          <h5 class="derecha"> <strong>TALLA 12:</strong>
-           <%= descripcioncorte.talla12 %></h5>
-          </div>
-          
-          <div class="col-md-2">
-          <h5 class="izquierda"> <strong>TALLA 14:</strong>
-           <%= descripcioncorte.talla14 %></h5>
-          </div>
-          
-          
-          <div class="col-md-1"></div>
-         </div>
+<%end%>
 
+</ul>
+  
+ 
 
-
-       </td>
-     </tr>
-      <tr class="">
-        <td>
-         
-         <div class="col-md-12">
-          
-          <div class="col-md-1"></div>
-          
-          <div class="col-md-2">
-           <h5 class="izquierda"> <strong>TALLA 28:</strong>
-           <%= descripcioncorte.talla28 %></h5>
-          </div>
-          <div class="col-md-2">
-          <h5 class="derecha"> <strong>TALLA 30:</strong>
-           <%= descripcioncorte.talla30 %></h5>
-          </div>
-         
-          <div class="col-md-2">
-          <h5 class="izquierda"> <strong>TALLA 32:</strong>
-           <%= descripcioncorte.talla32 %></h5>
-          </div>
-         
-          <div class="col-md-2">
-          <h5 class="derecha"> <strong>TALLA 34:</strong>
-           <%= descripcioncorte.talla34 %></h5>
-          </div>
-          
-          <div class="col-md-2">
-          <h5 class="izquierda"> <strong>TALLA 36:</strong>
-           <%= descripcioncorte.talla36 %></h5>
-          </div>
-          
-          
-          <div class="col-md-1"></div>
-         </div>
-
-
-
-       </td>
-     </tr>
+   
 
      <tr>
       <td>
        <div class="col-md-12 sumaa">
-         <h5 class="izquierda "> <strong>Total: </strong>
+         <h5 class="izquierda "> <strong>COLOR:  <%= descripcioncorte.color.colornombre rescue nil %> </strong> 
+       <br> <strong>Total: </strong>
           <%= descripcioncorte.tallasuma %> </h5>
 
 
@@ -152,7 +204,12 @@
     <%      
     re = re + sumar(descripcioncorte.tallasuma) 
     %>
-    <hr class="two">
+    
+    <% end %>
+
+ 
+    
+   
 
     <div class="col-md-12">
      <div class="col-md-10"></div>
@@ -167,12 +224,14 @@
     <td>
      <div class="col-md-12 sumaa">
        <hr class="two">
-       <h5 class="izquierda rr"> <strong>Total Unidad: <%= re %></strong> </h5>
-
+       <h5 class="izquierda rr"> 
+       <strong>Total Unidad: <%= re %></strong> </h5>
+     
 
 
      </div>
-     
+      <hr class="two">
+    <hr class="two">
      <br></br>
    </td>
  </tr>
@@ -181,3 +240,7 @@
 
 <br>
 </body>
+
+
+
+

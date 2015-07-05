@@ -39,12 +39,12 @@
 									
 
 
-									<li><%= link_to "<i class='fa fa-code fa-2x too questo'></i>".html_safe,  ordenproduccions_path %></li>
+									<li><%= link_to "<i class='fa fa-code fa-2x too questo'></i>".html_safe,  ordenproduccions_path,  { :class => 'tooltips', 'data-toggle' => 'tooltip', 'data-placement' => 'right', :title => '', 'data-original-title' => 'Ordenes de Producción' }  %></li>
 									
 									
 									<%# if current_usuario == Usuario.find(1)%>
 									
-										<li><%= link_to "<i class='fa fa-bar-chart fa-2x questo'></i>".html_safe, descripcioncortes_estadisticas_path %></li>
+										<li><%= link_to "<i class='fa fa-bar-chart fa-2x questo'></i>".html_safe, descripcioncortes_estadisticas_path, { :class => 'tooltips', 'data-toggle' => 'tooltip', 'data-placement' => 'right', :title => '', 'data-original-title' => 'Estadisticas' }  %></li>
 										
 										
 										

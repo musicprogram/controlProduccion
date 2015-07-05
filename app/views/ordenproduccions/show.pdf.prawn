@@ -64,22 +64,46 @@ move_down 5
 
 	@ordenproduccion.descripcioncortes.each do |descripcioncorte|
 
-		text "#{descripcioncorte.color.colornombre rescue nil}",  :size => 10,:style => :bold
-		text "Talla S: #{descripcioncorte.tallas}", :align => :right,  :size => 8
-
-		text "Talla L: #{descripcioncorte.tallal}", :align => :right,  :size => 8
-
+		text "Color: #{descripcioncorte.color.colornombre rescue nil}",  :size => 10,:style => :bold
+		  if descripcioncorte.tallas == 0
+			move_down 4
+		    elsif 
+				text "Talla S: #{descripcioncorte.tallas}",:size => 8
+	    end 
+		
+		 if descripcioncorte.tallal == 0 
+			move_down 4
+		    elsif 	
+		text "Talla L: #{descripcioncorte.tallal}", :size => 8
+         	end 
 		
 
-		text "Total Color: #{descripcioncorte.tallasuma}", :align => :right,  :size => 10,:style => :bold
+		text "Total Color: #{descripcioncorte.tallasuma}", :size => 10,:style => :bold
 
 		move_up 30
-
-			text "Talla XS: #{descripcioncorte.tallaxs}",  :size => 8
-			text "Total M: #{descripcioncorte.tallam}",  :size => 8
-			text "TallaXL: #{descripcioncorte.tallaxl}",  :size => 8
-			
+			if descripcioncorte.tallaxs == 0 
+			move_down 4	
+		    elsif 
+				text "Talla XS: #{descripcioncorte.tallaxs}",  :size => 8
+			end
+			if descripcioncorte.tallam == 0 
+			move_down 4	
+		    elsif 
+				text "Total M: #{descripcioncorte.tallam}",  :size => 8
+			end
+			if descripcioncorte.tallaxl == 0 
+			move_down 4	
+		    elsif 
+				text "TallaXL: #{descripcioncorte.tallaxl}",  :size => 8
+			end
+			move_down 4
 			stroke_horizontal_rule	
-		move_down 5
+		
 
 	end
+	
+	
+	
+	
+	
+	
