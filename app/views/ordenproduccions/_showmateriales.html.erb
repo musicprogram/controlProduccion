@@ -1,0 +1,28 @@
+<% @ordenproduccion.materiales.each do |material| %>
+  <p>
+    <strong>ancho:</strong>
+    <%= material.anchom %>
+  </p>
+ 
+  <p>
+    <strong>largotrazo:</strong>
+    <%= material.largotendidom %>
+  </p>
+  
+  <p>
+    <strong>largotendidom:</strong>
+    <%= material.largotendidom %>
+  </p>
+  <p>
+    <strong>capasm:</strong>
+    <%= material.capasm %>
+  </p>
+  <p>
+    <strong>vecestrazom:</strong>
+    <%= material.vecestrazom %>
+  </p>
+  <p>
+    <strong>cantidad:</strong>
+    <%= material.cantidad %>
+  </p>
+<% end %>

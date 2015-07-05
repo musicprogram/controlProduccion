@@ -1,0 +1,43 @@
+<h2>Agregar material:</h2>
+<%= form_for([@ordenproduccion, @ordenproduccion.materiales.build]) do |f| %>
+  
+  <p>
+    <h3>Ancho</h3><br>
+    <%= f.number_field :anchom , :type => 'float' , :in => 0..100, :step => 0.01, class:'form-control'%>
+
+  </p>
+  <p>
+    <h3>largotrazo</h3><br>
+    <%= f.number_field :largotrazom ,  class:'form-control'%>
+  </p>
+  <p>
+      
+        <p>
+    <h3>Tela</h3><br>
+    <%= f.collection_select :tela_id, Tela.all, :id, :telanombre,{prompt: "Seleccione Tela"}, {class: "form-control"} %>
+
+  </p>
+  <p>
+    <h3>Largotendido</h3><br>
+    <%= f.number_field :largotendidom , :type => 'float' , :in => 0..100, :step => 0.01, class:'form-control'%>
+  </p>
+  <p>
+      
+        <p>
+    <h3>capas</h3><br>
+    <%= f.number_field :capasm ,  class:'form-control'%>
+
+  </p>
+  <p>
+    <h3>vecestrazo</h3><br>
+    <%= f.number_field :vecestrazom , :type => 'float' , :in => 0..100, :step => 0.01, class:'form-control'%>
+  </p>
+  <p>
+      
+        <p>
+    <h3>Ancho</h3><br>
+    <%= f.number_field :cantidad , :type => 'float' , :in => 0..100, :step => 0.01, class:'form-control'%>
+
+    <%= f.submit %>
+  </p>
+<% end %>

@@ -1,0 +1,19 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  anchom: 1.5
+  largotrazom: 
+  tela_id: 
+  largotendidom: 1.5
+  capas: 1
+  vecestrazom: 1.5
+  cantidad: 1.5
+
+two:
+  anchom: 1.5
+  largotrazom: 
+  tela_id: 
+  largotendidom: 1.5
+  capas: 1
+  vecestrazom: 1.5
+  cantidad: 1.5

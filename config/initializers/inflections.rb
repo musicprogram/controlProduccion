@@ -7,7 +7,7 @@
 #   inflect.plural /^(ox)$/i, '\1en'
 #   inflect.singular /^(ox)en/i, '\1'
     
-    inflect.irregular 'instructor', 'instructores'
+    inflect.irregular 'material', 'materiales'
 #   inflect.uncountable %w( fish sheep )
  end
 

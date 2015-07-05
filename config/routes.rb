@@ -1,5 +1,9 @@
 Rails.application.routes.draw do
-
+  
+  
+  resources :ordenproduccions do
+    resources :materiales
+  end
 
   resources :tallas
 
@@ -19,7 +23,7 @@ Rails.application.routes.draw do
 
   #maestro detalle 
   resources :ordenproduccions do
-  resources :descripcioncortes 
+    resources :descripcioncortes 
    
   end
 

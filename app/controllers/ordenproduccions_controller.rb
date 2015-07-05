@@ -90,6 +90,6 @@ class OrdenproduccionsController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def ordenproduccion_params
-      params.require(:ordenproduccion).permit(:fechaprogramacion, :cliente_id, :descripcion, :referencia, :corte_id, :ancho, :tela_id, :largotrazo, :largotendido, :promedio, :cantidad, :responsablecorte, :totalmetros, :tiqueteada, :prenda_id, :vecestrazo, :capas, :totalmetros, :descripcioncorte_id)
+      params.require(:ordenproduccion).permit(:fechaprogramacion, :cliente_id, :descripcion, :referencia, :corte_id, :ancho, :tela_id, :largotrazo, :largotendido, :promedio, :cantidad, :responsablecorte, :totalmetros, :tiqueteada, :prenda_id, :vecestrazo, :capas, :totalmetros, :descripcioncorte_id, :material_id)
     end
 end
