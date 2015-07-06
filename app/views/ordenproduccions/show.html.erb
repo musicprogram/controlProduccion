@@ -171,24 +171,53 @@
                   </table>
                 </div>
 
-                <h4><strong>Descripción del Corte</strong></h4>
-
-      <%= render  "showdescripcion"%>
-                  
 
 
+<div class="fondocolor">
+    
+    <br>
+                <h2><strong><b>Descripción del Corte</b></strong></h2>
 
-
+ 
+<button class="btn " data-toggle="tooltip" data-placement="bottom" title="Click 'descripción de corte'">
+    <i class="fa fa-bars fa-4x" type="button" data-toggle="collapse" data-target="#collapseshow" aria-expanded="false" aria-controls="collapseExample">
+ 
+</i>
+</button>
+<div class="collapse" id="collapseshow">
+ 
+     <%= render  "showdescripcion"%>
+ 
+</div>
+</div>
+      
       <%= render  "formdescripcioncorte"%>
-
-    <%= render  "showmateriales"%>
-
-    <%= render  "materialesform"%>
+      
+      <hr class="two"></hr>
+      
+      <button class="btn " data-toggle="tooltip" data-placement="bottom" title="Click 'Agregar material'">
+        <i class="fa fa-caret-square-o-down fa-4x" type="button" data-toggle="collapse" data-target="#collapsematerial" aria-expanded="false" aria-controls="collapseExample">
+         
+        </i>
+    </button>
+    <br></br>
+        <div class="collapse" id="collapsematerial">
+         
+            <%= render  "showmateriales"%>
+        
+            <%= render  "materialesform"%>
+        
+        
+        </div>
+      
 
 
 
         <div class="panel-footer">
-         <br>
+            
+           
+ 
+          <br>
          <br>
          <strong class="zur1"><b>Centro de formación en diseño, confección y Moda</b></strong> <br>
          <%= link_to "<i class='fa fa-print fa-4x'></i>".html_safe, ordenproduccion_path(@ordenproduccion, :format => 'pdf'), { :class => 'tooltips', 'data-toggle' => 'tooltip', 'data-placement' => 'left', :title => '', 'data-original-title' => 'Imprimir PDF' } %>   
@@ -209,7 +238,6 @@
  </div>
 
 </body>
-
 
 
 

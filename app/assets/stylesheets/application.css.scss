@@ -1245,6 +1245,10 @@ body.sesion{
   h5{
     color: #fc7323;
   }
+  
+  h3{
+    color: #fc7323;
+  }
 }
 
 .mode{
@@ -1327,4 +1331,33 @@ hr.two {
   margin-right: 10px; 
   margin-bottom: 10px; 
   margin-left: 10px; 
+}
+
+
+
+
+
+
+.fondocolor{
+  background-color: #ededed;
+  margin-top: 36px; 
+  margin-right: 10px; 
+  margin-bottom: 10px; 
+  margin-left: 10px;
+  border-radius: 10px;
+  
+}
+
+
+.fondocolor1{
+  background-color: #ededed;
+  margin-top: 36px; 
+  margin-right: 10px; 
+  margin-bottom: 10px; 
+  margin-left: 10px;
+  border-radius: 10px;
+  -webkit-box-shadow: 0px 0px 26px -6px rgba(0,0,0,0.75);
+  -moz-box-shadow: 0px 0px 26px -6px rgba(0,0,0,0.75);
+  box-shadow: 0px 0px 26px -6px rgba(0,0,0,0.75);
+  
 }

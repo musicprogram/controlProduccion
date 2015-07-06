@@ -6,6 +6,17 @@ class MaterialesController < ApplicationController
             @material = @ordenproduccion.materiales.create(material_params)
             redirect_to ordenproduccion_path(@ordenproduccion)
         end
+        
+        
+              
+        def destroy
+          @ordenproduccion = Ordenproduccion.find(params[:ordenproduccion_id])
+          @material = @ordenproduccion.materiales.find(params[:id])
+          @material.destroy
+          redirect_to ordenproduccion_path(@ordenproduccion)
+        end
+              
+        
      
       private
         def material_params

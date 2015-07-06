@@ -1,28 +1,70 @@
+<div class="fondocolor1">
+    <br>
+    
+    <h1 class="center">
+      <b>MATERIAL</b>
+    </h1>
+    
 <% @ordenproduccion.materiales.each do |material| %>
-  <p>
-    <strong>ancho:</strong>
-    <%= material.anchom %>
-  </p>
  
-  <p>
-    <strong>largotrazo:</strong>
-    <%= material.largotendidom %>
-  </p>
-  
-  <p>
-    <strong>largotendidom:</strong>
-    <%= material.largotendidom %>
-  </p>
-  <p>
-    <strong>capasm:</strong>
-    <%= material.capasm %>
-  </p>
-  <p>
-    <strong>vecestrazom:</strong>
-    <%= material.vecestrazom %>
-  </p>
-  <p>
-    <strong>cantidad:</strong>
-    <%= material.cantidad %>
-  </p>
+  <hr class="two">
+ <table class="table">
+   
+   
+   
+   
+              <tr>
+                <td>
+                  <div class="col-md-6">
+                    <h5 class="izquierda"> <strong class="izquierda">capasm: </strong><%= material.capasm %></h5>
+
+                  </div>
+                  <div class="col-md-6">
+                    <h5 class="derecha"><strong class="derecha">vecestrazom: </strong><%= material.vecestrazom %></h5>
+                    
+                  </div>
+                  
+                </td>
+              </tr>
+              
+              
+              <tr>
+                <td>
+                  <div class="col-md-6">
+                    <h5 class="izquierda"> <strong class="izquierda">Cantidad: </strong><%= material.cantidad %></h5>
+
+                  </div>
+                  <div class="col-md-6">
+                    <h5 class="derecha"><strong class="derecha">ancho: </strong><%= material.anchom %></h5>
+                    
+                  </div>
+                  
+                </td>
+              </tr>
+              
+              <tr>
+                <td>
+                  <div class="col-md-6">
+                    <h5 class="izquierda"> <strong class="izquierda">largotrazo: </strong><%= material.largotrazom %></h5>
+
+                  </div>
+                  <div class="col-md-6">
+                    <h5 class="derecha"><strong class="derecha">largotendidom: </strong><%= material.largotendidom %></h5>
+                    
+                  </div>
+                  
+                </td>
+              </tr>
+              <hr class="two">  
+ </table>
+ 
+ 
+
+      
+   <p>
+  <%= link_to "<i class='fa fa-eraser fa-3x'></i>".html_safe, [material.ordenproduccion, material], method: :delete, data: { confirm: 'Are you sure?' } %>
+</p>
+ 
 <% end %>
+  
+</div>
