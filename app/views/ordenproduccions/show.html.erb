@@ -175,7 +175,7 @@
 
 <div class="fondocolor">
     
-    <br>
+   
                 <h2><strong><b>Descripción del Corte</b></strong></h2>
 
  
@@ -184,17 +184,21 @@
  
 </i>
 </button>
+
 <div class="collapse" id="collapseshow">
  
      <%= render  "showdescripcion"%>
  
-</div>
-</div>
-      
       <%= render  "formdescripcioncorte"%>
-      
+  </div>
+</div>    
       <hr class="two"></hr>
       
+      <div class="fondocolor">
+          
+                    <h2><strong><b>Materiales</b></strong></h2>
+
+          
       <button class="btn " data-toggle="tooltip" data-placement="bottom" title="Click 'Agregar material'">
         <i class="fa fa-caret-square-o-down fa-4x" type="button" data-toggle="collapse" data-target="#collapsematerial" aria-expanded="false" aria-controls="collapseExample">
          
@@ -202,14 +206,16 @@
     </button>
     <br></br>
         <div class="collapse" id="collapsematerial">
-         
+          
             <%= render  "showmateriales"%>
+        
         
             <%= render  "materialesform"%>
         
         
         </div>
       
+      </div>
 
 
 
@@ -220,8 +226,8 @@
           <br>
          <br>
          <strong class="zur1"><b>Centro de formación en diseño, confección y Moda</b></strong> <br>
-         <%= link_to "<i class='fa fa-print fa-4x'></i>".html_safe, ordenproduccion_path(@ordenproduccion, :format => 'pdf'), { :class => 'tooltips', 'data-toggle' => 'tooltip', 'data-placement' => 'left', :title => '', 'data-original-title' => 'Imprimir PDF' } %>   
-         <%= link_to "<i class='fa fa-pencil fa-4x'></i>".html_safe, edit_ordenproduccion_path(@ordenproduccion) %> 
+         <%= link_to "<i class='fa fa-print fa-4x'></i>".html_safe, ordenproduccion_path(@ordenproduccion, :format => 'pdf'), { :class => 'tooltips', 'data-toggle' => 'tooltip', 'data-placement' => 'left', :title => '', 'data-original-title' => 'PDF' } %>   
+         <%= link_to "<i class='fa fa-pencil fa-4x'></i>".html_safe, edit_ordenproduccion_path(@ordenproduccion) , { :class => 'tooltips', 'data-toggle' => 'tooltip', 'data-placement' => 'botton', :title => '', 'data-original-title' => 'Editar Orden de Producción' }%> 
          <%= link_to "<i class='fa fa-arrow-circle-left fa-4x'></i>".html_safe, ordenproduccions_path, { :class => 'tooltips', 'data-toggle' => 'tooltip', 'data-placement' => 'right', :title => '', 'data-original-title' => 'Atras' } %>
        
 
@@ -238,6 +244,14 @@
  </div>
 
 </body>
+
+
+
+
+
+<a href="#" id="scrollup" data-toggle="tooltip" data-placement="top" title="Orden"></a>
+
+
 
 
 

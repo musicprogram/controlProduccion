@@ -12,7 +12,7 @@
 move_up 35
 		image "#{Rails.root}/app/assets/images/ss.png", :scale => 0.6
 		move_up 15
-		text "Fecha de Programación: #{@ordenproduccion.fechaprogramacion}",:align => :right,  :size => 15
+		text "FECHA DE PROGRAMACIÓN: #{@ordenproduccion.fechaprogramacion}",:align => :right,  :size => 14
 	move_down 10
 
 	stroke_horizontal_rule
@@ -63,43 +63,116 @@ move_up 35
 move_down 5
 
 	@ordenproduccion.descripcioncortes.each do |descripcioncorte|
-
-		text "Color: #{descripcioncorte.color.colornombre rescue nil}",  :size => 10,:style => :bold
-		  if descripcioncorte.tallas == 0
-			move_down 4
-		    elsif 
-				text "Talla S: #{descripcioncorte.tallas}",:size => 8
-	    end 
 		
-		 if descripcioncorte.tallal == 0 
-			move_down 4
-		    elsif 	
-		text "Talla L: #{descripcioncorte.tallal}", :size => 8
+			
+		  	if descripcioncorte.tallaxs == 0 
+				
+			    elsif 
+					text "Talla XS: #{descripcioncorte.tallaxs}",  :size => 8
+			end
+		  
+			if descripcioncorte.tallas == 0
+				
+			    elsif 
+					text "Talla S: #{descripcioncorte.tallas}",:size => 8
+		    end 
+		
+		 	if descripcioncorte.tallal == 0 
+				
+			    elsif 	
+				text "Talla L: #{descripcioncorte.tallal}", :size => 8
          	end 
 		
-
-		text "Total Color: #{descripcioncorte.tallasuma}", :size => 10,:style => :bold
-
-		move_up 30
-			if descripcioncorte.tallaxs == 0 
-			move_down 4	
-		    elsif 
-				text "Talla XS: #{descripcioncorte.tallaxs}",  :size => 8
-			end
+		
 			if descripcioncorte.tallam == 0 
-			move_down 4	
+		
 		    elsif 
-				text "Total M: #{descripcioncorte.tallam}",  :size => 8
+				text "Talla M: #{descripcioncorte.tallam}",  :size => 8
 			end
+			
 			if descripcioncorte.tallaxl == 0 
-			move_down 4	
+				
 		    elsif 
-				text "TallaXL: #{descripcioncorte.tallaxl}",  :size => 8
+				text "Talla XL: #{descripcioncorte.tallaxl}",  :size => 8
 			end
-			move_down 4
+			
+			if descripcioncorte.talla6 == 0 
+					
+			    elsif 
+					text "Talla 6: #{descripcioncorte.talla6}",  :size => 8
+			end
+			
+			if descripcioncorte.talla8 == 0 
+					
+			    elsif 
+					text "Talla 8: #{descripcioncorte.talla8}",  :size => 8
+			end
+			
+			if descripcioncorte.talla10 == 0 
+					
+			    elsif 
+					text "Talla 10: #{descripcioncorte.talla10}",  :size => 8
+			end
+			
+			if descripcioncorte.talla12 == 0 
+					
+			    elsif 
+					text "Talla 12: #{descripcioncorte.talla12}",  :size => 8
+			end
+			
+			if descripcioncorte.talla14 == 0 
+					
+			    elsif 
+					text "Talla 14: #{descripcioncorte.talla14}",  :size => 8
+			end
+			
+			
+			if descripcioncorte.talla28 == 0 
+					
+			    elsif 
+					text "Talla 28: #{descripcioncorte.talla28}",  :size => 8
+			end
+			
+			if descripcioncorte.talla30 == 0 
+					
+			    elsif 
+					text "Talla 30: #{descripcioncorte.talla30}",  :size => 8
+			end
+			
+			if descripcioncorte.talla32 == 0 
+					
+			    elsif 
+					text "Talla 32: #{descripcioncorte.talla32}",  :size => 8
+			end
+			
+				if descripcioncorte.talla34 == 0 
+				
+		    elsif 
+				text "Talla 34: #{descripcioncorte.talla34}",  :size => 8
+			end
+			
+			if descripcioncorte.talla36 == 0 
+					
+			    elsif 
+					text "Talla 36: #{descripcioncorte.talla36}",  :size => 8
+			end
+			
+			move_down 5
+			
+			move_up 15
+			
+			text "Color: #{descripcioncorte.color.colornombre rescue nil}",  :size => 8,:style => :bold,:align => :right
+		  
+			
+			text "Total Color: #{descripcioncorte.tallasuma}", :size => 10,:style => :bold,:align => :right
+			
+			
+			move_down 5
+			
 			stroke_horizontal_rule	
 		
-
+			move_down 5	
+		
 	end
 	
 	
