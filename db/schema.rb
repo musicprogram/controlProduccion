@@ -59,12 +59,14 @@ ActiveRecord::Schema.define(version: 20150705211412) do
 
   create_table "materiales", force: true do |t|
     t.float    "anchom"
-    t.integer  "largotrazom"
+    t.float    "largotrazom"
     t.integer  "tela_id"
     t.float    "largotendidom"
-    t.integer  "capasm"
+    t.float    "capasm"
     t.float    "vecestrazom"
     t.float    "cantidad"
+    t.float    "promedio"
+    t.float    "totalmetros"
     t.integer  "ordenproduccion_id"
     t.datetime "created_at"
     t.datetime "updated_at"

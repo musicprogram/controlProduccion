@@ -20,7 +20,7 @@ class MaterialesController < ApplicationController
      
       private
         def material_params
-          params.require(:material).permit(:anchom, :largotrazom, :tela_id, :largotendidom, :capasm, :vecestrazom, :cantidad, :ordenproduccion_id)
+          params.require(:material).permit(:anchom, :largotrazom, :tela_id, :largotendidom, :capasm, :vecestrazom, :cantidad, :promedio, :totalmetros, :ordenproduccion_id)
         end
 end
 

@@ -4,15 +4,15 @@
 
 
 
-	text "CENTRO DE FORMACIÓN EN DISEÑO, CONFECCIÓN Y MODA", :align => :center, :size => 18, :style => :bold
+	text "CENTRO DE FORMACIÓN EN DISEÑO, CONFECCIÓN Y MODA", :align => :center, :size => 14, :style => :bold
 		stroke_horizontal_rule	
 	move_down 10
-	text "PROGRAMACIÓN DE CORTE", :align => :right, :size => 14
-	text "ORDEN #{@ordenproduccion.id}", :align => :right, :size => 14, :style => :bold
+	text "PROGRAMACIÓN DE CORTE", :align => :right, :size => 13
+	text "ORDEN #{@ordenproduccion.id}", :align => :right, :size => 13, :style => :bold
 move_up 35
 		image "#{Rails.root}/app/assets/images/ss.png", :scale => 0.6
 		move_up 15
-		text "FECHA DE PROGRAMACIÓN: #{@ordenproduccion.fechaprogramacion}",:align => :right,  :size => 14
+		text "FECHA DE PROGRAMACIÓN: #{@ordenproduccion.fechaprogramacion}",:align => :right,  :size => 13
 	move_down 10
 
 	stroke_horizontal_rule
@@ -56,12 +56,15 @@ move_up 35
 
 			move_down 25
 			text "#{@ordenproduccion.descripcion.upcase}", :size => 10,:style => :bold
-		move_down 10	
+		move_down 10
+		
+		
+
+			text "DESCRIPCIÓN DEL CORTE", :align => :center, :size => 10,:style => :bold
+		move_down 5
 	stroke_horizontal_rule	
 	
-move_down 5	
 
-	text "Descripción del corte", :align => :center, :size => 10,:style => :bold
 
 move_down 5
 
@@ -179,7 +182,7 @@ move_down 5
 	end
 	
 	
-	text "Materiales", :align => :center, :size => 10,:style => :bold
+	text "MATERIALES", :align => :center, :size => 10,:style => :bold
 		
 	@ordenproduccion.materiales.each do |material|
 		
@@ -190,9 +193,13 @@ move_down 5
 		
 		text "Veces en el Trazo: #{material.vecestrazom}",  :size => 8, :align => :right
 		
-	move_up 35
+		text "Promedio: #{material.promedio}",  :size => 8, :align => :right
 		
-		text "Tela: #{material.tela.telanombre}",  :size => 8
+		text "Total Metros: #{material.totalmetros}",  :size => 8, :align => :right
+		
+	move_up 40
+		
+		text "Tela: #{material.tela.telanombre rescue nil}",  :size => 8
 		
 		text "Largo Tendido: #{material.largotendidom}",  :size => 8
 		
@@ -200,6 +207,7 @@ move_down 5
 		
 		text "Cantidad: #{material.cantidad}",  :size => 8
 		
+	move_down 5	
 	stroke_horizontal_rule	
 	
 	end
