@@ -1,5 +1,4 @@
-<h2><b>AGREGAR MATERIAL</b></h2>
-<div class="mode">
+<div class="">
   <%= form_for([@ordenproduccion, @ordenproduccion.materiales.build]) do |f| %>
   
   
@@ -21,7 +20,7 @@
       <div class="col-md-3">
      
         <p>
-    <h3>Ancho</h3>
+    <h3>Cantidad</h3>
     <%= f.number_field :cantidad , :type => 'float' , :in => 0..100, :step => 0.01, class:'form-control'%>
 
      

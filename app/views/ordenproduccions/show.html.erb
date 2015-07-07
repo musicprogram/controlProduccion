@@ -31,11 +31,11 @@
               <tr>
                 <td>
                   <div class="col-md-6">
-                    <h5 class="izquierda"> <strong class="izquierda">Fecha: </strong><%= @ordenproduccion.fechaprogramacion %></h5>
+                    <h5 class="izquierda1"> <strong >Fecha: </strong><%= @ordenproduccion.fechaprogramacion %></h5>
 
                   </div>
                   <div class="col-md-6">
-                    <h5 class="derecha"><strong>Cliente: </strong><%= @ordenproduccion.cliente.clientenombre rescue nil %></h5>
+                    <h5 class="derecha1"><strong>Cliente: </strong><%= @ordenproduccion.cliente.clientenombre rescue nil %></h5>
                     
                   </div>
                   
@@ -48,10 +48,10 @@
 
                  <div class="col-md-6">
 
-                   <h5 class="izquierda"> <strong>Referencia: </strong><%= @ordenproduccion.referencia %></h5>
+                   <h5 class="izquierda1"> <strong>Referencia: </strong><%= @ordenproduccion.referencia %></h5>
                  </div>
                  <div class="col-md-6">
-                   <h5 class="derecha"><strong>Prenda: </strong>
+                   <h5 class="derecha1"><strong>Prenda: </strong>
                      <%= @ordenproduccion.prenda.prendanombre rescue nil %></h5>
                    </div>
 
@@ -61,12 +61,12 @@
                 <td>
 
                   <div class="col-md-6">
-                   <h5 class="izquierda"><strong>Corte: </strong>
+                   <h5 class="izquierda1"><strong>Corte: </strong>
                      <%= @ordenproduccion.corte.cortenombre rescue nil %></h5>
 
                    </div>
                    <div class="col-md-6">
-                     <h5 class="derecha"> <strong>Ancho del Trazo: </strong>
+                     <h5 class="derecha1"> <strong>Ancho del Trazo: </strong>
                       <%= @ordenproduccion.ancho %></h5>
 
                     </div>
@@ -79,11 +79,11 @@
                 <tr class="">
                   <td>
                     <div class="col-md-6">
-                      <h5 class="izquierda"> <strong>Tela: </strong>
+                      <h5 class="izquierda1"> <strong>Tela: </strong>
                        <%= @ordenproduccion.tela.telanombre rescue nil %></h5>
                      </div>
                      <div class="col-md-6">
-                       <h5 class="derecha"> <strong>Largo del Trazo: </strong>
+                       <h5 class="derecha1"> <strong>Largo del Trazo: </strong>
                         <%= @ordenproduccion.largotrazo.round(2) %></h5>
 
 
@@ -99,11 +99,11 @@
                     <td>
 
                       <div class="col-md-6">
-                       <h5 class="izquierda"> <strong>Veces en el Trazo: </strong>
+                       <h5 class="izquierda1"> <strong>Veces en el Trazo: </strong>
                         <%= @ordenproduccion.vecestrazo.round(2) %> </h5>
                       </div>
                       <div class="col-md-6">
-                       <h5 class="derecha"> <strong>Largo del Tendido: </strong>
+                       <h5 class="derecha1"> <strong>Largo del Tendido: </strong>
                         <%= @ordenproduccion.largotendido %>
                       </h5>
                     </div>
@@ -117,11 +117,11 @@
 
                     <div class="col-md-6">
 
-                     <h5 class="izquierda"> <strong>Promedio: </strong>
+                     <h5 class="izquierda1"> <strong>Promedio: </strong>
                       <%= @ordenproduccion.promedio.round(2) rescue nil %></h5>
                     </div>
                     <div class="col-md-6">
-                      <h5 class="derecha"> <strong>Cantidad: </strong>
+                      <h5 class="derecha1"> <strong>Cantidad: </strong>
                        <%= @ordenproduccion.cantidad %></h5>
                      </div>
 
@@ -131,11 +131,11 @@
                   <td>
 
                     <div class="col-md-6">
-                     <h5 class="izquierda"> <strong>Responsable del Corte: </strong>
+                     <h5 class="izquierda1"> <strong>Responsable del Corte: </strong>
                        <%= @ordenproduccion.responsablecorte %>  </h5>
                      </div>
                      <div class="col-md-6">
-                       <h5 class="derecha"> <strong>Capas: </strong>
+                       <h5 class="derecha1"> <strong>Capas: </strong>
                         <%= @ordenproduccion.capas %></h5>
                       </div>
 
@@ -147,11 +147,11 @@
                     <td>
 
                       <div class="col-md-6">
-                       <h5 class="izquierda"> <strong>Total Metros:</strong>
+                       <h5 class="izquierda1"> <strong>Total Metros:</strong>
                         <%= @ordenproduccion.totalmetros.round(2) %></h5>
                       </div>
                       <div class="col-md-6">
-                        <h5 class="derecha"><strong>Tiqueteada: </strong>
+                        <h5 class="derecha1"><strong>Tiqueteada: </strong>
                           <%= @ordenproduccion.tiqueteada %></h5>
 
                         </div>
@@ -161,7 +161,7 @@
                     </tr>
                     <tr>
                       <td>
-                       <div class="col-md-6"> <h5 class="izquierda"><strong>Descripcion: </strong>
+                       <div class="col-md-6"> <h5 class="izquierda1"><strong>Descripcion: </strong>
                         <%= @ordenproduccion.descripcion %></h5></div>
 
                       </td>

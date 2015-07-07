@@ -55,10 +55,13 @@ move_up 35
 
 
 			move_down 25
-			text "#{@ordenproduccion.descripcion}", :size => 10,:style => :bold
+			text "#{@ordenproduccion.descripcion.upcase}", :size => 10,:style => :bold
 		move_down 10	
-	stroke_horizontal_rule		
+	stroke_horizontal_rule	
+	
+move_down 5	
 
+	text "Descripción del corte", :align => :center, :size => 10,:style => :bold
 
 move_down 5
 
@@ -157,9 +160,9 @@ move_down 5
 					text "Talla 36: #{descripcioncorte.talla36}",  :size => 8
 			end
 			
-			move_down 5
+		move_down 5
 			
-			move_up 15
+		move_up 15
 			
 			text "Color: #{descripcioncorte.color.colornombre rescue nil}",  :size => 8,:style => :bold,:align => :right
 		  
@@ -167,16 +170,37 @@ move_down 5
 			text "Total Color: #{descripcioncorte.tallasuma}", :size => 10,:style => :bold,:align => :right
 			
 			
-			move_down 5
+		move_down 5
 			
 			stroke_horizontal_rule	
 		
-			move_down 5	
+		move_down 5	
 		
 	end
 	
 	
+	text "Materiales", :align => :center, :size => 10,:style => :bold
+		
+	@ordenproduccion.materiales.each do |material|
+		
 	
+		text "ancho: #{material.anchom}",  :size => 8, :align => :right
+		
+		text "Largo Trazo: #{material.largotrazom}",  :size => 8, :align => :right
+		
+		text "Veces en el Trazo: #{material.vecestrazom}",  :size => 8, :align => :right
+		
+	move_up 35
+		
+		text "Tela: #{material.tela.telanombre}",  :size => 8
+		
+		text "Largo Tendido: #{material.largotendidom}",  :size => 8
+		
+		text "Capas: #{material.capasm}",  :size => 8
+		
+		text "Cantidad: #{material.cantidad}",  :size => 8
+		
+	stroke_horizontal_rule	
 	
-	
+	end
 	
