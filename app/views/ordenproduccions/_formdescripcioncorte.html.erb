@@ -1,14 +1,17 @@
 
  
 <div class="mode">
+
   
+         
 
   <%= form_for([@ordenproduccion, @ordenproduccion.descripcioncortes.build]) do |f| %>
 
 
+<h2> CORTE - <small>ORDEN #: <%= @ordenproduccion.id  %></small></h2> 
 <div class="field">
- <b>Material</b>
- <br>
+
+ <h3><b>Material</b></h3>
  Si: <%= f.radio_button(:material, true) %>
  No: <%= f.radio_button(:material, false) %>
 </div>
