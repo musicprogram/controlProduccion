@@ -18,6 +18,7 @@ class CreateDescripcioncortes < ActiveRecord::Migration
       t.integer :talla34
       t.integer :talla36
       t.integer :tallasuma
+      t.boolean :material
       t.references :ordenproduccion, index: true
 
       t.timestamps

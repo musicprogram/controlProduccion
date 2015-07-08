@@ -4,6 +4,7 @@ class CreateMateriales < ActiveRecord::Migration
       t.float :anchom
       t.float :largotrazom
       t.references :tela, index: true
+      t.references :color, index: true
       t.float :largotendidom
       t.float :capasm
       t.float :vecestrazom

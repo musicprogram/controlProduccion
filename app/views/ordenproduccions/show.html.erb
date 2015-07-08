@@ -187,10 +187,36 @@
 
 <div class="collapse" id="collapseshow">
  
+ <i type="button" class="fa fa-plus-circle fa-4x" data-toggle="modal" data-target="#myModal">
+ 
+</i>
+
+ 
      <%= render  "showdescripcion"%>
  
-      <%= render  "formdescripcioncorte"%>
+      
+      
+      <!-- Button trigger modal -->
+
+<!-- Modal -->
+<div class="modal fade bs-example-modal-lg" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+  <div class="modal-dialog modal-lg" role="document">
+    <div class="modal-content">
+
+      <div class="modal-body">
+          <%= render  "formdescripcioncorte"%>
+      </div>
+      <div class="modal-footer">
+        
+      </div>
+    </div>
   </div>
+</div>
+  </div>
+  
+  
+  
+  
 </div>    
       <hr class="two"></hr>
       
@@ -207,10 +233,37 @@
     <br></br>
         <div class="collapse" id="collapsematerial">
           
-            <%= render  "showmateriales"%>
+          
         
         
+          
+            
+            
+ <i type="button" class="fa fa-plus-circle fa-4x" data-toggle="modal" data-target="#myModal1">
+ 
+</i>
+
+ 
+      <%= render  "showmateriales"%>
+ 
+      
+      
+      <!-- Button trigger modal -->
+
+<!-- Modal -->
+<div class="modal fade bs-example-modal-lg" id="myModal1" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+  <div class="modal-dialog modal-lg" role="document">
+    <div class="modal-content">
+
+      <div class="modal-body">
             <%= render  "materialesform"%>
+      </div>
+      <div class="modal-footer">
+        
+      </div>
+    </div>
+  </div>
+</div>
         
         
         </div>

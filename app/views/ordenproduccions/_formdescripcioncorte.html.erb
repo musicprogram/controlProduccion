@@ -6,6 +6,14 @@
   <%= form_for([@ordenproduccion, @ordenproduccion.descripcioncortes.build]) do |f| %>
 
 
+<div class="field">
+ <b>Material</b>
+ <br>
+ Si: <%= f.radio_button(:material, true) %>
+ No: <%= f.radio_button(:material, false) %>
+</div>
+
+
 
   <div class="col-md-12">
 

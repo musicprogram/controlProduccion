@@ -19,11 +19,16 @@
                     <h1 class="izquierda1"> <strong class="izquierda1">Tela: </strong><b><%= material.tela.telanombre  rescue nil%></b></h1>
 
                   </div>
+                  <div class="col-md-6">
+                    <h1 class="derecha"> <strong class="derecha">Color: </strong><b><%= material.color.colornombre  rescue nil%></b></h1>
+
+                  </div>
                   
                   
                 </td>
               </tr>
-   
+              
+              
               <tr>
                 <td>
                   <div class="col-md-6">
@@ -61,6 +66,19 @@
                   </div>
                   <div class="col-md-6">
                     <h5 class="derecha"><strong class="derecha">largotendidom: </strong><%= material.largotendidom %></h5>
+                    
+                  </div>
+                  
+                </td>
+              </tr>
+               <tr>
+                <td>
+                  <div class="col-md-6">
+                    <h5 class="izquierda1"> <strong class="izquierda"><b>Promedio</b>: </strong><%= material.promedio %></h5>
+
+                  </div>
+                  <div class="col-md-6">
+                    <h5 class="derecha1"><strong class="derecha"><b>Total Metros</b>: </strong><%= material.totalmetros %></h5>
                     
                   </div>
                   

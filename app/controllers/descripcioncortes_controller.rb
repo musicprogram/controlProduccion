@@ -26,7 +26,7 @@ class DescripcioncortesController < ApplicationController
  
   private
     def descripcion_params
-        params.require(:descripcioncorte).permit(:tallaxs, :tallas, :tallam, :tallal, :tallaxl,:talla2, :talla4, :talla6, :talla8, :talla10,:talla28, :talla30, :talla32, :talla34, :talla36, :ordenproduccion_id, :color_id, :tallasuma)
+        params.require(:descripcioncorte).permit(:tallaxs, :tallas, :tallam, :tallal, :tallaxl,:talla2, :talla4, :talla6, :talla8, :talla10,:talla28, :talla30, :talla32, :talla34, :talla36, :ordenproduccion_id, :color_id, :tallasuma, :material)
 
     end    
     

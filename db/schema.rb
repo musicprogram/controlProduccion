@@ -49,6 +49,7 @@ ActiveRecord::Schema.define(version: 20150705211412) do
     t.integer  "talla34"
     t.integer  "talla36"
     t.integer  "tallasuma"
+    t.boolean  "material"
     t.integer  "ordenproduccion_id"
     t.datetime "created_at"
     t.datetime "updated_at"
@@ -61,6 +62,7 @@ ActiveRecord::Schema.define(version: 20150705211412) do
     t.float    "anchom"
     t.float    "largotrazom"
     t.integer  "tela_id"
+    t.integer  "color_id"
     t.float    "largotendidom"
     t.float    "capasm"
     t.float    "vecestrazom"
@@ -72,6 +74,7 @@ ActiveRecord::Schema.define(version: 20150705211412) do
     t.datetime "updated_at"
   end
 
+  add_index "materiales", ["color_id"], name: "index_materiales_on_color_id"
   add_index "materiales", ["ordenproduccion_id"], name: "index_materiales_on_ordenproduccion_id"
   add_index "materiales", ["tela_id"], name: "index_materiales_on_tela_id"
 

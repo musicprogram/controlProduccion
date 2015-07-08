@@ -71,6 +71,8 @@ move_down 5
 	@ordenproduccion.descripcioncortes.each do |descripcioncorte|
 		
 			
+		  if descripcioncorte.material == false
+		  
 		  	if descripcioncorte.tallaxs == 0 
 				
 			    elsif 
@@ -177,16 +179,18 @@ move_down 5
 			
 			stroke_horizontal_rule	
 		
-		move_down 5	
+		move_down 5
+		  
+		  end
 		
 	end
 	
-	
-	text "MATERIALES", :align => :center, :size => 10,:style => :bold
+
+
 		
 	@ordenproduccion.materiales.each do |material|
 		
-	
+		text "MATERIALES", :align => :center, :size => 10,:style => :bold
 		text "ancho: #{material.anchom}",  :size => 8, :align => :right
 		
 		text "Largo Trazo: #{material.largotrazom}",  :size => 8, :align => :right
@@ -207,8 +211,131 @@ move_down 5
 		
 		text "Cantidad: #{material.cantidad}",  :size => 8
 		
+		text "Color: #{material.color.colornombre rescue nil}",  :size => 8
+		
 	move_down 5	
 	stroke_horizontal_rule	
+	move_down 5	
 	
+	end
+	
+	
+	
+	
+		@ordenproduccion.descripcioncortes.each do |descripcioncorte|
+		
+			
+		  if descripcioncorte.material == true	
+		  
+		  	if descripcioncorte.tallaxs == 0 
+				
+			    elsif 
+					text "Talla XS: #{descripcioncorte.tallaxs}",  :size => 8
+			end
+		  
+			if descripcioncorte.tallas == 0
+				
+			    elsif 
+					text "Talla S: #{descripcioncorte.tallas}",:size => 8
+		    end 
+		
+		 	if descripcioncorte.tallal == 0 
+				
+			    elsif 	
+				text "Talla L: #{descripcioncorte.tallal}", :size => 8
+         	end 
+		
+		
+			if descripcioncorte.tallam == 0 
+		
+		    elsif 
+				text "Talla M: #{descripcioncorte.tallam}",  :size => 8
+			end
+			
+			if descripcioncorte.tallaxl == 0 
+				
+		    elsif 
+				text "Talla XL: #{descripcioncorte.tallaxl}",  :size => 8
+			end
+			
+			if descripcioncorte.talla6 == 0 
+					
+			    elsif 
+					text "Talla 6: #{descripcioncorte.talla6}",  :size => 8
+			end
+			
+			if descripcioncorte.talla8 == 0 
+					
+			    elsif 
+					text "Talla 8: #{descripcioncorte.talla8}",  :size => 8
+			end
+			
+			if descripcioncorte.talla10 == 0 
+					
+			    elsif 
+					text "Talla 10: #{descripcioncorte.talla10}",  :size => 8
+			end
+			
+			if descripcioncorte.talla12 == 0 
+					
+			    elsif 
+					text "Talla 12: #{descripcioncorte.talla12}",  :size => 8
+			end
+			
+			if descripcioncorte.talla14 == 0 
+					
+			    elsif 
+					text "Talla 14: #{descripcioncorte.talla14}",  :size => 8
+			end
+			
+			
+			if descripcioncorte.talla28 == 0 
+					
+			    elsif 
+					text "Talla 28: #{descripcioncorte.talla28}",  :size => 8
+			end
+			
+			if descripcioncorte.talla30 == 0 
+					
+			    elsif 
+					text "Talla 30: #{descripcioncorte.talla30}",  :size => 8
+			end
+			
+			if descripcioncorte.talla32 == 0 
+					
+			    elsif 
+					text "Talla 32: #{descripcioncorte.talla32}",  :size => 8
+			end
+			
+				if descripcioncorte.talla34 == 0 
+				
+		    elsif 
+				text "Talla 34: #{descripcioncorte.talla34}",  :size => 8
+			end
+			
+			if descripcioncorte.talla36 == 0 
+					
+			    elsif 
+					text "Talla 36: #{descripcioncorte.talla36}",  :size => 8
+			end
+			
+		move_down 5
+			
+		move_up 15
+			
+			text "Color: #{descripcioncorte.color.colornombre rescue nil}",  :size => 8,:style => :bold,:align => :right
+		  
+			
+			text "Total Color: #{descripcioncorte.tallasuma}", :size => 10,:style => :bold,:align => :right
+			
+			
+		move_down 5
+			
+			stroke_horizontal_rule	
+		
+		move_down 5
+		  
+		  end
+		
 	end
 	
