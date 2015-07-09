@@ -8,8 +8,6 @@ Rails.application.routes.draw do
   resources :tallas
 
  
-  resources :nombres
-
   devise_for :usuarios
  
 

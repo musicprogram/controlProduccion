@@ -9,11 +9,14 @@
 		   	
 		   	<%if @orden_p == true %>
 				<body class="orden_p">
-			
-					<i class='fa fa-scissors fa-2x   '> Descripción del Corte</i><br>
-					<i class='fa fa-eye  '>  Mostrar la Orden</i><br>
-					<i class='fa fa-plus-circle  '> Crear nueva Orden</i> <br>
-					<a href="https://www.youtube.com/embed/7FR56CdLSew"><i class="fa fa-youtube-play fa-2x"></i></a>
+				<h2>
+					<i><%= link_to "COLORES", colors_path%></i>
+					<i><%= link_to "TELAS", telas_path%></i>
+					<i><%= link_to "PRENDAS", prendas_path%></i>
+					<i><%= link_to "CLIENTES", clientes_path%></i>
+					<i><%= link_to "TALLAS", tallas_path%></i>
+					<i><%= link_to "CORTES", cortes_path%></i>
+					</h2>
 					
 				
 				</body>
@@ -31,10 +34,13 @@
 		   
 		   <%elsif @fondo_desc == true%>
 		   <body class="fondo_desc">
-		   			<i class='fa fa-check-circle-o fa-2x   '> Cuadro de Producción</i><br>
-					<i class='fa fa-eye   '>  Mostrar la Programación de Corte</i><br>
-					<i class='fa fa-plus-circle  '> Crear nueva Descripción</i> <br>
-					<a href="https://www.youtube.com/embed/wWPZTIkLfNM"><i class="fa fa-youtube-play fa-2x"></i></a>
+		   			<h2><i><%= link_to "COLORES", colors_path%></i>
+					<i><%= link_to "TELAS", telas_path%></i>
+					<i><%= link_to "PRENDAS", prendas_path%></i>
+					<i><%= link_to "CLIENTES", clientes_path%></i>
+					<i><%= link_to "TALLAS", tallas_path%></i>
+					<i><%= link_to "CORTES", cortes_path%></i></h2>
+					
 		   </body>
 		   
 		   <%elsif @footer_terce == true%>
@@ -74,12 +80,13 @@
 		   
 		   <% elsif @tuto_estadisticas == true%>
 		   <body class="estadisticas">
-		   	<h2>
-		   	<i class="fa fa-bar-chart"> Calidad General </i> <br>
-		   	<i class="fa fa-barcode">  Promedio Días de Entrega</i> <br>
-		   	<i class="fa fa-bars"> Total de Entregas</i> <br>
-		  
-		   </h2>
+		   <i><%= link_to "COLORES", colors_path%></i>
+					<i><%= link_to "TELAS", telas_path%></i>
+					<i><%= link_to "PRENDAS", prendas_path%></i>
+					<i><%= link_to "CLIENTES", clientes_path%></i>
+					<i><%= link_to "TALLAS", tallas_path%></i>
+					<i><%= link_to "CORTES", cortes_path%></i>
+					
 		   	
 		   	
 		   	 

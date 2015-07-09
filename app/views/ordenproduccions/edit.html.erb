@@ -5,23 +5,28 @@
     <h1 class="center"><b>EDICIÓN DE ORDEN</b></h1>
 <br><br>
 
+<div class="col-md-12">
+
+<div class="col-md-1"></div>
+<div class="col-md-10">
+	
 <%= render 'form' %>
-<br><br>
-<div class="col-md-5">
 </div>
-<div class="col-md-5">
-
-
-
-</div>
-
-<div class="col-md-2">
-
-<h4 class="center1">
+<div class="col-md-1">
+	<h4 class="center1">
 	
 <%= link_to "<i class='fa fa-eye fa-4x encima'></i>".html_safe, @ordenproduccion, { :class => 'tooltips', 'data-toggle' => 'tooltip', 'data-placement' => 'left', :title => '', 'data-original-title' => 'Ver Orden' } %> 
 <%= link_to "<i class='fa fa-arrow-circle-left fa-4x'></i>".html_safe, ordenproduccions_path, { :class => 'tooltips', 'data-toggle' => 'tooltip', 'data-placement' => 'right', :title => '', 'data-original-title' => 'Atras' } %>
 
 </h4>
+</div>
+</div>
+
+
+
+<br><br>
+<div class="col-md-2">
+
+
 </div>
 </body>

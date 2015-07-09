@@ -1,5 +1,9 @@
 
 <body class="fonpage orden_p">
+  <div class="col-md-12">
+
+<div class="col-md-1"></div>
+<div class="col-md-10">
   <h1 class="center"><b>ORDENES DE PRODUCCIÓN</b></h1> 
   <br>
 <h4 class="derecho"><span class="badge option animated wobble" data-toggle="tooltip" data-placement="left" title="Cantidad de Ordenes"> <%= @ordenproduccions.count %> </span></h4 >
@@ -62,6 +66,9 @@
   <%= link_to "<i class='fa fa-plus-circle fa-4x'></i>".html_safe, new_ordenproduccion_path, { :class => 'tooltips', 'data-toggle' => 'tooltip', 'data-placement' => 'right', :title => '', 'data-original-title' => 'Agregar Orden' } %>
 
   <br>
+</div>
+<div class="col-md-1"></div>
+  </div>
 
 </body>
 

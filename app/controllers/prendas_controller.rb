@@ -1,4 +1,5 @@
 class PrendasController < ApplicationController
+   before_action :authenticate_usuario!
   before_action :set_prenda, only: [:show, :edit, :update, :destroy]
   # GET /prendas
   # GET /prendas.json

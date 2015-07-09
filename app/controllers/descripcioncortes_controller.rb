@@ -1,5 +1,5 @@
 class DescripcioncortesController < ApplicationController
-    
+     before_action :authenticate_usuario!
  def create
     @ordenproduccion = Ordenproduccion.find(params[:ordenproduccion_id])
     @descripcioncorte = @ordenproduccion.descripcioncortes.create(descripcion_params)

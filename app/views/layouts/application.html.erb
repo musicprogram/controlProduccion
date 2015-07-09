@@ -25,7 +25,7 @@
 					<% end %>
 
 
-<% if @nocontainer == true %>
+<% if @nocontainer == true || @fondo_page == true %>
 
 							<% if usuario_signed_in? %>
 							<nav class="navbar navbar-fixed-left navbar-minimal animate" role="navigation">
@@ -59,8 +59,10 @@
 							<% end%>
 
 
-							<span class="label label-default animated shake "><%= notice %></span>
+							<div class="container">
+								<span class="label label-default animated shake "><%= notice %></span>
 							<span class="label label-default animated shake"><%= alert %></span>
+							</div>
 							
 						
 				
@@ -68,8 +70,8 @@
 <% elsif %>
 
 
-<div class="container">
-	<div class="row">
+<div class="">
+	<div class="">
 		<% if usuario_signed_in? %>
 							<nav class="navbar navbar-fixed-left navbar-minimal animate" role="navigation">
 								<div class="navbar-toggler animate">
@@ -101,10 +103,12 @@
 			
 							<% end%>
 
-
+<div class="container">
+	
 							<span class="label label-default animated shake "><%= notice %></span>
 							<span class="label label-default animated shake"><%= alert %></span>
 							
+</div>
 						
 				
 							<%= yield %>

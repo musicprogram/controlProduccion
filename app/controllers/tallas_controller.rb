@@ -1,4 +1,5 @@
 class TallasController < ApplicationController
+   before_action :authenticate_usuario!
   before_action :set_talla, only: [:show, :edit, :update, :destroy]
 
   respond_to :html

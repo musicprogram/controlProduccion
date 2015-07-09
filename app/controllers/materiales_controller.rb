@@ -1,5 +1,5 @@
 class MaterialesController < ApplicationController
-        
+         before_action :authenticate_usuario!
         
         def create
             @ordenproduccion = Ordenproduccion.find(params[:ordenproduccion_id])
