@@ -16,6 +16,8 @@ class OrdenproduccionsController < ApplicationController
   def show    
      @home_pagee = true
      @footer_tuto1 = true
+
+     @nocontainer = true
     
   end
 

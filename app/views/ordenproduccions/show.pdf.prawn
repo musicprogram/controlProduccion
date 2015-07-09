@@ -70,7 +70,7 @@ move_down 5
 
 	@ordenproduccion.descripcioncortes.each do |descripcioncorte|
 
-	move_down 1
+	move_down 1  	
 		
 			
 		  if descripcioncorte.material == false || descripcioncorte.material == nil

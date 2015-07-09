@@ -54,10 +54,13 @@
       </table>
     </div>
   </div>
+  <h3 class="center">
+    
+  <%= will_paginate @ordenproduccions, renderer: BootstrapPagination::Rails%> <br>
+  </h3>
 
   <%= link_to "<i class='fa fa-plus-circle fa-4x'></i>".html_safe, new_ordenproduccion_path, { :class => 'tooltips', 'data-toggle' => 'tooltip', 'data-placement' => 'right', :title => '', 'data-original-title' => 'Agregar Orden' } %>
 
-  <%= will_paginate @ordenproduccions, :previous_label => '&laquo; Anterior', :next_label => 'Siguiente &raquo;' %>
   <br>
 
 </body>

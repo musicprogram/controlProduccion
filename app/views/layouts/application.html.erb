@@ -25,9 +25,8 @@
 					<% end %>
 
 
+<% if @nocontainer == true %>
 
-					<div class="container">
-						<div class="row">
 							<% if usuario_signed_in? %>
 							<nav class="navbar navbar-fixed-left navbar-minimal animate" role="navigation">
 								<div class="navbar-toggler animate">
@@ -66,8 +65,58 @@
 						
 				
 							<%= yield %>
-						</div>
-					</div>
+<% elsif %>
+
+
+<div class="container">
+	<div class="row">
+		<% if usuario_signed_in? %>
+							<nav class="navbar navbar-fixed-left navbar-minimal animate" role="navigation">
+								<div class="navbar-toggler animate">
+									<span class="menu-icon"></span>
+								</div>
+								<ul class="navbar-menu animate">
+
+
+									
+
+
+									<li><%= link_to "<i class='fa fa-code fa-2x too questo'></i>".html_safe,  ordenproduccions_path,  { :class => 'tooltips', 'data-toggle' => 'tooltip', 'data-placement' => 'right', :title => '', 'data-original-title' => 'Ordenes de Producción' }  %></li>
+									
+									
+									<%# if current_usuario == Usuario.find(1)%>
+									
+										<li><%= link_to "<i class='fa fa-bar-chart fa-2x questo'></i>".html_safe, descripcioncortes_estadisticas_path, { :class => 'tooltips', 'data-toggle' => 'tooltip', 'data-placement' => 'right', :title => '', 'data-original-title' => 'Estadisticas' }  %></li>
+										
+										
+										
+									<%# end%>
+									
+									<li><%= link_to "<i class='fa fa-user-times fa-2x questo'></i>".html_safe, destroy_usuario_session_path, :method => :delete, class: 'active' %></li>
+
+
+								</ul>
+							</nav>
+				
+			
+							<% end%>
+
+
+							<span class="label label-default animated shake "><%= notice %></span>
+							<span class="label label-default animated shake"><%= alert %></span>
+							
+						
+				
+							<%= yield %>
+	</div>
+</div>
+
+
+<% end%>
+
+
+
+
 					<br><br>
 
 

@@ -6,53 +6,123 @@
   <br>
 
   <div class="col-md-12">
-    <div class="col-md-2"></div>
+
     <div class="col-md-8">
 
 
-      <div >
-        <div class="panel panel-succes">
-          <div class="panel-heading center">
-            <h3 class="panel-title">
-            </h3>
-            <h4><strong>Numero de Orden: </strong>
-              <%= @ordenproduccion.id %> <br>
-              <strong class="zur1">Centro de formación en diseño, confección y Moda</strong></h4>
-            </div>
-            <div class="panel-body">
-              <div class="the-price">
-               <div class="center-block">
 
-                <%= image_tag("senab.png")%>
-              </div>
+      <div class="panel panel-succes">
+        <div class="panel-heading center">
+          <h3 class="panel-title">
+          </h3>
+          <h4><strong>Numero de Orden: </strong>
+            <%= @ordenproduccion.id %> <br>
+            <strong class="zur1">Centro de formación en diseño, confección y Moda</strong></h4>
+          </div>
+          <div class="panel-body">
+            <div class="the-price">
+             <div class="center-block">
 
+              <%= image_tag("senab.png")%>
             </div>
-            <table class="table">
-              <tr>
-                <td>
-                  <div class="col-md-6">
-                    <h5 class="izquierda1"> <strong >Fecha: </strong><%= @ordenproduccion.fechaprogramacion %></h5>
+
+          </div>
+          <table class="table">
+            <tr>
+              <td>
+                <div class="col-md-6">
+                  <h5 class="izquierda1"> <strong >Fecha: </strong><%= @ordenproduccion.fechaprogramacion %></h5>
+
+                </div>
+                <div class="col-md-6">
+                  <h5 class="derecha1"><strong>Cliente: </strong><%= @ordenproduccion.cliente.clientenombre rescue nil %></h5>
+
+                </div>
+
+              </td>
+            </tr>
+
+
+            <tr class="">
+              <td>
+
+               <div class="col-md-6">
+
+                 <h5 class="izquierda1"> <strong>Referencia: </strong><%= @ordenproduccion.referencia %></h5>
+               </div>
+               <div class="col-md-6">
+                 <h5 class="derecha1"><strong>Prenda: </strong>
+                   <%= @ordenproduccion.prenda.prendanombre rescue nil %></h5>
+                 </div>
+
+               </td>
+             </tr>
+             <tr>
+              <td>
+
+                <div class="col-md-6">
+                 <h5 class="izquierda1"><strong>Corte: </strong>
+                   <%= @ordenproduccion.corte.cortenombre rescue nil %></h5>
+
+                 </div>
+                 <div class="col-md-6">
+                   <h5 class="derecha1"> <strong>Ancho del Trazo: </strong>
+                    <%= @ordenproduccion.ancho %></h5>
 
                   </div>
-                  <div class="col-md-6">
-                    <h5 class="derecha1"><strong>Cliente: </strong><%= @ordenproduccion.cliente.clientenombre rescue nil %></h5>
-                    
-                  </div>
-                  
+
+
+
+
                 </td>
               </tr>
+              <tr class="">
+                <td>
+                  <div class="col-md-6">
+                    <h5 class="izquierda1"> <strong>Tela: </strong>
+                     <%= @ordenproduccion.tela.telanombre rescue nil %></h5>
+                   </div>
+                   <div class="col-md-6">
+                     <h5 class="derecha1"> <strong>Largo del Trazo: </strong>
+                      <%= @ordenproduccion.largotrazo.round(2) %></h5>
 
 
+                    </div>
+
+
+
+
+
+                  </td>
+                </tr>
+                <tr>
+                  <td>
+
+                    <div class="col-md-6">
+                     <h5 class="izquierda1"> <strong>Veces en el Trazo: </strong>
+                      <%= @ordenproduccion.vecestrazo.round(2) %> </h5>
+                    </div>
+                    <div class="col-md-6">
+                     <h5 class="derecha1"> <strong>Largo del Tendido: </strong>
+                      <%= @ordenproduccion.largotendido %>
+                    </h5>
+                  </div>
+
+
+
+                </td>
+              </tr>
               <tr class="">
                 <td>
 
-                 <div class="col-md-6">
+                  <div class="col-md-6">
 
-                   <h5 class="izquierda1"> <strong>Referencia: </strong><%= @ordenproduccion.referencia %></h5>
-                 </div>
-                 <div class="col-md-6">
-                   <h5 class="derecha1"><strong>Prenda: </strong>
-                     <%= @ordenproduccion.prenda.prendanombre rescue nil %></h5>
+                   <h5 class="izquierda1"> <strong>Promedio: </strong>
+                    <%= @ordenproduccion.promedio.round(2) rescue nil %></h5>
+                  </div>
+                  <div class="col-md-6">
+                    <h5 class="derecha1"> <strong>Cantidad: </strong>
+                     <%= @ordenproduccion.cantidad %></h5>
                    </div>
 
                  </td>
@@ -61,135 +131,93 @@
                 <td>
 
                   <div class="col-md-6">
-                   <h5 class="izquierda1"><strong>Corte: </strong>
-                     <%= @ordenproduccion.corte.cortenombre rescue nil %></h5>
-
+                   <h5 class="izquierda1"> <strong>Responsable del Corte: </strong>
+                     <%= @ordenproduccion.responsablecorte %>  </h5>
                    </div>
                    <div class="col-md-6">
-                     <h5 class="derecha1"> <strong>Ancho del Trazo: </strong>
-                      <%= @ordenproduccion.ancho %></h5>
-
+                     <h5 class="derecha1"> <strong>Capas: </strong>
+                      <%= @ordenproduccion.capas %></h5>
                     </div>
-
-
 
 
                   </td>
                 </tr>
+
                 <tr class="">
                   <td>
-                    <div class="col-md-6">
-                      <h5 class="izquierda1"> <strong>Tela: </strong>
-                       <%= @ordenproduccion.tela.telanombre rescue nil %></h5>
-                     </div>
-                     <div class="col-md-6">
-                       <h5 class="derecha1"> <strong>Largo del Trazo: </strong>
-                        <%= @ordenproduccion.largotrazo.round(2) %></h5>
 
+                    <div class="col-md-6">
+                     <h5 class="izquierda1"> <strong>Total Metros:</strong>
+                      <%= @ordenproduccion.totalmetros.round(2) %></h5>
+                    </div>
+                    <div class="col-md-6">
+                      <h5 class="derecha1"><strong>Tiqueteada: </strong>
+                        <%= @ordenproduccion.tiqueteada %></h5>
 
                       </div>
-
-
-
 
 
                     </td>
                   </tr>
                   <tr>
                     <td>
-
-                      <div class="col-md-6">
-                       <h5 class="izquierda1"> <strong>Veces en el Trazo: </strong>
-                        <%= @ordenproduccion.vecestrazo.round(2) %> </h5>
-                      </div>
-                      <div class="col-md-6">
-                       <h5 class="derecha1"> <strong>Largo del Tendido: </strong>
-                        <%= @ordenproduccion.largotendido %>
-                      </h5>
-                    </div>
-
-
-
-                  </td>
-                </tr>
-                <tr class="">
-                  <td>
-
-                    <div class="col-md-6">
-
-                     <h5 class="izquierda1"> <strong>Promedio: </strong>
-                      <%= @ordenproduccion.promedio.round(2) rescue nil %></h5>
-                    </div>
-                    <div class="col-md-6">
-                      <h5 class="derecha1"> <strong>Cantidad: </strong>
-                       <%= @ordenproduccion.cantidad %></h5>
-                     </div>
-
-                   </td>
-                 </tr>
-                 <tr>
-                  <td>
-
-                    <div class="col-md-6">
-                     <h5 class="izquierda1"> <strong>Responsable del Corte: </strong>
-                       <%= @ordenproduccion.responsablecorte %>  </h5>
-                     </div>
-                     <div class="col-md-6">
-                       <h5 class="derecha1"> <strong>Capas: </strong>
-                        <%= @ordenproduccion.capas %></h5>
-                      </div>
-
+                     <div class="col-md-6"> <h5 class="izquierda1"><strong>Descripcion: </strong>
+                      <%= @ordenproduccion.descripcion %></h5></div>
 
                     </td>
                   </tr>
 
-                  <tr class="">
-                    <td>
 
-                      <div class="col-md-6">
-                       <h5 class="izquierda1"> <strong>Total Metros:</strong>
-                        <%= @ordenproduccion.totalmetros.round(2) %></h5>
-                      </div>
-                      <div class="col-md-6">
-                        <h5 class="derecha1"><strong>Tiqueteada: </strong>
-                          <%= @ordenproduccion.tiqueteada %></h5>
-
-                        </div>
-
-
-                      </td>
-                    </tr>
-                    <tr>
-                      <td>
-                       <div class="col-md-6"> <h5 class="izquierda1"><strong>Descripcion: </strong>
-                        <%= @ordenproduccion.descripcion %></h5></div>
-
-                      </td>
-                    </tr>
-
-
-                  </table>
-                </div>
+                </table>
+              </div>
 
 
 
-<div class="fondocolor">
-    
+
+
+
+
+              <div class="panel-footer">
+
+
+
+                <strong class="zur1"><b>Centro de formación en diseño, confección y Moda</b></strong> <br>
+                <%= link_to "<i class='fa fa-print fa-4x'></i>".html_safe, ordenproduccion_path(@ordenproduccion, :format => 'pdf'), { :class => 'tooltips', 'data-toggle' => 'tooltip', 'data-placement' => 'left', :title => '', 'data-original-title' => 'PDF' } %>   
+                <%= link_to "<i class='fa fa-pencil fa-4x'></i>".html_safe, edit_ordenproduccion_path(@ordenproduccion) , { :class => 'tooltips', 'data-toggle' => 'tooltip', 'data-placement' => 'botton', :title => '', 'data-original-title' => 'Editar Orden de Producción' }%> 
+                <%= link_to "<i class='fa fa-arrow-circle-left fa-4x'></i>".html_safe, ordenproduccions_path, { :class => 'tooltips', 'data-toggle' => 'tooltip', 'data-placement' => 'right', :title => '', 'data-original-title' => 'Atras' } %>
+
+
+              </div>
+
+     </div>
+
+
+
+
+   </div>
+
+   <div class="col-md-4">
+     
+<div class="fondocolor1">
+    <br>
    
-                <h2><strong><b>Descripción del Corte</b></strong></h2>
+                <h2 class="center"><strong><b>Descripción del Corte</b></strong></h2>
 
  
-<button class="btn " data-toggle="tooltip" data-placement="bottom" title="Click 'descripción de corte'">
-    <i class="fa fa-bars fa-4x" type="button" data-toggle="collapse" data-target="#collapseshow" aria-expanded="false" aria-controls="collapseExample">
- 
-</i>
+<h4 class="center">
+  <button class="btn" data-toggle="tooltip" data-placement="bottom" title="Click 'descripción de corte'">
+    <i class="fa fa-bars fa-4x" type="button" data-toggle="collapse" data-target="#collapseshow" aria-expanded="false" aria-controls="collapseExample"></i>
 </button>
+</h4>
+<br></br>
 
 <div class="collapse" id="collapseshow">
- 
+ <h5 class="center">
+   
  <i type="button" class="fa fa-plus-circle fa-4x" data-toggle="modal" data-target="#myModal">
  
 </i>
+ </h5>
 
  
      <%= render  "showdescripcion"%>
@@ -220,16 +248,18 @@
 </div>    
       <hr class="two"></hr>
       
-      <div class="fondocolor">
-          
-                    <h2><strong><b>Materiales</b></strong></h2>
+      <div class="fondocolor2">
+          <br>
+                    <h2 class="center"><strong><b>Materiales</b></strong></h2>
 
           
-      <button class="btn " data-toggle="tooltip" data-placement="bottom" title="Click 'Ver Materiales'">
+      <h4 class="center">
+        <button class="btn " data-toggle="tooltip" data-placement="bottom" title="Click 'Ver Materiales'">
         <i class="fa fa-caret-square-o-down fa-4x" type="button" data-toggle="collapse" data-target="#collapsematerial" aria-expanded="false" aria-controls="collapseExample">
          
         </i>
     </button>
+      </h4>
     <br></br>
         <div class="collapse" id="collapsematerial">
           
@@ -237,12 +267,14 @@
         
         
           
-            
+      <h5 class="center">
+              
             
  <i type="button" class="fa fa-plus-circle fa-4x" data-toggle="modal" data-target="#myModal1">
  
 </i>
 
+      </h5>
  
       <%= render  "showmateriales"%>
  
@@ -269,32 +301,13 @@
         </div>
       
       </div>
-
-
-
-        <div class="panel-footer">
-            
-           
- 
-          <br>
-         <br>
-         <strong class="zur1"><b>Centro de formación en diseño, confección y Moda</b></strong> <br>
-         <%= link_to "<i class='fa fa-print fa-4x'></i>".html_safe, ordenproduccion_path(@ordenproduccion, :format => 'pdf'), { :class => 'tooltips', 'data-toggle' => 'tooltip', 'data-placement' => 'left', :title => '', 'data-original-title' => 'PDF' } %>   
-         <%= link_to "<i class='fa fa-pencil fa-4x'></i>".html_safe, edit_ordenproduccion_path(@ordenproduccion) , { :class => 'tooltips', 'data-toggle' => 'tooltip', 'data-placement' => 'botton', :title => '', 'data-original-title' => 'Editar Orden de Producción' }%> 
-         <%= link_to "<i class='fa fa-arrow-circle-left fa-4x'></i>".html_safe, ordenproduccions_path, { :class => 'tooltips', 'data-toggle' => 'tooltip', 'data-placement' => 'right', :title => '', 'data-original-title' => 'Atras' } %>
-       
-
        </div>
-
-     </div>
 
 
 
 
    </div>
-
-   <div class="col-md-2"></div>
- </div>
+ </d  iv>
 
 </body>
 

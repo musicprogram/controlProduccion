@@ -11,7 +11,7 @@
     </div>
   <% end %>
 
-<div class="col-md-12 ">
+<div class="col-md-12 cubo ">
   <div class="col-md-4">
   
   <div class="field">
@@ -35,36 +35,37 @@
     <%= f.collection_select :cliente_id, Cliente.all, :id, :clientenombre,{prompt: "Seleccione Cliente"}, {class: "form-control"}  %>
   </div>
 </div>
-</div>
 
 
-<div class="col-md-12 " >
+
+<br>
     <div class="col-md-4">
       <div class="field">
     <h5><b>REFERENCIA</b></h5>
     <%= f.text_field :referencia, class:'form-control' %>
   </div>
   </div>
-
+<br>
   <div class="col-md-4">
       
   <div class="field">
      <h5><b>CORTE</b></h5>
     <%= f.collection_select :corte_id, Corte.all, :id, :cortenombre,{prompt: "Seleccione Corte"}, {class: "form-control"}  %>
   </div>
-     
+    <br> 
   </div>
- 
+ <br>
   <div class="col-md-4">
     <div class="field">
     <h5><b>ANCHO</b></h5>
     <%= f.text_field :ancho, class:'form-control' %>
   </div>
   </div>
+<br>
 </div>
 
 
-<div class="col-md-12 ">
+<div class="col-md-12 cubo1">
    <div class="col-md-4">
      <div class="field">
      <h5><b>TELA</b></h5>
@@ -85,34 +86,32 @@
       <%= f.number_field :vecestrazo , :type => 'float' , :in => 0..100, :step => 0.01, class:'form-control'%>
     </div>
   </div>
-</div>
-
-  
-<div class="col-md-12 ">
+<br>
     <div class="col-md-4">
    <div class="field">
     <h5><b>CAPAS</b></h5>
     <%= f.number_field :capas, class:'form-control' %>
   </div>
   </div>
- 
+ <br>
   <div class="col-md-4">
      <div class="field">
     <h5><b>CANTIDAD</b></h5>
     <%= f.text_field :cantidad, class:'form-control' %>
   </div>
   </div>
- 
+ <br>
   <div class="col-md-4">
       <div class="field">
     <h5><b>RESPONSABLE DEL CORTE</b></h5>
     <%= f.text_field :responsablecorte, class:'form-control' %>
   </div>
   </div>
+  <br>
 </div>
  
 
- <div class="col-md-12 ">
+ <div class="col-md-12 cubo">
      <div class="col-md-4">
      <div class="field">
      <h5><b>PRENDA</b></h5>
@@ -133,17 +132,15 @@
   <div class="col-md-4">
     
   </div>
- </div>
 
- 
-<div class="col-md-12 ">
-    
+    <br> <br>
   <div class="col-md-8">
   <div class="field">
     <h5><b>DESCRIPCIÓN</b></h5>
     <%= f.text_area :descripcion, class:'form-control' %>
   </div>
   </div>
+  <br> <br>
   <div class="col-md-4">
        
        <div class="actions">
@@ -151,6 +148,7 @@
    <% end %>
   </div>
   </div>
+  <br>
  
- </div>
+ </div> <br>
 
