@@ -16,10 +16,10 @@ move_up 35
 	move_down 10
 
 	stroke_horizontal_rule
-		move_down 20
+		move_down 13
 
 			text "Referencia: #{@ordenproduccion.referencia}", :size => 12,:style => :bold
-		move_up 20
+		move_up 18
 			text "Cliente: #{@ordenproduccion.cliente.clientenombre rescue nil}", :align => :right, :size => 12
 
 	
@@ -60,18 +60,20 @@ move_up 35
 		
 		
 
-			text "DESCRIPCIÓN DEL CORTE", :align => :center, :size => 10,:style => :bold
-		move_down 5
 	stroke_horizontal_rule	
 	
 
 
 move_down 5
 
+	
+
 	@ordenproduccion.descripcioncortes.each do |descripcioncorte|
+
+	move_down 1
 		
 			
-		  if descripcioncorte.material == false
+		  if descripcioncorte.material == false || descripcioncorte.material == nil
 		  
 		  	if descripcioncorte.tallaxs == 0 
 				
@@ -175,7 +177,7 @@ move_down 5
 			text "Total Color: #{descripcioncorte.tallasuma}", :size => 10,:style => :bold,:align => :right
 			
 			
-		move_down 5
+		move_up 3
 			
 			stroke_horizontal_rule	
 		
@@ -186,11 +188,13 @@ move_down 5
 	end
 	
 
-
+mate = 1
 		
 	@ordenproduccion.materiales.each do |material|
 		
-		text "MATERIALES", :align => :center, :size => 10,:style => :bold
+
+
+		text "MATERIAL #{ mate }", :align => :center, :size => 10,:style => :bold
 		text "ancho: #{material.anchom}",  :size => 8, :align => :right
 		
 		text "Largo Trazo: #{material.largotrazom}",  :size => 8, :align => :right
@@ -216,11 +220,11 @@ move_down 5
 	move_down 5	
 	stroke_horizontal_rule	
 	move_down 5	
-	
+		mate = mate + 1 
 	end
 	
 	
-	
+
 	
 		@ordenproduccion.descripcioncortes.each do |descripcioncorte|
 		
@@ -329,11 +333,11 @@ move_down 5
 			text "Total Color: #{descripcioncorte.tallasuma}", :size => 10,:style => :bold,:align => :right
 			
 			
-		move_down 5
+		move_up 3
 			
 			stroke_horizontal_rule	
 		
-		move_down 5
+		move_down 3
 		  
 		  end
 		

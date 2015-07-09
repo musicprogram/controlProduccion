@@ -11,14 +11,14 @@
 <h2> CORTE - <small>ORDEN #: <%= @ordenproduccion.id  %></small></h2> 
 <div class="field">
 
- <h3><b>Material</b></h3>
- Si: <%= f.radio_button(:material, true) %>
- No: <%= f.radio_button(:material, false) %>
-</div>
-
 
 
   <div class="col-md-12">
+
+   <h3><b>Material</b></h3>
+ <h2>Si <%= f.radio_button(:material, true) %>
+ No <%= f.radio_button(:material, false) %></h2>
+</div>
 
    <div class="col-md-3">
     <div class="field">
