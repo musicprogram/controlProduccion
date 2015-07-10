@@ -68,113 +68,113 @@ move_down 5
 
 	
 
-	@ordenproduccion.descripcioncortes.each do |descripcioncorte|
+	@ordenproduccion.descripcioncortes.each do |descripcioncorte1|
 
 	move_down 1  	
 		
 			
-		  if descripcioncorte.material == false || descripcioncorte.material == nil
-		  
-		  	if descripcioncorte.tallaxs == 0 
+		  if descripcioncorte1.material == false || descripcioncorte1.material == nil
+		 
+		  	if descripcioncorte1.tallaxs == 0 
 				
 			    elsif 
-					text "Talla XS: #{descripcioncorte.tallaxs}",  :size => 8
+					text "Talla XS: #{descripcioncorte1.tallaxs}",  :size => 8
 			end
 		  
-			if descripcioncorte.tallas == 0
+			if descripcioncorte1.tallas == 0
 				
 			    elsif 
-					text "Talla S: #{descripcioncorte.tallas}",:size => 8
+					text "Talla S: #{descripcioncorte1.tallas}",:size => 8
 		    end 
 		
-		 	if descripcioncorte.tallal == 0 
+		 	if descripcioncorte1.tallal == 0 
 				
 			    elsif 	
-				text "Talla L: #{descripcioncorte.tallal}", :size => 8
+				text "Talla L: #{descripcioncorte1.tallal}", :size => 8
          	end 
 		
 		
-			if descripcioncorte.tallam == 0 
+			if descripcioncorte1.tallam == 0 
 		
 		    elsif 
-				text "Talla M: #{descripcioncorte.tallam}",  :size => 8
+				text "Talla M: #{descripcioncorte1.tallam}",  :size => 8
 			end
 			
-			if descripcioncorte.tallaxl == 0 
+			if descripcioncorte1.tallaxl == 0 
 				
 		    elsif 
-				text "Talla XL: #{descripcioncorte.tallaxl}",  :size => 8
+				text "Talla XL: #{descripcioncorte1.tallaxl}",  :size => 8
 			end
 			
-			if descripcioncorte.talla6 == 0 
+			if descripcioncorte1.talla6 == 0 
 					
 			    elsif 
-					text "Talla 6: #{descripcioncorte.talla6}",  :size => 8
+					text "Talla 6: #{descripcioncorte1.talla6}",  :size => 8
 			end
 			
-			if descripcioncorte.talla8 == 0 
+			if descripcioncorte1.talla8 == 0 
 					
 			    elsif 
-					text "Talla 8: #{descripcioncorte.talla8}",  :size => 8
+					text "Talla 8: #{descripcioncorte1.talla8}",  :size => 8
 			end
 			
-			if descripcioncorte.talla10 == 0 
+			if descripcioncorte1.talla10 == 0 
 					
 			    elsif 
-					text "Talla 10: #{descripcioncorte.talla10}",  :size => 8
+					text "Talla 10: #{descripcioncorte1.talla10}",  :size => 8
 			end
 			
-			if descripcioncorte.talla12 == 0 
+			if descripcioncorte1.talla12 == 0 
 					
 			    elsif 
-					text "Talla 12: #{descripcioncorte.talla12}",  :size => 8
+					text "Talla 12: #{descripcioncorte1.talla12}",  :size => 8
 			end
 			
-			if descripcioncorte.talla14 == 0 
+			if descripcioncorte1.talla14 == 0 
 					
 			    elsif 
-					text "Talla 14: #{descripcioncorte.talla14}",  :size => 8
+					text "Talla 14: #{descripcioncorte1.talla14}",  :size => 8
 			end
 			
 			
-			if descripcioncorte.talla28 == 0 
+			if descripcioncorte1.talla28 == 0 
 					
 			    elsif 
-					text "Talla 28: #{descripcioncorte.talla28}",  :size => 8
+					text "Talla 28: #{descripcioncorte1.talla28}",  :size => 8
 			end
 			
-			if descripcioncorte.talla30 == 0 
+			if descripcioncorte1.talla30 == 0 
 					
 			    elsif 
-					text "Talla 30: #{descripcioncorte.talla30}",  :size => 8
+					text "Talla 30: #{descripcioncorte1.talla30}",  :size => 8
 			end
 			
-			if descripcioncorte.talla32 == 0 
+			if descripcioncorte1.talla32 == 0 
 					
 			    elsif 
-					text "Talla 32: #{descripcioncorte.talla32}",  :size => 8
+					text "Talla 32: #{descripcioncorte1.talla32}",  :size => 8
 			end
 			
-				if descripcioncorte.talla34 == 0 
+				if descripcioncorte1.talla34 == 0 
 				
 		    elsif 
-				text "Talla 34: #{descripcioncorte.talla34}",  :size => 8
+				text "Talla 34: #{descripcioncorte1.talla34}",  :size => 8
 			end
 			
-			if descripcioncorte.talla36 == 0 
+			if descripcioncorte1.talla36 == 0 
 					
 			    elsif 
-					text "Talla 36: #{descripcioncorte.talla36}",  :size => 8
+					text "Talla 36: #{descripcioncorte1.talla36}",  :size => 8
 			end
 			
 		move_down 5
 			
 		move_up 15
 			
-			text "Color: #{descripcioncorte.color.colornombre rescue nil}",  :size => 8,:style => :bold,:align => :right
+			text "Color: #{descripcioncorte1.color.colornombre rescue nil}",  :size => 8,:style => :bold,:align => :right
 		  
 			
-			text "Total Color: #{descripcioncorte.tallasuma}", :size => 10,:style => :bold,:align => :right
+			text "Total Color: #{descripcioncorte1.tallasuma}", :size => 10,:style => :bold,:align => :right
 			
 			
 		move_up 3
@@ -225,11 +225,12 @@ mate = 1
 	
 	
 
-	
+	cortt = 1
 		@ordenproduccion.descripcioncortes.each do |descripcioncorte|
 		
 			
-		  if descripcioncorte.material == true	
+		  if descripcioncorte.material == true
+		  text "CORTE #{ cortt }", :align => :center, :size => 10,:style => :bold
 		  
 		  	if descripcioncorte.tallaxs == 0 
 				
@@ -338,8 +339,10 @@ mate = 1
 			stroke_horizontal_rule	
 		
 		move_down 3
-		  
-		  end
+		  cortt = cortt + 1  
+		end
+		
+		
 		
 	end
 	

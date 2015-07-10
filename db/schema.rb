@@ -78,16 +78,6 @@ ActiveRecord::Schema.define(version: 20150705211412) do
   add_index "materiales", ["ordenproduccion_id"], name: "index_materiales_on_ordenproduccion_id"
   add_index "materiales", ["tela_id"], name: "index_materiales_on_tela_id"
 
-  create_table "nombres", force: true do |t|
-    t.string   "nombreinstructor"
-    t.datetime "created_at"
-    t.datetime "updated_at"
-    t.string   "avatar_file_name"
-    t.string   "avatar_content_type"
-    t.integer  "avatar_file_size"
-    t.datetime "avatar_updated_at"
-  end
-
   create_table "ordenproduccions", force: true do |t|
     t.date     "fechaprogramacion"
     t.integer  "cliente_id"
